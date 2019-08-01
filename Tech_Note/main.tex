@@ -1,8 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     LaTeX source code to approximate a NIST Technical report
-%	  Instructions for authors: tinyurl.com/techpubsnist 
+%	  Instructions for authors: tinyurl.com/techpubsnist
 %	DOI watermark will be added on final PDF
-% 	Developed by K. Miller, kmm5@nist.gov 
+% 	Developed by K. Miller, kmm5@nist.gov
 %	Last updated: 26-March-2019
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[12pt]{article}
@@ -12,7 +12,7 @@
 \usepackage{amssymb}    % if you want extra symbols
 \usepackage{booktabs}
 \usepackage{bm}
-\usepackage{mhchem}
+%\usepackage{mhchem}
 \usepackage{chemformula}
 \usepackage{float}
 \usepackage[hang,flushmargin,bottom]{footmisc} % footnote format
@@ -44,11 +44,11 @@
 \addtolength{\cfttabnumwidth}{1em}
 \renewcommand{\cfttabpresnum}{\tablename\ }
 \setlength{\cfttabindent}{0in}    %% adjust as you like
-\setlength{\cftfigindent}{0in} 
+\setlength{\cftfigindent}{0in}
 
 \usepackage{enumitem}         % to control spacing between bullets/numbered lists
 
-\usepackage[numbers,sort&compress]{natbib} % format bibliography 
+\usepackage[numbers,sort&compress]{natbib} % format bibliography
 \renewcommand{\bibsection}{}
 \setlength{\bibsep}{0.0pt}
 
@@ -80,11 +80,11 @@ pdfkeywords={} %%put keywords here
 \setlength{\textheight}{8.5in}
 
 \usepackage{caption} % required for Figure labels
-\captionsetup{font=small,labelfont=bf,figurename=Fig.,labelsep=period,justification=raggedright} 
+\captionsetup{font=small,labelfont=bf,figurename=Fig.,labelsep=period,justification=raggedright}
 
 %%%%%%%%%%% !!!!!! REQUIRED - FILL OUT METADATA HERE !!!!!!!! %%%%%%%%%%%%%%
 %  	Report Number - fill in Report Number sent to you (see info below)
-%   DOI Statement - fill in DOI sent to you 
+%   DOI Statement - fill in DOI sent to you
 %   Month Year - fill in Month and Year of Publication
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\pubnumber}{XXXX}
@@ -95,14 +95,14 @@ pdfkeywords={} %%put keywords here
 \newcommand*\chem[1]{\ensuremath{\mathrm{#1}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   	BEGIN DOCUMENT 
+%   	BEGIN DOCUMENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-	\urlstyle{rm} % Format style of \url   
+	\urlstyle{rm} % Format style of \url
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   Cover Page is REQUIRED and must contain the information 
-%	displayed here, at a minimum. Additional artwork may be included 
+%   Cover Page is REQUIRED and must contain the information
+%	displayed here, at a minimum. Additional artwork may be included
 %	(e.g., official project/conference logo, etc.).
 %	Pub Number automated based on metadata
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -114,16 +114,15 @@ pdfkeywords={} %%put keywords here
 \LARGE{\textbf{NIST Technical Note \pubnumber}}\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Title 
+%	Title
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \Huge{\textbf{Mapping the Chemical Structure of Centerline Profiles in Medium-Scale Pool Fires}}\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Authors - add complete list of authors, affiliations will be 
+%	Authors - add complete list of authors, affiliations will be
 %   added on title page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \large Ryan Falkesntein-Smith\\
-\large Kevin McGrattan\\
 \large Anthony Hamins\\
 \large Kunhyuk Sung\\
 \vfill
@@ -137,7 +136,7 @@ pdfkeywords={} %%put keywords here
 %	NIST LOGO - keep as-is
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\includegraphics[width=0.3\linewidth]{NIST-logo.eps}\\ 
+\includegraphics[width=0.3\linewidth]{NIST-logo}\\
 
 
 \end{flushright}
@@ -151,11 +150,11 @@ pdfkeywords={} %%put keywords here
 %   Publication Series & Number - automated
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \LARGE{\textbf{NIST Technical Note \pubnumber}}\\
-\vfill 
+\vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Title 
+%	Title
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\Huge{\textbf{Title}}\\
+\Huge{\textbf{Mapping the Chemical Structure of Centerline Profiles in Medium-Scale Pool Fires}}\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	Author Order and Grouping. Always identify the primary author/creator first (s/he does not have to be a NIST author). For publications with multiple authors, group authors by their organizational affiliation. The organizational groupings and the names within each grouping should generally be ordered by decreasing level of contribution.
@@ -163,9 +162,8 @@ pdfkeywords={} %%put keywords here
 %	For NIST authors, include the Division and Laboratory names (but do not include their city and state).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \normalsize Ryan Falkenstein-Smith\\
-Kevin McGrattan\\
 Anthony Hamins\\
-\large Kunhyuk Sung\\
+Kunhyuk Sung\\
 \textit{Fire Research Division}\\
 \textit{Engineering Laboratory}\\
 \vspace{12pt}
@@ -185,10 +183,10 @@ Anthony Hamins\\
 %  Department of Commerce LOGO - leave as-is
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 
-\includegraphics[width=0.18\linewidth]{DoC-logo.eps}\\ 
+\includegraphics[width=0.18\linewidth]{DoC-logo}\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  Department of Commerce & NIST Leadership 
+%  Department of Commerce & NIST Leadership
 %	will be updated as changes occur
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \footnotesize U.S. Department of Commerce\\
@@ -204,12 +202,12 @@ National Institute of Standards and Technology\\
 %   Disclaimer/CODEN page - required
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{flushright}
-\footnotesize  Certain commercial entities, equipment, or materials may be identified in this document in order to describe an experimental procedure or concept adequately. Such identification is not intended to imply recommendation or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that the entities, materials, or equipment are necessarily the best available for the purpose.\\ 
+\footnotesize  Certain commercial entities, equipment, or materials may be identified in this document in order to describe an experimental procedure or concept adequately. Such identification is not intended to imply recommendation or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that the entities, materials, or equipment are necessarily the best available for the purpose.\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   This secton automated - do not change
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\normalsize \textbf{National Institute of Standards and Technology Technical Note \pubnumber\\ 
+\normalsize \textbf{National Institute of Standards and Technology Technical Note \pubnumber\\
 Natl. Inst. Stand. Technol. Tech. Note \pubnumber, \pageref{LastPage} pages (\monthyear)} \\
 \textbf{CODEN: NTNOEF}\\
 \vspace{12pt}
@@ -271,7 +269,7 @@ Figure~\ref{fig:Fuel_Level} shows how the fuel level was monitored by a fuel flo
 	\caption[Monitoring Fuel Level]{Photo of fuel flow operators monitoring the fuel level via live video feed (top) and a close up image of the lve video feed used to maintain a consistant fuel level relative to the fuel level indicator (bottom)}
 	\label{fig:Fuel_Level}
 \end{figure}
- 
+
 \subsection{Measuring the Volume Fraction of Gas Species via GC/MSD}
 \label{ssec:Gas_Species_Setup}
 
@@ -312,19 +310,19 @@ After some tests, soot deposits were observed on the inner walls of the quenchin
 	\label{fig:Soot_Probe_Setup}
 \end{figure}
 
-The soot mass fraction, $M_{s}$, was computed from the mass of the soot collected from the PTFE filter and gun cleaning patches, $m_{s}$, the ratio of the mass flow controller's temperature reading, $T_{\infty}$, to the temperature at the probe entrance,$T_{p}$, the total mass of gas sampled, $M_{t}$, based on the mass flow controller readings. 
+The soot mass fraction, $M_{s}$, was computed from the mass of the soot collected from the PTFE filter and gun cleaning patches, $m_{s}$, the ratio of the mass flow controller's temperature reading, $T_{\infty}$, to the temperature at the probe entrance,$T_{p}$, the total mass of gas sampled, $M_{t}$, based on the mass flow controller readings.
 
 \begin{equation}\label{eq:soot_mass_frac}
   M_{s}= \frac{m_{s}}{M_{t}}\frac{T_{\infty}}{T_{p}}
 \end{equation}
-The total mass of gas sampled was estimated from product of the average volumetric flow rate measured by the mass flow controller, $\dot{V}$, the density of the sample gas, $\rho_{g}$, and the gas sampling time, $t$. 
+The total mass of gas sampled was estimated from product of the average volumetric flow rate measured by the mass flow controller, $\dot{V}$, the density of the sample gas, $\rho_{g}$, and the gas sampling time, $t$.
 \begin{equation}\label{eq:total_mass}
 M_{t}= \dot{V}\cdot \rho_{g}\cdot t
-\end{equation} 
-In Eq.\ref{eq:total_mass}, the density of the sample gas was determined from the total mass detected in the TCD chromatogram, $m_{tot}$, over the volume of the sample loop, $V_{sl}$. 
+\end{equation}
+In Eq.\ref{eq:total_mass}, the density of the sample gas was determined from the total mass detected in the TCD chromatogram, $m_{tot}$, over the volume of the sample loop, $V_{sl}$.
 \begin{equation}\label{eq:gas_density}
 \rho_{g}= \frac{m_{tot}}{V_{sl}}
-\end{equation} 
+\end{equation}
 
 The uncertainty of the soot mass fraction was estimated from a combined uncertainty of the Type A evaluation of standard uncertainty in the variation of temperature and mass measurements and the Type B standard uncertainty in the bias errors of the instrumentation. A detailed description of the soot mass fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Soot_Frac}.
 
@@ -369,7 +367,7 @@ Mass Loss Rate~(\si{g/s})		&	X±x	&	X±x	&	X±x\\
 \subsection{Gas Species Concentrations}
 \label{ssec:Gas_Species_Concentrations}
 
-%Figure~\ref{},\ref{},\ref{} display the averaged volume fraction, $\bar{X_{i}}$, of significant species measurements made at various heights along the methanol (\ce{CH3OH}), ethanol (\ch{C2H5OH}), %and acetone ($\chem{C_3H_6O}$) pool fire’s centerlines, respectively. Significanat species detected in the TCD chromatogram include reactants, fuels and oxygen ($\chem{O_2}$), combustion products such as water ($\chem{H_2O}$) and carbon dioxide ($\chem{CO_2}$), combustion intermediates such as carbon monoxide ($\chem{CO}$), hydrogen ($\chem{H_2}$), methane ($\chem{CH_4}$), and inert gases such as Nitrogen ($\chem{N_2}$) and Argon ($\chem{Ar}$). As expected, the fuel volume fractions were highest, and the oxygen volume fraction was the lowest close to the fuel surface. The product species were found to have a maximum volume fraction at approximately 4 cm above the fuel surface. The intermediate gas species were found to have peaked at approximately 2 cm above the fuel surface. Inert gases were shown to increase with the distance from the fuel surface. It was also found that the gas sampled from the centerline nearly mimicked the composition of air at approximately 60 cm above the fuel surface. 
+%Figure~\ref{},\ref{},\ref{} display the averaged volume fraction, $\bar{X_{i}}$, of significant species measurements made at various heights along the methanol (\ce{CH3OH}), ethanol (\ch{C2H5OH}), %and acetone ($\chem{C_3H_6O}$) pool fire’s centerlines, respectively. Significanat species detected in the TCD chromatogram include reactants, fuels and oxygen ($\chem{O_2}$), combustion products such as water ($\chem{H_2O}$) and carbon dioxide ($\chem{CO_2}$), combustion intermediates such as carbon monoxide ($\chem{CO}$), hydrogen ($\chem{H_2}$), methane ($\chem{CH_4}$), and inert gases such as Nitrogen ($\chem{N_2}$) and Argon ($\chem{Ar}$). As expected, the fuel volume fractions were highest, and the oxygen volume fraction was the lowest close to the fuel surface. The product species were found to have a maximum volume fraction at approximately 4 cm above the fuel surface. The intermediate gas species were found to have peaked at approximately 2 cm above the fuel surface. Inert gases were shown to increase with the distance from the fuel surface. It was also found that the gas sampled from the centerline nearly mimicked the composition of air at approximately 60 cm above the fuel surface.
 
 \subsection{Soot Mass Fraction}
 \label{ssec:Soot_Mass_Fraction}
@@ -430,7 +428,7 @@ The total number of moles detected was determined from the summation of the numb
 \label{eq:totalnumberofmolesdetected}
 u_{\scriptscriptstyle n_{tot}}=\sqrt{{\sum_{n=1}^{N} s_{\scriptscriptstyle n_{i}}^2}}
 \end{equation}
-where $N$ is the number of a species identified species in the TCD chromatogram. 
+where $N$ is the number of a species identified species in the TCD chromatogram.
 
 \pagebreak
 
@@ -579,7 +577,7 @@ Liquid material concentrations are calibrated from the ratio of the liquid-vapor
 C_{vap} =\frac {P_{vap}}{P}
 \end{equation}
 
-The vapor pressure of any given liquid can be calculated and modified using the bubbler setup shown in Fig.~\ref{fig:Bubbler}: 
+The vapor pressure of any given liquid can be calculated and modified using the bubbler setup shown in Fig.~\ref{fig:Bubbler}:
 
 \begin{figure}[h!]
 	\centering
@@ -593,7 +591,7 @@ Nitrogen, acting as a carrier gas, was bubbled at the bottom of a liquid bath wh
 \label{eq:liquid_vapor_pressure_correlation}
 P_{vap} =e^{A+\frac{B}{T}+C~\ln{T}+D~T^{E}}
 \end{equation}
-In this correlation, $P_{vap}$ is the vapor pressure calculated from the temperature of the liquid bath, $T$, with the coefficients ($A$, $B$, $C$, $D$, $E$) specific to the liquid material. Table~\ref{tab:Liquid Calibrate_Table} lists all coefficients for each calibrated liquid, including the uncertainty of their respective correlations, $u_{corr}$. 
+In this correlation, $P_{vap}$ is the vapor pressure calculated from the temperature of the liquid bath, $T$, with the coefficients ($A$, $B$, $C$, $D$, $E$) specific to the liquid material. Table~\ref{tab:Liquid Calibrate_Table} lists all coefficients for each calibrated liquid, including the uncertainty of their respective correlations, $u_{corr}$.
 
 \begin{table}[!]
 \caption{Liquid Vapor Pressure Correlation Coefficients for Various Calibrated Liquids}
@@ -628,7 +626,7 @@ The uncertainty of the pressure measured upon injected was calculated from Eq.~\
 \begin{equation}
 \label{eq:vapor_concentration_uncertainty}
 u_{\scriptscriptstyle P_{vap}} = \sqrt{{\left(\frac{\partial P_{vap}}{\partial T_{B}}\,u_{\scriptscriptstyle T_{B}} \right)}^2+{u_{corr}}^2}
-\end{equation} 
+\end{equation}
 
 The Type A evaluation of uncertainty of the liquid bath temperautre readings is determined from the standard error of the temperature, $s_{T_{B}}$ readings from the sampling period. The Type B evaluation of uncertainty for the liquid bath temperature was the bias error source (1.5~$^\circ$C) in the thermocouple, $u_{inst}$. The combined uncertainty liquid bath temperature was determined via quadrature:
 
@@ -680,7 +678,7 @@ All gas sampling experiments and calibrations were conducted using a 2~\si{ml} s
 
 \subsection{Total Mass Injected into the GC/MSD}
 \label{ssec:Total_Mass_Injected_into_GC/MSD}
-The total mass detected in the TCD chromatogram, $m_{tot}$, was calculated from the summation of products of the moles of given species and their respective molar mass. 
+The total mass detected in the TCD chromatogram, $m_{tot}$, was calculated from the summation of products of the moles of given species and their respective molar mass.
 
 \begin{equation}
 \label{eq:total_mass_detected_uncertainty}
@@ -693,7 +691,7 @@ The uncertainty in the total mass detected was defined as the combined uncertain
 \label{eq:total_mass_detected_uncertainty}
 u_{\scriptscriptstyle m_{tot}}=\sqrt{{\sum_{n=1}^{N} (s_{\scriptscriptstyle n_{i}}\cdot\bar{M_{i}})^2}}
 \end{equation}
-where $N$ is the number of a species identified species in the TCD chromatogram. 
+where $N$ is the number of a species identified species in the TCD chromatogram.
 
 \subsection{Mass Flow Controller Internal Gas Flow Temperature Reading}
 \label{ssec:MFC_Temp}
