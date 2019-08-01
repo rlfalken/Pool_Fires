@@ -12,7 +12,7 @@
 \usepackage{amssymb}    % if you want extra symbols
 \usepackage{booktabs}
 \usepackage{bm}
-\usepackage{mhchem}
+%\usepackage{mhchem}
 \usepackage{chemformula}
 \usepackage{float}
 \usepackage[hang,flushmargin,bottom]{footmisc} % footnote format
@@ -27,7 +27,7 @@
 \usepackage{textgreek}
 \usepackage{textcomp}
 \usepackage{tikz}
-\usepackage{titlesec}
+\usepackage[newparttoc]{titlesec}
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor}
 \titleformat{\section}{\normalsize\bfseries}{\thesection.}{1em}{}	% required for heading numbering style
@@ -123,7 +123,6 @@ pdfkeywords={} %%put keywords here
 %   added on title page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \large Ryan Falkesntein-Smith\\
-\large Kevin McGrattan\\
 \large Anthony Hamins\\
 \large Kunhyuk Sung\\
 \vfill
@@ -155,7 +154,7 @@ pdfkeywords={} %%put keywords here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	Title 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\Huge{\textbf{Title}}\\
+\Huge{\textbf{Mapping the Chemical Structure of Centerline Profiles in Medium-Scale Pool Fires}}\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	Author Order and Grouping. Always identify the primary author/creator first (s/he does not have to be a NIST author). For publications with multiple authors, group authors by their organizational affiliation. The organizational groupings and the names within each grouping should generally be ordered by decreasing level of contribution.
@@ -163,9 +162,10 @@ pdfkeywords={} %%put keywords here
 %	For NIST authors, include the Division and Laboratory names (but do not include their city and state).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \normalsize Ryan Falkenstein-Smith\\
-Kevin McGrattan\\
 Anthony Hamins\\
-\large Kunhyuk Sung\\
+Kunhyuk Sung\\
+Jian Chen\\
+\large
 \textit{Fire Research Division}\\
 \textit{Engineering Laboratory}\\
 \vspace{12pt}
@@ -267,8 +267,8 @@ Figure~\ref{fig:Fuel_Level} shows how the fuel level was monitored by a fuel flo
 
 \begin{figure}[h!]
 	\centering
-\includegraphics[width=14.0cm,keepaspectratio]{Monitoring_Fuel_Level.png}
-	\caption[Monitoring Fuel Level]{Photo of fuel flow operators monitoring the fuel level via live video feed (top) and a close up image of the lve video feed used to maintain a consistant fuel level relative to the fuel level indicator (bottom)}
+\includegraphics[width=14.0cm,keepaspectratio]{Monitoring_Fuel_Level_A.png}
+	\caption[Monitoring Fuel Level]{Photo of fuel flow operators monitoring the fuel level via live video feed (top) and a close up image of the live video feed used to maintain a consistant fuel level relative to the fuel level indicator (bottom)}
 	\label{fig:Fuel_Level}
 \end{figure}
  
@@ -277,33 +277,33 @@ Figure~\ref{fig:Fuel_Level} shows how the fuel level was monitored by a fuel flo
 
 Gas-species measurements were made using an Agilent 5977E Series GC/MSD fitted with a thermal conductivity detector (TCD). The GC/MSD was able to quantify a variety of stable reactants, intermediates, and combustion product species collected from the pool fire. The GC/MSD was equipped with a 2~\si{ml} sample loop maintained at a 200~°\si{C}. Chromatographic separation of species was achieved using a Select for Permanent Gases-Dual Column (CP7430) comprised of mole-sieve and Porapak Q columns working in parallel and using a helium carrier gas. The sample analysis time was 62~\si{min} wherein the carrier gas flow leading into the TCD and MSD was 3.00~\si{ml/min} and 1.00~\si{ml/min}, respectively. During the analysis, the GC oven temperature was maintained at 30~°\si{C} for 12~\si{min}, then ramped at 8~°\si{C}/\si{min} for 2~\si{min} until a temperature of 300~°\si{C} was obtained.
 
-Figure~\ref{fig:Experimental_Setup} displays the flow diagram for gas sampling into the GC/MSD. After achieving steady-state burning conditions, approx. 10~\si{min} after ignition, flow prompted by a vacuum pump located downstream from the GC/MSD was initiated. Gas samples were collected using a quenching probe. The quenching probe was composed of two concentric, stainless-steel tubes with outer annular coolant flow and inner, extracted, gas-sample flow. The inner and outer tube diameters were 7.9~\si{mm} and 16~\si{mm}, respectively. Water maintained at 90~°\si{C} was used to flow through the sampling probe for the duration of the experiment. The remainder of the sampling line leading into the GC/MSD was heated with electrical, heating tape to 140~°\si{C} to prevent condensation of water and liquid fuels through the line.
+Figure~\ref{fig:Experimental_Setup} displays the flow diagram for gas sampling into the GC/MSD. After achieving steady-state burning conditions, approx. 10~\si{min} after ignition, flow prompted by a vacuum pump located downstream from the GC/MSD was initiated. Gas samples were collected using a quenching probe. The quenching probe was composed of two concentric, stainless-steel tubes with outer annular coolant flow and inner, extracted, gas-sample flow. The inner and outer tube diameters were 7.9~\si{mm} and 16~\si{mm}, respectively. Water at 90~°\si{C} flowed through the sampling probe for the duration of the experiment. The remainder of the sampling line leading into the GC/MSD was heated with electrical, heating tape to 140~°\si{C} to prevent condensation of water and liquid fuels through the line.
 
 \begin{sidewaysfigure}[!]
 	\centering
 \includegraphics[width=\textwidth,keepaspectratio]{Experimental_Setup.png}
-	\caption[A schematic of gas sampling procedure]{A schematic of extractive sampling procedure to transport gas samples from the pool fire to the GC/MSD}
+	\caption[A schematic of the gas sampling procedure]{A schematic of the extractive sampling setup used to transport gas samples from the pool fire to the GC/MSD}
 	\label{fig:Experimental_Setup}
 \end{sidewaysfigure}
 
-Gas sampling was conducted for a 12~\si{min} period to ensure that the gas sample had completely swept through the GC/MSD sample loop. The sampling flow was controlled using a mass flow controller (Alicat Scientific MC-Series) located in front of the vacuum pump within the sampling line. The volumetric flow was maintained at 190~\si{ml/min} and recorded using DAQ at 2~\si{Hz} for the entire duration of the gas sampling procedure. The mass flow controlled also provided temperature readings of its internal gas flow.
+Gas sampling was conducted for a minimum of 12~\si{min}, ensuring that the gas sample had completely swept through the GC/MSD sample loop. The gas sampling period varied from 12~\si{min} to 25~\si{min} depending on the sampling location within the fire. The sampling flow was controlled using a mass flow controller (Alicat Scientific MC-Series) located in front of the vacuum pump within the sampling line. During the gas sampling procedure, the volumetric flow was approximately 200~\si{ml/min} and recorded using DAQ at 2~\si{Hz} for the entire duration of the gas sampling procedure. The mass flow controlled also provided temperature readings of its internal gas flow.
 
 After the gas sampling period, two quarter-turn valves located on opposite ends of the GC/MSD sample loop within the sampling line are closed. Once the sampled gas reached equilibrium, pressure measurements, obtained from a digital pressure gauge (OMEGA DPG409-030DWU), and temperature measurements, acquired by a K Type Thermocouple located at the GC/MSD Sample Loop injection port, were collected at 2~\si{Hz} for 50~\si{s}. After collecting pressure and temperature measurements, the sampled gas was injected into the GC/MSD.
 
-The volume fraction, $\bar{X_{i}}$, was calculated from the ratio between the number of moles of a given species, $n_{i}$, and the total number of moles identified, $n_{tot}$. The moles of a given species were measured from the Thermal Conductivity Detector (TCD) within the GC/MSD. The total number of moles was determined from the summation of moles for each species identified by the TCD.
+The volume fraction, $\bar{X_{i}}$, was calculated from the ratio between the number of moles of a given gas species, $n_{i}$, and the total number of moles identified, $n_{tot}$. The moles of a given species were measured from the Thermal Conductivity Detector (TCD) within the GC/MSD. The total number of moles was determined from the summation of moles for each species identified by the TCD.
 
 \begin{equation}\label{eq:volume_fraction}
   \bar{X_{i}}= \frac{n_{i}}{n_{tot}}
 \end{equation}
 
-All measurements were repeated at least twice at each location along the centerline of the pool fire. Gas species concentration measurements made at the same location were averaged. The variance in the gas species volume fraction varied between location and species. A detailed description of the uncertainty analysis for the gas species measurement and calibration is discussed in Appendix~\ref{sec:UncertaintyGasSpecies} and \ref{sec:Uncertainty Analysis of Gas Species Calibrations}, respectively.
+All measurements were repeated at least twice at each location along the centerline of the pool fire. Gas species concentration measurements made at the same location were averaged. The variance in the gas species volume fraction was a function of location and species. A detailed description of the uncertainty analysis for the gas species measurement and its calibration is discussed in Appendices~\ref{sec:UncertaintyGasSpecies} and \ref{sec:Uncertainty Analysis of Gas Species Calibrations}, respectively.
 
 \subsection{Determining Soot Mass Fraction}
 \label{ssec:Soot_Setup}
 
-Soot was collected simultaneously with gas samples using the sampling procedure described in Section~\ref{ssec:Gas_Species_Setup}. Before a test, a 47~\si{mm} PTFE filter was weighed and subsequently placed into an in-line stainless steel particulate filter holder (Gelman Sciences 1235). During a test, the filter holder was positioned within the gas sampling line behind the quenching probe and heated to 140~°\si{C} using heating tape to prevent condensation of water and liquid fuels on the filter. After testing, the PTFE filter was removed from the filter holder and dried in a desiccator. After drying for a 48~\si{hrs} period, the PTFE filter's final weight was measured. Typically 1\textasciitilde2~\si{mg} of soot was collected during the gas sampling period.
+Soot was collected simultaneously with gas samples using the sampling procedure described in Section~\ref{ssec:Gas_Species_Setup}. Before a test, a dessicated 47~\si{mm} Polytetrafluoroethylene (PTFE) filter was weighed and subsequently placed into an in-line stainless steel particulate filter holder~\cite{GelmanSciences1235}. During a test, the filter holder was positioned within the gas sampling line behind the quenching probe and heated to 140~°\si{C} using heating tape to prevent condensation of water and liquid fuels on the filter. After testing, the PTFE filter was removed from the filter holder and dried in a desicator. After desicating for 48~\si{hrs}, the PTFE filter's final weight was measured. Approximately 2~\si{mg} of soot was collected during the gas sampling period which varied from 12~\si{min} to 25~\si{min} depending on the sampling location within the fire.
 
-After some tests, soot deposits were observed on the inner walls of the quenching probe. As shown in Fig.~\ref{fig:Soot_Probe_Setup} dried gun cleaning patches were used to clean the inside of the quenching probe. Multiple patches were used to collect soot on the inside of the probe. Soot collection using patches concluded once a patch was observed to have collected no soot after sweeping through the inner walls of the quenching probe. Patches were weighed immediately before and 48~\si{hrs} after cleaning the inside of the probe. The soot collected from the dry patches was accounted for when calculating the soot mass fraction. The portion of the soot collected on inner walls of the quenching probe relative to the PTFE filter varied based on the sampling location. The mass of the PTFE filter and cleaning patches were measured three times before and after each test.
+After some tests, soot deposits were observed on the inner walls of the quenching probe. As shown in Fig.~\ref{fig:Soot_Probe_Setup} desicated gun cleaning patches were used to clean the inside of the quenching probe. At least two patches were used to collect soot on the inside of the probe. Soot collection using patches concluded once a patch was observed to have no soot after being swept through the inner walls of the quenching probe. Patches were weighed immediately before and 48~\si{hrs} after cleaning the inside of the probe. The soot collected from the dry patches was accounted for when calculating the soot mass fraction. The portion of the soot collected on the inner walls of the quenching probe relative to the PTFE filter varied based on the sampling location. The mass of the PTFE filter and cleaning patches were measured three times before and after each test.
 
 \begin{figure}[ht!]
 	\centering
@@ -312,56 +312,59 @@ After some tests, soot deposits were observed on the inner walls of the quenchin
 	\label{fig:Soot_Probe_Setup}
 \end{figure}
 
-The soot mass fraction, $M_{s}$, was computed from the mass of the soot collected from the PTFE filter and gun cleaning patches, $m_{s}$, the ratio of the mass flow controller's temperature reading, $T_{\infty}$, to the temperature at the probe entrance,$T_{p}$, the total mass of gas sampled, $M_{t}$, based on the mass flow controller readings. 
+The soot mass fraction, $M_{s}$, was computed from the mass of the soot collected from the PTFE filter and gun cleaning patches, $m_{s}$, the ratio of the mass flow controller's temperature reading, $T_{\infty}$, to the temperature at the probe entrance,$T_{p}$, the total mass of gas sampled, $M_{t}$, based on the mass flow controller readings:
 
 \begin{equation}\label{eq:soot_mass_frac}
   M_{s}= \frac{m_{s}}{M_{t}}\frac{T_{\infty}}{T_{p}}
 \end{equation}
-The total mass of gas sampled was estimated from product of the average volumetric flow rate measured by the mass flow controller, $\dot{V}$, the density of the sample gas, $\rho_{g}$, and the gas sampling time, $t$. 
+The total mass of gas sampled was estimated from product of the average volumetric flow rate measured by the mass flow controller, $\dot{V}$, the density of the sample gas injected into the GC/MSD, $\rho_{g}$, and the gas sampling time, $t$. 
 \begin{equation}\label{eq:total_mass}
 M_{t}= \dot{V}\cdot \rho_{g}\cdot t
 \end{equation} 
-In Eq.\ref{eq:total_mass}, the density of the sample gas was determined from the total mass detected in the TCD chromatogram, $m_{tot}$, over the volume of the sample loop, $V_{sl}$. 
+In Eq.\ref{eq:total_mass}, the density of the sample gas was determined from the total mass detected in the TCD chromatogram, $m_{tot}$, for the injected sample volume, $V_{s}$. 
 \begin{equation}\label{eq:gas_density}
-\rho_{g}= \frac{m_{tot}}{V_{sl}}
+\rho_{g}= \frac{m_{tot}}{V_{s}}
 \end{equation} 
 
 The uncertainty of the soot mass fraction was estimated from a combined uncertainty of the Type A evaluation of standard uncertainty in the variation of temperature and mass measurements and the Type B standard uncertainty in the bias errors of the instrumentation. A detailed description of the soot mass fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Soot_Frac}.
 
+\section{Mixture Fraction}
+\label{sec:Mixture_Fraction}
+
 \section{Results}
 \label{sec:Results}
-Brief observations of each pool fire of a different fuel are described in the first portion of this section. The key results of this work are the local gas species and soot measurements made at incremental heights along the centerline of medium-scale pool fires using various fuels such as methanol, ethanol, and acetone. A more in-depth analysis of the relationships between different measured gas is also provided in this section.
+Brief observations of each pool fire burning different fuels are described in the first portion of this section. The key results of this work are the local gas species and soot measurements made at incremental heights along the centerline of medium-scale pool fires using various fuels such as methanol, ethanol, and acetone. A more in-depth analysis of the relationships between different measured gas is also provided in this section.
 
-\subsection{Flame Structure Observations}
-\label{ssec:Flame_Structure}
+\subsection{Flame Observations}
+\label{ssec:Flame_Observations}
 
 Figure~\ref{fig:Flame_Structure} displays a series of snapshots depicting the flame pulsation of the methanol, ethanol, and acetone pool fires in the 30.0~\si{cm} stainless-steel water-cooled burned. A repeated cycle was observed in each of the pool fires; uniformly curved flame sheets present at the burner rim would roll towards the fire centerline to form a long and narrow plume.
 \begin{figure}[!]
 	\centering
 \includegraphics[width=12.0cm,keepaspectratio]{Flame_Structure.png}
-	\caption[Pool Fire Structures]{Flame Structures of Methanol (top), Ethanol (middle), and Acetone (bottom) Pool Fires during their pulsing cycles}
+	\caption[Pool Fire Structures]{Flame structures of methanol (top), ethanol (middle), and acetone (bottom) pool fires during their pulsing cycles}
 	\label{fig:Flame_Structure}
 \end{figure}
 
 The shape and visible color of the fires differed between the different fuel types. The methanol fire appeared to be completely blue, whereas the ethanol and acetone fires primarily consisted of vibrant yellow and orange colors. The methanol pool fire was observed to exhibit a weak turbulent structure compared to the fully developed fires of the other two fuels.  The sequential order from smallest to largest of the time-averaged flame height of each pool fire was as follows: methanol, ethanol, acetone. Table~\ref{tab:Pool_Fire_Parameters_Table} provides a list of measurements of each pool fire. The observed dynamic shapes were consistent with previous experiments~\cite{Hamins2016,Hamins1994,Hamins1991,Hamins1996,Lock2008}.
 
 \begin{table}[!]
-\caption{List of measurements obtained in a well-ventilatedm round, steady, 30.0~\si{cm} diameter pool fire burning in a quiescent environment. The uncertainty of measuremetns made of the pool fire parameters is discussed in deatail in Appendix~\ref{sec:Uncertainty_Pool_Fire_Parameters}}
+\caption{List of measurements obtained in a well-ventilated round, steady, 30.0~\si{cm} diameter pool fire burning in a quiescent environment. The uncertainty of measurements of fire parameters are discussed in deatail in Appendix~\ref{sec:Uncertainty_Pool_Fire_Parameters}}
 \label{tab:Pool_Fire_Parameters_Table}
 \centering
 	\footnotesize
 	\begin{tabular}{lccc}
-			\hline
+\hline
 %\\[0.0005cm]
 \textbf{Parameter (units)} &\textbf{Methanol}& \textbf{Ethanol}& \textbf{Acetone}\\
 \hline
 \\[0.01cm]
-Mean Flame Height~(\si{m})	&	X±x	&	X±x	&	X±x\\
+Mean Flame Height~(\si{cm})	&	40.5~±1~4.8		&	61.1~±~14.1	&	87.3~±~16.4\\	
 \\[0.01cm]
-Pulsation Frequency~(\si{Hz}) 	&	X±x	&	X±x	&	X±x\\
+Mass Burning Flux~(\si{g/{m^2 s}})		&	12.4~±~1.1			&	13.9~±~0.8		&	17.6~±~2.7\\
 \\[0.01cm]
-Mass Loss Rate~(\si{g/s})		&	X±x	&	X±x	&	X±x\\
-\\[0.01cm]
+Heat Release Rate~(\si{kW})	&	17.4~±~1.4			&	26.3~±~1.5		&	35.5~±~5.4\\
+%\\[0.01cm]
 \hline
 \end{tabular}
 \end{table}
@@ -374,8 +377,12 @@ Mass Loss Rate~(\si{g/s})		&	X±x	&	X±x	&	X±x\\
 \subsection{Soot Mass Fraction}
 \label{ssec:Soot_Mass_Fraction}
 
-\subsection{Relationship Between Soot and Gas Species Measurements}
-\label{ssec:Relationship_Between_Soot_and_Gas_Species_Measurements}
+\subsection{Mixture Fraction Results}
+\label{ssec:Mixture_Fraction_Results}
+
+\subsection{Carbon Balance}
+\label{ssec:Carbon Balance}
+
 
 \section{Conclusion}
 \label{sec:Conclusion}
@@ -401,7 +408,7 @@ Mass Loss Rate~(\si{g/s})		&	X±x	&	X±x	&	X±x\\
 \newcommand{\section@cntformat}{Appendix:\ }
 \makeatother
 
-\section{Appendix A: Uncertainty Analysis of Gas Species Concentration} \label{sec:UncertaintyGasSpecies}
+\section{Uncertainty Analysis of Gas Species Concentration} \label{sec:UncertaintyGasSpecies}
 \addcontentsline{toc}{section}{Appendix A: Uncertainty Analysis of Gas Species Concentration}
 
 As shown in Eq.~\ref{eq:volume_fraction}, volume fraction, $\bar{X_{i}}$ was calculated from the ratio between the number of moles of a given species, $n_{i}$, and the total number of moles identified, $n_{tot}$. The uncertainty of the measured volume fraction was estimated using the law of propagation of uncertainty after determining the volume fraction of each species:
@@ -434,17 +441,17 @@ where $N$ is the number of a species identified species in the TCD chromatogram.
 
 \pagebreak
 
-\section{Appendix B: Uncertainty Analysis of Gas Species Calibrations}\label{sec:Uncertainty Analysis of Gas Species Calibrations}
+\section{Uncertainty Analysis of Gas Species Calibrations}\label{sec:Uncertainty Analysis of Gas Species Calibrations}
 \addcontentsline{toc}{section}{Appendix B: Uncertainty Analysis of Gas Species Calibrations}
 
-A calibration function is a relationship between an integrated peak area, $Area_{i}$, and the number of moles of a given species injected into the GC/MSD, $n_{i}$. A calibration function was determined by injecting a known amount of moles of a given species into the GC/MSD, $n_{i,cal}$, and identifying the peak area corresponding to the individual species. For this work, the calibration functions are found to be linear consisting of a slope, $a$, and intercept, $b$.
+A calibration function is a relationship between an integrated peak area on the TCD chromatogram, $Area_{i}$, and the number of moles of a given species injected into the GC/MSD, $n_{i}$. A calibration function was determined by injecting a known amount of moles of a given species into the GC/MSD, $n_{i,cal}$, and identifying the peak area corresponding to the individual species. For this work, the calibration functions are approximately linear consisting of a slope, $a$, and intercept, $b$.
 
 \begin{equation}
 \label{eq:Calibration Curve}
 n_{i,cal} = a(Area_{i})+b
 \end{equation}
 
-Calibration functions are weighted to account for the error of each gas standard used in the calibration procedure. The uncertainty of a calibration function was determined using the law of propagation of uncertainty:
+Calibration functions were weighted to account for the error of each gas standard used in the calibration procedure. The uncertainty of a calibration function was determined using the law of propagation of uncertainty:
 
 \begin{equation}
 \label{eq:Given_Moles_Uncertainty}
@@ -461,13 +468,13 @@ u_{\rm \scriptscriptstyle b} =\sqrt{\frac{\sum~\frac{Area_{i}^2}{u_{n_{i,cal}}}}
 \end{equation}
 where $u_{n_{i,cal}}$ is the uncertainty of the known number of moles of the respective species.
 
-During calibration, the number of moles of a given species $n_{i,cal}$ was calculated from the product of the total moles injected into the GC/MSD, $n_{tot,inj}$ and a known concentration the particular species in a calibration standard, $C_{i}$.
+During calibration, the number of moles of a given species $n_{i,cal}$ was calculated from the product of the total moles injected into the GC/MSD, $n_{tot,inj}$ and the known concentration of the particular species in the calibration standard, $C_{i}$.
 
 \begin{equation}
 \label{eq:Cal_Moles}
 n_{i,cal} = C_{i}(n_{tot,inj})
 \end{equation}
-A collection of gas calibration standards with a variety of species were pre-selected to provide a broad range of concentrations. A list of gas standards used in this work, with their respective concentrations and Type B evaluation of standard uncertainty, is provided in Appendix~\ref{sssec:Table of Gas Standards with Error}.
+A collection of gas calibration standards for a variety of species were pre-selected to provide a broad range of concentrations. All calibration standards were mixtures of the target gas species with a Nitrogen balance, with the exception of one standard balanced in Air. A list of gas standards used in this work, with their respective concentrations and Type B evaluation of standard uncertainty, is provided in Appendix~\ref{sssec:Table of Gas Standards with Error}.
 
 The uncertainty of the number of moles of a given species injected into the GC/MSD for calibration was estimated using the law of propagation of uncertainty:
 
@@ -479,12 +486,12 @@ The uncertainty of the number of moles of a given species injected into the GC/M
 \subsection{Total Moles Injected into the GC/MSD for Calibation}
 \label{ssec:Total Moles Injected into the GC/MSD for Calibation}
 
-The total moles injected into the GC/MSD for calibration was determined from pressure, $P$, temperature, $T$, and volume, $V$ measurements of the gas sample injected into the GC/MSD using the experimental setup described in Section~\ref{ssec:Gas_Species_Setup}. The injected sample was assumed to be an ideal gas using R as the universal gas constant (287~J/(mol $\cdot$K).
-
+The total moles injected into the GC/MSD for calibration was determined from the pressure, $P$, temperature, $T$, and volume, $V$, of the gas sample injected into the GC/MSD using the experimental setup described in Section~\ref{ssec:Gas_Species_Setup}. The injected sample was assumed to be an ideal gas: 
 \begin{equation}
 \label{eq:molesinjected}
 n_{tot, inj} = \frac{PV}{RT}
 \end{equation}
+where $R$ is the universal gas constant (287~J/(mol $\cdot$K).
 
 Pressure and temperature measurements were made using an Omega Digital Pressure Gauge (DPG409-030DWU) and K Type Thermocouple located at the GC/MSD Sample Loop injection valve, respectively, sampling at 2~\si{Hz} for 50~\si{s}. The volume of the GC/MSD sample loop, $V_{sl}$, was assumed to be 2~\si{ml}. The Type A evaluation of uncertainty of the total moles injected into the GC/MSD for calibration was determined from the standard error of the pressure, $s_{P}$, and temperature, $s_{T}$ readings from the sampling period. The Type B evaluation of uncertainty for the total moles injected into the GC/MSD for calibration is determined from the bias error sources in the instrumentation, $u_{inst}$, used to measure pressure (0.008\% accuracy of the reading), temperature (1.5~$^\circ$C), and volume (0.02 ml) of gas sample injected. The combined uncertainty of the pressure, temperature, and volume was found via quadrature:
 
@@ -526,8 +533,8 @@ A table of the gas standards with their respective concentrations and Type B eva
 200 ppm Acetone		&	2.00	&	Gasco Affiliates, LLC. 		&	DNJ-ACE-200N-1		\\
 0.26\% Acetylene		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-M24-0.25\%-1		\\
 1.04\% Acetylene		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-M24-1		\\
-1.02\% Argon			&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-2-1N-1		\\
-88.5\% Argon			&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-2-90N-1		\\
+1.02\% Argon		&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-2-1N-1		\\
+88.5\% Argon		&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-2-90N-1		\\
 100 ppm Benzene		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-21-100-3		\\
 15.6\% Carbon Dioxide	&	0.04	&	NIST Gas Sensing Metrology Group		&	9-C-44		\\
 24.5\% Carbon Dioxide	&	2.00	&	Gasco Affiliates, LLC. 		&	KBI-35-25-1		\\
@@ -539,30 +546,29 @@ A table of the gas standards with their respective concentrations and Type B eva
 0.02\% Carbon Monoxide	&	2.00	&	Matheson Tri-Gas		&	9306620888		\\
 0.11\% Carbon Monoxide	&	2.00	&	Roberts Oxygen			&	1002080917		\\
 4.00\% Carbon Monoxide	&	2.00	&	Praxair Doistribution Inc. 	&	304113044702		\\
-7.81 Carbon Monoxide	&	0.02	&	NIST Gas Sensing Metrology Group 		&	??????		\\
-0.51\% Ethane			&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-62N-0.5-1		\\
-1.00\% Ethane			&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-152N-1-1\%-1		\\
-2.55\% Ethane			&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-152N-2.5-1		\\
-0.51\% Ethylene			&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-62N-0.5\%-1		\\
-1.02\% Ethylene			&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-62N-1\%-1		\\
-2.55\% Ethylene			&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-62N-2.5\%-1		\\
+7.81\% Carbon Monoxide	&	0.02	&	NIST Gas Sensing Metrology Group 		&	??????		\\
+0.51\% Ethane		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-62N-0.5-1		\\
+1.00\% Ethane		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-152N-1-1\%-1		\\
+2.55\% Ethane		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-152N-2.5-1		\\
+0.51\% Ethylene		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-62N-0.5\%-1		\\
+1.02\% Ethylene		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-62N-1\%-1		\\
+2.55\% Ethylene		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-62N-2.5\%-1		\\
 0.26\% Hydrogen		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-84-0.25-1		\\
 0.50\% Hydrogen		&	2.00	&	Gasco Affiliates, LLC.		&	KBI-84-0.5-1		\\
 1.00\% Hydrogen		&	2.00	&	Gasco Affiliates, LLC.		&	KBI-84-1-3		\\
 2.00\% Hydrogen		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-84-2-5		\\
 4.03\% Hydrogen		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-84-4-2		\\
-0.40\% Methane			&	2.00	&	Gasco Affiliates, LLC. 		&	DBJ-135N-0.4-1		\\
-3.95\% Methane			&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-135N-4-2		\\
-40.8\% Methane			&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-135N-40-1		\\
-0.50\% Oxygen			&	2.00	&	Gasco Affiliates, LLC. 		&	DBJ-2-90N-1		\\
-1.97\% Oxygen			&	0.01	&	NIST Gas Sensing Metrology Group		&	73-D-03		\\
-5.02\% Oxygen			&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-161-5-5		\\
-9.92\% Oxygen			&	0.02	&	NIST Gas Sensing Metrology Group		&	72-D-60		\\
-10.2\% Oxygen			&	2.00	&	Gasco Affiliates, LLC. 		&	KBI-161-10-6		\\
-20.7\% Oxygen			&	0.04	&	NIST Gas Sensing Metrology Group		&	71-D-51		\\
-0.42\% Propane			&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-176N-0.4-1		\\
-39.6\% Propane			&	2.00	&	Gasco Affiliates, LLC. 		&	DBJ-176N-40-1		\\
-
+0.40\% Methane		&	2.00	&	Gasco Affiliates, LLC. 		&	DBJ-135N-0.4-1		\\
+3.95\% Methane		&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-135N-4-2		\\
+40.8\% Methane		&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-135N-40-1		\\
+0.50\% Oxygen		&	2.00	&	Gasco Affiliates, LLC. 		&	DBJ-2-90N-1		\\
+1.97\% Oxygen		&	0.01	&	NIST Gas Sensing Metrology Group		&	73-D-03		\\
+5.02\% Oxygen		&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-161-5-5		\\
+9.92\% Oxygen		&	0.02	&	NIST Gas Sensing Metrology Group		&	72-D-60		\\
+10.2\% Oxygen		&	2.00	&	Gasco Affiliates, LLC. 		&	KBI-161-10-6		\\
+20.7\% Oxygen		&	0.04	&	NIST Gas Sensing Metrology Group		&	71-D-51		\\
+0.42\% Propane		&	2.00	&	Gasco Affiliates, LLC.		&	DBJ-176N-0.4-1		\\
+39.6\% Propane		&	2.00	&	Gasco Affiliates, LLC. 		&	DBJ-176N-40-1		\\
 \\[0.005cm]
 \hline
 \end{tabular}
@@ -572,7 +578,7 @@ A table of the gas standards with their respective concentrations and Type B eva
 \subsection{Concentration of Vapors from Bubblers}
 \label{sssec:Concentration of Vapors from Bubblers}
 
-Liquid material concentrations are calibrated from the ratio of the liquid-vapor pressure to the pressure injected into the GC/MSD.
+Liquid material concentrations were calibrated from the ratio of the liquid-vapor pressure to the total pressure injected into the GC/MSD.
 
 \begin{equation}
 \label{eq:liquid_vapor_concentration}
@@ -615,7 +621,7 @@ Water		&	73.649	&	-7258.2	&	-7.3037	&	4.1653E-6	& 	2.00	&  0.20\\
 \end{tabular}
 \end{table}
 
-The concentration range of each calibrated liquid typically spanned between 2~\% and 50~\%. Liquid bath temperatures are controlled using a heating plate positioned underneath the insulated bubbler. The temperature of the bath, $T_{b}$, is measured using a K Type thermocouple placed at the liquid bath's surface. The liquid bath temperature measurements are sampled at 2~\si{Hz} for 50~\si{s} simultaneously with pressure and temperature measurements of the GC/MSD sample loop. Liquid-vapor calibrations are conducted once the bath temperature achieved steady-state (approximately 1 hour) and the Nitrogen/vapor gas has swept through the GC/MSD sample loop. Upon injection into the GC/MSD, pressure and temperature measurements of the sample loop are made a previously describe in Appendix~\ref{ssec:Total Moles Injected into the GC/MSD for Calibation}.
+The concentration range of each calibrated liquid typically spanned between 2~\% and 50~\%. Liquid bath temperatures were controlled using a heating plate positioned underneath the insulated bubbler. The temperature of the bath, $T_{b}$, was measured using a K Type thermocouple placed at the liquid bath's surface. The liquid bath temperature measurements were sampled at 2~\si{Hz} for 50~\si{s} simultaneously with pressure and temperature measurements of the GC/MSD sample loop. Liquid-vapor calibrations were conducted once the bath a steady-state temperature (approximately 1 hour) and the Nitrogen/vapor gas mixture has swept through the GC/MSD sample loop. Upon injection into the GC/MSD, pressure and temperature measurements of the sample loop are made as previously describe in Appendix~\ref{ssec:Total Moles Injected into the GC/MSD for Calibation}.
 
 The uncertainty of the concentration determined using Eq.~\ref{eq:liquid_vapor_concentration} was estimated using the law of propagation of uncertainty:
 \begin{equation}
@@ -640,13 +646,13 @@ u_{\scriptscriptstyle T_{B}} = \sqrt{u_{\rm \scriptscriptstyle inst.}^2 + s_{\sc
 
 \pagebreak
 
-\section{Appendix C: Uncertainty Analysis of the Soot Mass Fraction} \label{sec:Uncertainty_Soot_Frac}
+\section{Uncertainty Analysis of the Soot Mass Fraction} \label{sec:Uncertainty_Soot_Frac}
 \addcontentsline{toc}{section}{Appendix C: Uncertainty Analysis of the Soot Mass Fraction}
-Local soot mass fraction measurements, $M_{s}$ made at various heights from pool fires of different fuels were calculated through a combination of Eq.~\ref{eq:soot_mass_frac}, \ref{eq:total_mass}, and \ref{eq:gas_density}:
+The local soot mass fraction measurements, $M_{s}$ made at various heights above the fuel surface in pool fires of different fuels were calculated through a combination of Eq.~\ref{eq:soot_mass_frac}, \ref{eq:total_mass}, and \ref{eq:gas_density}:
 \begin{equation}\label{eq:overall_soot_mass_frac}
  M_{s}= \frac{m_{s}~V_{sl}}{\dot{V}~t~m_{tot}}\frac{T_{\infty}}{T_{p}}
 \end{equation}
-where $m_{s}$ is mass of soot collected from the PTFE filter and gun cleaning patches, $\dot{V}$ is the volumetric flow rate measured by the mass flow controller, $V_{sl}$ is the volume of the sample loop, $\sum~n_{i}\cdot\bar{M_{i}}$ is the total mass of the gas sample detected in the TCD chromatogram calculated from the summation of the product of the number of moles of a given species and their respective molar mass, $T_{\infty}/T_{p}$ is the ratio of the internal gas flow temperature readings of the mass flow controller to the temperature of the probe, and $t$ is the total sampling time. The uncertainty of the measured soot mass fraction was estimated using the law of propagation of uncertainty after determing the soot mass fraction:
+where $m_{s}$ is the mass of soot collected on the PTFE filter and gun cleaning patches, $\dot{V}$ is the volumetric flow rate measured by the mass flow controller, $V_{sl}$ is the volume of the sample loop, $\sum~n_{i}\cdot\bar{M_{i}}$ is the total mass of the gas sample detected in the TCD chromatogram calculated from the summation of the product of the number of moles of a given species and their respective molar mass, $T_{\infty}/T_{p}$ is the ratio of the internal gas flow temperature readings of the mass flow controller to the temperature of the probe, and $t$ is the total sampling time. The uncertainty of the measured soot mass fraction was estimated using the law of propagation of uncertainty after determing the soot mass fraction:
 
 \begin{equation}
 \label{eq:soot_mass_frac_uncertainty}
@@ -666,7 +672,7 @@ u_{\scriptscriptstyle m_{s}} = \sqrt{u_{\rm \scriptscriptstyle inst}^2 + s_{\scr
 \subsection{Mass Flow Controller Volumetric Flow Rate}
 \label{ssec:Mass_Flow_Controller_Volumetric_Flow_Rate}
 
-A mass flow controller is used to measure the volumetric flow rate, $\dot{V}$, within the gas sampling line. The Type A evaluation of standard uncertainty was taken as the standard deviation of the flow measurements sampled at 2~\si{Hz} for approximately 12~\si{min} during the sampling period. The Type B evaluation of standard uncertainty was determined from the calibration error, $u_{cal}$, and the precision error sources at calibration conditions, $u_{p}$, defined as $2~\si{ml}$ and 0.8~\% of the reading + 0.2~\% of the full scale ($2~\si{Lpm}$), respectively. The combined uncertainty is calculated via quadrature:
+A mass flow controller was used to measure the volumetric flow rate, $\dot{V}$, within the gas sampling line. The Type A evaluation of standard uncertainty was taken as the standard deviation of the flow measurements sampled at 2~\si{Hz} during the gas sampling period which varied from12~\si{min} to 25~\si{min} depending on the sampling location within the fire. The Type B evaluation of standard uncertainty was determined from the calibration error, $u_{cal}$, and the precision error sources at calibration conditions, $u_{p}$, defined as $2~\si{ml}$ and 0.8~\% of the reading + 0.2~\% of the full scale ($2~\si{Lpm}$), respectively. The combined uncertainty is calculated via quadrature:
 
 \begin{equation}
 \label{eq:volumetric_flow_uncertainty}
@@ -676,7 +682,7 @@ u_{\scriptscriptstyle \dot{V}} = \sqrt{u_{\rm \scriptscriptstyle p}^2 + u_{\rm \
 \subsection{GC/MSD Sample Loop Volume}
 \label{ssec:Sample_Loop_Volume}
 
-All gas sampling experiments and calibrations were conducted using a 2~\si{ml} sampling loop. The Type B evaluation of standard uncertainty of the GC/MSD sample loop was assumed to be 1~\% of the volume. \footnote{The uncertainty of the sample loop was assumed to be 1~\% after contacting the manufacturer.}
+All gas sampling experiments and calibrations were conducted using a 2~\si{ml} sampling loop. The Type B evaluation of standard uncertainty of the GC/MSD sample loop volume was assumed to be 1~\%. \footnote{The uncertainty of the sample loop was assumed to be 1~\% after contacting the manufacturer.}
 
 \subsection{Total Mass Injected into the GC/MSD}
 \label{ssec:Total_Mass_Injected_into_GC/MSD}
@@ -705,17 +711,17 @@ The mass flow controller provides an internal gas flow temperature reading that 
 
 \pagebreak
 
-\section{Appendix D:Uncertainty Analysis of Pool Fire Parameters}\label{sec:Uncertainty_Pool_Fire_Parameters}
+\section{Uncertainty Analysis of Pool Fire Parameters}\label{sec:Uncertainty_Pool_Fire_Parameters}
 \addcontentsline{toc}{section}{Appendix D: Uncertainty of Pool Fire Parameters}
 
 \subsection{Mean Flame Height}
 \label{ssec:Mean_Flame_Height}
 
-\subsection{Pulsation Frequency}
-\label{ssec:Pulsation_Frequency}
-
 \subsection{Mass Loss Rate}
 \label{ssec:Mass_Loss_Rate}
+
+\subsection{Heat Release Rate}
+\label{ssec:Heat_Release_Rate}
 
 \pagebreak
 
