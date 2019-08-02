@@ -89,7 +89,7 @@ pdfkeywords={} %%put keywords here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\pubnumber}{XXXX}
 \newcommand{\DOI}{https://doi.org/10.6028/NIST.TN.XXXX}
-\newcommand{\monthyear}{July 2019}
+\newcommand{\monthyear}{August 2019}
 
 
 \newcommand*\chem[1]{\ensuremath{\mathrm{#1}}}
@@ -125,6 +125,7 @@ pdfkeywords={} %%put keywords here
 \large Ryan Falkesntein-Smith\\
 \large Anthony Hamins\\
 \large Kunhyuk Sung\\
+\large Jian Chen\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	The DOI is automated based on metadata.	
@@ -136,7 +137,7 @@ pdfkeywords={} %%put keywords here
 %	NIST LOGO - keep as-is
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\includegraphics[width=0.3\linewidth]{NIST-logo.eps}\\ 
+\includegraphics[width=0.3\linewidth]{NIST-logo}\\ 
 
 
 \end{flushright}
@@ -185,7 +186,7 @@ Jian Chen\\
 %  Department of Commerce LOGO - leave as-is
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 
-\includegraphics[width=0.18\linewidth]{DoC-logo.eps}\\ 
+\includegraphics[width=0.18\linewidth]{DoC-logo}\\ 
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Department of Commerce & NIST Leadership 
@@ -250,7 +251,7 @@ In this study, measurements are made in a 30.0~\si{cm} diameter pool fire using 
 \section{Description of Experiments}
 \label{sec:Experiments}
 
-The methods used in this work to investigate pool fires have been documented previously~\cite{Hamins2016,Hamins1994,Hamins1991,Hamins1996,Lock2008}. Experiments are conducted under a canopy hood surrounded by a 2.5~\si{m}~x~2.5~\si{m}~x~2.5~\si{m} enclosure made of a double-mesh screen wall. The walls of the enclosure were formed by a double layer of the wire-mesh screen (5 mesh/cm) that reduced the influence of compromising room flows that could disrupt the pool fire’s flow field. All measurements were made once the burning conditions, specifically the mass burning rate, reached steady-state, achieved approximately 10~\si{min} after ignition.
+The methods used in this work to investigate pool fires have been documented previously~\cite{Hamins2016,Hamins1994,Hamins1991,Hamins1996,Lock2008}. Experiments are conducted under a canopy hood surrounded by a 2.5~\si{m} x 2.5 \si{m} x 2.5~\si{m} enclosure made of a double-mesh screen wall. The walls of the enclosure were formed by a double layer of the wire-mesh screen (5 mesh/cm) that reduced the influence of compromising room flows that could disrupt the pool fire’s flow field. All measurements were made once the burning conditions, specifically the mass burning rate, reached steady-state, achieved approximately 10~\si{min} after ignition.
 
 \subsection{Pool Burner Setup}
 \label{ssec:Pool_Burner_Setup}
@@ -296,7 +297,17 @@ The volume fraction, $\bar{X_{i}}$, was calculated from the ratio between the nu
   \bar{X_{i}}= \frac{n_{i}}{n_{tot}}
 \end{equation}
 
-All measurements were repeated at least twice at each location along the centerline of the pool fire. Gas species concentration measurements made at the same location were averaged. The variance in the gas species volume fraction was a function of location and species. A detailed description of the uncertainty analysis for the gas species measurement and its calibration is discussed in Appendices~\ref{sec:UncertaintyGasSpecies} and \ref{sec:Uncertainty Analysis of Gas Species Calibrations}, respectively.
+The mass fraction, $\bar{Y_{i}}$, of each species $i$ was calculated from the measured volume fraction, $\bar{X_{i}}$, using the folowing expression:
+\begin{equation}\label{eq:mass_fraction}
+\bar{Y_{i}}=\frac{\bar{X_{i}}~\bar{M_{i}}}{\bar{M_{tot}}}
+\end{equation}
+where ${\bar{M_{i}}}$ is the molecular weight of a given species and ${\bar{M_{tot}}}$ is the average molecular weight of all detected gas species represented in the function below. 
+
+ \begin{equation}\label{eq:Total_MW}
+\bar{M_{tot}}=\sum{\bar{X_{i}}~bar{M_{i}}}
+\end{equation}
+
+All measurements using the GC/MSD were repeated at least twice at each location along the centerline of the pool fire. Gas species concentration measurements made at the same location were averaged. The variance in the gas species volume fraction was a function of location and species. A detailed description of the uncertainty analysis for the gas species measurement and its calibration is discussed in Appendices~\ref{sec:UncertaintyGasSpecies} and \ref{sec:Uncertainty Analysis of Gas Species Calibrations}, respectively.
 
 \subsection{Determining Soot Mass Fraction}
 \label{ssec:Soot_Setup}
@@ -326,10 +337,21 @@ In Eq.\ref{eq:total_mass}, the density of the sample gas was determined from the
 \rho_{g}= \frac{m_{tot}}{V_{s}}
 \end{equation} 
 
-The uncertainty of the soot mass fraction was estimated from a combined uncertainty of the Type A evaluation of standard uncertainty in the variation of temperature and mass measurements and the Type B standard uncertainty in the bias errors of the instrumentation. A detailed description of the soot mass fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Soot_Frac}.
+The uncertainty of the soot mass fraction was estimated from a combined uncertainty of the Type A evaluation of standard uncertainty in the variation of temperature and mass measurements and the Type B standard uncertainty in the bias errors of the instrumentation. A detailed description of the soot mass fraction uncertainty is provided in Appendix~\ref{sec:Uncetainty_Soot_Frac}.
 
 \section{Mixture Fraction}
 \label{sec:Mixture_Fraction}
+The mixture fraction, $Z$, was based on carbon containing species and was defined as follows:
+\begin{equation}\label{eq:Mixture_Fraction}
+Z=Y_{F}+\frac{\bar{M_{F}}}{x}\sum{\frac{Y_{i}}{\bar{M_{i}}}}
+\end{equation} 
+where $Y_{F}$, $\bar{M_{F}}$, and $x$ are the mass fraction, molecular weight, and number of carbon molecules of the parent fuel, respectively.
+
+Considering the idealized reaction of a hydrocarbon fuel, the state reactions was derived as 
+
+where $max(\alpha,\beta)$ and $min(\alpha,\beta)$ are operators that return the larger and smaller, respectively, of the two parameters $\alpha$ and $\beta$. 
+
+%%% State of relations
 
 \section{Results}
 \label{sec:Results}
@@ -359,26 +381,65 @@ The shape and visible color of the fires differed between the different fuel typ
 \textbf{Parameter (units)} &\textbf{Methanol}& \textbf{Ethanol}& \textbf{Acetone}\\
 \hline
 \\[0.01cm]
-Mean Flame Height~(\si{cm})	&	40.5~±1~4.8		&	61.1~±~14.1	&	87.3~±~16.4\\	
+Mean Flame Height~(\si{cm})			&	40.5~±~14.8			&	61.1~±~14.1		&	87.3~±~16.4\\	
 \\[0.01cm]
 Mass Burning Flux~(\si{g/{m^2 s}})		&	12.4~±~1.1			&	13.9~±~0.8		&	17.6~±~2.7\\
 \\[0.01cm]
-Heat Release Rate~(\si{kW})	&	17.4~±~1.4			&	26.3~±~1.5		&	35.5~±~5.4\\
+Heat Release Rate~(\si{kW})			&	17.4~±~1.4			&	26.3~±~1.5		&	35.5~±~5.4\\
 %\\[0.01cm]
 \hline
 \end{tabular}
 \end{table}
 
+% Description of flame height calculation
+
+% Description of mass burning flux
+
+% Description of heat release rate
+
 \subsection{Gas Species Concentrations}
 \label{ssec:Gas_Species_Concentrations}
 
-%Figure~\ref{},\ref{},\ref{} display the averaged volume fraction, $\bar{X_{i}}$, of significant species measurements made at various heights along the methanol (\ce{CH3OH}), ethanol (\ch{C2H5OH}), %and acetone ($\chem{C_3H_6O}$) pool fire’s centerlines, respectively. Significanat species detected in the TCD chromatogram include reactants, fuels and oxygen ($\chem{O_2}$), combustion products such as water ($\chem{H_2O}$) and carbon dioxide ($\chem{CO_2}$), combustion intermediates such as carbon monoxide ($\chem{CO}$), hydrogen ($\chem{H_2}$), methane ($\chem{CH_4}$), and inert gases such as Nitrogen ($\chem{N_2}$) and Argon ($\chem{Ar}$). As expected, the fuel volume fractions were highest, and the oxygen volume fraction was the lowest close to the fuel surface. The product species were found to have a maximum volume fraction at approximately 4 cm above the fuel surface. The intermediate gas species were found to have peaked at approximately 2 cm above the fuel surface. Inert gases were shown to increase with the distance from the fuel surface. It was also found that the gas sampled from the centerline nearly mimicked the composition of air at approximately 60 cm above the fuel surface. 
+Figure~\ref{fig:Fuel_Comparison} displays the averaged volume fraction, $\bar{X_{i}}$, of significant species measurements made at various heights along the methanol, ethanol, and acetone fire centerlines. Significanat species detected in the TCD chromatogram include reactants, fuels and oxygen ($\chem{O_2}$), combustion products such as water ($\chem{H_2O}$) and carbon dioxide ($\chem{CO_2}$), combustion intermediates such as carbon monoxide ($\chem{CO}$), hydrogen ($\chem{H_2}$), methane ($\chem{CH_4}$), and inert gases such as Nitrogen ($\chem{N_2}$) and Argon ($\chem{Ar}$). 
+
+%% Edit this paragraph
+As expected, the fuel volume fractions were highest, and the oxygen volume fraction was the lowest close to the fuel surface. The product species were found to have a maximum volume fraction at approximately 4 cm above the fuel surface. The intermediate gas species were found to have peaked at approximately 2 cm above the fuel surface. Inert gases were shown to increase with the distance from the fuel surface. It was also found that the gas sampled from the centerline nearly mimicked the composition of air at approximately 60 cm above the fuel surface. 
+
+\begin{figure}[!]
+	\centering
+\includegraphics[width=12.0cm,keepaspectratio]{OVERALL_Fuel_Comparison.png}
+	\caption[Major Species Comparison]{Flame structures of methanol (top), ethanol (middle), and acetone (bottom) pool fires during their pulsing cycles}
+	\label{fig:Fuel_Comparison}
+\end{figure}
 
 \subsection{Soot Mass Fraction}
 \label{ssec:Soot_Mass_Fraction}
+%% Combine Soot Plots together; there is more soot for acetone than ethanol by an
 
 \subsection{Mixture Fraction Results}
 \label{ssec:Mixture_Fraction_Results}
+
+\begin{figure}[!]
+	\centering
+\includegraphics[width=12.0cm,keepaspectratio]{Methanol_Mass_Frac_Mix_Frac.png}
+	\caption[Averaged quasi-steady mass fraction of major species as a function of mixture fraction for a methanol pool fire]{Mass fractions of major species detected from a methanol pool fire centerline as a function of mixture fracton}
+	\label{fig:Methanol_Mix_Frac}
+\end{figure}
+
+\begin{figure}[!]
+	\centering
+\includegraphics[width=12.0cm,keepaspectratio]{Ethanol_Mass_Frac_Mix_Frac.png}
+	\caption[Averaged quasi-steady mass fraction of major species as a function of mixture fraction for an ethanol pool fire]{Mass fractions of major species detected from a ethanol pool fire centerline as a function of mixture fracton}
+	\label{fig:Ethanol_Mix_Frac}
+\end{figure}
+
+\begin{figure}[!]
+	\centering
+\includegraphics[width=12.0cm,keepaspectratio]{Acetone_Mass_Frac_Mix_Frac.png}
+	\caption[Averaged quasi-steady mass fraction of major species as a function of mixture fraction for a acetone pool fire]{Mass fractions of major species detected from a acetone pool fire centerline as a function of mixture fracton}
+	\label{fig:Acetone_Mix_Frac}
+\end{figure}
+
 
 \subsection{Carbon Balance}
 \label{ssec:Carbon Balance}
@@ -615,7 +676,7 @@ In this correlation, $P_{vap}$ is the vapor pressure calculated from the tempera
 Acetone	&	69.006	&	-5599.6	&	-7.0985	&	6.2237E-6	& 	2.00	&  3.00\\
 Ethanol	&	73.304	&	-7122.3	&	-7.1424	&	2.8853E-6	& 	2.00	&  1.00\\
 Methanol	&	82.718	&	-6904.5	&	-8.8622	&	7.4664E-6	& 	2.00	&  3.00\\
-Water		&	73.649	&	-7258.2	&	-7.3037	&	4.1653E-6	& 	2.00	&  0.20\\
+Water	&	73.649	&	-7258.2	&	-7.3037	&	4.1653E-6	& 	2.00	&  0.20\\
 \\[0.01cm]
 \hline
 \end{tabular}
@@ -686,7 +747,7 @@ All gas sampling experiments and calibrations were conducted using a 2~\si{ml} s
 
 \subsection{Total Mass Injected into the GC/MSD}
 \label{ssec:Total_Mass_Injected_into_GC/MSD}
-The total mass detected in the TCD chromatogram, $m_{tot}$, was calculated from the summation of products of the moles of given species and their respective molar mass. 
+The total mass detected in the TCD chromatogram, $m_{tot}$, was calculated from the summation of products of the moles of given species and their respective molar mass,$\bar{M_{i}}$: 
 
 \begin{equation}
 \label{eq:total_mass_detected_uncertainty}
