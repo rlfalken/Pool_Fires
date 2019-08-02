@@ -275,9 +275,11 @@ The heat release rate of each fuel, $\dot{Q}$, was calculated from Eq.\ref{eq:He
 \begin{equation}\label{eq:Heat_release_rate}
 \dot{Q}= m''\Delta H_{c}A
 \end{equation}
-where $\Delta H_{c}$ is the heat of the combustion of the burned fuel and $A$ is the cross-sectional area of the pool fire. The uncertainty of the heat release rate was calculated from the law of propagation of uncertainty which is detaled in Appendix~\ref{ssec:Heat_Release_Rate}.
+where $\Delta H_{c}$ is the heat of the combustion of the burned fuel provided by DIPPR\textsuperscript{\textregistered} and $A$ is the cross-sectional area of the pool fire. The uncertainty of the heat release rate was calculated from the law of propagation of uncertainty which is detaled in Appendix~\ref{ssec:Heat_Release_Rate}.
 
-Mean flame height was estimated from high quality video recordings of the methanol, ethanol, and acetone pool fire tests. 
+The mean flame height was estimated from 3600 frames obtained from high quality video recordings of the methanol, ethanol, and acetone pool fire tests. Frames were proccessed using MATLAB’s Image Processing Toolbox. Imported RGB images were decomposed into binary (black and white) images using a pre-set threshold level. The flame height for a single frame was defined as the distance between the pool surface and flame tip established using MATLAB software. The measurement was reapeated for each of the 3600 frames then averaged to provide the mean flame height. 
+
+The uncertainty of the mean flame height was estimated by combing the Type A and B evaluation of uncertainty defined as the variance of the averaged height measurements from each frame and the bias error of the distance measured in each frame. A detailed description of the uncertainty analysis for the mean flame height is described in Appendix~\ref{ssec:Mean_Flame_Heigh}.
 
 \begin{figure}[h!]
 	\centering
@@ -387,10 +389,10 @@ Figure~\ref{fig:Flame_Structure} displays a series of snapshots depicting the fl
 	\label{fig:Flame_Structure}
 \end{figure}
 
-The shape and visible color of the fires differed between fuel types. The methanol fire appeared to be completely blue, whereas the ethanol and acetone fires primarily consisted of vibrant yellow and orange colors. The methanol pool fire was observed to exhibit a weak turbulent structure compared to the fully developed fires of the other two fuels. The sequential order from smallest to largest of the time-averaged flame height of each pool fire was as follows: methanol, ethanol, acetone. Table~\ref{tab:Pool_Fire_Parameters_Table} provides a list of measurements made of each pool fire. The observed dynamic shapes were consistent with previous experiments~\cite{Hamins2016,Hamins1994,Hamins1991,Hamins1996,Lock2008}.
+The shape and visible color of the fires differed between fuel types. The methanol fire appeared to be completely blue, whereas the ethanol and acetone fires primarily consisted of vibrant yellow and orange colors. The methanol pool fire was observed to exhibit a weak turbulent structure compared to the fully developed fires of the other two fuels. The observed dynamic shapes were consistent with previous experiments~\cite{Hamins2016,Hamins1994,Hamins1991,Hamins1996,Lock2008}. Table~\ref{tab:Pool_Fire_Parameters_Table} provides a list of measurements made of each pool fire. The observed provide in the Table below are consistent with previous works \cite{Kim2019}. 
 
 \begin{table}[!]
-\caption{List of measurements obtained in a well-ventilated round, steady, 30.0~\si{cm} diameter pool fire burning in a quiescent environment. The uncertainty of measurements of fire parameters are discussed in deatail in Appendix~\ref{sec:Uncertainty_Pool_Fire_Parameters}}
+\caption{List of measurements obtained in a well-ventilated round, steady, 30.0~\si{cm} diameter pool fire burning in a quiescent environment. The uncertainty of measurements of fire parameters are discussed in detail in Appendix~\ref{sec:Uncertainty_Pool_Fire_Parameters}.}
 \label{tab:Pool_Fire_Parameters_Table}
 \centering
 	\footnotesize
