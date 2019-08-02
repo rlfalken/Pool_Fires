@@ -12,9 +12,9 @@
 \usepackage{amssymb}    % if you want extra symbols
 \usepackage{booktabs}
 \usepackage{bm}
-%\usepackage{mhchem}
 \usepackage{chemformula}
 \usepackage{float}
+%\usepackage{fourier}
 \usepackage[hang,flushmargin,bottom]{footmisc} % footnote format
 \usepackage{graphicx}   % need for figures
 \usepackage{mathptmx}
@@ -93,6 +93,8 @@ pdfkeywords={} %%put keywords here
 
 
 \newcommand*\chem[1]{\ensuremath{\mathrm{#1}}}
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   	BEGIN DOCUMENT 
@@ -264,7 +266,18 @@ A circular, stainless-steel pan with an outer diameter of 30.0~\si{cm}, a depth 
 	\label{fig:Pool Burner}
 \end{figure}
 
-Figure~\ref{fig:Fuel_Level} shows how the fuel level was monitored by a fuel flow operator via live video feed. The live video feed provided a close up of a barely discernable dimple made from the fuel level indicator on the fuel surface. The fuel flow was manually adjusted using a needle valve to maintain a fuel level 10~\si{mm} below the burner rim. Fuel to the burner was gravity fed from a reservoir positioned on a mass load cell located outside the enclosure and monitored by a data acquisition system. The expanded uncertainty with a coverage factor of 2 of the fuel level was estimated to be 0.5~\si{mm} for these experiments.
+The time-averaged mass burning flux, $m''$, was determined from the rate at which fuel was delivered to the pool. Fuel to the burner was gravity fed from a reservoir positioned on a mass load cell located outside the enclosure and monitored by a data acquisition system. Figure~\ref{fig:Fuel_Level} shows the procedure for monitoring the fuel level via fuel flow operator. Using a live video feed, the operator was able to observe a close up of a slightly discernable dimple (Approximately 2~\si{mm}) made from the fuel level indicator on the fuel surface. The fuel level was controlled at 10~\si{mm} below the burner rim by manually adjusted the fuel flow using a needle valve.
+
+The expanded uncertainty of the mass burning rate was estimated from a combination of Type A and B evaluation of standard uncertainty. The Type A evaluation of standard uncertainty was determined from the variance in the time-averaged mass burning flux measured during each test. The Type B evaluation of stnadard uncertainty was defined as the bias errors in the load cell used to measure the mass flux. The uncertainty of the mass burning flux is discussed further detail in Appendix~\ref{ssec:Mass_Burning_Rate}.
+
+The heat release rate of each fuel, $\dot{Q}$, was calculated from Eq.\ref{eq:Heat_release_rate} using the time-averaged mass burning flux measurements:
+
+\begin{equation}\label{eq:Heat_release_rate}
+\dot{Q}= m''\Delta H_{c}A
+\end{equation}
+where $\Delta H_{c}$ is the heat of the combustion of the burned fuel and $A$ is the cross-sectional area of the pool fire. The uncertainty of the heat release rate was calculated from the law of propagation of uncertainty which is detaled in Appendix~\ref{ssec:Heat_Release_Rate}.
+
+Mean flame height was estimated from high quality video recordings of the methanol, ethanol, and acetone pool fire tests. 
 
 \begin{figure}[h!]
 	\centering
@@ -299,12 +312,12 @@ The volume fraction, $\bar{X_{i}}$, was calculated from the ratio between the nu
 
 The mass fraction, $\bar{Y_{i}}$, of each species $i$ was calculated from the measured volume fraction, $\bar{X_{i}}$, using the folowing expression:
 \begin{equation}\label{eq:mass_fraction}
-\bar{Y_{i}}=\frac{\bar{X_{i}}~\bar{M_{i}}}{\bar{M_{tot}}}
+\bar{Y_{i}}=\frac{\bar{X_{i}}~{MW_{i}}}{{MW_{tot}}}
 \end{equation}
-where ${\bar{M_{i}}}$ is the molecular weight of a given species and ${\bar{M_{tot}}}$ is the average molecular weight of all detected gas species represented in the function below. 
+where ${{MW_{i}}}$ is the molecular weight of a given species and ${{MW_{tot}}}$ is the average molecular weight of all detected gas species represented in the function below. 
 
  \begin{equation}\label{eq:Total_MW}
-\bar{M_{tot}}=\sum{\bar{X_{i}}~bar{M_{i}}}
+{MW_{tot}}=\sum{\bar{X_{i}}~{MW_{i}}}
 \end{equation}
 
 All measurements using the GC/MSD were repeated at least twice at each location along the centerline of the pool fire. Gas species concentration measurements made at the same location were averaged. The variance in the gas species volume fraction was a function of location and species. A detailed description of the uncertainty analysis for the gas species measurement and its calibration is discussed in Appendices~\ref{sec:UncertaintyGasSpecies} and \ref{sec:Uncertainty Analysis of Gas Species Calibrations}, respectively.
@@ -337,21 +350,27 @@ In Eq.\ref{eq:total_mass}, the density of the sample gas was determined from the
 \rho_{g}= \frac{m_{tot}}{V_{s}}
 \end{equation} 
 
-The uncertainty of the soot mass fraction was estimated from a combined uncertainty of the Type A evaluation of standard uncertainty in the variation of temperature and mass measurements and the Type B standard uncertainty in the bias errors of the instrumentation. A detailed description of the soot mass fraction uncertainty is provided in Appendix~\ref{sec:Uncetainty_Soot_Frac}.
+The uncertainty of the soot mass fraction was estimated from a combined uncertainty of the Type A evaluation of standard uncertainty in the variation of temperature and mass measurements and the Type B standard uncertainty in the bias errors of the instrumentation. A detailed description of the soot mass fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Soot_Frac}.
 
 \section{Mixture Fraction}
 \label{sec:Mixture_Fraction}
 The mixture fraction, $Z$, was based on carbon containing species and was defined as follows:
 \begin{equation}\label{eq:Mixture_Fraction}
-Z=Y_{F}+\frac{\bar{M_{F}}}{x}\sum{\frac{Y_{i}}{\bar{M_{i}}}}
+Z=Y_{F}+\frac{{MW_{F}}}{x}\sum{\frac{Y_{i}}{{MW_{i}}}}
 \end{equation} 
-where $Y_{F}$, $\bar{M_{F}}$, and $x$ are the mass fraction, molecular weight, and number of carbon molecules of the parent fuel, respectively.
+where $Y_{F}$, ${MW_{F}}$, and $x$ are the mass fraction, molecular weight, and number of carbon molecules of the parent fuel, respectively. Considering the idealized reaction of a hydrocarbon fuel, the state reactions was derived as:
+\begin{align*}
+C_{x}H_{y}&O_{z}+\eta(x+\frac{y}{4}-\frac{z}{2})~(O_{2}+3.76~N_{2}+0.0445~Ar)\\
+&\rightarrow max(0,1-\eta)~C_{x}H_{y}O_{z}+max(0,1-\eta)~(x+\frac{y}{4}~\frac{z}{2})~O_{2}+ min(1,\eta)~x~CO_{2}\\ 
+&~~~~+min(1,\eta)~\frac{y}{2}~H_{2}O+\eta(x+\frac{y}{4}-\frac{z}{2})~(3.76~N_{2}+0.0445~Ar) \numberthis \label{eq:Ideal_rxn}
+\end{align*}
+where $max(\alpha,\beta)$ and $min(\alpha,\beta)$ are operators that return the larger and smaller value, respectively, of the two parameters $\alpha$ and $\beta$. The parameter $\eta$ represents the portion of air relative to the amount of fuel used as a reactant in Eq.~\ref{eq:Ideal_rxn}. In other words, $\eta$ can be defined as the reciprical of the local fuel equivalence ratio, $\phi$,
+\begin{equation}\label{eq:Eta}
+\phi=\frac{(F/A)}{(F/A)_{st}}=\frac{1}{\eta}
+\end{equation} 
+where $F/A$ is the fuel-air ratio and the subscript $st$ denotes the stoichiometric condition. The idealized mixture fractions of the products relative to the mixture fraction can then be calcuated through a combintation of Eq.~\ref{eq:Mixture_Fraction} and \ref{eq:Ideal_rxn}. 
 
-Considering the idealized reaction of a hydrocarbon fuel, the state reactions was derived as 
-
-where $max(\alpha,\beta)$ and $min(\alpha,\beta)$ are operators that return the larger and smaller, respectively, of the two parameters $\alpha$ and $\beta$. 
-
-%%% State of relations
+The uncertainty of the mixture fraction was determined from propagating the error in the mass fraction measurements. A detailed description of the mixture fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Mix_Frac}. 
 
 \section{Results}
 \label{sec:Results}
@@ -368,7 +387,7 @@ Figure~\ref{fig:Flame_Structure} displays a series of snapshots depicting the fl
 	\label{fig:Flame_Structure}
 \end{figure}
 
-The shape and visible color of the fires differed between the different fuel types. The methanol fire appeared to be completely blue, whereas the ethanol and acetone fires primarily consisted of vibrant yellow and orange colors. The methanol pool fire was observed to exhibit a weak turbulent structure compared to the fully developed fires of the other two fuels.  The sequential order from smallest to largest of the time-averaged flame height of each pool fire was as follows: methanol, ethanol, acetone. Table~\ref{tab:Pool_Fire_Parameters_Table} provides a list of measurements of each pool fire. The observed dynamic shapes were consistent with previous experiments~\cite{Hamins2016,Hamins1994,Hamins1991,Hamins1996,Lock2008}.
+The shape and visible color of the fires differed between fuel types. The methanol fire appeared to be completely blue, whereas the ethanol and acetone fires primarily consisted of vibrant yellow and orange colors. The methanol pool fire was observed to exhibit a weak turbulent structure compared to the fully developed fires of the other two fuels. The sequential order from smallest to largest of the time-averaged flame height of each pool fire was as follows: methanol, ethanol, acetone. Table~\ref{tab:Pool_Fire_Parameters_Table} provides a list of measurements made of each pool fire. The observed dynamic shapes were consistent with previous experiments~\cite{Hamins2016,Hamins1994,Hamins1991,Hamins1996,Lock2008}.
 
 \begin{table}[!]
 \caption{List of measurements obtained in a well-ventilated round, steady, 30.0~\si{cm} diameter pool fire burning in a quiescent environment. The uncertainty of measurements of fire parameters are discussed in deatail in Appendix~\ref{sec:Uncertainty_Pool_Fire_Parameters}}
@@ -381,11 +400,11 @@ The shape and visible color of the fires differed between the different fuel typ
 \textbf{Parameter (units)} &\textbf{Methanol}& \textbf{Ethanol}& \textbf{Acetone}\\
 \hline
 \\[0.01cm]
-Mean Flame Height~(\si{cm})			&	40.5~±~14.8			&	61.1~±~14.1		&	87.3~±~16.4\\	
+Mass Burning Flux~(\si{g/{m^2 s}})		&	12.4~$\pm$~1.1		&	13.9~$\pm$~0.8	&	17.6~$\pm$~2.7\\
 \\[0.01cm]
-Mass Burning Flux~(\si{g/{m^2 s}})		&	12.4~±~1.1			&	13.9~±~0.8		&	17.6~±~2.7\\
+Heat Release Rate~(\si{kW})			&	17.4~$\pm$~1.4		&	26.3~$\pm$~1.5	&	35.5~$\pm$~5.4\\
 \\[0.01cm]
-Heat Release Rate~(\si{kW})			&	17.4~±~1.4			&	26.3~±~1.5		&	35.5~±~5.4\\
+Mean Flame Height~(\si{cm})			&	40.5~$\pm$~14.8		&	61.1~$\pm$~28.2	&	87.3~$\pm$~32.8\\
 %\\[0.01cm]
 \hline
 \end{tabular}
@@ -469,8 +488,8 @@ As expected, the fuel volume fractions were highest, and the oxygen volume fract
 \newcommand{\section@cntformat}{Appendix:\ }
 \makeatother
 
-\section{Uncertainty Analysis of Gas Species Concentration} \label{sec:UncertaintyGasSpecies}
-\addcontentsline{toc}{section}{Appendix A: Uncertainty Analysis of Gas Species Concentration}
+\section{Uncertainty Analysis of Gas Species Concentrations} \label{sec:UncertaintyGasSpecies}
+\addcontentsline{toc}{section}{Appendix A: Uncertainty Analysis of Gas Species Concentrations}
 
 As shown in Eq.~\ref{eq:volume_fraction}, volume fraction, $\bar{X_{i}}$ was calculated from the ratio between the number of moles of a given species, $n_{i}$, and the total number of moles identified, $n_{tot}$. The uncertainty of the measured volume fraction was estimated using the law of propagation of uncertainty after determining the volume fraction of each species:
 
@@ -676,7 +695,7 @@ In this correlation, $P_{vap}$ is the vapor pressure calculated from the tempera
 Acetone	&	69.006	&	-5599.6	&	-7.0985	&	6.2237E-6	& 	2.00	&  3.00\\
 Ethanol	&	73.304	&	-7122.3	&	-7.1424	&	2.8853E-6	& 	2.00	&  1.00\\
 Methanol	&	82.718	&	-6904.5	&	-8.8622	&	7.4664E-6	& 	2.00	&  3.00\\
-Water	&	73.649	&	-7258.2	&	-7.3037	&	4.1653E-6	& 	2.00	&  0.20\\
+Water		&	73.649	&	-7258.2	&	-7.3037	&	4.1653E-6	& 	2.00	&  0.20\\
 \\[0.01cm]
 \hline
 \end{tabular}
@@ -713,13 +732,14 @@ The local soot mass fraction measurements, $M_{s}$ made at various heights above
 \begin{equation}\label{eq:overall_soot_mass_frac}
  M_{s}= \frac{m_{s}~V_{sl}}{\dot{V}~t~m_{tot}}\frac{T_{\infty}}{T_{p}}
 \end{equation}
-where $m_{s}$ is the mass of soot collected on the PTFE filter and gun cleaning patches, $\dot{V}$ is the volumetric flow rate measured by the mass flow controller, $V_{sl}$ is the volume of the sample loop, $\sum~n_{i}\cdot\bar{M_{i}}$ is the total mass of the gas sample detected in the TCD chromatogram calculated from the summation of the product of the number of moles of a given species and their respective molar mass, $T_{\infty}/T_{p}$ is the ratio of the internal gas flow temperature readings of the mass flow controller to the temperature of the probe, and $t$ is the total sampling time. The uncertainty of the measured soot mass fraction was estimated using the law of propagation of uncertainty after determing the soot mass fraction:
+where $m_{s}$ is the mass of soot collected on the PTFE filter and gun cleaning patches, $\dot{V}$ is the volumetric flow rate measured by the mass flow controller, $V_{sl}$ is the volume of the sample loop, $\sum~n_{i}\cdot{MW_{i}}$ is the total mass of the gas sample detected in the TCD chromatogram calculated from the summation of the product of the number of moles of a given species and their respective molar mass, $T_{\infty}/T_{p}$ is the ratio of the internal gas flow temperature readings of the mass flow controller to the temperature of the probe, and $t$ is the total sampling time. The uncertainty of the measured soot mass fraction was estimated using the law of propagation of uncertainty after determing the soot mass fraction:
 
 \begin{equation}
 \label{eq:soot_mass_frac_uncertainty}
 u_{\scriptscriptstyle M_{s}} = \sqrt{{\left(\frac{\partial M_{s}}{\partial m_{s}}\,u_{\scriptscriptstyle m_{s}} \right)}^2+{\left(\frac{\partial M_{s}}{\partial \dot{V} }\,u_{\scriptscriptstyle \dot{V}} \right)}^2+{\left(\frac{\partial M_{s}}{\partial V_{sl}}\,u_{\scriptscriptstyle V_{sl}} \right)}^2+{\left(\frac{\partial M_{s}}{\partial m_{tot}}\,u_{\scriptscriptstyle m_{tot}} \right)}^2+{\left(\frac{\partial M_{s}}{\partial T_{\infty}}\,u_{\scriptscriptstyle T_{\infty}} \right)}^2+{\left(\frac{\partial M_{s}}{\partial T_{p}}\,u_{\scriptscriptstyle T_{p}} \right)}^2}
 \end{equation}
 A coverage factor of 2 was applied to the combined uncertainty to produce a 95~\% confidence interval.
+
 \subsection{Mass of Soot}
 \label{ssec:Mass_of_Soot}
 
@@ -747,18 +767,18 @@ All gas sampling experiments and calibrations were conducted using a 2~\si{ml} s
 
 \subsection{Total Mass Injected into the GC/MSD}
 \label{ssec:Total_Mass_Injected_into_GC/MSD}
-The total mass detected in the TCD chromatogram, $m_{tot}$, was calculated from the summation of products of the moles of given species and their respective molar mass,$\bar{M_{i}}$: 
+The total mass detected in the TCD chromatogram, $m_{tot}$, was calculated from the summation of products of the moles of given species and their respective molar mass,${MW_{i}}$: 
 
 \begin{equation}
 \label{eq:total_mass_detected_uncertainty}
-m_{tot}=\sum_{n=1}^{N}  n_{i}\cdot\bar{M_{i}}
+m_{tot}=\sum_{n=1}^{N}  n_{i}\cdot{MW_{i}}
 \end{equation}
 
 The uncertainty in the total mass detected was defined as the combined uncertainty of all identified species multiplied by their corresponding molar mass via quadrature:
 
 \begin{equation}
 \label{eq:total_mass_detected_uncertainty}
-u_{\scriptscriptstyle m_{tot}}=\sqrt{{\sum_{n=1}^{N} (s_{\scriptscriptstyle n_{i}}\cdot\bar{M_{i}})^2}}
+u_{\scriptscriptstyle m_{tot}}=\sqrt{{\sum_{n=1}^{N} (s_{\scriptscriptstyle n_{i}}\cdot{MW_{i}})^2}}
 \end{equation}
 where $N$ is the number of a species identified species in the TCD chromatogram. 
 
@@ -772,17 +792,28 @@ The mass flow controller provides an internal gas flow temperature reading that 
 
 \pagebreak
 
+\section{Uncertainty Analysis of the Mixture Fraction}\label{sec:Uncertainty_Mix_Frac}
+\addcontentsline{toc}{section}{Appendix D: Uncertainty of the Mixture Fraction}
+The mixture fraction, $Z$ was determined from Eq.\ref{eq:Mixture_Fraction} based on carbon containing species. The uncertainty of the determined mixture fraction was estimated using the law of propagation of uncertainty based on calculated mass fractions, $Y_{i}$. 
+
+\begin{equation}
+\label{eq:mixture_frac_uncertainty}
+u_{\scriptscriptstyle Z}=\sqrt{{\sum_{i=1}^{N}{\left(\frac{\partial Z}{\partial Y_{i}}\,u_{\scriptscriptstyle Y_{i}} \right)}^2}}
+\end{equation}
+
+\pagebreak
+
 \section{Uncertainty Analysis of Pool Fire Parameters}\label{sec:Uncertainty_Pool_Fire_Parameters}
-\addcontentsline{toc}{section}{Appendix D: Uncertainty of Pool Fire Parameters}
+\addcontentsline{toc}{section}{Appendix E: Uncertainty of Pool Fire Parameters}
 
-\subsection{Mean Flame Height}
-\label{ssec:Mean_Flame_Height}
-
-\subsection{Mass Loss Rate}
-\label{ssec:Mass_Loss_Rate}
+\subsection{Mass Burning Rate}
+\label{ssec:Mass_Burning_Rate}
 
 \subsection{Heat Release Rate}
 \label{ssec:Heat_Release_Rate}
+
+\subsection{Mean Flame Height}
+\label{ssec:Mean_Flame_Height}
 
 \pagebreak
 
