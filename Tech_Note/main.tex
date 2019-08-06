@@ -268,7 +268,7 @@ A circular, stainless-steel pan with an outer diameter of 30.0~\si{cm}, a depth 
 
 The time-averaged mass burning flux, $m''$, was determined from the rate at which fuel was delivered to the pool. Fuel to the burner was gravity fed from a reservoir positioned on a mass load cell located outside the enclosure and monitored by a data acquisition system. Figure~\ref{fig:Fuel_Level} shows the procedure for monitoring the fuel level via fuel flow operator. Using a live video feed, the operator was able to observe a close up of a slightly discernable dimple (Approximately 2~\si{mm}) made from the fuel level indicator on the fuel surface. The fuel level was controlled at 10~\si{mm} below the burner rim by manually adjusted the fuel flow using a needle valve.
 
-The expanded uncertainty of the mass burning rate was estimated from a combination of Type A and B evaluation of standard uncertainty. The Type A evaluation of standard uncertainty was determined from the variance in the time-averaged mass burning flux measured during each test. The Type B evaluation of stnadard uncertainty was defined as the bias errors in the load cell used to measure the mass flux. The uncertainty of the mass burning flux is discussed further detail in Appendix~\ref{ssec:Mass_Burning_Rate}.
+The expanded uncertainty of the mass burning rate was estimated from a combination of Type A and B evaluation of standard uncertainty. The Type A evaluation of standard uncertainty was determined from the variance in the time-averaged mass burning flux measured during each test. The Type B evaluation of stnadard uncertainty was defined as the bias errors in the load cell used to measure the mass flux. The uncertainty of the mass burning flux is discussed further detail in Appendix~\ref{ssec:Mass_Burning_Flux}.
 
 The heat release rate of each fuel, $\dot{Q}$, was calculated from Eq.\ref{eq:Heat_release_rate} using the time-averaged mass burning flux measurements:
 
@@ -279,7 +279,7 @@ where $\Delta H_{c}$ is the heat of the combustion of the burned fuel provided b
 
 The mean flame height was estimated from 3600 frames obtained from high quality video recordings of the methanol, ethanol, and acetone pool fire tests. Frames were proccessed using MATLAB’s Image Processing Toolbox. Imported RGB images were decomposed into binary (black and white) images using a pre-set threshold level. The flame height for a single frame was defined as the distance between the pool surface and flame tip established using MATLAB software. The measurement was reapeated for each of the 3600 frames then averaged to provide the mean flame height. 
 
-The uncertainty of the mean flame height was estimated by combing the Type A and B evaluation of uncertainty defined as the variance of the averaged height measurements from each frame and the bias error of the distance measured in each frame. A detailed description of the uncertainty analysis for the mean flame height is described in Appendix~\ref{ssec:Mean_Flame_Heigh}.
+The uncertainty of the mean flame height was estimated by combing the Type A and B evaluation of uncertainty defined as the variance of the averaged height measurements from each frame and the bias error of the distance measured in each frame. A detailed description of the uncertainty analysis for the mean flame height is described in Appendix~\ref{ssec:Mean_Flame_Height}.
 
 \begin{figure}[h!]
 	\centering
@@ -406,7 +406,7 @@ Mass Burning Flux~(\si{g/{m^2 s}})		&	12.4~$\pm$~1.1		&	13.9~$\pm$~0.8	&	17.6~$\
 \\[0.01cm]
 Heat Release Rate~(\si{kW})			&	17.4~$\pm$~1.4		&	26.3~$\pm$~1.5	&	35.5~$\pm$~5.4\\
 \\[0.01cm]
-Mean Flame Height~(\si{cm})			&	40.5~$\pm$~14.8		&	61.1~$\pm$~28.2	&	87.3~$\pm$~32.8\\
+Mean Flame Height~(\si{cm})			&	36.4~$\pm$~16.0		&	61.1~$\pm$~28.2	&	91.5~$\pm$~34.6\\
 %\\[0.01cm]
 \hline
 \end{tabular}
@@ -628,7 +628,7 @@ A table of the gas standards with their respective concentrations and Type B eva
 0.02\% Carbon Monoxide	&	2.00	&	Matheson Tri-Gas		&	9306620888		\\
 0.11\% Carbon Monoxide	&	2.00	&	Roberts Oxygen			&	1002080917		\\
 4.00\% Carbon Monoxide	&	2.00	&	Praxair Doistribution Inc. 	&	304113044702		\\
-7.81\% Carbon Monoxide	&	0.02	&	NIST Gas Sensing Metrology Group 		&	??????		\\
+7.81\% Carbon Monoxide	&	0.02	&	NIST Gas Sensing Metrology Group 		&	51-28-C	\\
 0.51\% Ethane		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-62N-0.5-1		\\
 1.00\% Ethane		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-152N-1-1\%-1		\\
 2.55\% Ethane		&	2.00	&	Gasco Affiliates, LLC.		&	FBJ-152N-2.5-1		\\
@@ -796,7 +796,7 @@ The mass flow controller provides an internal gas flow temperature reading that 
 
 \section{Uncertainty Analysis of the Mixture Fraction}\label{sec:Uncertainty_Mix_Frac}
 \addcontentsline{toc}{section}{Appendix D: Uncertainty of the Mixture Fraction}
-The mixture fraction, $Z$ was determined from Eq.\ref{eq:Mixture_Fraction} based on carbon containing species. The uncertainty of the determined mixture fraction was estimated using the law of propagation of uncertainty based on calculated mass fractions, $Y_{i}$. 
+The mixture fraction, $Z$, was determined from Eq.~\ref{eq:Mixture_Fraction} based on carbon containing species. The uncertainty of the determined mixture fraction was estimated using the law of propagation of uncertainty based on calculated mass fractions, $Y_{i}$. 
 
 \begin{equation}
 \label{eq:mixture_frac_uncertainty}
@@ -808,14 +808,32 @@ u_{\scriptscriptstyle Z}=\sqrt{{\sum_{i=1}^{N}{\left(\frac{\partial Z}{\partial 
 \section{Uncertainty Analysis of Pool Fire Parameters}\label{sec:Uncertainty_Pool_Fire_Parameters}
 \addcontentsline{toc}{section}{Appendix E: Uncertainty of Pool Fire Parameters}
 
-\subsection{Mass Burning Rate}
-\label{ssec:Mass_Burning_Rate}
+\subsection{Mass Burning Flux}
+\label{ssec:Mass_Burning_Flux}
+The mass burning flux, $m''$, was measured from the mass loss rate of the fuel resevoir, feeding to the pool burner via gravity, during the burning period per area of the pool burner. The area of the pool burner, $A$, was assumed to be 30~\si{cm}. Mass measurements were made using a Precisa XB-6200C Prcision XB Laboratory Prime Balance sampling at 1~\si{Hz} for the entire duration of the burning period. The balance was calibrated from a collection standard weights. The expanded uncertainty was estimated via quadrature from a combination of the Type A and Type B evaluation of standard uncertainty. The Type A evaluation of standard uncertainty was calculated from the standard error, $s_{\scriptscriptstyle m_{f}}$ of the time-averaged mass loss measured during the burning period. The Type B evaluation of standard uncertainty was determined from the bias error of the balance, $u_{\rm \scriptscriptstyle inst}$ (0.01~\si{g}), and the calibration error, $u_{\rm \scriptscriptstyle cal}$ (1~\% of the reading).
 
+\begin{equation}
+\label{eq:mass_flux_uncertainty}
+u_{\scriptscriptstyle m''} = \frac{1}{A}\sqrt{s_{\scriptscriptstyle m_{f}}^2+u_{\rm \scriptscriptstyle inst}^2+u_{\rm \scriptscriptstyle cal}^2}
+\end{equation}
+ 
 \subsection{Heat Release Rate}
 \label{ssec:Heat_Release_Rate}
+The heat release rate was determined from Eq.~\ref{eq:Heat_release_rate} using the heat of combustion property of the respective fuel, povided by DIPPR\textsuperscript{\textregistered}, and time-averaged mass burning flux values listed in Table~\ref{tab:Pool_Fire_Parameters_Table}. The uncertainty of the heat release rate was calculated via the law of propagation of uncertainty:
+
+\begin{equation}
+\label{eq:heat_release_rate_uncertainty}
+u_{\scriptscriptstyle \dot{Q}} = \sqrt{{\left(\frac{\partial \dot{Q}}{\partial m''}\,u_{\scriptscriptstyle m''} \right)}^2+{\left(\frac{\partial \dot{Q}}{\partial \Delta H_{c}}\,u_{\scriptscriptstyle \Delta H_{c}} \right)}^2}
+\end{equation}
 
 \subsection{Mean Flame Height}
 \label{ssec:Mean_Flame_Height}
+The mean flame height, $u_{h_{f}}$ was determined by measuring the distance between the pool surface and flame tip using the photographic analysis method described in Section~\ref{}. The uncertainty of the mean flame height, $u_{\scriptscriptstyle h_{fl}}$ was calculated from a combined uncertainty of the Type A and B evaluation of standard uncertainty. The Type A evaluation of standard uncertainty was estimated from the standard deviation of the height measurments, $s_{\scriptscriptstyle h_{fl}}$ made with each frame. The error of the measured distance using the photogrpahic analysis method compared to the true distance, $u_{\scriptscriptstyle meth}$,  was found to be 0.1\% and was treated as the Type B evaluation of standard uncertainty. The combined uncertainty calculation of the mean flame height is shown below:
+
+\begin{equation}
+\label{eq:mean_flame_height}
+u_{\scriptscriptstyle h_{f}} = \sqrt{s_{\scriptscriptstyle{h_{f}}}^2+u_{\rm \scriptscriptstyle meth}^2}
+\end{equation}
 
 \pagebreak
 
