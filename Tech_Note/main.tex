@@ -1,8 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     LaTeX source code to approximate a NIST Technical report
-%	  Instructions for authors: tinyurl.com/techpubsnist 
+%	  Instructions for authors: tinyurl.com/techpubsnist
 %	DOI watermark will be added on final PDF
-% 	Developed by K. Miller, kmm5@nist.gov 
+% 	Developed by K. Miller, kmm5@nist.gov
 %	Last updated: 26-March-2019
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[12pt]{article}
@@ -46,11 +46,11 @@
 \addtolength{\cfttabnumwidth}{1em}
 \renewcommand{\cfttabpresnum}{\tablename\ }
 \setlength{\cfttabindent}{0in}    %% adjust as you like
-\setlength{\cftfigindent}{0in} 
+\setlength{\cftfigindent}{0in}
 
 \usepackage{enumitem}         % to control spacing between bullets/numbered lists
 
-\usepackage[numbers,sort&compress]{natbib} % format bibliography 
+\usepackage[numbers,sort&compress]{natbib} % format bibliography
 \renewcommand{\bibsection}{}
 \setlength{\bibsep}{0.0pt}
 
@@ -82,11 +82,11 @@ pdfkeywords={} %%put keywords here
 \setlength{\textheight}{8.5in}
 
 \usepackage{caption} % required for Figure labels
-\captionsetup{font=small,labelfont=bf,figurename=Fig.,labelsep=period,justification=raggedright} 
+\captionsetup{font=small,labelfont=bf,figurename=Fig.,labelsep=period,justification=raggedright}
 
 %%%%%%%%%%% !!!!!! REQUIRED - FILL OUT METADATA HERE !!!!!!!! %%%%%%%%%%%%%%
 %  	Report Number - fill in Report Number sent to you (see info below)
-%   DOI Statement - fill in DOI sent to you 
+%   DOI Statement - fill in DOI sent to you
 %   Month Year - fill in Month and Year of Publication
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\pubnumber}{XXXX}
@@ -99,14 +99,14 @@ pdfkeywords={} %%put keywords here
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   	BEGIN DOCUMENT 
+%   	BEGIN DOCUMENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-	\urlstyle{rm} % Format style of \url   
+	\urlstyle{rm} % Format style of \url
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   Cover Page is REQUIRED and must contain the information 
-%	displayed here, at a minimum. Additional artwork may be included 
+%   Cover Page is REQUIRED and must contain the information
+%	displayed here, at a minimum. Additional artwork may be included
 %	(e.g., official project/conference logo, etc.).
 %	Pub Number automated based on metadata
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -118,12 +118,12 @@ pdfkeywords={} %%put keywords here
 \LARGE{\textbf{NIST Technical Note \pubnumber}}\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Title 
+%	Title
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \Huge{\textbf{The Structure of Medium-Scale Pool Fires}}\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Authors - add complete list of authors, affiliations will be 
+%	Authors - add complete list of authors, affiliations will be
 %   added on title page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \large Ryan Falkesntein-Smith\\
@@ -141,7 +141,7 @@ pdfkeywords={} %%put keywords here
 %	NIST LOGO - keep as-is
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\includegraphics[width=0.3\linewidth]{NIST-logo}\\ 
+\includegraphics[width=0.3\linewidth]{NIST-logo}\\
 
 
 \end{flushright}
@@ -155,9 +155,9 @@ pdfkeywords={} %%put keywords here
 %   Publication Series & Number - automated
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \LARGE{\textbf{NIST Technical Note \pubnumber}}\\
-\vfill 
+\vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Title 
+%	Title
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \Huge{\textbf{The Structure of Medium-Scale Pool Fires}}\\
 \vfill
@@ -190,10 +190,10 @@ Jian Chen\\
 %  Department of Commerce LOGO - leave as-is
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 
-\includegraphics[width=0.18\linewidth]{DoC-logo}\\ 
+\includegraphics[width=0.18\linewidth]{DoC-logo}\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  Department of Commerce & NIST Leadership 
+%  Department of Commerce & NIST Leadership
 %	will be updated as changes occur
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \footnotesize U.S. Department of Commerce\\
@@ -209,12 +209,12 @@ National Institute of Standards and Technology\\
 %   Disclaimer/CODEN page - required
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{flushright}
-\footnotesize  Certain commercial entities, equipment, or materials may be identified in this document in order to describe an experimental procedure or concept adequately. Such identification is not intended to imply recommendation or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that the entities, materials, or equipment are necessarily the best available for the purpose.\\ 
+\footnotesize  Certain commercial entities, equipment, or materials may be identified in this document in order to describe an experimental procedure or concept adequately. Such identification is not intended to imply recommendation or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that the entities, materials, or equipment are necessarily the best available for the purpose.\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   This secton automated - do not change
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\normalsize \textbf{National Institute of Standards and Technology Technical Note \pubnumber\\ 
+\normalsize \textbf{National Institute of Standards and Technology Technical Note \pubnumber\\
 Natl. Inst. Stand. Technol. Tech. Note \pubnumber, \pageref{LastPage} pages (\monthyear)} \\
 \textbf{CODEN: NTNOEF}\\
 \vspace{12pt}
@@ -226,9 +226,9 @@ Natl. Inst. Stand. Technol. Tech. Note \pubnumber, \pageref{LastPage} pages (\mo
 %   Start front matter - page number starts with "i"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Abstract}
-This report documents a series of time-averaged local gas species measurements made throughout the centerline profile of moderate-sized methanol, ethanol, and acetone pool fires steadily burning in a quiescent environment. All gas species measurements are obtained using a Gas Chromatograph/ Mass Spectrometer system (GC/MSD). The volume fraction of each species was calculated via the number of moles identified by the GC/MSD at each location throughout the centerline profile of the fire. Soot mass fractions are simultaneously measured during the gas sampling process. The gas species volume and soot mass fractions were compared at different heights within the fire and across a variety of different fuels. Other fire parameters are measured as well, including time-averaged temperature measurements and mass burning rates. 
+This report documents a series of time-averaged gas species measurements made along the centerline of methanol, ethanol, and acetone pool fires steadily burning in a quiescent environment. All gas species measurements are obtained using a Gas Chromatograph/ Mass Spectrometer system (GC/MSD). The volume fraction of each species was calculated via the number of moles identified by the GC/MSD at each location ({\bf Kevin -- this statement doesn't explain very much}). Soot mass fractions are simultaneously measured during the gas sampling process. The gas species volume and soot mass fractions are compared at different heights within the fire and across a variety of different fuels. Other fire parameters are measured as well, including time-averaged temperature measurements and mass burning rates.
 \section*{Keywords}
-\normalsize Acetone fuel, Ethanol fuel, Gas species measurements. Methanol fuel, Moderate-sized pool fire\\
+\normalsize Acetone, Ethanol, Gas species measurements, Methanol, Liquid pool fires \\
 \pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Table of Contents is required
@@ -245,29 +245,32 @@ This report documents a series of time-averaged local gas species measurements m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:intro}
-Use of fire modeling, such as the Fire Dynamic Simulator (FDS)~\cite{FDS_Tech_Guide}, in fire protection engineering, has increased dramatically during the last decade due to the development of practical computational fluid dynamics fire models and the decreased cost of computational power. Today, fire protection engineers use models to design safer buildings, nuclear power plants, aircraft cabins, trains, and marine vessels, to name a few types of applications. To be reliable, the models require validation, which involves an extensive collection of experimental measurements. An objective of this report is to provide data for use in fire model evaluation by the research community.
+Computational fluid dynamics (CFD) modeling is an important component of performance-based design in fire protection engineering. A requirement of their acceptance in the design process is that models be verified and validated, the latter of which involves comparison with experimental measurements. The primary objective of this report is to provide data for use in fire model validation.
 
-A pool fire is a fundamental combustion configuration of interest in model development. In pool fires, the fuel surface is isothermal, flat and horizontal, providing a well-defined and straightforward setup for testing models and furthering the understanding of fire phenomena. In moderate and large-scale pool fires, radiative heat transfer is the dominant mechanism of heat feedback to the fuel surface. Species concentrations and temperatures have a significant influence on the radiative heat transfer. A zone of particular interest is the fuel rich-core between the flame and the pool surface, where gas species can absorb energy that would otherwise have been transferred to the fuel surface. Few studies in the literature studies have reported local chemical species measurements, which provide a deep understanding of the chemical structure of a pool fire and provide insight on critical kinetic, heat, and mass transfer processes.
+A pool fire is a fundamental focus of study in fire science. The fuel surface is isothermal, flat and horizontal, providing a well-defined boundary condition for modeling. Fuel and product species concentrations and temperatures have a significant influence on the heat feedback to the fuel surface, which directly affects the burning rate. A zone of particular interest is the fuel rich-core between the flame and the pool surface, where gas species can absorb energy that would otherwise have been transferred to the fuel surface. Few studies in the literature have reported local chemical species measurements within the flame envelop.
 
-The purpose of this study is to characterize the spatial distribution of stable gas-phase chemical species in moderate-scale liquid pool fires steadily burning in a well-ventilated quiescent environment. Here, methanol, ethanol, and acetone are the fuels of interest. Contrary to ethanol and acetone, fires established using methanol are unusual as no carbonaceous soot is present or emitted. These particular fuels are selected for research since the measurements complement results from previous studies, including analyses of the mass burning rate, the temperature and velocity fields, radiative emission, flame height, and pulsation frequency~\cite{Fisher1987,Hamins2016}. Additional characterization of this fire enables a more comprehensive understanding of its detailed structure, enhancing the understanding of fire physics.
+The purpose of this study is to characterize the spatial distribution of the principal chemical species in moderate-scale liquid pool fires steadily burning in a well-ventilated, quiescent environment. Here, methanol, ethanol, and acetone are the fuels of interest. Contrary to ethanol and acetone, fires established using methanol are unusual as no carbonaceous soot is present or emitted. These particular fuels are selected for research since the measurements complement results from previous studies, including analyses of the mass burning rate, the temperature and velocity fields, radiative emission, flame height, and pulsation frequency~\cite{Fisher1987,Hamins2016}.
 
 \section{Description of Experiments}
 \label{sec:Experiments}
 
-The experimental setup used in this work to investigate pool fires has been documented previously~\cite{Hamins2016,Hamins1994,Hamins1991,Hamins1996,Lock2008}. Experiments are conducted under a canopy hood surrounded by a \SI{2.5}{m} x \SI{2.5}{m} x \SI{2.5}{m} enclosure made of a double-mesh screen wall. The walls of the enclosure were formed by a double layer of the wire-mesh screen (5 mesh/cm) to reduce the influence of compromising room flows that could disrupt the flow field. All measurements were made once the mass burning rate reached steady-state, achieved approximately \SI{10}{min} after ignition.
+Descriptions of previous pool fire experiments are found in Refs.~\cite{Hamins2016,Hamins1994,Hamins1991,Hamins1996,Lock2008}. 
 
 \subsection{Pool Burner Setup}
 \label{ssec:Pool_Burner_Setup}
-A circular, stainless-steel pan with an outer diameter of \SI{30}{cm}, a depth of \SI{15}{m}, and a wall thickness of \SI{0.16}{m} was used as the pool burner. As shown in Fig.~\ref{fig:Pool Burner}, the burner was placed within an overflow basin, which extended \SI{30}{cm} beyond the burner wall. The burner was fitted with legs such that the burner rim was positioned \SI{30}{m} above the ground. The bottom of the burner was maintained at a constant temperature by flowing water (\SI{20.0}{\degree C}~±~\SI{3.0}{\degree C}) through a \SI{3}{cm} section on the bottom of the fuel pan. Additionally, a fuel level indicator was positioned near the center of the burner to aid in maintaining the fuel level while burning.
+
+The experiments are conducted under a canopy hood surrounded by a cubical enclosure 2.5~m on a side made of a double layer of wire-mesh screen (5 mesh/cm) to reduce the impact of room ventilation. All measurements are made once the mass burning rate reaches a steady-state, achieved approximately 10~min after ignition.
+
+The circular, stainless-steel burn pan has an outer diameter of 30~cm, a depth of 15~cm, and a wall thickness of 1.6~mm. The lip of the burner is positioned 30~cm above the floor. As shown in Fig.~\ref{fig:Pool Burner}, the burner is placed within an overflow basin, which extends 3~cm beyond the burner wall.  The bottom of the burner is maintained at a constant temperature by flowing water ($20 \; ^\circ \hbox{C} \pm 3 \; ^\circ \hbox{C}$)  through the basin. A fuel level indicator is positioned near the center of the burner to maintain a consistent surface level.
 
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.0cm,keepaspectratio]{Pool_Burner.png}
-	\caption[A \SI{30}{m} Pool Burner with fuel level indicator, overflow section, and quenching probe]{A \SI{30}{m} Pool Burner with fuel level indicator, overflow section, and quenching probe}
+	\caption[Photograph of the burner]{The 30~cm burner with fuel level indicator, overflow section, and quenching probe}
 	\label{fig:Pool Burner}
 \end{figure}
 
-The time-averaged mass burning rate, $\dot{m}$, was determined from the rate at which fuel was delivered to the pool. Fuel to the burner was gravity fed from a reservoir positioned on a mass load cell located outside the enclosure and monitored by a data acquisition system (DAQ). As shown in Fig.~\ref{fig:Fuel_Level}, the fuel level was monitored via a fuel flow operator. The operator was able to observe a close up of a slightly discernible dimple (approximately \SI{2}{mm}) made from the fuel level indicator on the fuel surface using a live video feed. The fuel level was controlled by manually adjusting the fuel flow using a needle valve. The fuel level was set at \SI{10}{mm} below the burner rim to match previous experimental conditions \cite{Fisher1987,Hamins2016,Kim2019,Weckman1996}
+Fuel to the burner is gravity fed from a reservoir positioned on a mass load cell located outside the enclosure and monitored by a data acquisition system (DAQ). As shown in Fig.~\ref{fig:Fuel_Level}, the fuel level is monitored via a fuel flow operator. The operator is able to observe a close up of a slightly discernible dimple (approximately \SI{2}{mm}) made from the fuel level indicator on the fuel surface using a live video feed. The fuel level is controlled by manually adjusting the fuel flow using a needle valve. The fuel surface is maintained \SI{10}{mm} below the burner rim to match previous experimental conditions \cite{Fisher1987,Hamins2016,Kim2019,Weckman1996}
 
 \begin{figure}[h!]
 	\centering
@@ -276,27 +279,26 @@ The time-averaged mass burning rate, $\dot{m}$, was determined from the rate at 
 	\label{fig:Fuel_Level}
 \end{figure}
 
-The expanded uncertainty of the mass burning rate was estimated from a combination of Type A and B evaluation of standard uncertainty. The Type A evaluation of standard uncertainty was determined from the variance in the time-averaged mass burning rate measured during each test. The Type B evaluation of standard uncertainty was defined as the calibration and resolution errors in the load cell used to measure the mass burning rate. The uncertainty of the mass burning rate is discussed further detail in Appendix~\ref{ssec:Mass_Burning_Flux}.
 
-The heat release rate of each fuel, $\dot{Q}$, was calculated from Eqn.~\ref{eq:Heat_release_rate} using the time-averaged mass burning rate measurements:
 
+The heat release rate, $\dot{Q}$, is the product of the time-averaged mass burning rate, $\dot{m}$ and the heat of combustion, $\Delta H_{c}$:
 \begin{equation}\label{eq:Heat_release_rate}
 \dot{Q}= \dot{m}~\Delta H_{c}
 \end{equation}
-where $\Delta H_{c}$ is the heat of the combustion of the burned fuel provided by DIPPR\textsuperscript{\textregistered}~\cite{Dippr} and reported in Table~\ref{tab:Pool_Fire_Parameters_Table}. The uncertainty of the heat release rate was calculated from the law of propagation of uncertainty which is detailed in Appendix~\ref{ssec:Heat_Release_Rate}.
+The heat of the combustion is provided by Ref.~\cite{Dippr} and reported in Table~\ref{tab:Pool_Fire_Parameters_Table}. The uncertainty of the mass burning rate is discussed in Appendix~\ref{ssec:Mass_Burning_Flux}. The uncertainty of the heat release rate is discussed in Appendix~\ref{ssec:Heat_Release_Rate}.
 
-The mean flame height, $H$, was estimated from 3600 frames obtained from high-resolution video recordings of the methanol, ethanol, and acetone pool fire tests. Frames were processed using MATLAB’s Image Processing Toolbox\footnote{\label{fn:product} Certain commercial products are identified in this report to specify adequately the equipment used. Such identification does not imply a recommendation by the National Institute of Standards and Technology, nor does it imply that this equipment is the best available for the purpose.}. Imported RGB images were decomposed into binary (i.e., black and white) images using a pre-set threshold level. The flame height for a single frame was defined as the distance between the pool surface and flame tip established using MATLAB software. All measurements were repeated, then averaged to provide the mean flame height. The uncertainty of the mean flame height was estimated by combing the Type A and B evaluation of uncertainty defined as the variance of the averaged height measurements from each frame and the 1\%~pixel error of the distance measured in each frame. A detailed description of the uncertainty analysis for the mean flame height is described in Appendix~\ref{ssec:Mean_Flame_Height}.
+The mean flame height, $H$, is estimated from 3600~frames of high-resolution video of the experiments using MATLAB’s Image Processing Toolbox\footnote{\label{fn:product} Certain commercial products are identified in this report to specify adequately the equipment used. Such identification does not imply a recommendation by the National Institute of Standards and Technology, nor does it imply that this equipment is the best available for the purpose.}. Imported color images are decomposed into binary (i.e., black and white) images using a pre-set threshold level. The flame height for a single frame is defined as the distance between the pool surface and flame tip. All measurements are repeated, then averaged to provide the mean flame height. A description of the uncertainty analysis for the mean flame height is described in Appendix~\ref{ssec:Mean_Flame_Height}.
 
 \subsection{Centerline Temperature Measurements}
 \label{ssec:Temperature_Measurements}
 
-Time-averaged temperature measurements were made along the centerline profiles of the pool fires. An S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouple with a diameter of \SI{50.0}{\micro\metre} (OMEGA P10R-001\footref{fn:product}) was positioned onto a traverse such that the thermocouple bead was centered in the middle of the burner. The traverse controlled the position of the thermocouple relative to the fuel surface and was prompted via computer. Temperature measurements were sampled at \SI{250.0}{Hz} for \SI{2.0}{min} which represented more than 300 fire pulsing cycles \cite{Wang2019}. 
+Time-averaged temperature measurements are made along the vertical centerline of the fire plumes. An S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouple with a diameter of \SI{50}{\micro\metre} (OMEGA P10R-001\footref{fn:product}) is positioned using a computer-controlled traverse. Temperature measurements are sampled at \SI{250}{Hz} for \SI{2}{min}, or approximately 300~pulsing cycles \cite{Wang2019}.
 
-The thermal inertia and radiative heat loss associated with the thermocouple were corrected following Shaddix's method~\cite{Shaddix1999}. The energy balance on the thermocouple bead considered the convective, radiative, and conductive heat transfer and can be expressed as:
+The thermal inertia and radiative heat loss associated with the thermocouple are corrected following Shaddix's method~\cite{Shaddix1999}. The energy balance on the thermocouple bead considered the convective, radiative, and conductive heat transfer and can be expressed as:
 \begin{equation}\label{eq:Thermocouple_Bead_Energy_Balance}
-{\dot{Q}_{conv}+\dot{Q}_{rad}}= \rho_{b}~c_{p,b}~V_{b}\frac{dT_{b}}{dt}
+{\dot{Q}_{\rm con}+\dot{Q}_{\rm rad}}= \rho_{\rm b}~c_{\rm b}~V_{\rm b}\frac{{\rm d}T_{\rm b}}{{\rm d}t}
 \end{equation}
-where $\dot{Q}_{conv}$ and $\dot{Q}_{rad}$ are the net rate of convective and radiative heat transfer, respectively, and $\rho_{b}$, $c_{p,b}$, $V_{b}$ are the density, specific heat and volume of the bead, respectively. The thermal inertia effect is related to the thermocouple time constant, $\tau$, and can be incorporated into Eqn.~\ref{eq:Thermocouple_Bead_Energy_Balance} to correct the temperature measurement. The energy balance from Eq.~\ref{eq:Thermocouple_Bead_Energy_Balance} can be simplified to solve for the corrected gas temperature.
+where $\dot{Q}_{\rm con}$ and $\dot{Q}_{\rm rad}$ are the net rate of convective and radiative heat transfer, respectively, and $\rho_{\rm b}$, $c_{\rm b}$, $V_{\rm b}$ are the density, specific heat and volume of the bead, respectively. The thermal inertia effect is related to the thermocouple time constant, $\tau$, and can be incorporated into Eq.~(\ref{eq:Thermocouple_Bead_Energy_Balance}) to correct the temperature measurement. The energy balance from Eq.~(\ref{eq:Thermocouple_Bead_Energy_Balance}) can be simplified to solve for the corrected gas temperature.
 \begin{equation}\label{eq:Thermocouple_Bead_Correction}
 {T_{g}(t)}= T_{b}(t)+\tau\frac{dT_{b}}{dt}+\frac{\epsilon\sigma}{h}\left({T_{b}(t)}^4-{T_{surr}(t)}^4\right)
 \end{equation}
@@ -309,12 +311,12 @@ h=\frac{Nu\lambda_{g}}{d_{b}}
 \begin{equation}\label{eq:tau}
 \tau= \frac{\rho_{b}c_{p,b}{d_{b}}^2}{6Nu\lambda_{g}}
 \end{equation}
-where $\lambda_{g}$ is the thermal conductivity of the gas and $d_{b}$ is the diameter of the bead. The Nusselt number, $Nu$, for the bead was calculated using the Ranz-Marshall correlation~\cite{Shaddix1999}, as shown in the Eqn.~\ref{eq:Nu_number}. 
+where $\lambda_{g}$ is the thermal conductivity of the gas and $d_{b}$ is the diameter of the bead. The Nusselt number, $Nu$, for the bead was calculated using the Ranz-Marshall correlation~\cite{Shaddix1999}, as shown in the Eqn.~\ref{eq:Nu_number}.
 \begin{equation}\label{eq:Nu_number}
 Nu= 2+{\textrm{Re}_{d}}^{\frac{1}{2}}+\textrm{Pr}^{\frac{1}{3}}
 \end{equation}
 The temperature-dependent gas properties for, Reynolds number, Re, and Prandtl number, Pr, are taken as those of air from Ref.~\cite{Dippr}. The gas velocity was assumed to be equal to 2 m/s to determine the Re. Calculations showed that the corrected temperature had little sensitivity on the magnitude of the velocity between values of \SI{1}{ m/s} and \SI{3}{m/s}, which is consistent with the results of Shaddix~\cite{Shaddix1999}. The uncertainty of the time-averaged temperature measurements was estimated from a combined Type A and B evaluation of uncertainty defined as the variance of the temperature measurements and the thermocouple error. Additional details regarding the time-averaged temperature measurements are provided in Appendix~\ref{sec:Uncertainty_Temperature_Measurements}.
- 
+
 \subsection{Measuring the Volume Fraction of Gas Species via GC/MSD}
 \label{ssec:Gas_Species_Setup}
 
@@ -341,7 +343,7 @@ The mass fraction, $\bar{Y}_{i}$, of a given species $i$ was calculated from the
 \begin{equation}\label{eq:mass_fraction}
 	\bar{Y}_{i}=\frac{\bar{X}_{i}~{\textrm{MW}_{i}}}{{\textrm{MW}_{tot}}}
 \end{equation}
-where ${{\textrm{MW}_{i}}}$ is the molecular weight of a given species and ${{MW_{tot}}}$ is the average molecular weight of all detected gas species calculated from Eqn.~\ref{eq:Total_MW}. 
+where ${{\textrm{MW}_{i}}}$ is the molecular weight of a given species and ${{MW_{tot}}}$ is the average molecular weight of all detected gas species calculated from Eqn.~\ref{eq:Total_MW}.
 \begin{equation}\label{eq:Total_MW}
 	{\textrm{MW}_{tot}}=\sum{\bar{X}_{i}{\textrm{MW}_{i}}}
 \end{equation}
@@ -367,14 +369,14 @@ The soot mass fraction, $m_{s}$, was computed from the mass of the soot collecte
 \begin{equation}\label{eq:soot_mass_frac}
 Y_{s}= \frac{m_{s}}{m_{t}}\frac{T_{\infty}}{T_{g}}
 \end{equation}
-The total mass of gas sampled was estimated from the product of the average volumetric flow rate measured by the mass flow controller, $\dot{V}$, the density of the sample gas injected into the GC/MSD, $\rho_{g}$, and the gas sampling time, $t$. 
+The total mass of gas sampled was estimated from the product of the average volumetric flow rate measured by the mass flow controller, $\dot{V}$, the density of the sample gas injected into the GC/MSD, $\rho_{g}$, and the gas sampling time, $t$.
 \begin{equation}\label{eq:total_mass}
 m_{t}= \dot{V}\cdot \rho_{g}\cdot t
-\end{equation} 
-In Eqn.~\ref{eq:total_mass}, the density of the sample gas was determined from the total mass detected from the TCD and MSD, $m_{tot}$, for the injected sample volume, $V_{s}$. 
+\end{equation}
+In Eqn.~\ref{eq:total_mass}, the density of the sample gas was determined from the total mass detected from the TCD and MSD, $m_{tot}$, for the injected sample volume, $V_{s}$.
 \begin{equation}\label{eq:gas_density}
 \rho_{g}= \frac{m_{tot}}{V_{s}}
-\end{equation} 
+\end{equation}
 The uncertainty of the soot mass fraction was estimated from a combined uncertainty of the Type A evaluation of standard uncertainty in the variance of temperature and mass measurements and the Type B standard uncertainty in the bias errors of the instrumentation. A detailed description of the soot mass fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Soot_Frac}.
 
 \section{Mixture Fraction}
@@ -382,19 +384,19 @@ The uncertainty of the soot mass fraction was estimated from a combined uncertai
 The mixture fraction, $Z$, was based on carbon containing species and was defined as follows:
 \begin{equation}\label{eq:Mixture_Fraction}
 Z=\bar{Y}_{F}+\frac{{\textrm{MW}_{F}}}{x}\sum{\frac{\bar{Y}_{i}}{{\textrm{MW}_{i}}}}
-\end{equation} 
+\end{equation}
 where $\bar{Y}_{F}$, ${\textrm{MW}_{F}}$, and $x$ are the mass fraction, molecular weight, and number of carbon molecules of the parent fuel, respectively. The mixture fraction calculation included the mass fraction of soot measured from the technique described in Section~\ref{ssec:Soot_Setup}.
 Considering the idealized reaction of a hydrocarbon fuel, the state reactions was derived as:
 \begin{align*}
 C_{x}H_{y}&O_{z}+\eta(x+\frac{y}{4}-\frac{z}{2})~(O_{2}+3.76~N_{2}+0.0445~Ar)\\
-&\rightarrow max(0,1-\eta)~C_{x}H_{y}O_{z}+max(0,1-\eta)~(x+\frac{y}{4}~\frac{z}{2})~O_{2}+ min(1,\eta)~x~CO_{2}\\ 
+&\rightarrow max(0,1-\eta)~C_{x}H_{y}O_{z}+max(0,1-\eta)~(x+\frac{y}{4}~\frac{z}{2})~O_{2}+ min(1,\eta)~x~CO_{2}\\
 &~~~~+min(1,\eta)~\frac{y}{2}~H_{2}O+\eta(x+\frac{y}{4}-\frac{z}{2})~(3.76~N_{2}+0.0445~Ar) \numberthis \label{eq:Ideal_rxn}
 \end{align*}
 where $max(\alpha,\beta)$ and $min(\alpha,\beta)$ are operators that return the larger and smaller value, respectively, of the two parameters $\alpha$ and $\beta$. The parameter $\eta$ represents the portion of air relative to the amount of fuel used as a reactant in Eqn.~\ref{eq:Ideal_rxn}. In other words, $\eta$ can be defined as the reciprocal of the local fuel equivalence ratio, $\phi$,
 \begin{equation}\label{eq:Eta}
 \phi=\frac{(F/A)}{(F/A)_{st}}=\frac{1}{\eta}
-\end{equation} 
-where $F/A$ is the fuel-air ratio and the subscript $st$ denotes the stoichiometric condition. The idealized mixture fractions of the products relative to the mixture fraction can then be calculated through a combination of Eqs.~\ref{eq:Mixture_Fraction}, \ref{eq:Ideal_rxn}, and \ref{eq:Eta}. The uncertainty of the mixture fraction was determined from propagating the error in the mass fraction measurements. A detailed description of the mixture fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Mix_Frac}. 
+\end{equation}
+where $F/A$ is the fuel-air ratio and the subscript $st$ denotes the stoichiometric condition. The idealized mixture fractions of the products relative to the mixture fraction can then be calculated through a combination of Eqs.~\ref{eq:Mixture_Fraction}, \ref{eq:Ideal_rxn}, and \ref{eq:Eta}. The uncertainty of the mixture fraction was determined from propagating the error in the mass fraction measurements. A detailed description of the mixture fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Mix_Frac}.
 
 \section{Results}
 \label{sec:Results}
@@ -443,7 +445,7 @@ Carbon/Hydrogen 					&	3.0				&	4.0			&	6.0			\\
 To account for the difference in height between the methanol, ethanol, and acetone pool fires, the mean flame height, $H$, of each fuel was converted to dimensionless distance, $Z^{*}$, that was calculated from Eqn.~\ref{eq:Z_Star}.
 \begin{equation}\label{eq:Z_Star}
 Z^{*}=H\left(\frac{\dot{Q}}{C_{p}\sqrt{g}\rho_{o}T_{o}}\right)^{\frac{2}{5}}
-\end{equation} 
+\end{equation}
 Here $\dot{Q}$ is the heat release rate, $g$ is the gravitational constant, and $C_p$ and $\rho_o$ are the specific heat and the density of air at room temperature, $T_o$. The uncertainty of $Z^{*}$ was calculated from the law of propagation of uncertainty and is detailed in Appendix~\ref{sec:Uncertainty_Z_star}.
 
 Figure~\ref{fig:Temp_Comparison} shows the time-averaged corrected gas temperatures from the centerline of the methanol, ethanol, and acetone pool fires. The maximum mean temperature from each pool fire was found to peak at an approximate $Z^{*}$ of 57. Methanol was determined to have the highest mean temperature of 1316 K with ethanol and acetone exhibiting maximum mean temperatures of 1281 K and 1190 K, respectively. The maximum mean temperature of fuels with higher heat release rates is shown to be lower compared to other fuels. The inverse relationship between heat release rate and maximum mean temperature can be attributed to the radiation loss of the flame to its surroundings. Compared to the raw temperature data, it was discovered that the thermal inertia correction had little influence ($<$ \SI{5}{K}) on the mean temperature but significantly altered the RMS.
@@ -468,7 +470,7 @@ For all fuels, the fuel and oxygen volume fractions were highest and lowest, res
 
 \subsection{Mixture Fraction Results}
 \label{ssec:Mixture_Fraction_Results}
-In this section, the results of the fuels are presented corresponding to fuel type, since fuel type established the relationship between mass and mixture fraction as defined in Eqn.~\ref{eq:Mixture_Fraction}. Figures~\ref{fig:Methanol_Mix_Frac}, \ref{fig:Ethanol_Mix_Frac}, and \ref{fig:Acetone_Mix_Frac} show the averaged quasi-steady mass fractions measurements as a function of the mixture fraction for the methanol, ethanol, and acetone fires, respectively. The dotted lines in each of the figures represent idealized combustion calculated from Eqs.~\ref{eq:Mixture_Fraction}, \ref{eq:Ideal_rxn}, and \ref{eq:Eta}, in that it is assumed that no intermediate species (i.e., $\ch{CO}$, $\ch{H_{2}}$, or soot) are produced. The vertical dotted line defines the stoichiometric combustion condition of which to its left and right represents the fuel-lean ($Z<Z_{st}$) and fuel-rich ($Z>Z_{st}$) regions, respectively. In all figures, the vertical error bars represent the propagated uncertainty of the averaged mass fractions. Additional plots that detail the averaged mass fractions of all detected species as a function of mixture fraction, with their expanded uncertainties, are provided in Appendix~\ref{sec:Mix_Frac_Figs}. 
+In this section, the results of the fuels are presented corresponding to fuel type, since fuel type established the relationship between mass and mixture fraction as defined in Eqn.~\ref{eq:Mixture_Fraction}. Figures~\ref{fig:Methanol_Mix_Frac}, \ref{fig:Ethanol_Mix_Frac}, and \ref{fig:Acetone_Mix_Frac} show the averaged quasi-steady mass fractions measurements as a function of the mixture fraction for the methanol, ethanol, and acetone fires, respectively. The dotted lines in each of the figures represent idealized combustion calculated from Eqs.~\ref{eq:Mixture_Fraction}, \ref{eq:Ideal_rxn}, and \ref{eq:Eta}, in that it is assumed that no intermediate species (i.e., $\ch{CO}$, $\ch{H_{2}}$, or soot) are produced. The vertical dotted line defines the stoichiometric combustion condition of which to its left and right represents the fuel-lean ($Z<Z_{st}$) and fuel-rich ($Z>Z_{st}$) regions, respectively. In all figures, the vertical error bars represent the propagated uncertainty of the averaged mass fractions. Additional plots that detail the averaged mass fractions of all detected species as a function of mixture fraction, with their expanded uncertainties, are provided in Appendix~\ref{sec:Mix_Frac_Figs}.
 
 \begin{figure}[!]
 	\centering
@@ -491,14 +493,14 @@ In this section, the results of the fuels are presented corresponding to fuel ty
 	\label{fig:Acetone_Mix_Frac}
 \end{figure}
 
-In the instances where the mixture fraction is small ($Z<<Z_{st}$), all major gas species are in fair agreement with the theoretical lines; the measured mass fractions of unburned fuel and $\ch{CO}$ are nearly zero, and the $\ch{O_2}$ is close to its respective theoretical value. As the mixture fraction approaches stoichiometric conditions, the measured mass fraction of $\ch{O_{2}}$ decreases while $\ch{CO_{2}}$ and $\ch{H_{2}O}$ increases. The measured mass fraction of $\ch{CO_{2}}$ and $\ch{H_{2}O}$ are found to peak close to the stoichiometric mixture fraction. As the mixture fraction increases past the stoichiometric condition, the measured mass fraction of the unburned fuel is shown to increase, following the same trend as the idealized case. In the fuel-rich regions, the measured mass fraction of $\ch{CO_{2}}$ differs considerably from the theoretical case. The difference between the measured $\ch{CO_{2}}$ concentration and the theoretical value is attributed to the substantial portion of $\ch{CO}$, which exhibits a comparable trend to $\ch{CO_{2}}$ with respect to the mixture fraction. The presence of soot and other carbon containing species also attributes to the under-predicted concentration of $\ch{CO_{2}}$ relative to the theoretical case. 
+In the instances where the mixture fraction is small ($Z<<Z_{st}$), all major gas species are in fair agreement with the theoretical lines; the measured mass fractions of unburned fuel and $\ch{CO}$ are nearly zero, and the $\ch{O_2}$ is close to its respective theoretical value. As the mixture fraction approaches stoichiometric conditions, the measured mass fraction of $\ch{O_{2}}$ decreases while $\ch{CO_{2}}$ and $\ch{H_{2}O}$ increases. The measured mass fraction of $\ch{CO_{2}}$ and $\ch{H_{2}O}$ are found to peak close to the stoichiometric mixture fraction. As the mixture fraction increases past the stoichiometric condition, the measured mass fraction of the unburned fuel is shown to increase, following the same trend as the idealized case. In the fuel-rich regions, the measured mass fraction of $\ch{CO_{2}}$ differs considerably from the theoretical case. The difference between the measured $\ch{CO_{2}}$ concentration and the theoretical value is attributed to the substantial portion of $\ch{CO}$, which exhibits a comparable trend to $\ch{CO_{2}}$ with respect to the mixture fraction. The presence of soot and other carbon containing species also attributes to the under-predicted concentration of $\ch{CO_{2}}$ relative to the theoretical case.
 
 \subsection{Verifying Gas Species Measurements}
 \label{ssec:Verifying_Vol_Frac_Measurements}
 As a way to verify the accuracy of the experimental method, specifically the calibration procedure and curve fit, the total moles identified, $n_{tot}$, by the TCD and MSD was compared to the total moles injected into the GC/MSD system. The total moles injected, $n_{inj}$, into the GC/MSD was calculated from the ideal gas equation, Eqn.~\ref{eq:moles_inj}.
 \begin{equation}\label{eq:moles_inj}
 n_{inj}=\frac{PV_{sl}}{RT}
-\end{equation} 
+\end{equation}
 Here, $R$ is the universal gas constant (287~J/(mol $\cdot$K), $V_{sl}$ is the volume of the GC/MSD sample loop (\SI{2.0}{ml}), and $P$ and $T$ are the averaged pressure and temperature measurements, respectively, collected before injecting the gas sample into the GC/MSD as described in Section~\ref{ssec:Gas_Species_Setup}. The combined uncertainty of the total moles injected is detailed in Section~\ref{ssec:Total Moles Injected into the GC/MSD for Calibation}.
 
 \begin{figure}[h!]
@@ -508,9 +510,9 @@ Here, $R$ is the universal gas constant (287~J/(mol $\cdot$K), $V_{sl}$ is the v
 	\label{fig:Mole_Comp}
 \end{figure}
 
-Figure~\ref{fig:Mole_Comp} shows the ratio of the moles identified by the TCD and MSD to the mole injected into the GC/MSD as a function of $Z^{*}$. The horizontal dotted line represents the theoretical instance when the moles identified is equal to the moles injected. In most cases, the ratio is close to unity, indicating that the total moles injected into the GC/MS are all accounted for in the calculation. In some instances, where $Z^{*}$ is small ($<35$), the ratio is higher than the theoretical value. This difference indicates an error in the calibration, which is over predicting certain gas species; most likely fuel species since there are high concentrations of fuel close to the fuel surface. The discrepancy between the measured and theoretical values is accounted for in the uncertainty as shown in the error bars which extend beyond the unity line. 
+Figure~\ref{fig:Mole_Comp} shows the ratio of the moles identified by the TCD and MSD to the mole injected into the GC/MSD as a function of $Z^{*}$. The horizontal dotted line represents the theoretical instance when the moles identified is equal to the moles injected. In most cases, the ratio is close to unity, indicating that the total moles injected into the GC/MS are all accounted for in the calculation. In some instances, where $Z^{*}$ is small ($<35$), the ratio is higher than the theoretical value. This difference indicates an error in the calibration, which is over predicting certain gas species; most likely fuel species since there are high concentrations of fuel close to the fuel surface. The discrepancy between the measured and theoretical values is accounted for in the uncertainty as shown in the error bars which extend beyond the unity line.
 
-Another way to verify the accuracy of the gas species measurements was to calculate the carbon to hydrogen, product species, and inert species ratios from the methanol, ethanol, and acetone pool fires. Each calculation only incorporates quantified species and assumes other identified species are trace amounts. The expanded uncertainty of the carbon to hydrogen, product, and inert ratios was determined using the law of propagation of uncertainty that accounted for the error of each species' volume fraction measurement and discussed in Appendix~\ref{sec:Uncertainty_Ver_Scheme}. 
+Another way to verify the accuracy of the gas species measurements was to calculate the carbon to hydrogen, product species, and inert species ratios from the methanol, ethanol, and acetone pool fires. Each calculation only incorporates quantified species and assumes other identified species are trace amounts. The expanded uncertainty of the carbon to hydrogen, product, and inert ratios was determined using the law of propagation of uncertainty that accounted for the error of each species' volume fraction measurement and discussed in Appendix~\ref{sec:Uncertainty_Ver_Scheme}.
 
 The theoretical value of the carbon to hydrogen ratio was determined from the mass fraction of carbon and hydrogen residing within the parent fuel and are reported in Table~\ref{tab:Pool_Fire_Parameters_Table}. As shown in Eqn.~\ref{eq:c2h_ratio} the carbon to hydrogen ratio was calculated from the mass fraction of any quantified gas species that contained either carbon, $\bar{Y}_{i,C}$, or hydrogen, $\bar{Y}_{i,H}$. Here $\textrm{MW}_{C}$ and $\textrm{MW}_{H}$ are the molecular weights of carbon and hydrogen.
 
@@ -518,7 +520,7 @@ The theoretical value of the carbon to hydrogen ratio was determined from the ma
  \frac{C}{H}=\frac{\sum{\bar{Y}_{i,C}~{\frac{\textrm{MW}_{C}}{\textrm{MW}_{i,C}}}}}{\sum{\bar{Y}_{i,H}~{\frac{\textrm{MW}_{H}}{\textrm{MW}_{i,H}}}}}
 \end{equation}
 
-The carbon to hydrogen ratio for each experiment is shown in Fig.~\ref{fig:C2H}. The dotted line represents the theoretical value stated in Table~\ref{tab:Pool_Fire_Parameters_Table}. For each fuel, the data is shown to be in agreement with the theoretical value indicating that the analysis is successful in quantifying most of the carbon and hydrogen containing species.   
+The carbon to hydrogen ratio for each experiment is shown in Fig.~\ref{fig:C2H}. The dotted line represents the theoretical value stated in Table~\ref{tab:Pool_Fire_Parameters_Table}. For each fuel, the data is shown to be in agreement with the theoretical value indicating that the analysis is successful in quantifying most of the carbon and hydrogen containing species.
 
 \begin{figure}[h!]
 	\centering
@@ -546,7 +548,7 @@ When simplified, the $\text{SCR}$ of each fuel was calculated as:
 \end{equation}
 The derivation for methanol, ethanol, and acetone's SCRs is provided in Appendix~\ref{sec:SCR_Derv}.
 
-Figure~\ref{fig:SCR} shows the difference between the $\text{SCR}$ and experimental data. The dotted lines represents the $\text{SCR}$ values calculated from Eqns.~\ref{eq:prod_ratio_methanol}, \ref{eq:prod_ratio_ethanol}, and \ref{eq:prod_ratio_acetone}. Direct comparison of the measured values to the idealized values shows that there is general agreement and that the volume fraction measurements are not unreasonable. An exact match is not expected since the idealized values do not take into account molecular diffusion, nor the mass of soot. 
+Figure~\ref{fig:SCR} shows the difference between the $\text{SCR}$ and experimental data. The dotted lines represents the $\text{SCR}$ values calculated from Eqns.~\ref{eq:prod_ratio_methanol}, \ref{eq:prod_ratio_ethanol}, and \ref{eq:prod_ratio_acetone}. Direct comparison of the measured values to the idealized values shows that there is general agreement and that the volume fraction measurements are not unreasonable. An exact match is not expected since the idealized values do not take into account molecular diffusion, nor the mass of soot.
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.5cm, keepaspectratio]{Prod_ratio_Comparison.png}
@@ -554,7 +556,7 @@ Figure~\ref{fig:SCR} shows the difference between the $\text{SCR}$ and experimen
 	\label{fig:SCR}
 \end{figure}
 
-An inert ratio was also calculated from the volume fraction measurements of argon to nitrogen. Since both argon and nitrogen are inert, the ratio between them should be reasonably consistent across all fuels. The inert ratio was measured from ambient air samples using the setup described in Sec.~\ref{ssec:Gas_Species_Setup}. The inert ratio of ambient air was determined to be $0.012~\pm~4~\%$. The range of the inert ratios calculated from the ambient air sample is depicted in Fig.~\ref{fig:IR} as the error band. The error band is shown to extend beyond all calculated inert ratios, which further supports the validity of the measurements. 
+An inert ratio was also calculated from the volume fraction measurements of argon to nitrogen. Since both argon and nitrogen are inert, the ratio between them should be reasonably consistent across all fuels. The inert ratio was measured from ambient air samples using the setup described in Sec.~\ref{ssec:Gas_Species_Setup}. The inert ratio of ambient air was determined to be $0.012~\pm~4~\%$. The range of the inert ratios calculated from the ambient air sample is depicted in Fig.~\ref{fig:IR} as the error band. The error band is shown to extend beyond all calculated inert ratios, which further supports the validity of the measurements.
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.5cm, keepaspectratio]{Inert_ratio_Comparison.png}
@@ -596,7 +598,7 @@ The mass burning rate, $\dot{m}$, was measured from the mass loss in the fuel re
 \label{eq:mass_rate_uncertainty}
 u_{\scriptscriptstyle \dot{m}} = \sqrt{s_{\scriptscriptstyle \dot{m}}^2+u_{\rm \scriptscriptstyle inst}^2+u_{\rm \scriptscriptstyle cal}^2}
 \end{equation}
- 
+
 \subsection{Heat Release Rate}
 \label{ssec:Heat_Release_Rate}
 The heat release rate was determined from Eqn.~\ref{eq:Heat_release_rate} using the heat of combustion property of the respective fuel, provided by DIPPR\textsuperscript{\textregistered}, and time-averaged mass burning rate values listed in Table~\ref{tab:Pool_Fire_Parameters_Table}. The uncertainty of the heat release rate was calculated via the law of propagation of uncertainty:
@@ -671,7 +673,7 @@ The total number of moles detected was determined from the summation of the numb
 \label{eq:totalnumberofmolesdetected}
 u_{\scriptscriptstyle n_{tot}}=\sqrt{{\sum_{n=1}^{N} s_{\scriptscriptstyle n_{i}}^2}}
 \end{equation}
-where $N$ is the number of a species identified species in the TCD and TIC chromatogram. 
+where $N$ is the number of a species identified species in the TCD and TIC chromatogram.
 
 \subsection{Uncertainty of Mass Fractions}
 \label{ssec:Uncertainty of Mass Fractions}
@@ -682,7 +684,7 @@ u_\mathrm{\bar{Y}_{i}} = \sqrt{{\left( \frac{\partial \bar{Y}_{i}}{\partial \bar
 
 \subsubsection{Uncertainty of the average molecular weight}
 \label{ssec:Uncertainty of the average molecular weight}
-The uncertainty of the average molecular weight was determined using the law of propagation of uncertainty, which accounted for each detected species measured from the injected sample. 
+The uncertainty of the average molecular weight was determined using the law of propagation of uncertainty, which accounted for each detected species measured from the injected sample.
 
 \begin{equation}\label{eq:Uncertainty_Total_MW}
 	u_{\scriptscriptstyle \textrm{MW}_{tot}}=\sqrt{\left(\sum{{u_{\scriptscriptstyle \bar{X}_{i}}}{{\textrm{MW}_{i}}}}\right)^2}
@@ -822,7 +824,7 @@ Liquid material concentrations were calibrated from the ratio of the liquid-vapo
 C_{vap} =\frac {P_{vap}}{P}
 \end{equation}
 
-The vapor pressure of any given liquid can be calculated and modified using the bubbler setup shown in Fig.~\ref{fig:Bubbler}: 
+The vapor pressure of any given liquid can be calculated and modified using the bubbler setup shown in Fig.~\ref{fig:Bubbler}:
 
 \begin{figure}[h!]
 	\centering
@@ -836,7 +838,7 @@ Nitrogen, acting as a carrier gas, was bubbled at the bottom of a liquid bath wh
 \label{eq:liquid_vapor_pressure_correlation}
 P_{vap} =e^{A+\frac{B}{T}+C~\ln{T}+D~T^{E}}
 \end{equation}
-In this correlation, $P_{vap}$ is the vapor pressure calculated from the temperature of the liquid bath, $T$, with the coefficients ($A$, $B$, $C$, $D$, $E$) specific to the liquid material. Table~\ref{tab:Liquid Calibrate_Table} lists all coefficients for each calibrated liquid, including the uncertainty of their respective correlations, $u_{corr}$. 
+In this correlation, $P_{vap}$ is the vapor pressure calculated from the temperature of the liquid bath, $T$, with the coefficients ($A$, $B$, $C$, $D$, $E$) specific to the liquid material. Table~\ref{tab:Liquid Calibrate_Table} lists all coefficients for each calibrated liquid, including the uncertainty of their respective correlations, $u_{corr}$.
 
 \begin{table}[!]
 \caption{Liquid Vapor Pressure Correlation Coefficients for Various Calibrated Liquids}
@@ -871,7 +873,7 @@ The uncertainty of the pressure measured upon injected was calculated from Eqn.~
 \begin{equation}
 \label{eq:vapor_concentration_uncertainty}
 u_{\scriptscriptstyle P_{vap}} = \sqrt{{\left(\frac{\partial P_{vap}}{\partial T_{B}}\,u_{\scriptscriptstyle T_{B}} \right)}^2+{u_{corr}}^2}
-\end{equation} 
+\end{equation}
 
 The Type A evaluation of uncertainty of the liquid bath temperautre readings was determined from the standard error of the temperature, $s_{T_{B}}$ readings from the sampling period. The Type B evaluation of uncertainty for the liquid bath temperature was defined as the bias error source (\SI{1.5}{\degree C}) in the thermocouple, $u_{inst}$. The combined uncertainty liquid bath temperature was determined via quadrature:
 
@@ -917,7 +919,7 @@ u_{\scriptscriptstyle \dot{V}} = \sqrt{u_{\rm \scriptscriptstyle p}^2 + u_{\rm \
 
 \subsection{Total Mass Identified}
 \label{ssec:Total_Mass_Identified_into_GC/MSD}
-The total mass detected in the TCD and TIC chromatograms, $m_{tot}$, was calculated from the summation of products of the number moles of a given species that were identified from the TCD and TIC chromatograms, $n_{i}$, and their respective molar mass, ${\textrm{MW}_{i}}$: 
+The total mass detected in the TCD and TIC chromatograms, $m_{tot}$, was calculated from the summation of products of the number moles of a given species that were identified from the TCD and TIC chromatograms, $n_{i}$, and their respective molar mass, ${\textrm{MW}_{i}}$:
 
 \begin{equation}
 \label{eq:total_mass_detected_uncertainty}
@@ -930,7 +932,7 @@ The uncertainty in the total mass detected was calculated from the uncertainties
 \label{eq:total_mass_detected_uncertainty}
 u_{\scriptscriptstyle m_{tot}}=\sqrt{{\sum_{n=1}^{N} (u_{\scriptscriptstyle n_{i}}{\textrm{MW}_{i}})^2}}
 \end{equation}
-where $N$ is the number of a species identified species in the TCD and TIC chromatograms. 
+where $N$ is the number of a species identified species in the TCD and TIC chromatograms.
 
 \subsection{Mass Flow Controller Internal Gas Flow Temperature Reading}
 \label{ssec:MFC_Temp}
@@ -951,18 +953,18 @@ The mixture fraction, $Z$, was determined from Eqn.~\ref{eq:Mixture_Fraction} ba
 \label{eq:mixture_frac_uncertainty}
 u_{\scriptscriptstyle Z}=\sqrt{{u_{\scriptscriptstyle \bar{Y}_{f}}}^2+{\sum_{i=1}^{N}{\left(\frac{\partial Z}{\partial \bar{Y}_{i,C}}\frac{u_{\scriptscriptstyle \bar{Y}_{i,C}}}{\textrm{MW}_{i}} \right)}^2}}
 \end{equation}
-The uncertainty of the mass fractions of carbon containing species is discussed in Appendix~\ref{ssec:Uncertainty of Mass Fractions}. 
+The uncertainty of the mass fractions of carbon containing species is discussed in Appendix~\ref{ssec:Uncertainty of Mass Fractions}.
 
 \pagebreak
 
 \section{Uncertainty Analysis of the $Z^{*}$}\label{sec:Uncertainty_Z_star}
 \addcontentsline{toc}{section}{Appendix H: Uncertainty Analysis of the $Z^{*}$}
-$Z^{*}$ was calculated from Eqn.~\ref{eq:Z_Star} where the gravitational constant and temperature, specific heat, and density of the ambient air were treated as constants. The uncertainty of $Z^{*}$ was calculated from the law of propagation of uncertainty, which incorporated the uncertainties of the heat release rate, $\dot{Q}$, and the mean flame height, $H$. 
+$Z^{*}$ was calculated from Eqn.~\ref{eq:Z_Star} where the gravitational constant and temperature, specific heat, and density of the ambient air were treated as constants. The uncertainty of $Z^{*}$ was calculated from the law of propagation of uncertainty, which incorporated the uncertainties of the heat release rate, $\dot{Q}$, and the mean flame height, $H$.
 \begin{equation}
 \label{eq:heat_release_rate_uncertainty}
 u_{\scriptscriptstyle Z^{*}} = \sqrt{{\left(\frac{\partial Z^{*}}{\partial \dot{Q}}\,u_{\scriptscriptstyle \dot{Q}} \right)}^2+{\left(\frac{\partial Z^{*}}{\partial H}\,u_{\scriptscriptstyle H} \right)}^2}
 \end{equation}
-The uncertainty of the heat release rate and mean flame height is described in Appendix~\ref{sec:Uncertainty_Pool_Fire_Parameters}. 
+The uncertainty of the heat release rate and mean flame height is described in Appendix~\ref{sec:Uncertainty_Pool_Fire_Parameters}.
 
 \pagebreak
 
@@ -1134,7 +1136,7 @@ Eqn.~\ref{eq:Methanol_H_Balance_2} can then be substituted into Eqn.~\ref{eq:Met
 \label{eq:Methanol_C_Balance_2}
 d+g-\frac{1}{2}\left(e+f\right)=0
 \end{equation}
-or 
+or
 \begin{equation}
 \label{eq:Methanol_SCR}
 \frac{e+f}{d+g}=2
@@ -1176,7 +1178,7 @@ Eqn.~\ref{eq:Ethanol_H_Balance_2} can then be substituted into Eqn.~\ref{eq:Meth
 \label{eq:Ethanol_C_Balance_2}
 d+g+4l+\frac{2}{3}\left(j+2i-e-f-\frac{1}{2}h\right)=0
 \end{equation}
-or 
+or
 \begin{equation}
 \label{eq:Ethanol_SCR}
 \frac{e+f+\frac{1}{2}h}{d+g+\frac{2}{3}(j+2i)+4l}=\frac{3}{2}
@@ -1218,7 +1220,7 @@ Eqn.~\ref{eq:Acetone_H_Balance_2} can then be substituted into Eqn.~\ref{eq:Meth
 \label{eq:Acetone_C_Balance_2}
 d+g+3l+i-e-f-h-k=0
 \end{equation}
-or 
+or
 \begin{equation}
 \label{eq:Acetone_SCR}
 \frac{e+f+h+k}{d+g+i+3l}=1
