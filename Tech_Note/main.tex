@@ -384,16 +384,14 @@ This section presents the gas species and soot measurements made at incremental 
 \subsection{Flame Observations}
 \label{ssec:Flame_Observations}
 
-Figure~\ref{fig:Flame_Structure} displays a series of snapshots depicting the flame pulsation of the methanol, ethanol, and acetone pool fires. A repeated cycle was observed in each of the pool fires; uniformly curved flame sheets present at the burner rim would roll towards the fire centerline to form a long and narrow plume.
+Figure~\ref{fig:Flame_Structure} displays a series of snapshots depicting a single pulsation cycle of the methanol, ethanol, and acetone fires. The pulsation frequency is approximately 3~Hz.
 \begin{figure}[p]
 	\centering
 \includegraphics[width=5.0in,keepaspectratio]{Flame_Structure.png}
 	\caption[Pool Fire Structures]{Flame structures of methanol (top), ethanol (middle), and acetone (bottom) pool fires during their pulsing cycles}
 	\label{fig:Flame_Structure}
 \end{figure}
-The shape and color of the fires differs between fuel types. The methanol fire has a pale blue color, whereas the ethanol and acetone fires are luminous and yellow. The observations are consistent with previous experiments~\cite{Hamins2016,Kim2019,Weckman1996,Hamins1994,Hamins1991,Lock2008,Hogben1998}.
-
-The measured time-averaged burning rates and calculated heat release rates are listed in Table~\ref{tab:Pool_Fire_Parameters_Table}. The heat release rates are calculated from Eq.~(\ref{eq:Heat_release_rate}). The methanol fire has the lowest average flame height, followed by the ethanol, and then the acetone. In comparison to the measured mean flame height of each fuel, Heskestad’s theoretical flame height, reported in Ref.~\cite{Heskestad1983}, falls within the experimental uncertainty. The values stated here are within the uncertainty bands of measurements made by Kim et al.~\cite{Kim2019}.
+The methanol fire has a pale blue color, whereas the ethanol and acetone fires are more luminous and yellow. The measured time-averaged burning rates and calculated heat release rates are listed in Table~\ref{tab:Pool_Fire_Parameters_Table}. The heat release rates are calculated from Eq.~(\ref{eq:Heat_release_rate}). The methanol fire has the lowest average flame height, followed by the ethanol, and then the acetone. The measured mean flame heights match Heskestad’s correlation~\cite{Heskestad1983} to within measurement uncertainty. The flame heights are also within the uncertainty bounds of measurements made by Kim~et~al.~\cite{Kim2019}.
 
 \begin{table}[!ht]
 \caption{List of measurements and thermochemical properties of fuels burning in a well-ventilated round 30~cm diameter pool fire burning in a quiescent environment. The uncertainties of measurements are discussed in detail in Appendix~\ref{sec:Uncertainty_Pool_Fire_Parameters}.}
@@ -414,7 +412,7 @@ Mean Flame Height~(\si{cm})			&	36.4~$\pm$~16.0		&	61.1~$\pm$~28.2	&	91.5~$\pm$~
 \\[0.01cm]
 Heat of Combustion~ (\si{kJ/g})			&	19.9				&	26.8			&	28.6			\\	
 \\[0.01cm]
-Carbon/Hydrogen 					&	3.0				&	4.0			&	6.0			\\
+Carbon/Hydrogen 					&	1/4			&	1/3		&	1/2			\\
 \hline
 \end{tabular}
 \end{table}
@@ -422,13 +420,11 @@ Carbon/Hydrogen 					&	3.0				&	4.0			&	6.0			\\
 \subsection{Comparison of Pool Fires from Different Fuels}
 \label{ssec:Fuel_comp}
 
-To account for the difference in height between the methanol, ethanol, and acetone pool fires, the mean flame height, $H$, of each fuel is non-dimensionalized:
+Figure~\ref{fig:Temp_Comparison} displays the time-averaged, corrected gas temperatures as a function of the normalized vertical spatial coordinate, $z^*$:
 \begin{equation}\label{eq:Z_Star}
-Z^*=\frac{H}{D^*}  \quad ; \quad  D^* = \left(\frac{\dot{Q}}{C_{p}\sqrt{g}\rho_\infty T_\infty}\right)^{\frac{2}{5}}
+z^*=\frac{z}{D^*}  \quad ; \quad  D^* = \left(\frac{\dot{Q}}{c_{p}\rho_\infty T_\infty \sqrt{g}}\right)^{\frac{2}{5}}
 \end{equation}
-Here, $\dot{Q}$ is the heat release rate, $g$ is the gravitational constant, and $C_p$ and $\rho_\infty$ are the specific heat and the density of air at room temperature, $T_\infty$. The uncertainty of $Z^*$ is discussed in Appendix~\ref{sec:Uncertainty_Z_star}.
-
-Figure~\ref{fig:Temp_Comparison} shows the time-averaged, corrected gas temperatures along the centerline of the methanol, ethanol, and acetone fires. The maximum mean temperature from each fire is found to peak at an approximate $Z^{*}$ of 57. Methanol has the highest mean temperature of 1316~K with ethanol and acetone exhibiting maximum mean temperatures of 1281~K and 1190~K, respectively. The correction applied to the thermocouple temperature has less than a 5~K influence on the mean but significantly alters the RMS.
+Here, $\dot{Q}$ is the heat release rate, $g$ is the acceleration of gravity, and $c_p$ and $\rho_\infty$ are the specific heat and the density of air at room temperature, $T_\infty$. The maximum mean temperature for each fuel peaks at approximately $z^*=0.2$. Methanol has the highest mean temperature of 1316~K with ethanol and acetone exhibiting maximum mean temperatures of 1281~K and 1190~K, respectively. The correction applied to the thermocouple temperature has less than a 5~K influence on the mean but significantly alters the RMS.
 
 \begin{figure}[h!]
 	\centering
@@ -437,7 +433,7 @@ Figure~\ref{fig:Temp_Comparison} shows the time-averaged, corrected gas temperat
 	\label{fig:Temp_Comparison}
 \end{figure}
 
-Figure~\ref{fig:Fuel_Comparison} displays the volume fraction, $\bar{X}_{i}$, of major species centerline measurements as a function of $Z^{*}$ on the centerline of the methanol, ethanol, and acetone fires. Individual species plots pertaining to each fuel, which shows the major and trace species as a function of $Z^{*}$, are displayed in Appendix~\ref{sec:Vol_Frac_Figs} and include the uncertainty of each measurement. Major species detected in the TCD and MSD include combustion reactants (fuels and oxygen, $\ch{O_2}$), combustion products such as water, $\ch{H_{2}O}$, and carbon dioxide, $\ch{CO_{2}}$, combustion intermediates such as carbon monoxide, $\ch{CO}$, hydrogen, $\ch{H_{2}}$, and inert gases such as Nitrogen, $\ch{N_{2}}$, and Argon, $\ch{Ar}$. Methane was detected and quantified in all fires. In the case of the ethanol and acetone fires, soot, benzene, acetylene, ethylene, and ethane were also detected and quantified. Trace amounts of other species were also detected including propene, acetaldehyde, and ethyl acetate which is consistent with previous literature~\cite{Pichon2009, Gong2015}.
+Figure~\ref{fig:Fuel_Comparison} displays the mean volume fraction of the major species, $\bar{X}_{i}$, as a function of $z^*$ for the methanol, ethanol, and acetone fires. Plots for individual species, including uncertainties, displayed in Appendix~\ref{sec:Vol_Frac_Figs}. Major species detected in the TCD and MSD include combustion reactants (fuels and oxygen, $\ch{O_2}$), combustion products such as water, $\ch{H_{2}O}$, and carbon dioxide, $\ch{CO_{2}}$, combustion intermediates such as carbon monoxide, $\ch{CO}$, hydrogen, $\ch{H_{2}}$, and inert gases such as nitrogen, $\ch{N_{2}}$, and argon, $\ch{Ar}$. Methane is detected and quantified in all fires. In the case of the ethanol and acetone fires, soot, benzene, acetylene, ethylene, and ethane are also detected and quantified. Trace amounts of other species are also detected including propene, acetaldehyde, and ethyl acetate, consistent with previous literature~\cite{Pichon2009, Gong2015}.
 
 \begin{figure}[!]
 	\centering
@@ -446,80 +442,60 @@ Figure~\ref{fig:Fuel_Comparison} displays the volume fraction, $\bar{X}_{i}$, of
 	\label{fig:Fuel_Comparison}
 \end{figure}
 
-For all fuels, the fuel and oxygen volume fractions were highest and lowest, respectively, close to the fuel surface. Furthermore, the volume fractions of inert gases were found to have increased relative to the distance from the fuel surface. Methanol and ethanol volume fractions profiles of $\ch{H_{2}O}$, $\ch{CO_{2}}$, and $\ch{CO}$, with respect to $Z^{*}$ were reasonably similar. The largest volume fractions of all product species, such as $\ch{CO_2}$, $\ch{CO}$, and $\ch{H_2O}$ was achieved when burning acetone, except for $\ch{H_{2}}$ in which its peak was determined to be the lowest compared to the other fuels. Acetone was also found to produce a greater mass fraction of soot at every location of the centerline profile compared to the ethanol fire.
-
-
-
 
 \clearpage
 
 \section{Verifying Gas Species Measurements}
 \label{ssec:Verifying_Vol_Frac_Measurements}
 
-As a way to verify the accuracy of the experimental method, specifically the calibration procedure and curve fit, the total moles identified, $n_{tot}$, by the TCD and MSD was compared to the total moles injected into the GC/MSD system. The total moles injected, $n_{inj}$, into the GC/MSD was calculated from the ideal gas equation, Eqn.~\ref{eq:moles_inj}.
+This section presents several different techniques of verifying the accuracy of the species concentration measurements. 
+
+
+\subsection{Counting Moles}
+
+As a way to verify the accuracy of the experimental method, specifically the calibration procedure and curve fit, the total moles, $n_{\rm tot}$, identified by the TCD and MSD is compared to the total moles injected into the GC/MSD system, $n_{\rm inj}$, which is calculated from the ideal gas law:
 \begin{equation}\label{eq:moles_inj}
-n_{inj}=\frac{PV_{sl}}{RT}
+n_{\rm inj}=\frac{PV_{\rm sl}}{RT}
 \end{equation}
-Here, $R$ is the universal gas constant (287~J/(mol $\cdot$K), $V_{sl}$ is the volume of the GC/MSD sample loop (\SI{2.0}{ml}), and $P$ and $T$ are the averaged pressure and temperature measurements, respectively, collected before injecting the gas sample into the GC/MSD as described in Section~\ref{ssec:Gas_Species_Setup}. The combined uncertainty of the total moles injected is detailed in Section~\ref{ssec:Total Moles Injected into the GC/MSD for Calibation}.
+Here, $R=287$~J/(mol$\cdot$K) is the universal gas constant for air, $V_{\rm sl}=2\times 10^{-6}$~m$^3$ is the volume of the GC/MSD sample loop, and $P$~(Pa) and $T$~(K) are the mean pressure and temperature, respectively, collected before injecting the gas sample into the GC/MSD as described in Section~\ref{ssec:Gas_Species_Setup}. The combined uncertainty of the total moles injected is detailed in Section~\ref{ssec:Total Moles Injected into the GC/MSD for Calibation}.
 
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.5cm,keepaspectratio]{mole_ratio_Comparison.png}
-	\caption[Ratio of moles identified to moles injected, with error, as a function of $Z^{*}$]{Ratio of moles identified to moles injected, with error, as a function of $Z^{*}$ compared to the theoretical value}
+	\caption[Ratio of moles identified to moles injected]{Ratio of moles identified to moles injected, with error, as a function of $z^*$}
 	\label{fig:Mole_Comp}
 \end{figure}
 
-Figure~\ref{fig:Mole_Comp} shows the ratio of the moles identified by the TCD and MSD to the mole injected into the GC/MSD as a function of $Z^{*}$. The horizontal dotted line represents the theoretical instance when the moles identified is equal to the moles injected. In most cases, the ratio is close to unity, indicating that the total moles injected into the GC/MS are all accounted for in the calculation. In some instances, where $Z^{*}$ is small ($<35$), the ratio is higher than the theoretical value. This difference indicates an error in the calibration, which is over predicting certain gas species; most likely fuel species since there are high concentrations of fuel close to the fuel surface. The discrepancy between the measured and theoretical values is accounted for in the uncertainty as shown in the error bars which extend beyond the unity line.
+Figure~\ref{fig:Mole_Comp} shows the ratio of the moles identified by the TCD and MSD to the mole injected into the GC/MSD as a function of $z^*$. In most cases, the ratio is close to unity, indicating that the total moles injected into the GC/MS are all accounted for in the calculation. For low values of $z^*$, the ratio is higher than unity, indicating an error in the calibration which is most likely due to an over-prediction of the fuel species that are found at high concentrations near the liquid surface. 
 
-Another way to verify the accuracy of the gas species measurements was to calculate the carbon to hydrogen, product species, and inert species ratios from the methanol, ethanol, and acetone pool fires. Each calculation only incorporates quantified species and assumes other identified species are trace amounts. The expanded uncertainty of the carbon to hydrogen, product, and inert ratios was determined using the law of propagation of uncertainty that accounted for the error of each species' volume fraction measurement and discussed in Appendix~\ref{sec:Uncertainty_Ver_Scheme}.
+\subsection{Carbon to Hydrogen Ratio}
 
-The theoretical value of the carbon to hydrogen ratio was determined from the mass fraction of carbon and hydrogen residing within the parent fuel and are reported in Table~\ref{tab:Pool_Fire_Parameters_Table}. As shown in Eqn.~\ref{eq:c2h_ratio} the carbon to hydrogen ratio was calculated from the mass fraction of any quantified gas species that contained either carbon, $\bar{Y}_{i,C}$, or hydrogen, $\bar{Y}_{i,H}$. Here $\textrm{MW}_{C}$ and $\textrm{MW}_{H}$ are the molecular weights of carbon and hydrogen.
-
+Another way to verify the accuracy of the gas species measurements is to calculate the ratio of carbon to hydrogen atoms contained in all gas species at each vertical measurement location:
 \begin{equation}\label{eq:c2h_ratio}
- \frac{C}{H}=\frac{\sum{\bar{Y}_{i,C}~{\frac{\textrm{MW}_{C}}{\textrm{MW}_{i,C}}}}}{\sum{\bar{Y}_{i,H}~{\frac{\textrm{MW}_{H}}{\textrm{MW}_{i,H}}}}}
+  \frac{\rm C}{\rm H}=\frac{ \sum  x_i \, \bar{X}_{i} }{ \sum y_i \, \bar{X}_{i} }
 \end{equation}
-
-The carbon to hydrogen ratio for each experiment is shown in Fig.~\ref{fig:C2H}. The dotted line represents the theoretical value stated in Table~\ref{tab:Pool_Fire_Parameters_Table}. For each fuel, the data is shown to be in agreement with the theoretical value indicating that the analysis is successful in quantifying most of the carbon and hydrogen containing species.
+where the summation is over all measured gas species, and $x_i$ and $y_i$ are the numbers of carbon and hydrogen atoms in the molecule, respectively. The carbon to hydrogen ratio of the fuel molecules are reported in Table~\ref{tab:Pool_Fire_Parameters_Table}, and the ratio for each fuel is shown in Fig.~\ref{fig:C2H}. 
 
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.5cm, keepaspectratio]{C2H_ratio_Comparison.png}
-	\caption[Carbon to hydrogen ratio calculated from experimental values compared to theoretical values]{Carbon to hydrogen ratio calculated from experimental values with error compared to theoretical values. Dotted lines represent the theoretical carbon to hydrogen ratio calculated from the mass fraction of carbon and hydrogen residing within the parent fuel}
+	\caption[Carbon to hydrogen ratio calculated from all species]{Carbon to hydrogen ratio calculated from all measured gas species compared to the theoretical values.}
 	\label{fig:C2H}
 \end{figure}
 
-Another verification test was comparing volume fraction measurements to stoichiometric combustion ratios, $\text{SCR}$, determined from the reaction below.
-\begin{align*}
-C_{x}H_{y}&O_{z}+a~(O_{2}+3.76~N_{2}+0.0445~Ar)\\
-&\rightarrow b~C_{x}H_{y}O_{z}+c~O_{2}+ d~CO_{2}+e~H_{2}O+f~H_{2}+ g~CO\\
-&~~~~+h~CH_{4}+ i~C_{2}H_{2}+j~C_{2}H_{4}+k~C_{2}H_{6}+l~C_{6}H_{6}\\
-&~~~~+f~(3.76~N_{2}+0.0445~Ar) \numberthis \label{eq:Ideal_rxn}
-\end{align*}
-When simplified, the $\text{SCR}$ of each fuel was calculated as:
-\begin{equation}\label{eq:prod_ratio_methanol}
- \text{SCR}_{methanol}=\frac{\bar{X}_{H_2O}+\bar{X}_{H_2}}{\bar{X}_{CO_2}+\bar{X}_{CO}}=2
-\end{equation}
-\begin{equation}\label{eq:prod_ratio_ethanol}
-\text{SCR}_{ethanol}=\frac{\bar{X}_{H_2O}+\bar{X}_{H_2}+\frac{1}{2}\bar{X}_{CH_4}}{\bar{X}_{CO_2}+\bar{X}_{CO}+\frac{2}{3}(\bar{X}_{C_2H_4}+2\bar{X}_{C_2H_2})+4\bar{X}_{C_6H_6}}=\frac{3}{2}
-\end{equation}
-\begin{equation}\label{eq:prod_ratio_acetone}
-\text{SCR}_{acetone}=\frac{\bar{X}_{H_2O}+\bar{X}_{H_2}+\bar{X}_{CH_4}+\bar{X}_{C_2H_6}}{\bar{X}_{CO_2}+\bar{X}_{CO}+\bar{X}_{C_2H_2}+3\bar{X}_{C_6H_6}}=1
-\end{equation}
-The derivation for methanol, ethanol, and acetone's SCRs is provided in Appendix~\ref{sec:SCR_Derv}.
-
-Figure~\ref{fig:SCR} shows the difference between the $\text{SCR}$ and experimental data. The dotted lines represents the $\text{SCR}$ values calculated from Eqns.~\ref{eq:prod_ratio_methanol}, \ref{eq:prod_ratio_ethanol}, and \ref{eq:prod_ratio_acetone}. Direct comparison of the measured values to the idealized values shows that there is general agreement and that the volume fraction measurements are not unreasonable. An exact match is not expected since the idealized values do not take into account molecular diffusion, nor the mass of soot.
+A similar verification test is to apply the summations in Eq.~(\ref{eq:c2h_ratio}) to all {\em product} species; that is, all species except the original fuel molecule. The carbon to hydrogen ratio for the product gases should be the same as that for all species. Figure~\ref{fig:SCR} shows the results. Note that an exact match is not expected because the idealized values do not take into account the mass of soot.
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.5cm, keepaspectratio]{Prod_ratio_Comparison.png}
-	\caption[Stoichiometric Combustion Ratio calculated from experimental values compared to theoretical values]{Comparison of Stoichiometric Combustion Ratio, $\text{SCR}$, calculated from experimental and theoretical values compared to theoretical values. Dotted lines represent the theoretical $\text{SCR}$ calculated using Eqns.~\ref{eq:prod_ratio_ethanol}, \ref{eq:prod_ratio_methanol}, \ref{eq:prod_ratio_acetone}.}
+	\caption[Carbon to hydrogen ratio calculated from all {\em product} species]{Carbon to hydrogen ratio calculated from all measured {\em product} species compared to the theoretical values.}
 	\label{fig:SCR}
 \end{figure}
 
-An inert ratio was also calculated from the volume fraction measurements of argon to nitrogen. Since both argon and nitrogen are inert, the ratio between them should be reasonably consistent across all fuels. The inert ratio was measured from ambient air samples using the setup described in Sec.~\ref{ssec:Gas_Species_Setup}. The inert ratio of ambient air was determined to be $0.012~\pm~4~\%$. The range of the inert ratios calculated from the ambient air sample is depicted in Fig.~\ref{fig:IR} as the error band. The error band is shown to extend beyond all calculated inert ratios, which further supports the validity of the measurements.
+Another verification test considers the inert species argon and nitrogen whose molar ratio should be the same regardless of fuel type. The measured Ar/N$_2$ ratio in ambient air is $0.0117\pm0.0005$, and the measured ratio at different vertical locations within the fires is depicted in Fig.~\ref{fig:IR}. All points fall within the uncertainty bounds of the ambient air measurement.
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.5cm, keepaspectratio]{Inert_ratio_Comparison.png}
-	\caption[Stoichiometric Combustion Ratio calculated from experimental values compared to theoretical values]{Inert ratios calculated from the volume fractions of argon and nitrogen compared to inert ratios determined from ambient air and represented as error band.}
+	\caption[Ar/N$_2$ ratio within the fire envelop compared to ambient air]{Ar/N$_2$ molar ratio at different elevations compared to the uncertainty bounds of the measurement in ambient air.}
 	\label{fig:IR}
 \end{figure}
 
@@ -527,47 +503,47 @@ An inert ratio was also calculated from the volume fraction measurements of argo
 \subsection{Plotting the Results in Mixture Fraction Space}
 \label{ssec:Mixture_Fraction_Results}
 
-The mixture fraction, $Z$, was based on carbon containing species and was defined as follows:
+The mixture fraction, $Z$, is based on carbon containing species and was defined as follows:
 \begin{equation}\label{eq:Mixture_Fraction}
-Z=\bar{Y}_{F}+\frac{{\textrm{MW}_{F}}}{x}\sum{\frac{\bar{Y}_{i}}{{\textrm{MW}_{i}}}}
+  Z = \bar{Y}_{\rm F} + \frac{W_{\rm F}}{x} \sum \frac{\bar{Y}_i}{W_{i}}
 \end{equation}
-where $\bar{Y}_{F}$, ${\textrm{MW}_{F}}$, and $x$ are the mass fraction, molecular weight, and number of carbon molecules of the parent fuel, respectively. The mixture fraction calculation included the mass fraction of soot measured from the technique described in Section~\ref{ssec:Soot_Setup}.
+where $\bar{Y}_{\rm F}$, ${W_{\rm F}}$, and $x$ are the mass fraction, molecular weight, and number of carbon molecules of the parent fuel, respectively. The mixture fraction calculation included the mass fraction of soot measured from the technique described in Section~\ref{ssec:Soot_Setup}.
 Considering the idealized reaction of a hydrocarbon fuel, the state reactions was derived as:
 \begin{align*}
-C_{x}H_{y}&O_{z}+\eta(x+\frac{y}{4}-\frac{z}{2})~(O_{2}+3.76~N_{2}+0.0445~Ar)\\
-&\rightarrow max(0,1-\eta)~C_{x}H_{y}O_{z}+max(0,1-\eta)~(x+\frac{y}{4}~\frac{z}{2})~O_{2}+ min(1,\eta)~x~CO_{2}\\
-&~~~~+min(1,\eta)~\frac{y}{2}~H_{2}O+\eta(x+\frac{y}{4}-\frac{z}{2})~(3.76~N_{2}+0.0445~Ar) \numberthis \label{eq:Ideal_rxn}
+{\rm C}_{x}{\rm H}_{y}{\rm O}_{z} & +\eta(x+\frac{y}{4}-\frac{z}{2})~({\rm O}_{2}+3.76~{\rm N}_{2}+0.0445~{\rm Ar}) \rightarrow  \\
+          & \max(0,1-\eta)~{\rm C}_{x}{\rm H}_{y}{\rm O}_{z}+\max(0,1-\eta)~(x+\frac{y}{4}-\frac{z}{2})~{\rm O}_{2}+ \min(1,\eta)~x~{\rm CO}_{2} +  \\
+          & \min(1,\eta)~\frac{y}{2}~{\rm H}_{2}{\rm O}+\eta(x+\frac{y}{4}-\frac{z}{2})~(3.76~{\rm N}_{2}+0.0445~{\rm Ar})  \numberthis \label{eq:Ideal_rxn}
 \end{align*}
-where $max(\alpha,\beta)$ and $min(\alpha,\beta)$ are operators that return the larger and smaller value, respectively, of the two parameters $\alpha$ and $\beta$. The parameter $\eta$ represents the portion of air relative to the amount of fuel used as a reactant in Eqn.~\ref{eq:Ideal_rxn}. In other words, $\eta$ can be defined as the reciprocal of the local fuel equivalence ratio, $\phi$,
+The parameter $\eta$ is the reciprocal of the local fuel equivalence ratio, $\phi$,
 \begin{equation}\label{eq:Eta}
-\phi=\frac{(F/A)}{(F/A)_{st}}=\frac{1}{\eta}
+\phi=\frac{(F/A)}{(F/A)_{\rm st}}=\frac{1}{\eta}
 \end{equation}
-where $F/A$ is the fuel-air ratio and the subscript $st$ denotes the stoichiometric condition. The idealized mixture fractions of the products relative to the mixture fraction can then be calculated through a combination of Eqs.~\ref{eq:Mixture_Fraction}, \ref{eq:Ideal_rxn}, and \ref{eq:Eta}. The uncertainty of the mixture fraction was determined from propagating the error in the mass fraction measurements. A detailed description of the mixture fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Mix_Frac}.
+where $F/A$ is the fuel-air mass ratio and the subscript $\rm st$ denotes the stoichiometric condition. The ideal species mass fractions can then be calculated using Eq.~(\ref{eq:Ideal_rxn}). The uncertainty of the mixture fraction is determined from propagating the error in the mass fraction measurements. A detailed description of the mixture fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Mix_Frac}.
 
-In this section, the results of the fuels are presented corresponding to fuel type, since fuel type established the relationship between mass and mixture fraction as defined in Eqn.~\ref{eq:Mixture_Fraction}. Figures~\ref{fig:Methanol_Mix_Frac}, \ref{fig:Ethanol_Mix_Frac}, and \ref{fig:Acetone_Mix_Frac} show the averaged quasi-steady mass fractions measurements as a function of the mixture fraction for the methanol, ethanol, and acetone fires, respectively. The dotted lines in each of the figures represent idealized combustion calculated from Eqs.~\ref{eq:Mixture_Fraction}, \ref{eq:Ideal_rxn}, and \ref{eq:Eta}, in that it is assumed that no intermediate species (i.e., $\ch{CO}$, $\ch{H_{2}}$, or soot) are produced. The vertical dotted line defines the stoichiometric combustion condition of which to its left and right represents the fuel-lean ($Z<Z_{st}$) and fuel-rich ($Z>Z_{st}$) regions, respectively. In all figures, the vertical error bars represent the propagated uncertainty of the averaged mass fractions. Additional plots that detail the averaged mass fractions of all detected species as a function of mixture fraction, with their expanded uncertainties, are provided in Appendix~\ref{sec:Mix_Frac_Figs}.
+Figures~\ref{fig:Methanol_Mix_Frac}, \ref{fig:Ethanol_Mix_Frac}, and \ref{fig:Acetone_Mix_Frac} show the mean mass fraction measurements as a function of the mixture fraction for the methanol, ethanol, and acetone fires, respectively. The dotted lines represent ideal combustion calculated from Eq.~(\ref{eq:Ideal_rxn}). The vertical dotted line identifies the stoichiometric value of the mixture fraction. Additional plots that detail the averaged mass fractions of all detected species as a function of mixture fraction, with their expanded uncertainties, are provided in Appendix~\ref{sec:Mix_Frac_Figs}.
 
 \begin{figure}[!]
 	\centering
 \includegraphics[width=11.0cm,keepaspectratio]{Methanol_OVERALL_Mass_Frac_Mix_Frac.png}
-	\caption[Averaged quasi-steady mass fraction of major species as a function of mixture fraction for a \SI{30}{cm} methanol pool fire]{Averaged quasi-steady mass fraction of major species as a function of mixture fraction for a \SI{30}{cm} methanol pool fire}
+	\caption[Mean mass fractions as a function of mixture fraction, methanol]{Mean mass fractions as a function of mixture fraction, methanol}
 	\label{fig:Methanol_Mix_Frac}
 \end{figure}
 
 \begin{figure}[!]
 	\centering
 \includegraphics[width=11.0cm,keepaspectratio]{Ethanol_OVERALL_Mass_Frac_Mix_Frac.png}
-	\caption[Averaged quasi-steady mass fraction of major species as a function of mixture fraction for a \SI{30}{cm} ethanol pool fire]{Averaged quasi-steady mass fraction of major species as a function of mixture fraction for a \SI{30}{cm} ethanol pool fire}
+	\caption[Mean mass fractions as a function of mixture fraction, ethanol]{Mean mass fractions as a function of mixture fraction, ethanol}
 	\label{fig:Ethanol_Mix_Frac}
 \end{figure}
 
 \begin{figure}[!]
 	\centering
 \includegraphics[width=11.0cm,keepaspectratio]{Acetone_OVERALL_Mass_Frac_Mix_Frac.png}
-	\caption[Averaged quasi-steady mass fraction of major species as a function of mixture fraction for a \SI{30}{cm} acetone pool fire]{Averaged quasi-steady mass fraction of major species as a function of mixture fraction for a \SI{30}{cm} acetone pool fire}
+	\caption[Mean mass fractions as a function of mixture fraction, acetone]{Mean mass fractions as a function of mixture fraction, acetone}
 	\label{fig:Acetone_Mix_Frac}
 \end{figure}
 
-In the instances where the mixture fraction is small ($Z<<Z_{st}$), all major gas species are in fair agreement with the theoretical lines; the measured mass fractions of unburned fuel and $\ch{CO}$ are nearly zero, and the $\ch{O_2}$ is close to its respective theoretical value. As the mixture fraction approaches stoichiometric conditions, the measured mass fraction of $\ch{O_{2}}$ decreases while $\ch{CO_{2}}$ and $\ch{H_{2}O}$ increases. The measured mass fraction of $\ch{CO_{2}}$ and $\ch{H_{2}O}$ are found to peak close to the stoichiometric mixture fraction. As the mixture fraction increases past the stoichiometric condition, the measured mass fraction of the unburned fuel is shown to increase, following the same trend as the idealized case. In the fuel-rich regions, the measured mass fraction of $\ch{CO_{2}}$ differs considerably from the theoretical case. The difference between the measured $\ch{CO_{2}}$ concentration and the theoretical value is attributed to the substantial portion of $\ch{CO}$, which exhibits a comparable trend to $\ch{CO_{2}}$ with respect to the mixture fraction. The presence of soot and other carbon containing species also attributes to the under-predicted concentration of $\ch{CO_{2}}$ relative to the theoretical case.
+Where the mixture fraction is much less than stoichiometric, all major gas species are in close agreement with the ideal state relations; the measured mass fractions of unburned fuel and $\ch{CO}$ are nearly zero, and the $\ch{O_2}$ is close to its respective theoretical value. The measured mass fraction of $\ch{CO_{2}}$ and $\ch{H_{2}O}$ are found to peak close to the stoichiometric mixture fraction. In the fuel-rich region, the measured mass fraction of $\ch{CO_{2}}$ differs considerably from the ideal state relation due to the substantial portion of $\ch{CO}$ and soot.
 
 
 
@@ -1111,133 +1087,6 @@ The inert ratio was calculated from the ratio the Nitrogen and Argon volume frac
 u_{\scriptscriptstyle \bar{X}_{N_2}/\bar{X}_{Ar}} = \sqrt{{\left(\frac{u_{\scriptscriptstyle \bar{X}_{N_2}}}{\bar{X}_{Ar}}\right)}^2+{\left(\frac{-\bar{X}_{N_2}u_{\scriptscriptstyle \bar{X}_{Ar}}}{\bar{X}_{Ar}}\right)}^2}
 \end{equation}
 The uncertainty of the volume fractions is described in Appendix~\ref{sec:UncertaintyMoleFrac}.
-
-\pagebreak
-
-\section{Derivations of the Stoichiometric Combustion Ratio for Methanol, Ethanol, and Acetone Fires}\label{sec:SCR_Derv}
-\addcontentsline{toc}{section}{Appendix K : Derivations of the Stoichiometric Combustion Ratio for Methanol, Ethanol, and Acetone Fires}
-\subsection{Methanol}
-\label{ssec:Methanol_SCR}
-The combustion of methanol was determined from the gas species identified by the GC/MSD and is shown in the reaction below.
-\begin{align*}
-CH_{3}OH+&a~(O_{2}+3.76~N_{2}+0.0445~Ar)\\
-&\rightarrow b~CH_{3}OH+c~O_{2}+ d~CO_{2}+e~H_{2}O\\
-&~~~~+f~H_{2}+ g~CO+h~CH_{4}\\
-&~~~~+i~(3.76~N_{2}+0.0445~Ar) \numberthis \label{eq:Methanol_rxn}
-\end{align*}
-Balancing the hydrogen atoms produces the following equation:
-\begin{equation}
-\label{eq:Methanol_H_Balance_1}
-4b+2e+2f+4h=4
-\end{equation}
-This equation can be rewritten as:
-\begin{equation}
-\label{eq:Methanol_H_Balance_2}
--\frac{1}{2}\left(e+f\right)=b+h-1
-\end{equation}
-Balancing the carbon atoms results in:
-\begin{equation}
-\label{eq:Methanol_C_Balance_1}
-b+d+g+h=1
-\end{equation}
-Eqn.~\ref{eq:Methanol_H_Balance_2} can then be substituted into Eqn.~\ref{eq:Methanol_C_Balance_1}, resulting in
-\begin{equation}
-\label{eq:Methanol_C_Balance_2}
-d+g-\frac{1}{2}\left(e+f\right)=0
-\end{equation}
-or
-\begin{equation}
-\label{eq:Methanol_SCR}
-\frac{e+f}{d+g}=2
-\end{equation}
-When simplified, Eqn.~\ref{eq:Methanol_SCR} is shown to equal a constant value, which is defined as the $\text{SCR}$ of methanol.
-\begin{equation}\label{eq:prod_ratio_methanol}
- \text{SCR}_{methanol}=\frac{\bar{X}_{H_2O}+\bar{X}_{H_2}}{\bar{X}_{CO_2}+\bar{X}_{CO}}=2
-\end{equation}
-
-\pagebreak
-
-\subsection{Ethanol}
-\label{ssec:Ethanol_SCR}
-The combustion of ethanol was determined from the gas species identified by the GC/MSD and is shown in the reaction below.
-\begin{align*}
-C_{2}H_{5}OH+&a~(O_{2}+3.76~N_{2}+0.0445~Ar)\\
-&\rightarrow b~C_{2}H_{5}OH+c~O_{2}+ d~CO_{2}+e~H_{2}O\\
-&~~~~+f~H_{2}+ g~CO+h~CH_{4}\\
-&~~~~ +i~C_{2}H_{2}+j~C_{2}H_{4}+k~C_{2}H_{6}+l~C_{6}H_{6}\\
-&~~~~+m~(3.76~N_{2}+0.0445~Ar) \numberthis \label{eq:Ethanol_rxn}
-\end{align*}
-Balancing the hydrogen atoms produces the following equation:
-\begin{equation}
-\label{eq:Ethanol_H_Balance_1}
-6b+2e+2f+4h+2i+4j+6k+6l=6
-\end{equation}
-This equation can be rewritten as:
-\begin{equation}
-\label{eq:Ethanol_H_Balance_2}
--\frac{2}{3}\left(e+f+2h+i+2j+3l\right)=2b+2k-2
-\end{equation}
-Balancing the carbon atoms results in:
-\begin{equation}
-\label{eq:Ethanol_C_Balance_1}
-2b+d+g+h+2i+2j+2k+6l=2
-\end{equation}
-Eqn.~\ref{eq:Ethanol_H_Balance_2} can then be substituted into Eqn.~\ref{eq:Methanol_C_Balance_1}, resulting in
-\begin{equation}
-\label{eq:Ethanol_C_Balance_2}
-d+g+4l+\frac{2}{3}\left(j+2i-e-f-\frac{1}{2}h\right)=0
-\end{equation}
-or
-\begin{equation}
-\label{eq:Ethanol_SCR}
-\frac{e+f+\frac{1}{2}h}{d+g+\frac{2}{3}(j+2i)+4l}=\frac{3}{2}
-\end{equation}
-When simplified, Eqn.~\ref{eq:Ethanol_SCR} is shown to equal a constant value, which is defined as the $\text{SCR}$ of ethanol.
-\begin{equation}\label{eq:prod_ratio_ethanol}
-\text{SCR}_{ethanol}=\frac{\bar{X}_{H_2O}+\bar{X}_{H_2}+\frac{1}{2}\bar{X}_{CH_4}}{\bar{X}_{CO_2}+\bar{X}_{CO}+\frac{2}{3}(\bar{X}_{C_2H_4}+2\bar{X}_{C_2H_2})+4\bar{X}_{C_6H_6}}=\frac{3}{2}
-\end{equation}
-
-\pagebreak
-
-\subsection{Acetone}
-\label{ssec:Acetone_SCR}
-The combustion of acetone was determined from the gas species identified by the GC/MSD and is shown in the reaction below.
-\begin{align*}
-C_{3}H_{5}OH+&a~(O_{2}+3.76~N_{2}+0.0445~Ar)\\
-&\rightarrow b~C_{3}H_{5}OH+c~O_{2}+ d~CO_{2}+e~H_{2}O\\
-&~~~~+f~H_{2}+ g~CO+h~CH_{4}\\
-&~~~~+ i~C_{2}H_{2}+j~C_{2}H_{4}+k~C_{2}H_{6}+l~C_{6}H_{6}\\
-&~~~~+m~(3.76~N_{2}+0.0445~Ar) \numberthis \label{eq:Ethanol_rxn}
-\end{align*}
-Balancing the hydrogen atoms produces the following equation:
-\begin{equation}
-\label{eq:Acetone_H_Balance_1}
-6b+2e+2f+4h+2i+4j+6k+6l=6
-\end{equation}
-This equation can be rewritten as:
-\begin{equation}
-\label{eq:Acetone_H_Balance_2}
--\left(e+f+2h+i+3k+3l\right)=3b+2j-3
-\end{equation}
-Balancing the carbon atoms results in:
-\begin{equation}
-\label{eq:Acetone_C_Balance_1}
-3b+d+g+h+2i+2j+2k+6l=3
-\end{equation}
-Eqn.~\ref{eq:Acetone_H_Balance_2} can then be substituted into Eqn.~\ref{eq:Methanol_C_Balance_1}, resulting in
-\begin{equation}
-\label{eq:Acetone_C_Balance_2}
-d+g+3l+i-e-f-h-k=0
-\end{equation}
-or
-\begin{equation}
-\label{eq:Acetone_SCR}
-\frac{e+f+h+k}{d+g+i+3l}=1
-\end{equation}
-
-\begin{equation}\label{eq:prod_ratio_acetone}
-\text{SCR}_{acetone}=\frac{\bar{X}_{H_2O}+\bar{X}_{H_2}+\bar{X}_{CH_4}+\bar{X}_{C_2H_6}}{\bar{X}_{CO_2}+\bar{X}_{CO}+\bar{X}_{C_2H_2}+3\bar{X}_{C_6H_6}}=1
-\end{equation}
 
 \pagebreak
 \end{document}
