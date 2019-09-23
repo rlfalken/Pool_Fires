@@ -257,7 +257,7 @@ The purpose of this study is to characterize the spatial distribution of the pri
 \section{Description of Experiments}
 \label{sec:Experiments}
 
-Descriptions of previous pool fire experiments are found in Refs.~\cite{Hamins2016,Hamins1994,Hamins1991,Hamins1996,Lock2008}. 
+Descriptions of previous pool fire experiments are found in Refs.~\cite{Hamins2016,Hamins1994,Hamins1991,Hamins1996,Lock2008}.
 
 \subsection{Pool Burner Setup}
 \label{ssec:Pool_Burner_Setup}
@@ -379,7 +379,7 @@ A description of the soot mass fraction uncertainty is provided in Appendix~\ref
 \section{Results}
 \label{sec:Results}
 
-This section presents the gas species and soot measurements made at incremental heights along the centerline of medium-scale pool fires using various fuels such as methanol, ethanol, and acetone. 
+This section presents the gas species and soot measurements made at incremental heights along the centerline of medium-scale pool fires using various fuels such as methanol, ethanol, and acetone.
 
 \subsection{Flame Observations}
 \label{ssec:Flame_Observations}
@@ -404,15 +404,15 @@ The methanol fire has a pale blue color, whereas the ethanol and acetone fires a
 \textbf{Parameter (units)} &\textbf{Methanol}& \textbf{Ethanol}& \textbf{Acetone}\\
 \hline
 \\[0.01cm]
-Mass Burning Flux~(\si{g/{m^2 s}})		&	12.4~$\pm$~1.1		&	13.9~$\pm$~0.8	&	17.6~$\pm$~2.7\\
+Mass Burning Flux~(\si{g/{m^2 s}})		        &	12.4~$\pm$~1.1		&	13.9~$\pm$~0.8	&	17.6~$\pm$~2.7\\
 \\[0.01cm]
-Heat Release Rate~(\si{kW})			&	17.4~$\pm$~1.4		&	26.3~$\pm$~1.5	&	35.5~$\pm$~5.4\\
+Heat Release Rate~(\si{kW})		            	&	17.4~$\pm$~1.4		&	26.3~$\pm$~1.5	&	35.5~$\pm$~5.4\\
 \\[0.01cm]
-Mean Flame Height~(\si{cm})			&	36.4~$\pm$~16.0		&	61.1~$\pm$~28.2	&	91.5~$\pm$~34.6\\
+Mean Flame Height~(\si{cm})			            &	36.4~$\pm$~16.0		&	61.1~$\pm$~28.2	&	91.5~$\pm$~34.6\\
 \\[0.01cm]
-Heat of Combustion~ (\si{kJ/g})			&	19.9				&	26.8			&	28.6			\\	
+Heat of Combustion (kJ/g)~\cite{SFPE}			&	19.94				&	26.81			&	28.56			\\	
 \\[0.01cm]
-Carbon/Hydrogen 					&	1/4			&	1/3		&	1/2			\\
+Carbon/Hydrogen Ratio				         	&	1/4			&	1/3		&	1/2			\\
 \hline
 \end{tabular}
 \end{table}
@@ -448,7 +448,7 @@ Figure~\ref{fig:Fuel_Comparison} displays the mean volume fraction of the major 
 \section{Verifying Gas Species Measurements}
 \label{ssec:Verifying_Vol_Frac_Measurements}
 
-This section presents several different techniques of verifying the accuracy of the species concentration measurements. 
+This section presents several different techniques of verifying the accuracy of the species concentration measurements.
 
 
 \subsection{Counting Moles}
@@ -466,7 +466,7 @@ Here, $R=287$~J/(mol$\cdot$K) is the universal gas constant for air, $V_{\rm s}=
 	\label{fig:Mole_Comp}
 \end{figure}
 
-Figure~\ref{fig:Mole_Comp} shows the ratio of the moles identified by the TCD and MSD to the mole injected into the GC/MSD as a function of $z^*$. In most cases, the ratio is close to unity, indicating that the total moles injected into the GC/MS are all accounted for in the calculation. For low values of $z^*$, the ratio is higher than unity, indicating an error in the calibration which is most likely due to an over-prediction of the fuel species that are found at high concentrations near the liquid surface. 
+Figure~\ref{fig:Mole_Comp} shows the ratio of the moles identified by the TCD and MSD to the mole injected into the GC/MSD as a function of $z^*$. In most cases, the ratio is close to unity, indicating that the total moles injected into the GC/MS are all accounted for in the calculation. For low values of $z^*$, the ratio is higher than unity, indicating an error in the calibration which is most likely due to an over-prediction of the fuel species that are found at high concentrations near the liquid surface.
 
 \subsection{Carbon to Hydrogen Ratio}
 
@@ -474,7 +474,7 @@ Another way to verify the accuracy of the gas species measurements is to calcula
 \begin{equation}\label{eq:c2h_ratio}
   \frac{\rm C}{\rm H}=\frac{ \sum  x_i \, \bar{X}_{i} }{ \sum y_i \, \bar{X}_{i} }
 \end{equation}
-where the summation is over all measured gas species, and $x_i$ and $y_i$ are the numbers of carbon and hydrogen atoms in the molecule, respectively. The carbon to hydrogen ratio of the fuel molecules are reported in Table~\ref{tab:Pool_Fire_Parameters_Table}, and the ratio for each fuel is shown in Fig.~\ref{fig:C2H}. 
+where the summation is over all measured gas species, and $x_i$ and $y_i$ are the numbers of carbon and hydrogen atoms in the molecule, respectively. The carbon to hydrogen ratio of the fuel molecules are reported in Table~\ref{tab:Pool_Fire_Parameters_Table}, and the ratio for each fuel is shown in Fig.~\ref{fig:C2H}.
 
 \begin{figure}[h!]
 	\centering
@@ -503,12 +503,11 @@ Another verification test considers the inert species argon and nitrogen whose m
 \subsection{Plotting the Results in Mixture Fraction Space}
 \label{ssec:Mixture_Fraction_Results}
 
-The mixture fraction, $Z$, is based on carbon containing species and was defined as follows:
+The mixture fraction, $Z$, is defined as the mass fraction of the gases and soot that originate in the fuel stream. It can be expressed\footnote{The uncertainty of the mixture fraction is determined from propagating the error in the mass fraction measurements. A detailed description of the mixture fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Mix_Frac}.} as follows:
 \begin{equation}\label{eq:Mixture_Fraction}
-  Z = \bar{Y}_{\rm F} + \frac{W_{\rm F}}{x} \sum \frac{\bar{Y}_i}{W_{i}}
+  Z = \bar{Y}_{\rm F} + \frac{W_{\rm F}}{x} \sum_{i\ne {\rm F}} \frac{\bar{Y}_i}{W_{i}}
 \end{equation}
-where $\bar{Y}_{\rm F}$, ${W_{\rm F}}$, and $x$ are the mass fraction, molecular weight, and number of carbon molecules of the parent fuel, respectively. The mixture fraction calculation included the mass fraction of soot measured from the technique described in Section~\ref{ssec:Soot_Setup}.
-Considering the idealized reaction of a hydrocarbon fuel, the state reactions was derived as:
+where $\bar{Y}_{\rm F}$, ${W_{\rm F}}$, and $x$ are the mass fraction, molecular weight, and number of carbon atoms in the fuel molecule, respectively. Assuming ideal (i.e. no CO or soot), infinitely-fast (fuel and oxygen cannot co-exist) combustion, the mass fractions of all species can be expressed as piece-wise linear ``state relations'' according to the following reaction:
 \begin{align*}
 {\rm C}_{x}{\rm H}_{y}{\rm O}_{z} & +\eta(x+\frac{y}{4}-\frac{z}{2})~({\rm O}_{2}+3.76~{\rm N}_{2}+0.0445~{\rm Ar}) \rightarrow  \\
           & \max(0,1-\eta)~{\rm C}_{x}{\rm H}_{y}{\rm O}_{z}+\max(0,1-\eta)~(x+\frac{y}{4}-\frac{z}{2})~{\rm O}_{2}+ \min(1,\eta)~x~{\rm CO}_{2} +  \\
@@ -516,9 +515,9 @@ Considering the idealized reaction of a hydrocarbon fuel, the state reactions wa
 \end{align*}
 The parameter $\eta$ is the reciprocal of the local fuel equivalence ratio, $\phi$,
 \begin{equation}\label{eq:Eta}
-\phi=\frac{(F/A)}{(F/A)_{\rm st}}=\frac{1}{\eta}
+\phi=\frac{\rm (F/A)}{{\rm (F/A)}_{\rm st}}=\frac{1}{\eta}
 \end{equation}
-where $F/A$ is the fuel-air mass ratio and the subscript $\rm st$ denotes the stoichiometric condition. The ideal species mass fractions can then be calculated using Eq.~(\ref{eq:Ideal_rxn}). The uncertainty of the mixture fraction is determined from propagating the error in the mass fraction measurements. A detailed description of the mixture fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Mix_Frac}.
+where $\rm F/A$ is the fuel-air mass ratio and the subscript $\rm st$ denotes the stoichiometric condition.
 
 Figures~\ref{fig:Methanol_Mix_Frac}, \ref{fig:Ethanol_Mix_Frac}, and \ref{fig:Acetone_Mix_Frac} show the mean mass fraction measurements as a function of the mixture fraction for the methanol, ethanol, and acetone fires, respectively. The dotted lines represent ideal combustion calculated from Eq.~(\ref{eq:Ideal_rxn}). The vertical dotted line identifies the stoichiometric value of the mixture fraction. Additional plots that detail the averaged mass fractions of all detected species as a function of mixture fraction, with their expanded uncertainties, are provided in Appendix~\ref{sec:Mix_Frac_Figs}.
 
@@ -555,14 +554,17 @@ Where the mixture fraction is much less than stoichiometric, all major gas speci
 In summary, time-averaged local measurements of temperature and gas species concentrations were made to characterize the structure of methanol, ethanol, and acetone \SI{30}{cm} diameter pool fire steadily burning in a quiescent environment. A verification scheme was developed to verify the gas species measurements that considered  the accuracy of the calibration and the overall stoichiometry of combustion for each fuel (see Eqn.~\ref{eq:prod_ratio_ethanol}, \ref{eq:prod_ratio_methanol}, and \ref{eq:prod_ratio_acetone}). The gas species measurements were favorably compared to the idealized SCR values, which lends confidence to the veracity of the measurements. These local measurements complement previous measurements and provide insight into the complex chemical structure of medium-scale pool fires.
 
 \section*{Acknowledgments}
-\noindent The authors would like to acknowledge Kimberly Harris of the Gas Sensing Metrology Group at NIST, who assisted in the developing the species calibration method used in the study.
-\pagebreak
+The authors would like to acknowledge Kimberly Harris of the Gas Sensing Metrology Group at NIST, who assisted in the developing the species calibration method used in the study.
+
+\clearpage
 
 \section*{References}
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{techpubs}
 \bibliography{References}
-\pagebreak
+
+
+\clearpage
 
 
 \appendix
@@ -586,13 +588,13 @@ u_{\scriptscriptstyle \dot{m}} = \sqrt{s_{\scriptscriptstyle \dot{m}}^2+u_{\rm \
 
 \subsection{Heat Release Rate}
 \label{ssec:Heat_Release_Rate}
-The heat release rate was determined from Eqn.~\ref{eq:Heat_release_rate} using the heat of combustion property of the respective fuel, provided by DIPPR\textsuperscript{\textregistered}, and time-averaged mass burning rate values listed in Table~\ref{tab:Pool_Fire_Parameters_Table}. The uncertainty of the heat release rate was calculated via the law of propagation of uncertainty:
 
+The heat release rate, $\dot{Q}$, is the product of the fuel mass loss rate, $\dot{m}$, and the heat of combustion, $\Delta H$. Its uncertainty is calculated using the law of propagation of uncertainty:
 \begin{equation}
 \label{eq:heat_release_rate_uncertainty}
-u_{\scriptscriptstyle \dot{Q}} = \sqrt{{\left(\frac{\partial \dot{Q}}{\partial \dot{m}}\,u_{\scriptscriptstyle \dot{m}} \right)}^2}
+u_{\scriptscriptstyle \dot{Q}} = \sqrt{ (\Delta H \, u_{\dot{m}})^2 + (\dot{m} \, u_{\Delta H} )^2 }
 \end{equation}
-The description of the mass burning rate uncertainty is provided in Appendix~\ref{ssec:Heat_Release_Rate}.
+The description of the mass burning rate uncertainty is provided in Appendix~\ref{ssec:Mass_Burning_Flux}.
 
 \subsection{Mean Flame Height}
 \label{ssec:Mean_Flame_Height}
