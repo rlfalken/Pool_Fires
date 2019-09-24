@@ -295,25 +295,24 @@ The mean flame height, $L_{\rm{f}}$, is estimated from 3600~frames of high-resol
 \subsection{Centerline Temperature Measurements}
 \label{ssec:Temperature_Measurements}
 
-Time-averaged temperature measurements are made along the vertical centerline of the fire plumes. An S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouple with a diameter of \SI{50}{\micro\metre} (OMEGA P10R-001\footref{fn:product}) is positioned using a computer-controlled traverse. Temperature measurements are sampled at \SI{250}{Hz} for \SI{2}{min}, or approximately 300~pulsing cycles \cite{Wang2019}.
+Time-averaged temperature measurements are made along the vertical centerline of the fire plumes using an S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouple with a diameter of approximately 50~$\mu$m (OMEGA P10R-001). Temperature measurements are sampled at \SI{250}{Hz} for \SI{2}{min}, or approximately 300~pulsing cycles \cite{Wang2019}. The uncertainty of the temperature measurements are discussed in Appendix~\ref{sec:Uncertainty_Temperature_Measurements}.
 
-The thermal inertia and radiative heat loss associated with the thermocouple are corrected following Shaddix's method~\cite{Shaddix1999}. The energy balance on the thermocouple bead considered the convective, radiative, and conductive heat transfer and can be expressed as:
-\begin{equation}\label{eq:Thermocouple_Bead_Energy_Balance}
-{\dot{Q}_{\rm con}+\dot{Q}_{\rm rad}}= \rho_{\rm b}~c_{\rm b}~V_{\rm b}\frac{{\rm d}T_{\rm b}}{{\rm d}t}
-\end{equation}
-where $\dot{Q}_{\rm con}$ and $\dot{Q}_{\rm rad}$ are the net rate of convective and radiative heat transfer, respectively, and $\rho_{\rm b}$, $c_{\rm b}$, $V_{\rm b}$ are the density, specific heat and volume of the bead, respectively. The thermal inertia effect is related to the thermocouple time constant, $\tau$, and can be incorporated into Eq.~(\ref{eq:Thermocouple_Bead_Energy_Balance}) to correct the temperature measurement. The energy balance from Eq.~(\ref{eq:Thermocouple_Bead_Energy_Balance}) can be simplified to solve for the corrected gas temperature.
+The measured thermocouple temperatures are corrected for heat losses and thermal inertia using the formula described by Shaddix~\cite{Shaddix1999}: 
 \begin{equation}\label{eq:Thermocouple_Bead_Correction}
-{T_{\rm g}(t)}= T_{\rm b}(t) + \tau \, \frac{{\rm d}T_{\rm b}}{{\rm d}t} + \frac{\epsilon\sigma}{h}\left({T_{\rm b}(t)}^4-{T_{\rm surr}(t)}^4\right)
+   {T_{\rm g}(t)}= T_{\rm b}(t) + \tau \, \frac{{\rm d}T_{\rm b}}{{\rm d}t} + \frac{\epsilon\sigma}{h}\left(T_{\rm b}(t)^4-T_\infty^4\right)
 \end{equation}
-where $T_{\rm g}$ is the effective temperature of the gas, $T_{\rm b}$ is the measured bead temperature, $T_{\rm surr}$ is the effective temperature of the surroundings, $\sigma=5.67 \times 10^{-11} \; {\rm kW}/({\rm m}^2{\rm K}^4)$ is the Stefan-Boltzmann constant, $\epsilon$ is the thermocouple emissivity, and $h$ is the convective heat transfer coefficient of the gas flow near the bead. Specific heat of thermocouple bead is taken from Ref.~\cite{Jaeger1939}. The temperature dependent emissivity of the platinum was taken from Ref.~\cite{Incropera2007}. The coefficients of $h$ and $\tau$ and are further defined as:
+where $T_{\rm g}$ is the ``true'' gas temperature, $T_{\rm b}$ is the measured bead temperature, $T_\infty$ is the ambient temperature, $\sigma=5.67 \times 10^{-11} \; {\rm kW}/({\rm m}^2{\rm K}^4)$ is the Stefan-Boltzmann constant, $\epsilon$ is the thermocouple emissivity, and $h$ is the convective heat transfer coefficient. The specific heat of the bead is taken from Ref.~\cite{Jaeger1939}. The temperature-dependent emissivity of the platinum is taken from Ref.~\cite{Incropera2007}. $h$ and $\tau$ are defined:
 \begin{equation}\label{eq:h_eqn}
 h=\frac{{\rm Nu} \, k_{\rm g}}{D_{\rm b}}  \quad ; \quad \tau= \frac{\rho_{\rm b} \, c_{\rm b} \, {D_{\rm b}}^2}{6 \, {\rm Nu} \, k_{\rm g}}
 \end{equation}
-where $k_{\rm g}$ is the thermal conductivity of the gas and $D_{\rm b}$ is the diameter of the bead. The Nusselt number, Nu, for the bead was calculated using the Ranz-Marshall correlation~\cite{Shaddix1999}, as shown in the Eq.~(\ref{eq:Nu_number}).
+where $k_{\rm g}$ is the thermal conductivity of the gas, $\rho_{\rm b}$, $c_{\rm b}$, and $D_{\rm b}$ are the density, specific heat, and diameter of the bead, respectivley. The Nusselt number, Nu, is calculated using the Ranz-Marshall correlation~\cite{Shaddix1999}:
 \begin{equation}\label{eq:Nu_number}
-{\rm Nu} = 2+{\textrm{Re}_{\rm D}}^{\frac{1}{2}}+\textrm{Pr}^{\frac{1}{3}}
+{\rm Nu} = 2 + 0.6 \, \textrm{Re}^{1/2} \, \textrm{Pr}^{1/3} \quad ; \quad \textrm{Re} = \frac{ \rho_{\rm air} \, U_{\rm g} \, D_{\rm b} }{\mu_{\rm air}}  \quad ; \quad \textrm{Pr}=0.7
 \end{equation}
-The temperature-dependent gas properties for, Reynolds number, Re, and Prandtl number, Pr, are taken as those of air from Ref.~\cite{Dippr}. The gas velocity was assumed to be equal to 2 m/s to determine the Re. Calculations showed that the corrected temperature had little sensitivity on the magnitude of the velocity between values of \SI{1}{ m/s} and \SI{3}{m/s}, which is consistent with the results of Shaddix~\cite{Shaddix1999}. The uncertainty of the time-averaged temperature measurements are discussed in Appendix~\ref{sec:Uncertainty_Temperature_Measurements}.
+The temperature-dependent gas properties for Reynolds number, Re, and Prandtl number, Pr, are taken as those of air from Ref.~\cite{Dippr}. The gas velocity is assumed to be equal to 2~m/s. The corrected temperature is relatively insensitive to gas velocities between 1~m/s and 3~m/s, consistent with the results of Shaddix~\cite{Shaddix1999}. 
+
+The uncertainty of Eq.~(\ref{eq:Thermocouple_Bead_Correction}) is difficult to quantify, primarily because the temperature of the gas surrounding the thermocouple bead is assumed to be ambient. This correction formula is included for the convenience of mathematical modeling.
+
 
 \subsection{Measuring the Volume Fraction of Gas Species via GC/MSD}
 \label{ssec:Gas_Species_Setup}
@@ -575,60 +574,42 @@ The authors would like to acknowledge Kimberly Harris of the Gas Sensing Metrolo
 \makeatother
 
 \section{Uncertainty Analysis of Pool Fire Parameters}\label{sec:Uncertainty_Pool_Fire_Parameters}
-\addcontentsline{toc}{section}{Appendix A: Uncertainty of Pool Fire Parameters}
+\addcontentsline{toc}{section}{Appendix A: Uncertainty Analysis}
 
 \subsection{Mass Burning Rate}
 \label{ssec:Mass_Burning_Flux}
-The mass burning rate, $\dot{m}$, was measured from the mass loss in the fuel reservoir, feeding to the pool burner via gravity, during the burning period per area of the pool burner. Mass measurements were made using a Precisa XB-6200C Precision XB Laboratory Prime Balance sampling at \SI{1.0}{\hertz} for the entire duration of the burning period. The balance was calibrated from a collection standard weights. The expanded uncertainty was estimated via quadrature from a combination of the Type A and Type B evaluation of standard uncertainty. The Type A evaluation of standard uncertainty was calculated from the standard error, $s_{\scriptscriptstyle \dot{m}}$, of the time-averaged mass loss measured during the burning period. The Type B evaluation of standard uncertainty was determined from the bias error of the balance, $u_{\rm \scriptscriptstyle inst}$ (\SI{0.01}{g}), and the calibration error, $u_{\rm \scriptscriptstyle cal}$ (1~\% of the reading).
+
+The mean mass burning rate, $\dot{m}$, is determining by weighing the fuel reservoir at the start and end of the steady burning stage using a Precisa XB-6200C Precision balance, calibrated using a collection of standard weights. The Type A evaluation of uncertainty is the standard deviation in the measurements made during replicate experiments, $s_{\scriptscriptstyle \dot{m}}$. The Type B evaluation of uncertainty is the reported accuracy of the balance, 0.01~g, divided by the time interval. The Type A uncertainty dominates; thus, the standard uncertainty is approximately the standard deviation of the multiple measurements:
 
 \begin{equation}
 \label{eq:mass_rate_uncertainty}
-u_{\scriptscriptstyle \dot{m}} = \sqrt{s_{\scriptscriptstyle \dot{m}}^2+u_{\rm \scriptscriptstyle inst}^2+u_{\rm \scriptscriptstyle cal}^2}
+u_{\scriptscriptstyle \dot{m}} \approx s_{\scriptscriptstyle \dot{m} }
 \end{equation}
 
 \subsection{Heat Release Rate}
 \label{ssec:Heat_Release_Rate}
 
-The heat release rate, $\dot{Q}$, is the product of the fuel mass loss rate, $\dot{m}$, and the heat of combustion, $\Delta H$. Its uncertainty is calculated using the law of propagation of uncertainty:
+The heat release rate, $\dot{Q}$, is the product of the fuel mass loss rate, $\dot{m}$, and the heat of combustion, $\Delta H$. The relative uncertainty of the former is far greater than the latter, thus:
 \begin{equation}
 \label{eq:heat_release_rate_uncertainty}
-u_{\scriptscriptstyle \dot{Q}} = \sqrt{ (\Delta H \, u_{\dot{m}})^2 + (\dot{m} \, u_{\Delta H} )^2 }
+u_{\scriptscriptstyle \dot{Q}} \approx \Delta H \, u_{\dot{m}}
 \end{equation}
-The description of the mass burning rate uncertainty is provided in Appendix~\ref{ssec:Mass_Burning_Flux}.
 
 \subsection{Mean Flame Height}
 \label{ssec:Mean_Flame_Height}
-The mean flame height, ${L_{\rm{f}}}$, was determined by measuring the distance between the pool surface and flame tip using the photographic analysis method described in Section~\ref{ssec:Pool_Burner_Setup}. The uncertainty of the mean flame height, $u_{\scriptscriptstyle L_{\rm{f}}}$, was calculated from a combined uncertainty of the Type A and B evaluation of standard uncertainty. The Type A evaluation of standard uncertainty was estimated from the standard deviation of the height measurements, $s_{\scriptscriptstyle L_{\rm{f}}}$, made with each frame. The error of the measured distance using the photographic analysis method compared to the true distance, $u_{\scriptscriptstyle \rm{method}}$,  was found to be 0.1\% and was treated as the Type B evaluation of standard uncertainty. The combined uncertainty calculation of the mean flame height is shown below:
+
+The mean flame height, ${L_{\rm{f}}}$, is determined using photographic analysis as described in Section~\ref{ssec:Pool_Burner_Setup}. The Type A evaluation of uncertainty is the standard deviation of the height measurements, $s_{\scriptscriptstyle L_{\rm{f}}}$, made for each frame. The uncertainty of the distance measurement for each frame is relatively small, 0.1~\%, and thus the standard uncertainty is approximately the standard deviation of the heights over multiple frames:
 
 \begin{equation}
 \label{eq:mean_flame_height}
-u_{\scriptscriptstyle L_{\rm{f}}} = \sqrt{s_{\scriptscriptstyle{L_{\rm{f}}}}^2+u_{\rm \scriptscriptstyle method}^2}
+u_{\scriptscriptstyle L_{\rm{f}}} \approx s_{\scriptscriptstyle{L_{\rm f}}}
 \end{equation}
 
-\pagebreak
 
-\section{Uncertainty Analysis of Temperature Measurements}\label{sec:Uncertainty_Temperature_Measurements}
-\addcontentsline{toc}{section}{Appendix B: Uncertainty of Temperature Measurements}
+\subsection{Uncertainty Analysis of Temperature Measurements}
+\label{sec:Uncertainty_Temperature_Measurements}
 
-Temperature measurements were sampled at \SI{250.0}{Hz} for \SI{2.0}{min} using a S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouple with a diameter of \SI{50.0}{\micro\metre} (OMEGA P10R-001\footref{fn:product}). Temperature measurements were corrected for following Shassix's method~\cite{Shaddix1999} and using Eqn.~\ref{eq:Thermocouple_Bead_Correction}:
-\begin{equation}\label{eq:Thermocouple_Bead_Correction_full}
-{T_{\rm g}(t)}= T_{\rm b}(t)+{\frac{\rho_{\rm b} \, c_{\rm b} \, {D_{\rm b}}^2}{6\, {\rm Nu} \, k_{\rm g}}}\frac{{\rm d} T_{\rm b}}{{\rm d} t}+\frac{\epsilon \, \sigma \, D_{\rm b}}{{\rm Nu} \, k_{\rm g}}\left({T_{\rm b}(t)}^4-{T_{\rm surr}(t)}^4\right)
-\end{equation}
-where $T_{\rm g}$ is the effective temperature of the gas, $T_{\rm surr}$ is the effective temperature of the surroundings, $k_{\rm g}$ is the thermal conductivity of the gas, $\rm Nu$ is the Nusselt number calculated from Eqn.~\ref{eq:Nu_number}, $\sigma$ is the Stefan-Boltzmann constant (\SI{5.6696E-8}{W/(m^2~K^4}), $\epsilon$ is the thermocouple emmisivity, and $T_{\rm b}$, $\rho_{\rm b}$, $c_{\rm b}$, $D_{\rm b}$ are the raw temperature measurements, density, specific heat, and diameter of the bead, respectively. The uncertainty of the effective temperature of the gas was calculated from the uncertainty of all temperature dependent parameters included in Eqn.~\ref{eq:Thermocouple_Bead_Correction_full}. The bead temperature dependent variables included in Eqn.~\ref{eq:Thermocouple_Bead_Correction_full} are $k_{\rm g}$, $\rm Nu$, $\epsilon$, $T_{\rm b}$, $\rho_{\rm b}$, $c_{\rm b}$ whereas all other parameters are considered as constant. The uncertainty of the corrected temperature measurements were estimated using a propagation of uncertainty:
- \begin{equation}
-\label{eq:temperature_corr_uncer}
-u_{\scriptscriptstyle T_{\rm g}} = \sqrt{{\left(\frac{\partial T_{\rm g}}{\partial T_{\rm b}}\,u_{\scriptscriptstyle T_{\rm b}} \right)}^2}
-\end{equation}
 
-\subsection{Uncertainty of Bead Temperature Measurements}
-\label{ssec:Uncertain_Bead_Temp_Measurements}
-The uncertainty of the raw bead temperature measurements was calculated from a combined Type A and B evaluation of uncertainty. The Type A evaluation of raw bead temperature measurements was determined from the standard error of temperature measurements, $s_{T_{\rm b}}$ from the sampling period. The Type B evaluation of uncertainty for the raw bead temperature measurements was determined from the bias error sources in the instrumentation, $u_{\rm inst}$, used to measure temperature (\SI{1.5}{\degree C}) of gas sample injected. The combined uncertainty temperature was found via quadrature:
-
-\begin{equation}
-\label{eq:temp_uncertainty}
-u_{\scriptscriptstyle T_{\rm b}} = \sqrt{ u_{\rm \scriptscriptstyle inst}^2 + s_{\scriptscriptstyle T_{\rm b}}^2}
-\end{equation}
-\pagebreak
 
 \section{Uncertainty Analysis of Gas Species Concentrations} \label{sec:UncertaintyGasSpecies}
 \addcontentsline{toc}{section}{Appendix C: Uncertainty Analysis of Gas Species Concentrations}
