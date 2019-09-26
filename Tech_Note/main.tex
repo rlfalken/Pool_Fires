@@ -234,12 +234,15 @@ This report documents a series of time-averaged gas species measurements made al
 %   Table of Contents is required
 % 	List of Tables & Figures required if more than 5 tables/figures
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-	\tableofcontents
-	\listoftables
-	\listoffigures
-\end{center}
+
+\tableofcontents
+	
 \pagebreak
+
+\listoftables
+\listoffigures
+
+\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Start body of text - page number starts with "1"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -295,7 +298,7 @@ The mean flame height, $L_{\rm{f}}$, is estimated from 3600~frames of high-resol
 
 Time-averaged temperature measurements are made along the vertical centerline of the fire plumes using an S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouple (OMEGA P10R-001) with a wire diameter of approximately 50~$\mu$m and a bead diameter of approximately 150~$\mu$m. Temperature measurements are sampled at \SI{250}{Hz} for \SI{2}{min}, or approximately 300~pulsing cycles \cite{Wang2019}. The uncertainty of the temperature measurements are discussed in Appendix~\ref{sec:Uncertainty_Temperature_Measurements}.
 
-The measured thermocouple temperatures are corrected for heat losses and thermal inertia using the formula described by Shaddix~\cite{Shaddix1999}: 
+The measured thermocouple temperatures are corrected for heat losses and thermal inertia using the formula described by Shaddix~\cite{Shaddix1999}:
 \begin{equation}\label{eq:Thermocouple_Bead_Correction}
    {T_{\rm g}(t)}= T_{\rm b}(t) + \tau \, \frac{{\rm d}T_{\rm b}}{{\rm d}t} + \frac{\epsilon\sigma}{h}\left(T_{\rm b}(t)^4-T_\infty^4\right)
 \end{equation}
@@ -311,7 +314,7 @@ where $k_{\rm g}$ is the thermal conductivity of the gas, $\rho_{\rm b}$, $c_{\r
 \begin{equation}\label{eq:Nu_number}
 {\rm Nu} = 2 + 0.6 \, \textrm{Re}^{1/2} \, \textrm{Pr}^{1/3} \quad ; \quad \textrm{Re} = \frac{ \rho_{\rm air} \, U_{\rm g} \, D_{\rm b} }{\mu_{\rm air}}  \quad ; \quad \textrm{Pr}=0.7
 \end{equation}
-The temperature-dependent gas properties for Reynolds number, Re, and Prandtl number, Pr, are taken as those of air from Ref.~\cite{Incropera2007}. The gas velocity is assumed to be equal to 2~m/s. The corrected temperature is relatively insensitive to gas velocities between 1~m/s and 3~m/s, consistent with the results of Shaddix~\cite{Shaddix1999}. 
+The temperature-dependent gas properties for Reynolds number, Re, and Prandtl number, Pr, are taken as those of air from Ref.~\cite{Incropera2007}. The gas velocity is assumed to be equal to 2~m/s. The corrected temperature is relatively insensitive to gas velocities between 1~m/s and 3~m/s, consistent with the results of Shaddix~\cite{Shaddix1999}.
 
 The uncertainty of Eq.~(\ref{eq:Thermocouple_Bead_Correction}) is difficult to quantify, primarily because the temperature of the gas surrounding the thermocouple bead is assumed to be ambient. This correction formula is included for the convenience of mathematical modeling.
 
@@ -319,7 +322,7 @@ The uncertainty of Eq.~(\ref{eq:Thermocouple_Bead_Correction}) is difficult to q
 \subsection{Measuring the Volume Fraction of Gas Species via GC/MS}
 \label{ssec:Gas_Species_Setup}
 
-Gas-species measurements are made using an Agilent 5977E Series GC/MS fitted with a thermal conductivity detector (TCD). The GC/MS is able to quantify a variety of stable reactants, intermediates, and combustion product species collected from the pool fire. Figure~\ref{fig:Experimental_Setup} displays the flow diagram for gas sampling into the GC/MS. The GC/MS is equipped with a \SI{2}{ml} sample loop maintained at \SI{200}{\degree C}. The gases are extracted by a vacuum pump located downstream of the GC/MS. Gas samples are collected using a quenching probe. The quenching probe is composed of two concentric, stainless-steel tubes with outer annular coolant flow and inner, extracted, gas-sample flow. The inner and outer tube diameters are \SI{8}{mm}and \SI{16}{mm}, respectively. Water at \SI{90}{\degree C} flows through the sampling probe for the duration of the experiment. The remainder of the sampling line leading into the GC/MS is heated with electrical, heating tape to \SI{140}{\degree C} to prevent condensation of water and liquid fuels through the line.
+Gas species measurements are made using an Agilent 5977E Series GC/MS fitted with a thermal conductivity detector (TCD). The GC/MS is able to quantify a variety of stable reactant, intermediate, and product species collected from the fire plume. Figure~\ref{fig:Experimental_Setup} displays the flow diagram for gas sampling. The GC/MS is equipped with a 2~mL sample loop maintained at approximately \SI{200}{\degree C}. The gases are extracted by a vacuum pump located downstream of the GC/MS. Gas samples are collected using a quenching probe, which is composed of two concentric, stainless-steel tubes with outer annular coolant flow and inner, extracted sample flow. The inner and outer tube diameters are \SI{8}{mm}and \SI{16}{mm}, respectively. Water at approximately \SI{90}{\degree C} flows through the sampling probe for the duration of the experiment. The remainder of the sampling line leading into the GC/MS is heated with electrical, heating tape to approximately \SI{140}{\degree C} to prevent condensation of water and liquid fuels within the line.
 
 \begin{sidewaysfigure}[!]
 	\centering
@@ -328,15 +331,13 @@ Gas-species measurements are made using an Agilent 5977E Series GC/MS fitted wit
 	\label{fig:Experimental_Setup}
 \end{sidewaysfigure}
 
-Gas sampling is conducted for a minimum of \SI{12}{min}, ensuring that the gas sample is completely swept through the GC/MS sample loop. The gas sampling period varies from \SI{12}{min} to \SI{25}{min} depending on the sampling location within the fire. The sampling flow is controlled using a mass flow controller (Alicat Scientific MC-Series) located in front of the vacuum pump within the sampling line. During the gas sampling procedure, the volumetric flow is approximately \SI{200}{ml/min} and recorded, using a DAQ, at \SI{2}{\hertz} for the entire duration of the gas sampling procedure. The mass flow controlled also provides temperature readings of its internal gas flow.
+Depending on the probe location within the fire, the sampling period varies from \SI{12}{min} to \SI{25}{min}, ensuring that the gases are completely swept through the sample loop. The flow is controlled using a mass flow controller (Alicat Scientific MC-Series) located in front of the vacuum pump within the sampling line. During the gas sampling procedure, the volumetric flow is approximately 200~mL/min and recorded at \SI{2}{\hertz}.
 
-After the gas sampling period, two quarter-turn valves located on opposite ends of the GC/MS sample loop within the sampling line are closed. Once the sampled gas reaches equilibrium, pressure measurements, obtained from a digital pressure gauge (OMEGA DPG409-030DWU), and temperature measurements, acquired by a K-type thermocouple located at the GC/MS sample loop injection port, are collected at \SI{2}{\hertz} for \SI{50}{s}. After collecting pressure and temperature measurements, the sampled gas is injected into the GC/MS.
+After the gas sampling period, two quarter-turn valves located on opposite ends of the sample loop are closed, at which point pressure measurements, obtained from a digital pressure gauge (OMEGA DPG409-030DWU), and temperature measurements, acquired by a K-type thermocouple located at the GC/MS sample loop injection port, are collected at \SI{2}{\hertz} for \SI{50}{s}. The sampled gas is then fed onto a column located within the GC oven. Chromatographic separation of species is achieved using a Select for Permanent Gases-Dual Column (CP7430) comprised of mole-sieve and Porapak Q columns working in parallel and using a helium carrier gas. The flow path is divided past the column using a splitter, wherein the carrier gas flow leading into the TCD and MS is approximately 3~mL/min and 1~mL/min, respectively. When developing the GC/MS method, the portioned flows feeding into the TCD and MS are calculated such that their respective chromatograms are synchronized.
 
-Once injected into the GC/MS, the gas sample is fed onto a column located within the GC oven. Chromatographic separation of species is achieved using a Select for Permanent Gases-Dual Column (CP7430) comprised of mole-sieve and Porapak Q columns working in parallel and using a helium carrier gas. The flow path is divided past the column using a splitter, wherein the carrier gas flow leading into the TCD and MS is \SI{3}{ml/min} and \SI{1}{ml/min}, respectively. When developing the GC/MS method, the portioned flows feeding into the TCD and MS are calculated such that their respective chromatograms are synchronized. 
+The sample analysis time is approximately \SI{60}{min}, during which time the GC oven temperature is maintained at \SI{30}{\degree C} for \SI{12}{min}, then ramped at \SI{8}{\degree C/min} for \SI{2}{min} until a temperature of \SI{300}{\degree C} is reached. During the sample analysis, the TCD is maintained at \SI{300}{\degree C} with a makeup and reference flow of 12~mL/min and 27~mL/min, respectively. Additionally, the MS source and quad temperatures are \SI{250}{\degree C} and \SI{200}{\degree C}, respectively, for the duration of the sample analysis.
 
-The sample analysis time is approximately \SI{60}{min}, in which the GC oven temperature is maintained at \SI{30}{\degree C} for \SI{12}{min}, then ramped at \SI{8}{\degree C/min} for \SI{2}{min} until a temperature of \SI{300}{\degree C} is reached. During the sample analysis, the TCD is maintained at \SI{300}{\degree C} with a makeup and reference flow of \SI{12}{ml/min} and \SI{27}{ml/min}, respectively. Additionally, the MS source and quad temperatures are \SI{250}{\degree C} and \SI{200}{\degree C}, respectively, for the duration of the sample analysis. 
- 
-Gas species are identified using the total ion chromatogram (TIC) provided from the MS and quantified from the TCD chromatogram. A typical TCD chromatogram, produced from a pool fire gas sample, is shown in Fig.~\ref{fig:Chromatogram}. The TCD chromatogram figure exemplifies the connection between a peak and gas species; the area of a peak corresponds to the number of moles detected of a given species. Due to the complexity of the TCD chromatograms (i.e., overlapping peaks or irregular peak shapes), peaks are manually integrated using Agilent software. Integration bounds of each peak are determined from the TIC. In some instances, it is necessary to implement a tangential skim to improve integration resolution of an overlapping peak, as shown in Fig.~\ref{fig:Chromatogram}. 
+Gas species are identified using the total ion chromatogram (TIC) provided from the MS and quantified from the TCD chromatogram. A typical TCD chromatogram is shown in Fig.~\ref{fig:Chromatogram}. The area associated with each peak is proportional to the number of moles of a particular species. Overlapping or irregular regions are manually integrated using the Agilent software. Integration bounds of each region are determined from the TIC. In some instances, it is necessary to implement a tangential ``skim'' to improve integration resolution of an overlapping region, as shown in Fig.~\ref{fig:Chromatogram}.
 
 \begin{figure}[h!]
 	\centering
@@ -345,15 +346,13 @@ Gas species are identified using the total ion chromatogram (TIC) provided from 
 	\label{fig:Chromatogram}
 \end{figure}
 
-Peak areas obtained from chromatograms are adjusted to account for the variation in pressure and temperature of the gas sample injected into the GC/MS. Eq.~\ref{eq:Area_corrected} shows the function used to correct the peak area by normalizing the pressure and temperature measurements.
-
-Here, the subscript $\rm{o}$  and $\rm{a}$ represent the measured and ambient conditions, respectively. 
+The area associated with a peak, $A$, is adjusted to account for the variation in the measured pressure, $P$, and temperature, $T$, of the sample:
 \begin{equation}\label{eq:Area_corrected}
-	\mathrm {Area_{corrected}}=\mathrm{Area} \, \left(\frac{P_{\rm o} \, T_{\mathrm a}}{P_{\mathrm a} \, T_{\rm o}}\right)
+	A_{\rm corr} = A \, \left(\frac{P \, T_\infty}{P_\infty \, T} \right)
 \end{equation}
-Corrected peak areas are converted into number of moles using linear calibration curves. The calibration coefficients of typical gas species are determined using gas standards listed in Appendix~\ref{sssec:Table of Gas Standards with Error}. The calibration functions of liquid-vapors (e.g., water, methanol, ethanol, acetone) are obtained from a bubbler setup described in Appendix~\ref{sssec:Concentration of Vapors from Bubblers}. 
+The corrected area is converted into number of moles using a linear calibration curve determined using gas standards listed in Appendix~\ref{sssec:Table of Gas Standards with Error}. The calibration functions of liquid-vapors (e.g., water, methanol, ethanol, acetone) are obtained from a bubbler apparatus described in Appendix~\ref{sssec:Concentration of Vapors from Bubblers}.
 
-Once the number moles for all detected species is determined, the volume fraction of each species can be calculated. The mean volume fraction of a given species, $\bar{X}_{i}$, is the ratio of the number of moles of a given gas species, $n_{i}$, and the total number of moles identified by the GC/MS, $n_{\rm tot}$, averaged over the repeated GC/MS gas injections. The total number of moles is determined from the summation of moles for each species quantified from the TCD chromatogram.
+Once the number of moles for all detected species is determined, the volume fraction of each species can be calculated. The mean volume fraction of a given species, $\bar{X}_{i}$, is the ratio of the number of moles of a given gas species, $n_{i}$, and the total number of moles identified by the GC/MS, $n_{\rm tot}$, averaged over the repeated GC/MS gas injections. The total number of moles is determined from the summation of moles for each species quantified from the TCD chromatogram.
 \begin{equation}\label{eq:volume_fraction}
   	\bar{X}_{i}= \frac{n_{i}}{n_{\rm tot}}
 \end{equation}
@@ -363,7 +362,7 @@ The mean mass fraction, $\bar{Y}_{i}$, of a given species $i$ is calculated from
 \end{equation}
 where ${{\textrm{W}_{i}}}$ is the molecular weight of a given species.
 
-All measurements using the GC/MS are repeated at least twice at each location along the centerline of the pool fire. Gas species concentration measurements made at the same location are averaged. The variance in the volume fraction is a function of position and species. A detailed description of the uncertainty analysis for the gas species measurement and its calibration is discussed in Appendices~\ref{sec:UncertaintyGasSpecies} and \ref{sec:Uncertainty Analysis of Gas Species Calibrations}.
+All measurements using the GC/MS are repeated at least twice at each location along the centerline of the pool fire. Gas species concentration measurements made at the same location are averaged. The variance in the volume fraction is a function of position and species. The uncertainty of the species measurements and the calibration procedure is discussed in Appendices~\ref{sec:UncertaintyGasSpecies} and \ref{sec:Uncertainty Analysis of Gas Species Calibrations}, respectively.
 
 \subsection{Determining Soot Mass Fraction}
 \label{ssec:Soot_Setup}
@@ -595,7 +594,6 @@ The authors would like to acknowledge Kimberly Harris of the Gas Sensing Metrolo
 \makeatother
 
 \section{Uncertainty Analysis of Pool Fire Parameters}\label{sec:Uncertainty_Pool_Fire_Parameters}
-\addcontentsline{toc}{section}{Appendix A: Uncertainty Analysis}
 
 \subsection{Mass Burning Rate}
 \label{ssec:Mass_Burning_Flux}
@@ -633,7 +631,6 @@ u_{\scriptscriptstyle L_{\rm{f}}} \approx s_{\scriptscriptstyle{L_{\rm f}}}
 \pagebreak
 
 \section{Uncertainty Analysis of Gas Species Concentrations} \label{sec:UncertaintyGasSpecies}
-\addcontentsline{toc}{section}{Appendix C: Uncertainty Analysis of Gas Species Concentrations}
 
 \subsection{Uncertainty of Volume Fractions} \label{sec:UncertaintyMoleFrac}
 As shown in Eqn.~\ref{eq:volume_fraction}, volume fraction, $\bar{X}_{i}$, is calculated from the ratio between the number of moles of a given species, $n_{i}$, and the total number of moles identified, $n_{\rm tot}$. The uncertainty of the measured volume fraction is estimated using the law of propagation of uncertainty after determining the volume fraction of each species:
@@ -648,7 +645,6 @@ A coverage factor of 2 is applied to the combined uncertainty to produce a 95~\%
 \label{ssec:Number_of_Moles_of_a_Given_Species}
 
 The number of moles of a given species is determined from a calibration function of the integrated peak area of the respective species obtained from the TCD's and the MS's Total Ion Current (TIC) chromatograms. The Type A evaluation of standard uncertainty of the number of moles of a given species is taken as the standard deviation of the measurements obtained from the repeated tests. The Type B evaluation of standard uncertainty is determined from the error in the calibration functions for each species measured by the TCD and MS is further detailed in Appendix~\ref{sec:Uncertainty Analysis of Gas Species Calibrations}. The combined uncertainty is found via quadrature:
-
 \begin{equation}
 \label{eq:gasspeciesuncertaintycertainty}
 u_{\scriptscriptstyle n_{i}} = \sqrt{ u_{\rm \scriptscriptstyle n_{i,\rm cal}}^2 + s_{\scriptscriptstyle n_{i}}^2}
@@ -657,7 +653,6 @@ u_{\scriptscriptstyle n_{i}} = \sqrt{ u_{\rm \scriptscriptstyle n_{i,\rm cal}}^2
 \subsubsection{Total Number of Moles Identified}
 \label{ssec:Total Number of Moles Identified}
 The total number of moles detected is determined from the summation of the number of moles for each species identified by the TCD and TIC chromatograms. Therefore, the uncertainty in the total number of moles identified is the combined uncertainty of all the identified species via quadrature:
-
 \begin{equation}
 \label{eq:totalnumberofmolesdetected}
 u_{\scriptscriptstyle n_{\rm tot}}=\sqrt{{\sum_{n=1}^{N} s_{\scriptscriptstyle n_{i}}^2}}
@@ -666,6 +661,7 @@ where $N$ is the number of a species identified species in the TCD and TIC chrom
 
 \subsection{Uncertainty of Mass Fractions}
 \label{ssec:Uncertainty of Mass Fractions}
+
 Mass fraction of a given species is calculated using its measured volume fraction, $\bar{X_{i}}$, molecular weight, $W_i$ , and the average molecular weight of all detected gas species, $W_{\rm tot}$, as shown in Eqn.~\ref{eq:mass_fraction}. The uncertainty of the mass fraction of a given species is estimated from the law of propagation of uncertainty using Eqn.~\ref{eq:mass_fraction}.
 \begin{equation}\label{eq:Mass_Frac_Uncertainty}
 u_\mathrm{\bar{Y}_{i}} = \sqrt{{\left( \frac{\partial \bar{Y}_{i}}{\partial \bar{X}_{i}}\,u_{\scriptscriptstyle \bar{X}_{i}} \right)}^2+{\left(\frac{\partial \bar{Y}_{i}}{\partial W_{\rm tot}}\,u_{\scriptscriptstyle W_{tot}}\right)}^2}
@@ -673,8 +669,8 @@ u_\mathrm{\bar{Y}_{i}} = \sqrt{{\left( \frac{\partial \bar{Y}_{i}}{\partial \bar
 
 \subsubsection{Uncertainty of the average molecular weight}
 \label{ssec:Uncertainty of the average molecular weight}
-The uncertainty of the average molecular weight is determined using the law of propagation of uncertainty, which accounted for each detected species measured from the injected sample.
 
+The uncertainty of the average molecular weight is determined using the law of propagation of uncertainty, which accounted for each detected species measured from the injected sample.
 \begin{equation}\label{eq:Uncertainty_Total_MW}
 	u_{\scriptscriptstyle W_{tot}}=\sqrt{\left(\sum{{u_{\scriptscriptstyle \bar{X}_{i}}}{{W_{i}}}}\right)^2}
 \end{equation}
@@ -682,7 +678,7 @@ The uncertainty of the average molecular weight is determined using the law of p
 \pagebreak
 
 \section{Uncertainty Analysis of Gas Species Calibrations}\label{sec:Uncertainty Analysis of Gas Species Calibrations}
-\addcontentsline{toc}{section}{Appendix D: Uncertainty Analysis of Gas Species Calibrations}
+
 Peak areas are converted into number of moles, $n_{i}$, using linear calibration curves.
 \begin{equation}
 \label{eq:Calibration Curve}
@@ -874,7 +870,7 @@ u_{\scriptscriptstyle T_{\rm B}} = \sqrt{u_{\rm \scriptscriptstyle inst}^2 + s_{
 \pagebreak
 
 \section{Uncertainty Analysis of the Soot Mass Fraction} \label{sec:Uncertainty_Soot_Frac}
-\addcontentsline{toc}{section}{Appendix E: Uncertainty Analysis of the Soot Mass Fraction}
+
 The local soot mass fraction measurements, $M_{\rm s}$ made at various heights above the fuel surface in pool fires of different fuels are calculated through a combination of Eqns.~\ref{eq:soot_mass_frac}, \ref{eq:total_mass}, and \ref{eq:gas_density}:
 \begin{equation}\label{eq:overall_soot_mass_frac}
 Y_{\rm s}= \frac{m_{\rm s} \, V_{s}}{\dot{V} \, t \, m_{\rm tot}}\frac{T_{\rm \infty}}{T_{\rm g}}
@@ -885,7 +881,7 @@ where $m_{\rm s}$ is the mass of soot collected on the PTFE filter and gun clean
 \label{eq:soot_mass_frac_uncertainty}
 u_{\scriptscriptstyle Y_{\rm s}} = \sqrt{{\left(\frac{\partial Y_{\rm s}}{\partial m_{\rm s}}\,u_{\scriptscriptstyle m_{\rm s}} \right)}^2+{\left(\frac{\partial Y_{\rm s}}{\partial \dot{V} }\,u_{\scriptscriptstyle \dot{V}} \right)}^2+{\left(\frac{\partial Y_{\rm s}}{\partial m_{\rm tot}}\,u_{\scriptscriptstyle m_{\rm tot}} \right)}^2}
 \end{equation}
-The uncertainty of the temperature measurements is not accounted for since the uncertainty of the soot mass fraction is dominated by the remaining parameters uncertainties. 
+The uncertainty of the temperature measurements is not accounted for since the uncertainty of the soot mass fraction is dominated by the remaining parameters uncertainties.
 
 \subsection{Mass of Soot}
 \label{ssec:Mass_of_Soot}
@@ -937,7 +933,7 @@ where $N$ is the number of a species identified species in the TCD and TIC chrom
 \pagebreak
 
 \section{Uncertainty Analysis of the Mixture Fraction}\label{sec:Uncertainty_Mix_Frac}
-\addcontentsline{toc}{section}{Appendix F: Uncertainty of the Mixture Fraction}
+
 The mixture fraction, $Z$, is determined from Eqn.~\ref{eq:Mixture_Fraction} based on carbon containing species. The uncertainty of the determined mixture fraction is estimated from the law of propagation of uncertainty using mass fractions of carbon containing species, $\bar{Y}_{i}$, and the parent fuel, $\bar{Y}_{f}$.
 \begin{equation}
 \label{eq:mixture_frac_uncertainty}
@@ -945,21 +941,10 @@ u_{\scriptscriptstyle Z}=\sqrt{{u_{\scriptscriptstyle \bar{Y}_{f}}}^2+{\left(\fr
 \end{equation}
 The uncertainty of the mass fractions of carbon containing species is discussed in Appendix~\ref{ssec:Uncertainty of Mass Fractions}.
 
-\pagebreak
-
-\section{Uncertainty Analysis of the $Z^{*}$}\label{sec:Uncertainty_Z_star}
-\addcontentsline{toc}{section}{Appendix H: Uncertainty Analysis of the $Z^{*}$}
-$Z^{*}$ is calculated from Eqn.~\ref{eq:Z_Star} where the gravitational constant and temperature, specific heat, and density of the ambient air are treated as constants. The uncertainty of $Z^{*}$ is calculated from the law of propagation of uncertainty, which incorporated the uncertainties of the heat release rate, $\dot{Q}$, and the mean flame height, $L_{\rm{f}}$.
-\begin{equation}
-\label{eq:heat_release_rate_uncertainty}
-u_{\scriptscriptstyle Z^{*}} = \sqrt{{\left(\frac{\partial Z^{*}}{\partial \dot{Q}}\,u_{\scriptscriptstyle \dot{Q}} \right)}^2+{\left(\frac{\partial Z^{*}}{\partial L_{\rm{f}}}\,u_{\scriptscriptstyle L_{\rm{f}}} \right)}^2}
-\end{equation}
-The uncertainty of the heat release rate and mean flame height is described in Appendix~\ref{sec:Uncertainty_Pool_Fire_Parameters}.
 
 \pagebreak
 
-\section{Figures of Averaged Volume Fractions of Centerline Measurements as a Function of $Z^{*}$ for Methanol, Ethanol, and Acetone Fires}\label{sec:Vol_Frac_Figs}
-\addcontentsline{toc}{section}{Appendix H: Figures of Averaged Volume Fractions of Centerline Measurements as a Function of $Z^{*}$ for Methanol, Ethanol, and Acetone Fires}
+\section{Figures of Averaged Volume Fractions}\label{sec:Vol_Frac_Figs}
 
 \subsection{Methanol}
 \label{ssec:Methanol_ALL_Vol_Frac}
@@ -1016,10 +1001,9 @@ The uncertainty of the heat release rate and mean flame height is described in A
 	\label{fig:Methanol_VOL_Frac_Inter}
 \end{figure}
 
-\pagebreak
+\clearpage
 
-\section{Figures of Averaged Mass Fractions of Centerline Measurements as a Function of Mixture Fractions for Methanol, Ethanol, and Acetone Fires}\label{sec:Mix_Frac_Figs}
-\addcontentsline{toc}{section}{Appendix I: Figures of Averaged Mass Fractions of Centerline Measurements as a Function of Mixture Fractions for Methanol, Ethanol, and Acetone Fires}
+\section{Figures of Averaged Mass Fractions}\label{sec:Mix_Frac_Figs}
 
 \subsection{Methanol}
 \label{ssec:Methanol_ALL_Mix_Frac}
@@ -1056,7 +1040,7 @@ The uncertainty of the heat release rate and mean flame height is described in A
 \pagebreak
 
 \section{Uncertainty Analysis of the Verification Scheme}\label{sec:Uncertainty_Ver_Scheme}
-\addcontentsline{toc}{section}{Appendix J: Uncertainty of the Verification Scheme}
+
 \subsection{Ratio of moles identified to moles injected }
 \label{ssec:mole ratio}
 The uncertainty of the ratio of the total number of moles identified by the TCD and MS, $n_{\rm tot}$, to the number of moles injected into the GC/MS, $n_{\rm inj}$, is calculated using the law of propagation of uncertainty and shown in the equation below:
