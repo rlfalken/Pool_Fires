@@ -226,7 +226,7 @@ Natl. Inst. Stand. Technol. Tech. Note \pubnumber, \pageref{LastPage} pages (\mo
 %   Start front matter - page number starts with "i"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Abstract}
-This report documents a series of time-averaged gas species measurements made along the centerline of methanol, ethanol, and acetone pool fires steadily burning in a quiescent environment. All gas species measurements are obtained using a Gas Chromatograph/ Mass Spectrometer System (GC/MSD). Measurements were made at different heights along the centerline of the fire and repeated at least twice for each location. Gas species volume fractions were determined via the GC/MSD using predetermined calibration factors. Soot mass fractions are simultaneously measured during the gas sampling process. The gas species volume and soot mass fractions are compared at different heights within the fire and across a variety of different fuels. Other fire parameters are measured as well, including time-averaged temperature measurements and mass burning rates.
+This report documents a series of time-averaged gas species measurements made along the centerline of methanol, ethanol, and acetone pool fires steadily burning in a quiescent environment. All gas species measurements are obtained using a Gas Chromatograph/ Mass Spectrometer System (GC/MS). Measurements were made at different heights along the centerline of the fire and repeated at least twice for each location. Gas species volume fractions were determined via the GC/MS using predetermined calibration factors. Soot mass fractions are simultaneously measured during the gas sampling process. The gas species volume and soot mass fractions are compared at different heights within the fire and across a variety of different fuels. Other fire parameters are measured as well, including time-averaged temperature measurements and mass burning rates.
 \section*{Keywords}
 \normalsize Acetone, Ethanol, Gas species measurements, Methanol, Liquid pool fires \\
 \pagebreak
@@ -240,6 +240,7 @@ This report documents a series of time-averaged gas species measurements made al
 \pagebreak
 
 \listoftables
+\pagebreak
 \listoffigures
 
 \clearpage
@@ -335,7 +336,7 @@ Depending on the probe location within the fire, the sampling period varies from
 
 After the gas sampling period, two quarter-turn valves located on opposite ends of the sample loop are closed, at which point pressure measurements, obtained from a digital pressure gauge (OMEGA DPG409-030DWU), and temperature measurements, acquired by a K-type thermocouple located at the GC/MS sample loop injection port, are collected at \SI{2}{\hertz} for \SI{50}{s}. The sampled gas is then fed onto a column located within the GC oven. Chromatographic separation of species is achieved using a Select for Permanent Gases-Dual Column (CP7430) comprised of mole-sieve and Porapak Q columns working in parallel and using a helium carrier gas. The flow path is divided past the column using a splitter, wherein the carrier gas flow leading into the TCD and MS is approximately 3~mL/min and 1~mL/min, respectively. When developing the GC/MS method, the portioned flows feeding into the TCD and MS are calculated such that their respective chromatograms are synchronized.
 
-The sample analysis time is approximately \SI{60}{min}, during which time the GC oven temperature is maintained at \SI{30}{\degree C} for \SI{12}{min}, then ramped at \SI{8}{\degree C/min} for \SI{2}{min} until a temperature of \SI{300}{\degree C} is reached. During the sample analysis, the TCD is maintained at \SI{300}{\degree C} with a makeup and reference flow of 12~mL/min and 27~mL/min, respectively. Additionally, the MS source and quad temperatures are \SI{250}{\degree C} and \SI{200}{\degree C}, respectively, for the duration of the sample analysis.
+For the ethanol and acetone pool fires, the sample analysis time is approximately \SI{60}{min}, during which time the GC oven temperature is maintained at \SI{30}{\degree C} for \SI{10}{min}, then ramped at \SI{8}{\degree C/min} for \SI{34}{min} until reaching a temperature of \SI{300}{\degree C} which is maintined for the remainder of the analysis. For methanol pool fires, GC oven has same setpoint temperature hold time and ramp rate, but only ramps to \SI{192}{\degree C} to reduce overall analysis time. During the sample analysis, the TCD is maintained at \SI{300}{\degree C} with a makeup and reference flow of 12~mL/min and 27~mL/min, respectively. Additionally, the MS source and quad temperatures are \SI{250}{\degree C} and \SI{200}{\degree C}, respectively, for the duration of the sample analysis.
 
 Gas species are identified using the total ion chromatogram (TIC) provided from the MS and quantified from the TCD chromatogram. A typical TCD chromatogram is shown in Fig.~\ref{fig:Chromatogram}. The area associated with each peak is proportional to the number of moles of a particular species. Overlapping or irregular regions are manually integrated using the Agilent software. Integration bounds of each region are determined from the TIC. In some instances, it is necessary to implement a tangential ``skim'' to improve integration resolution of an overlapping region, as shown in Fig.~\ref{fig:Chromatogram}.
 
@@ -447,7 +448,7 @@ Here, $\dot{Q}$ is the heat release rate, $g$ is the acceleration of gravity, an
 
 \begin{figure}[h!]
 	\centering
-\includegraphics[width=11.0 cm, keepaspectratio]{Temperature_Comparison.png}
+\includegraphics[width=11.0 cm, keepaspectratio]{Temperature_Comparison.pdf}
 	\caption[Major Species Comparison]{Mean and RMS centerline temperature profiles of methanol, ethanol, and acetone pool fires during their pulsing cycles}
 	\label{fig:Temp_Comparison}
 \end{figure}
@@ -456,7 +457,7 @@ Figure~\ref{fig:Fuel_Comparison} displays the mean volume fraction of the major 
 
 \begin{figure}[!]
 	\centering
-\includegraphics[width=12.5cm,keepaspectratio]{OVERALL_Fuel_Comparison.png}
+\includegraphics[width=12.5cm,keepaspectratio]{OVERALL_Fuel_Comparison.pdf}
 	\caption[Major Species Comparison]{Centerline volume fraction and soot mass fraction profiles of methanol ($\blacklozenge$), ethanol ($\bigcirc$), and acetone ($\blacksquare$) pool fires.}
 	\label{fig:Fuel_Comparison}
 \end{figure}
@@ -480,7 +481,7 @@ Here, $R=287$~J/(mol$\cdot$K) is the universal gas constant for air, $V_{\rm s}=
 
 \begin{figure}[h!]
 	\centering
-\includegraphics[width=10.5cm,keepaspectratio]{mole_ratio_Comparison.png}
+\includegraphics[width=10.5cm,keepaspectratio]{mole_ratio_Comparison.pdf}
 	\caption[Ratio of moles identified to moles injected]{Ratio of moles identified to moles injected, with error, as a function of $z^*$}
 	\label{fig:Mole_Comp}
 \end{figure}
@@ -497,15 +498,15 @@ where the summation is over all measured gas species, and $x_i$ and $y_i$ are th
 
 \begin{figure}[h!]
 	\centering
-\includegraphics[width=10.5cm, keepaspectratio]{C2H_ratio_Comparison.png}
+\includegraphics[width=10.5cm, keepaspectratio]{C2H_ratio_Comparison.pdf}
 	\caption[Carbon to hydrogen ratio calculated from all species]{Carbon to hydrogen ratio calculated from all measured gas species compared to the theoretical values.}
 	\label{fig:C2H}
 \end{figure}
 
-A similar verification test is to apply the summations in Eq.~(\ref{eq:c2h_ratio}) to all {\em product} species; that is, all species except the original fuel molecule. The carbon to hydrogen ratio for the product gases should be the same as that for all species. Figure~\ref{fig:SCR} shows the results. Note that an exact match is not expected because the idealized values do not take into account the mass of soot.
+A similar verification test is to apply the summations in Eq.~(\ref{eq:c2h_ratio}) to all {\em product} species; that is, all species except the original fuel molecule and any detected compound that shares the same carbon to hydrogen ratio as the parent fuel. The carbon to hydrogen ratio for the product gases should be the same as that for all species. Figure~\ref{fig:SCR} shows the results. Note that an exact match is not expected because the idealized values do not take into account the mass of soot.
 \begin{figure}[h!]
 	\centering
-\includegraphics[width=10.5cm, keepaspectratio]{Prod_ratio_Comparison.png}
+\includegraphics[width=10.5cm, keepaspectratio]{Prod_ratio_Comparison.pdf}
 	\caption[Carbon to hydrogen ratio calculated from all {\em product} species]{Carbon to hydrogen ratio calculated from all measured {\em product} species compared to the theoretical values.}
 	\label{fig:SCR}
 \end{figure}
@@ -513,7 +514,7 @@ A similar verification test is to apply the summations in Eq.~(\ref{eq:c2h_ratio
 Another verification test considers the inert species argon and nitrogen whose molar ratio should be the same regardless of fuel type. The measured Ar/N$_2$ ratio in ambient air is $0.0117\pm0.0005$, and the measured ratio at different vertical locations within the fires is depicted in Fig.~\ref{fig:IR}. All points fall within the uncertainty bounds of the ambient air measurement.
 \begin{figure}[h!]
 	\centering
-\includegraphics[width=10.5cm, keepaspectratio]{Inert_ratio_Comparison.png}
+\includegraphics[width=10.5cm, keepaspectratio]{Inert_ratio_Comparison.pdf}
 	\caption[Ar/N$_2$ ratio within the fire envelop compared to ambient air]{Ar/N$_2$ molar ratio at different elevations compared to the uncertainty bounds of the measurement in ambient air.}
 	\label{fig:IR}
 \end{figure}
@@ -542,21 +543,21 @@ Figures~\ref{fig:Methanol_Mix_Frac}, \ref{fig:Ethanol_Mix_Frac}, and \ref{fig:Ac
 
 \begin{figure}[!]
 	\centering
-\includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelMethanol_Mixture_Fraction_Intermediate_Plot.png}
+\includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelMethanol_Mixture_Fraction_Intermediate_Plot.pdf}
 	\caption[Mean mass fractions as a function of mixture fraction, methanol]{Mean mass fractions as a function of mixture fraction, methanol}
 	\label{fig:Methanol_Mix_Frac}
 \end{figure}
 
 \begin{figure}[!]
 	\centering
-\includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelEthanol_Mixture_Fraction_Intermediate_Plot.png}
+\includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelEthanol_Mixture_Fraction_Intermediate_Plot.pdf}
 	\caption[Mean mass fractions as a function of mixture fraction, ethanol]{Mean mass fractions as a function of mixture fraction, ethanol}
 	\label{fig:Ethanol_Mix_Frac}
 \end{figure}
 
 \begin{figure}[!]
 	\centering
-\includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelAcetone_Mixture_Fraction_Intermediate_Plot.png}
+\includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelAcetone_Mixture_Fraction_Intermediate_Plot.pdf}
 	\caption[Mean mass fractions as a function of mixture fraction, acetone]{Mean mass fractions as a function of mixture fraction, acetone}
 	\label{fig:Acetone_Mix_Frac}
 \end{figure}
@@ -627,6 +628,7 @@ u_{\scriptscriptstyle L_{\rm{f}}} \approx s_{\scriptscriptstyle{L_{\rm f}}}
 
 \subsection{Uncertainty Analysis of Temperature Measurements}
 \label{sec:Uncertainty_Temperature_Measurements}
+The uncertainty of the temperature measurements was estimated from the bias error sources in the S-type, $u_{\rm inst}$, used to measure temperature (\SI{1.5}{\degree C}) of gas sample injected. 
 
 \pagebreak
 
@@ -950,16 +952,16 @@ The uncertainty of the mass fractions of carbon containing species is discussed 
 \label{ssec:Methanol_ALL_Vol_Frac}
 \begin{figure}[!h]
 	\centering
-\includegraphics[width=10.0cm,keepaspectratio]{Methanol_MOL_FRAC_Plot.png}
-	\caption[Plot of volume fractions, with error, of major species identified in the methanol pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of major species identified in the methanol pool fire centerline as function of $Z^{*}$}
+\includegraphics[width=10.75cm,keepaspectratio]{Methanol_MOL_FRAC_Plot.pdf}
+	\caption[Plot of volume fractions, with error, of major species identified in the methanol pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of major species identified in the methanol pool fire centerline as function of $z^{*}$}
 	\label{fig:Methanol_VOL_Frac_Major}
 \end{figure}
 \pagebreak
 
 \begin{figure}[!h]
 	\centering
-\includegraphics[width=10.0cm,keepaspectratio]{Methanol_Inter_MOL_FRAC_Plot.png}
-	\caption[Plot of volume fractions, with error, of intermediate species identified in the methanol pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of intermediate species identified in the methanol pool fire centerline as function of $Z^{*}$}
+\includegraphics[width=10.75cm,keepaspectratio]{Methanol_Inter_MOL_FRAC_Plot.pdf}
+	\caption[Plot of volume fractions, with error, of intermediate species identified in the methanol pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of intermediate species identified in the methanol pool fire centerline as function of $z^{*}$}
 	\label{fig:Methanol_VOL_Frac_Inter}
 \end{figure}
 \pagebreak
@@ -969,16 +971,16 @@ The uncertainty of the mass fractions of carbon containing species is discussed 
 
 \begin{figure}[!h]
 	\centering
-\includegraphics[width=10.5cm,keepaspectratio]{Ethanol_MOL_FRAC_Plot.png}
-	\caption[Plot of volume fractions, with error, of major species identified in the ethanol pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of major species identified in the ethanol pool fire centerline as function of $Z^{*}$}
+\includegraphics[width=10.75cm,keepaspectratio]{Ethanol_MOL_FRAC_Plot.pdf}
+	\caption[Plot of volume fractions, with error, of major species identified in the ethanol pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of major species identified in the ethanol pool fire centerline as function of $z^{*}$}
 	\label{fig:Methanol_VOL_Frac_Major}
 \end{figure}
 \pagebreak
 
 \begin{figure}[!h]
 	\centering
-\includegraphics[width=10.5cm,keepaspectratio]{Ethanol_Inter_MOL_FRAC_Plot.png}
-	\caption[Plot of volume fractions, with error, of intermediate species identified in the ethanol pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of intermediate species identified in the ethanol pool fire centerline as function of $Z^{*}$}
+\includegraphics[width=10.75cm,keepaspectratio]{Ethanol_Inter_MOL_FRAC_Plot.pdf}
+	\caption[Plot of volume fractions, with error, of intermediate species identified in the ethanol pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of intermediate species identified in the ethanol pool fire centerline as function of $z^{*}$}
 	\label{fig:Methanol_VOL_Frac_Inter}
 \end{figure}
 
@@ -989,15 +991,15 @@ The uncertainty of the mass fractions of carbon containing species is discussed 
 
 \begin{figure}[!h]
 	\centering
-\includegraphics[width=10.0cm,keepaspectratio]{Acetone_MOL_FRAC_Plot.png}
-	\caption[Plot of volume fractions, with error, of major species identified in the acetone pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of major species identified in the acetonel pool fire centerline as function of $Z^{*}$}
+\includegraphics[width=10.75cm,keepaspectratio]{Acetone_MOL_FRAC_Plot.pdf}
+	\caption[Plot of volume fractions, with error, of major species identified in the acetone pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of major species identified in the acetonel pool fire centerline as function of $z^{*}$}
 	\label{fig:Methanol_VOL_Frac_Major}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-\includegraphics[width=10.0cm,keepaspectratio]{Acetone_Inter_MOL_FRAC_Plot.png}
-	\caption[Plot of volume fractions, with error, of intermediate species identified in the acetone pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of intermediate species identified in the acetone pool fire centerline as function of $Z^{*}$}
+\includegraphics[width=10.75cm,keepaspectratio]{Acetone_Inter_MOL_FRAC_Plot.pdf}
+	\caption[Plot of volume fractions, with error, of intermediate species identified in the acetone pool fire centerline as function of $Z^{*}$]{Plot of volume fractions of intermediate species identified in the acetone pool fire centerline as function of $z^{*}$}
 	\label{fig:Methanol_VOL_Frac_Inter}
 \end{figure}
 
@@ -1010,7 +1012,7 @@ The uncertainty of the mass fractions of carbon containing species is discussed 
 
 \begin{figure}[!h]
 	\centering
-\includegraphics[width=10.0cm,keepaspectratio]{Methanol_Mixture_Fraction_Major_Plot.png}
+\includegraphics[width=10.25cm,keepaspectratio]{Methanol_Mixture_Fraction_Major_Plot.pdf}
 	\caption[Plot of mass fractions, with error, of major species identified in the methanol pool fire centerline as function of mixture fraction]{Plot of mass fractions, with error, of major species identified in the methanol pool fire centerline as function of mixture fraction}
 	\label{fig:Methanol_MIX_Frac_Major}
 \end{figure}
@@ -1021,7 +1023,7 @@ The uncertainty of the mass fractions of carbon containing species is discussed 
 \label{ssec:Ethanol_ALL_Mix_Frac}
 \begin{figure}[h!]
 	\centering
-\includegraphics[width=10.0cm,keepaspectratio]{Ethanol_Mixture_Fraction_Major_Plot.png}
+\includegraphics[width=10.5cm,keepaspectratio]{Ethanol_Mixture_Fraction_Major_Plot.pdf}
 	\caption[Plot of mass fractions, with error, of major species identified in the ethanol pool fire centerline as function of mixture fraction]{Plot of mass fractions, with error, of major species identified in the ethanol pool fire centerline as function of mixture fraction}
 	\label{fig:Ethanol_MIX_Frac_Major}
 \end{figure}
@@ -1032,7 +1034,7 @@ The uncertainty of the mass fractions of carbon containing species is discussed 
 \label{ssec:Acetone_ALL_Mix_Frac}
 \begin{figure}[!h]
 	\centering
-\includegraphics[width=10.0cm,keepaspectratio]{Acetone_Mixture_Fraction_Major_Plot.png}
+\includegraphics[width=10.5cm,keepaspectratio]{Acetone_Mixture_Fraction_Major_Plot.pdf}
 	\caption[Plot of mass fractions, with error, of major species identified in the acetone pool fire centerline as function of mixture fraction]{Plot of mass fractions, with error, of major species identified in the acetone pool fire centerline as function of mixture fraction}
 	\label{fig:Acetone_MIX_Frac_Major}
 \end{figure}
@@ -1059,12 +1061,12 @@ u_{\scriptscriptstyle {\rm C}/{\rm H}} = \sqrt{{\sum\left(\frac{\partial ({\rm C
 \end{equation}
 The uncertainty of the mass fractions of carbon and hydrogen containing species is described in Appendix~\ref{ssec:Uncertainty of Mass Fractions}.
 
-\subsection{Product Ratio}
+\subsection{Product Species Ratio}
 \label{ssec:Pro_ratio}
-The stoichiometric combustion ratio, $\text{SCR}$, is calculated from a ratio of volume fractions of combustion products, $\bar{X}_{i}$, identified by the TCD and TIC chromatograms. The uncertainty of $\text{SCR}$ is determined from the law of propagation of uncertainty:
+The product species ratio, $\text{PSR}$, is calculated from a ratio of volume fractions of combustion products, $\bar{X}_{i}$, identified by the TCD and TIC chromatograms. The uncertainty of $\text{PSR}$ is determined from the law of propagation of uncertainty:
 \begin{equation}
 \label{eq:c2h_ratio_uncertainty}
-u_{\scriptscriptstyle \text{SCR}} = \sqrt{{\sum\left(\frac{\partial \text{SCR}}{\partial \bar{X}_{i}}\,u_{\scriptscriptstyle \bar{X}_{i}}\right)}^2}
+u_{\scriptscriptstyle \text{PSR}} = \sqrt{{\sum\left(\frac{\partial \text{PSR}}{\partial \bar{X}_{i}}\,u_{\scriptscriptstyle \bar{X}_{i}}\right)}^2}
 \end{equation}
 The uncertainty of the volume fractions is described in Appendix~\ref{sec:UncertaintyMoleFrac}.
 
