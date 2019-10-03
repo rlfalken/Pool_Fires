@@ -291,11 +291,11 @@ The heat release rate, $\dot{Q}$, is the product of the time-averaged mass burni
 \dot{Q}= \dot{m}~\Delta H_{c}
 \end{equation}
 
-The heat of the combustion is provided by Ref.~\cite{Dippr} and reported in Table~\ref{tab:Pool_Fire_Parameters_Table}. The uncertainty of the mass burning rate is discussed in Appendix~\ref{ssec:Mass_Burning_Flux}. The uncertainty of the heat release rate is discussed in Appendix~\ref{ssec:Heat_Release_Rate}.
+The heat of the combustion is provided by Ref.~\cite{Dippr} and reported in Table~\ref{tab:Pool_Fire_Parameters_Table}. The uncertainty of the mass burning rate is discussed in Appendix~\ref{ssec:Mass_Burning_Flux}. The uncertainty of the heat release rate and $Q^*$ is discussed in Appendix~\ref{ssec:Heat_Release_Rate}.
 
-$Q^*$ is the normalized energetics of a fire and is defined as:
+$Q^*$ is the normalized heat release rate of a fire and is defined as:
 \begin{equation}
-Q^*=\frac{\dot{Q}}{c_{p}\rho_\infty T_\infty \sqrt{g D} \, D^2}
+Q^*=\frac{\dot{Q}}{c_{p}\rho_\infty T_\infty \sqrt{g} \, D^{5/2}}
 \end{equation}
 Here, $D$ is the diameter of the pool fire (30~cm), $g$ is the acceleration of gravity, and $c_p$ and $\rho_\infty$ are the specific heat and the density of air at room temperature, $T_\infty$. 
 
@@ -615,7 +615,7 @@ The mean mass burning rate, $\dot{m}$, is determining by weighing the fuel reser
 u_{\scriptscriptstyle \dot{m}} \approx s_{\scriptscriptstyle \dot{m} }
 \end{equation}
 
-\subsection{Heat Release Rate}
+\subsection{Heat Release Rate and $Q^*$ }
 \label{ssec:Heat_Release_Rate}
 
 The heat release rate, $\dot{Q}$, is the product of the fuel mass loss rate, $\dot{m}$, and the heat of combustion, $\Delta H$. The relative uncertainty of the former is far greater than the latter, thus:
@@ -623,14 +623,10 @@ The heat release rate, $\dot{Q}$, is the product of the fuel mass loss rate, $\d
 \label{eq:heat_release_rate_uncertainty}
 u_{\scriptscriptstyle \dot{Q}} \approx \Delta H \, u_{\dot{m}}
 \end{equation}
-
-\subsection{Heat Release Rate}
-\label{ssec:Heat_Release_Rate}
-
 The uncertainty of ${Q^*}$, is dominated by the relative uncertainty of $\dot{Q}$, thus:
 \begin{equation}
-\label{eq:heat_release_rate_uncertainty}
-u_{\scriptscriptstyle {Q^*}} \approx \frac{u_{\scriptscriptstyle \dot{Q}}}{c_{p}\rho_\infty T_\infty \sqrt{g D} \, D^2}
+\label{eq:Q*_uncertainty}
+u_{\scriptscriptstyle {Q^*}} \approx \frac{u_{\scriptscriptstyle \dot{Q}}}{c_{p}\rho_\infty T_\infty \sqrt{g} \, D^{5/2}}
 \end{equation}
 
 \subsection{Mean Flame Height}
