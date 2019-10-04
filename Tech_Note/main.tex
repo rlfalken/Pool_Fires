@@ -290,14 +290,7 @@ The heat release rate, $\dot{Q}$, is the product of the time-averaged mass burni
 \begin{equation}\label{eq:Heat_release_rate}
 \dot{Q}= \dot{m}~\Delta H_{c}
 \end{equation}
-
-The heat of the combustion is provided by Ref.~\cite{Dippr} and reported in Table~\ref{tab:Pool_Fire_Parameters_Table}. The uncertainty of the mass burning rate is discussed in Appendix~\ref{ssec:Mass_Burning_Flux}. The uncertainty of the heat release rate and $Q^*$ is discussed in Appendix~\ref{ssec:Heat_Release_Rate}.
-
-$Q^*$ is the normalized heat release rate of a fire and is defined as:
-\begin{equation}
-Q^*=\frac{\dot{Q}}{c_{p}\rho_\infty T_\infty \sqrt{g} \, D^{5/2}}
-\end{equation}
-Here, $D$ is the diameter of the pool fire (30~cm), $g$ is the acceleration of gravity, and $c_p$ and $\rho_\infty$ are the specific heat and the density of air at room temperature, $T_\infty$. 
+The heat of the combustion is provided by Ref.~\cite{Dippr} and reported in Table~\ref{tab:Pool_Fire_Parameters_Table}. 
 
 The mean flame height, $L_{\rm{f}}$, is estimated from 3600~frames of high-resolution video of the experiments using MATLAB’s Image Processing Toolbox\footnote{\label{fn:product} Certain commercial products are identified in this report to specify adequately the equipment used. Such identification does not imply a recommendation by the National Institute of Standards and Technology, nor does it imply that this equipment is the best available for the purpose.}. Imported color images are decomposed into binary (i.e., black and white) images using a pre-set threshold level. The flame height for a single frame is defined as the distance between the pool surface and flame tip. All measurements are repeated, then averaged to provide the mean flame height. A description of the uncertainty analysis for the mean flame height is described in Appendix~\ref{ssec:Mean_Flame_Height}.
 
@@ -345,7 +338,7 @@ After the gas sampling period, two quarter-turn valves located on opposite ends 
 
 For the ethanol and acetone pool fires, the sample analysis time is approximately \SI{60}{min}, during which time the GC oven temperature is maintained at \SI{30}{\degree C} for \SI{10}{min}, then ramped at \SI{8}{\degree C/min} for \SI{34}{min} until reaching a temperature of \SI{300}{\degree C} which is maintined for the remainder of the analysis. For methanol pool fires, GC oven has same setpoint temperature hold time and ramp rate, but only ramps to \SI{192}{\degree C} to reduce overall analysis time. During the sample analysis, the TCD is maintained at \SI{300}{\degree C} with a makeup and reference flow of 12~mL/min and 27~mL/min, respectively. Additionally, the MS source and quad temperatures are \SI{250}{\degree C} and \SI{200}{\degree C}, respectively, for the duration of the sample analysis.
 
-Gas species are identified using the total ion chromatogram (TIC) provided from the MS and quantified from the TCD chromatogram. A typical TCD chromatogram is shown in Fig.~\ref{fig:Chromatogram}. The area associated with each peak is proportional to the number of moles of a particular species. Peaks are manually integrated using the Agilent software. Integration bounds of each peak are determined using the MS. In instances where peaks overlap, it is necessary to implement a tangential ``skim'' to improve integration resolution of an overlapping region, as shown in Fig.~\ref{fig:Chromatogram}. 
+Gas species are identified using the total ion chromatogram (TIC) provided from the MS and quantified from the TCD chromatogram. A typical TCD chromatogram is shown in Fig.~\ref{fig:Chromatogram}. The area associated with each peak is proportional to the number of moles of a particular species. Peaks are manually integrated using the Agilent software. Integration bounds of each peak are determined using the MS. In instances where peaks overlap, it is necessary to implement a tangential ``skim'' to improve integration resolution of an overlapping region, as shown in Fig.~\ref{fig:Chromatogram}.
 
 \begin{figure}[h!]
 	\centering
@@ -406,7 +399,7 @@ A description of the soot mass fraction uncertainty is provided in Appendix~\ref
 \section{Results}
 \label{sec:Results}
 
-This section presents the flame height, temperature, gas species, and soot measurements made at incremental heights along the centerline of medium-scale pool fires using various fuels such as methanol, ethanol, and acetone.
+This section presents the flame height, temperature, gas species, and soot measurements made at incremental heights along the centerline of 30~cm methanol, ethanol, and acetone pool fires.
 
 \subsection{Flame Observations}
 \label{ssec:Flame_Observations}
@@ -418,10 +411,14 @@ Figure~\ref{fig:Flame_Structure} displays a series of snapshots depicting a sing
 	\caption[Photographs of the three fires]{Flame structures of methanol (top), ethanol (middle), and acetone (bottom) pool fires during their pulsing cycles}
 	\label{fig:Flame_Structure}
 \end{figure}
-The methanol fire has a pale blue color, whereas the ethanol and acetone fires are more luminous and yellow. The measured time-averaged burning rates and calculated heat release rates are listed in Table~\ref{tab:Pool_Fire_Parameters_Table}. The heat release rates are calculated from Eq.~(\ref{eq:Heat_release_rate}). The methanol fire has the lowest average flame height, followed by the ethanol, and then the acetone. The measured mean flame heights match Heskestad’s correlation~\cite{Heskestad1983} to within measurement uncertainty. The flame heights are also within the uncertainty bounds of measurements made by Kim~et~al.~\cite{Kim2019}.
+The methanol fire has a pale blue color, whereas the ethanol and acetone fires are more luminous and yellow. The measured time-averaged burning rates and calculated heat release rates are listed in Table~\ref{tab:Pool_Fire_Parameters_Table}. The heat release rates are calculated from Eq.~(\ref{eq:Heat_release_rate}). The methanol fire has the lowest average flame height, followed by the ethanol, and then the acetone. The measured mean flame heights match Heskestad’s correlation~\cite{Heskestad1983} to within measurement uncertainty. 
+\begin{equation}
+\frac{L_{\rm f}}{D} = 3.7 \, (\dot{Q}^*)^{2/5} - 1.02 \quad ; \quad \dot{Q}^*=\frac{\dot{Q}}{c_{p}\rho_\infty T_\infty \sqrt{g} \, D^{5/2}}
+\end{equation}
+Here, $D$ is the diameter of the pool fire (30~cm), $g$ is the acceleration of gravity, and $c_p$ and $\rho_\infty$ are the specific heat and the density of air at room temperature, $T_\infty$. The measured flame heights are also within the uncertainty bounds of measurements made by Kim~et~al.~\cite{Kim2019}.
 
-\begin{table}[!ht]
-\caption[List of measurements and thermochemical properties of fuels]{List of measurements and thermochemical properties of fuels burning in a well-ventilated round 30~cm diameter pool fire burning in a quiescent environment. The uncertainties of measurements are discussed in detail in Appendix~\ref{sec:Uncertainty_Pool_Fire_Parameters}.}
+\begin{table}[!t]
+\caption[List of measurements and thermochemical properties of fuels]{List of measurements and thermochemical properties of fuels burning in a well-ventilated round 30~cm diameter pool fire burning in a quiescent environment. The uncertainty of the mass burning rate is discussed in Appendix~\ref{ssec:Mass_Burning_Flux}. The uncertainty of the heat release rate and $\dot{Q}^*$ is discussed in Appendix~\ref{ssec:Heat_Release_Rate}.}
 \label{tab:Pool_Fire_Parameters_Table}
 \centering
 	\footnotesize
@@ -435,7 +432,7 @@ Mass Burning Flux~(\si{g/{m^2 s}})		        	&	12.4~$\pm$~1.1		&	13.9~$\pm$~0.8	
 \\[0.01cm]
 Heat Release Rate~(\si{kW})		            	&	17.4~$\pm$~1.4		&	26.3~$\pm$~1.5		&	35.5~$\pm$~5.4		\\
 \\[0.01cm]							
-$Q^* $~(\si{kW})						&	0.32~$\pm$~0.02		&	0.48~$\pm$~0.01		&	0.64~$\pm$~0.05		\\	
+$\dot{Q}^* $						&	0.32~$\pm$~0.02		&	0.48~$\pm$~0.01		&	0.64~$\pm$~0.05		\\	
 \\[0.01cm]
 $D^*$~(\si{m})						&	0.190~$\pm$~0.006	&	0.224~$\pm$~0.005	&	0.252~$\pm$~0.015	\\
 \\[0.01cm]
@@ -464,7 +461,7 @@ Here, $z$ is the vertical spatial coordinate, $\dot{Q}$ is the heat release rate
 	\label{fig:Temp_Comparison}
 \end{figure}
 
-Figure~\ref{fig:Fuel_Comparison} displays the mean volume fraction of the major species, $\bar{X}_{i}$, as a function of $z^*$ for the methanol, ethanol, and acetone fires. Plots for individual species, including uncertainties, displayed in Appendix~\ref{sec:Vol_Frac_Figs}. Major species detected in the TCD and MS include combustion reactants (fuels and oxygen, $\ch{O_2}$), combustion products such as water, $\ch{H_{2}O}$, and carbon dioxide, $\ch{CO_{2}}$, combustion intermediates such as carbon monoxide, $\ch{CO}$, hydrogen, $\ch{H_{2}}$, and inert gases such as nitrogen, $\ch{N_{2}}$, and argon, $\ch{Ar}$. Methane is detected and quantified in all fires. In the case of the ethanol and acetone fires, soot, benzene, acetylene, ethylene, and ethane are also detected and quantified. Trace amounts of other species are also detected including propene, acetaldehyde, and ethyl acetate, consistent with previous literature~\cite{Pichon2009, Gong2015}.
+Figure~\ref{fig:Fuel_Comparison} displays the mean volume fraction of the major species, $\bar{X}_{i}$, as a function of $z^*$ for the methanol, ethanol, and acetone fires. Plots for individual species, including uncertainties, are displayed in Appendix~\ref{sec:Vol_Frac_Figs}. Major species detected in the TCD and MS include combustion reactants (fuels and oxygen, $\ch{O_2}$), combustion products such as water, $\ch{H_{2}O}$, and carbon dioxide, $\ch{CO_{2}}$, combustion intermediates such as carbon monoxide, $\ch{CO}$, hydrogen, $\ch{H_{2}}$, and inert gases such as nitrogen, $\ch{N_{2}}$, and argon, $\ch{Ar}$. Methane is detected and quantified in all fires. In the case of the ethanol and acetone fires, soot, benzene, acetylene, ethylene, and ethane are also detected and quantified. Trace amounts of other species are also detected including propene, acetaldehyde, and ethyl acetate, consistent with previous literature~\cite{Pichon2009, Gong2015}.
 
 \begin{figure}[!]
 	\centering
@@ -503,9 +500,9 @@ Figure~\ref{fig:Mole_Comp} shows the ratio of the moles identified by the TCD an
 
 Another way to verify the accuracy of the gas species measurements is to calculate the ratio of carbon to hydrogen atoms contained in all gas species at each vertical measurement location:
 \begin{equation}\label{eq:c2h_ratio}
-  \frac{\rm C}{\rm H}=\frac{ \sum  x_i \, \bar{X}_{i} }{ \sum y_i \, \bar{X}_{i} }
+  \frac{\rm C}{\rm H}=\frac{ \sum  {\rm x}_i \, \bar{X}_{i} }{ \sum {\rm y}_i \, \bar{X}_{i} }
 \end{equation}
-where the summation is over all measured gas species, and $x_i$ and $y_i$ are the numbers of carbon and hydrogen atoms in the molecule, respectively. The carbon to hydrogen ratio of the fuel molecules are reported in Table~\ref{tab:Pool_Fire_Parameters_Table}, and the ratio for each fuel is shown in Fig.~\ref{fig:C2H}.
+where the summation is over all measured gas species, and ${\rm x}_i$ and ${\rm y}_i$ are the numbers of carbon and hydrogen atoms in the molecule, respectively. The carbon to hydrogen ratio of the fuel molecules are reported in Table~\ref{tab:Pool_Fire_Parameters_Table}, and the ratio for each fuel is shown in Fig.~\ref{fig:C2H}.
 
 \begin{figure}[h!]
 	\centering
@@ -536,9 +533,9 @@ Another verification test considers the inert species argon and nitrogen whose m
 
 The mixture fraction, $Z$, is defined as the mass fraction of the gases containing carbon, in addition to soot, that originate in the fuel stream. It can be expressed\footnote{The uncertainty of the mixture fraction is determined from propagating the error in the mass fraction measurements. A detailed description of the mixture fraction uncertainty is provided in Appendix~\ref{sec:Uncertainty_Mix_Frac}.} as follows:
 \begin{equation}\label{eq:Mixture_Fraction}
-  Z = \bar{Y}_{\rm F} + \frac{W_{\rm F}}{x} \sum_{i\ne {\rm F}} \frac{\bar{Y}_i}{W_{i}}
+  Z = \bar{Y}_{\rm F} + \frac{W_{\rm F}}{\rm x} \sum_{i\ne {\rm F}} \frac{\bar{Y}_i}{W_{i}}
 \end{equation}
-where $\bar{Y}_{\rm F}$, ${W_{\rm F}}$, and $x$ are the mass fraction, molecular weight, and number of carbon atoms in the fuel molecule, respectively. Assuming ideal (i.e. no CO or soot), infinitely-fast (fuel and oxygen from the air cannot co-exist) combustion, the mass fractions of all species can be expressed as piece-wise linear ``state relations'' according to the following reaction:
+where $\bar{Y}_{\rm F}$, ${W_{\rm F}}$, and $\rm x$ are the mass fraction, molecular weight, and number of carbon atoms in the fuel molecule, respectively. Assuming ideal (i.e. no CO or soot), infinitely-fast (fuel and oxygen from the air cannot co-exist) combustion, the mass fractions of all species can be expressed as piece-wise linear ``state relations'' according to the following reaction:
 \begin{align*}
 {\rm C}_{\rm x}{\rm H}_{\rm y}{\rm O}_{\rm z} & +\eta(\rm x+\frac{\rm y}{4}-\frac{\rm z}{2})~({\rm O}_{2}+3.76~{\rm N}_{2}+0.0445~{\rm Ar}) \rightarrow  \\
           & \max(0,1-\eta)~{\rm C}_{\rm x}{\rm H}_{\rm y}{\rm O}_{\rm z}+\max(0,1-\eta)~(\rm x+\frac{\rm y}{4}-\frac{\rm z}{2})~{\rm O}_{2}+ \min(1,\eta)~\rm x~{\rm CO}_{2} +  \\
@@ -915,7 +912,7 @@ u_{\scriptscriptstyle \dot{V}} = \sqrt{u_{\rm \scriptscriptstyle prec}^2 + u_{\r
 
 \subsection{Total Mass Identified}
 \label{ssec:Total_Mass_Identified_into_GC/MS}
-The total mass detected in the TCD and TIC chromatograms, $m_{\rm tot}$, is calculated: 
+The total mass detected in the TCD and TIC chromatograms, $m_{\rm tot}$, is calculated:
 \begin{equation}
 \label{eq:total_mass_detected}
 m_{\rm tot}=\sum_{n=1}^{N} n_{i}{\textrm{W}_{i}}
@@ -1079,7 +1076,7 @@ The uncertainty of the volume fractions is described in Appendix~\ref{sec:Uncert
 The mixture fraction, $Z$, is determined from Eq.~(\ref{eq:Mixture_Fraction}). The uncertainty of the mixture fraction is a function of the uncertainties in the carbon carrying species:
 \begin{equation}
 \label{eq:mixture_frac_uncertainty}
-u_{\scriptscriptstyle Z}=\sqrt{{u_{\scriptscriptstyle \bar{Y}_{f}}}^2+{\left(\frac{W_F}{x}\right)}^2{\sum_{i\ne {\rm F}}{\left(\frac{u_{\scriptscriptstyle \bar{Y}_{i}}}{\textrm{W}_{i}} \right)}^2}}
+u_{\scriptscriptstyle Z}=\sqrt{{u_{\scriptscriptstyle \bar{Y}_{\rm F}}}^2+{\left(\frac{W_{\rm F}}{\rm x}\right)}^2{\sum_{i\ne {\rm F}}{\left(\frac{u_{\scriptscriptstyle \bar{Y}_{i}}}{\textrm{W}_{i}} \right)}^2}}
 \end{equation}
 The uncertainty of the mass fractions of carbon containing species is discussed in Appendix~\ref{ssec:Uncertainty of Mass Fractions}.
 
@@ -1089,6 +1086,6 @@ The uncertainty of the mass fractions of carbon containing species is discussed 
 
 %\Subsection{Methanol}
 %\label{ssec:Meth_Measure}
-%There have been many measurements made on 30 cm diameter methanol pool fires.  A list of the measurements is described in Refs. [].  The results, which may be of interest for model development and validation, is available through the MaCFP GitHub website, and include both global and local measurements: 
+%There have been many measurements made on 30 cm diameter methanol pool fires.  A list of the measurements is described in Refs. [].  The results, which may be of interest for model development and validation, is available through the MaCFP GitHub website, and include both global and local measurements:
 
 \end{document}
