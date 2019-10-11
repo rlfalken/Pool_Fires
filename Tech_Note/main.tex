@@ -30,6 +30,7 @@
 \usepackage{textcomp}
 \usepackage{tikz}
 \usepackage[newparttoc]{titlesec}
+\usepackage[flushleft]{threeparttable}
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor}
 \usepackage{footmisc}
@@ -1114,7 +1115,7 @@ There are subtle differences in the experimental conditions as well as reporting
 
 There are several general considerations regarding the previous work:
 \begin{itemize}
-\item Ref.~\cite{Weckman1996} reports using a round, stainless-steel, 30.5~cm diameter burner\footnote{The report does not state if this is the inner or outer diameter} , which differs from the 0.301 (inner) diameter burner used in Refs.~\cite{Kim2019,Hamins1994,Klassen1994,Hamins1991,Hamins2016,Wang2019,Buch1997}. Due to this disparity (3 \% in area), Table~\ref{tab:pool_fire_prev_measurements} refers to the mass burning flux (rather than the mass burning rate). The same circular, water-cooled, stainless-steel pan was used for experiments~\cite{Kim2019,Hamins1994,Klassen1994,Hamins1991,Hamins2016,Wang2019,Buch1997}. The burner had an inner diameter of 0.301 m, a depth of 0.15~m, and a wall thickness of 0.0016~m (an outer diameter of 0.304~m). The burner was fitted with legs such that the burner rim was positioned 0.3~m above the ground. The bottom of the burner was maintained at a constant temperature by flowing tap water (nominally 20~\si{\degree C}) through a 3 cm section on the bottom of the fuel pan. The exhaust flow in \cite{Kim2019} was 0.50~kg/s; this value can be assumed to be approximately the same for Refs.~\cite{Hamins1994,Klassen1994,Hamins2016,Wang2019,Buch1997}.
+\item Ref.~\cite{Weckman1996} reports using a round, stainless-steel, 30.5~cm diameter burner, which differs from the 0.301 (inner) diameter burner used in Refs.~\cite{Kim2019,Hamins1994,Klassen1994,Hamins1991,Hamins2016,Wang2019,Buch1997}. Due to this disparity (3 \% in area), Table~\ref{tab:pool_fire_prev_measurements} refers to the mass burning flux (rather than the mass burning rate). The same circular, water-cooled, stainless-steel pan was used for experiments~\cite{Kim2019,Hamins1994,Klassen1994,Hamins1991,Hamins2016,Wang2019,Buch1997}. The burner had an inner diameter of 0.301 m, a depth of 0.15~m, and a wall thickness of 0.0016~m (an outer diameter of 0.304~m). The burner was fitted with legs such that the burner rim was positioned 0.3~m above the ground. The bottom of the burner was maintained at a constant temperature by flowing tap water (nominally 20~\si{\degree C}) through a 3 cm section on the bottom of the fuel pan. The exhaust flow in \cite{Kim2019} was 0.50~kg/s; this value can be assumed to be approximately the same for Refs.~\cite{Hamins1994,Klassen1994,Hamins2016,Wang2019,Buch1997}.
 \item The lip height reported in Ref.~\cite{Weckman1996} and several of the other studies was 10~mm \cite{Hamins2016,Wang2019}, except Refs.~\cite{Hamins1994,Klassen1994,Hamins1991,Hamins2016,Buch1997} where it was reported as 4~mm or 5~mm (see Table~\ref{tab:pool_fire_prev_measurements}). 
 \item Weckman and Strong’s results \cite{Weckman1996} and Ref.~\cite{Hamins2016} are presented as a function of distance from the fuel surface, whereas all the other studies use the top of the burner rim as the point of reference.
 \item A water-cooling section was not reported on the bottom of the burner used in Ref.~\cite{Weckman1996}; the burner in Refs.~\cite{Kim2019,Klassen1994,Hamins1991,Hamins1994,Hamins2016,Wang2019,Buch1997} had a water-cooling section on the bottom of the burner.
@@ -1122,35 +1123,46 @@ There are several general considerations regarding the previous work:
 \item The amount of CO in the methanol, ethanol and acetone exhaust stream was below detection limits \cite{Kim2019}, so the combustion efficiency can be assumed to be about 1.
 \item In Ref.~\cite{Klassen1994}, the average heat flux to the pool was assumed to be equal to the radiative flux measured just outside the burner, which is smaller than that expected \cite{Kim2019}. Here, $\chi_{rad}$ is recalculated using  $\chi_{r}$= 0.065 from \cite{Kim2019}.
 \item In Ref.~\cite{Klassen1994}, $\chi_{rad}$ was based on a heat of combustion of 22.317 kJ/g. Here, $\chi_{rad}$ is recalculated using the “net” heat of combustion (19.94 kJ/g) in which gaseous water is assumed to be the product of combustion \cite{Dippr}.
-\item The estimated heat of combustion is 19.918~\si{kJ/g} in Ref.~\cite{Dippr}.
+\item The heat of combustion values provided in Table~\ref{tab:Pool_Fire_Parameters_Table} were used to determine the heat release rates reported in Table~\ref{tab:Past_Pool_fire_parameters}.
 \end{itemize}
 
 
 \begin{table}[!h]
+\begin{threeparttable}
     \centering
 	\footnotesize
     \caption[Previously reported pool fire measurements]{Reported mass burning flux, $m''$, heat release rate, $\dot{Q}$, radiative fractions, excluding, $\chi_r$, and including, $\chi_{rad}$ the fuel pool, and the lip height of steady burning pool fires}
     \label{tab:Past_Pool_fire_parameters}
-    \begin{tabular}{c|ccccp{1cm}cc}
-								&$m''$~(\si{g/{m^2 s}})		& $\dot{Q}$~(\si{kW})		&  $\chi_r$		& $\chi_{rad}$	& \textbf{Lip Height}	&\textbf{Comments}		&\textbf{Ref.}					\\ \hline
-\multirow{10}{*}{\rotatebox{90}{Methanol}}	        	&	15.1~$\pm$~*		&	21.4\footnote{asfaqsf}				&	*		&*		&	10		&Volumetric Burning Rate of 1.35~\si{cm^3/s}& \cite{Weckman1996}	\\
-		            					&	13.5~$\pm$~9\%		&	19.2				&	0.19		&0.24		&	10		&							&\cite{Kim2019}					\\
-								&	12.9~$\pm$~*		&	18.3				&	0.22		&*		&	5		&Fuel Mass Burning Rate of 0.92~g/s 		&\cite{Hamins1994}				\\	
-								&	12.6~$\pm$~*		&	18.0				&	*		&0.20		&	5		&Fuel Mass Burning Rate of 0.9~g/s 		&\cite{Klassen1994}				\\	           										
-								&	*~$\pm$~*			&	20				&	0.18		&0.22		&	4		&							&\cite{Hamins1991}				\\
-								&	*~$\pm$~*			&	*				&	*		&*		&	5		&							&\cite{Hamins2016}				\\
-								&	*~$\pm$~*			&	*				&	*		&*		&	10		&							&\cite{Wang2019}					\\
-								&	12.8~$\pm$~10\%		&	18.2				&	0.22		&*		&	5		&							& \cite{Buch1997}					\\ 
-								&	12.4~$\pm$~4\%		&	17.6				&	*		&*		&	10		&							& This study						\\
-								&	12.4~$\pm$~4\%		&	17.6				&	*		&*		&	10		&							& This study						\\ \hline
-\multirow{3}{*}{\rotatebox{90}{Ethanol}}	        	&	16.2~$\pm$~11\%		&	31.0				&	0.21		&*		&	10		&							&\cite{Kim2019}					\\
-	        							&	14.4~$\pm$~10\%		&	27.3				&	0.16		&*		&	5		&							&\cite{Buch1997}					\\
-	        							&	13.9~$\pm$~15\%		&	26.3				&	*		&0.26		&	10		&							& This study						\\  \hline
-\multirow{4}{*}{\rotatebox{90}{Acetone}}	        	&	*~$\pm$~*			&	53.8				&	0.26		&*		&	10		&							&\cite{Weckman1996}				\\
-	        							&	18.7~$\pm$~11\%		&	38.1				&	0.27		&0.31		&	10		&							&\cite{Kim2019}					\\
-	        							&	18.7~$\pm$~10\%		&	37.7				&	0.28		&*		&	5		&							&\cite{Buch1997}					\\ 
-	        							&	17.6~$\pm$~15\%		&	35.5				&	*		&*		&	10		&							&This Study						\\ \hline
-								&	* unreported			&					&			&		&			&							&							\\
+    \begin{tabular}{c|ccccp{0.3cm}cp{3cm}}
+								&$\dot{m''}$~(\si{g/{m^2 s}})		& $\dot{Q}$~(\si{kW})		&  $\chi_r$		& $\chi_{rad}$	& Lip Height&\text{Ref.}				&\text{Comments}					\\ \hline
+\multirow{11}{*}{\rotatebox{90}{Methanol}}	        	&	15.1~$\pm$~*		&	21.4				&*			&*		&	10		& \cite{Weckman1996}				&Volumetric Burning Rate of 1.35~\si{cm^3/s}	\\
+		            					&	13.5~$\pm$~9\%		&	19.2				&	0.19		&0.24		&	10		&\cite{Kim2019}					&								\\
+								&	12.9~$\pm$~*		&	18.3				&	0.22		&*		&	5		&\cite{Hamins1994}				&Fuel Mass Burning Rate of 0.92~g/s			\\	
+								&	12.6~$\pm$~*		&	18.0				&	*		&0.20		&	5		&\cite{Klassen1994}				&Fuel Mass Burning Rate of 0.9~g/s 			\\	           								
+								&	*				&	20				&	0.18		&0.22		&	4		&\cite{Hamins1991}				&								\\
+								&	*				&	*				&	*		&*		&	5		&\cite{Hamins2016}				&								\\	
+								&	*				&	*				&	*		&*		&	10		&\cite{Wang2019}					&								\\
+								&	12.8~$\pm$~10\%		&	18.2				&	0.22		&*		&	5		&\cite{Buch1997}					&								\\ 
+								&	12.4~$\pm$~4\%		&	17.6				&	*		&*		&	10		&This study						&								\\
+								&	12.4~$\pm$~4\%		&	17.6				&	*		&*		&	10		&This study						&								\\
+								&	13.2~$\pm$~0.4		&	18.7~$\pm$~0.6		&0.20~$\pm$~0.02&0.22~$\pm$0.2&			& Average						&								\\ \hline
+\multirow{4}{*}{\rotatebox{90}{Ethanol}}	        	&	16.2~$\pm$~11\%		&	31.0				&	0.21		&*		&	10		&\cite{Kim2019}					&								\\
+	        							&	14.4~$\pm$~10\%		&	27.3				&	0.16		&*		&	5		&\cite{Buch1997}					&								\\
+	        							&	13.9~$\pm$~15\%		&	26.3				&	*		&0.26		&	10		&This study						&								\\  
+								&	14.8~$\pm$~1.2		&	28.2~$\pm$~2.5		&0.19~$\pm$~0.3&0.26&					& Average						&								\\ \hline
+\multirow{5}{*}{\rotatebox{90}{Acetone}}	        	&	25.9~$\pm$~*		&	54.1				&	0.26		&*		&	10		&\cite{Weckman1996}				&$\dot{Q''}$ of 740~\si{kW/m^2}	\\
+	        							&	18.7~$\pm$~11\%		&	38.1				&	0.27		&0.31		&	10		&\cite{Kim2019}					&								\\
+	        							&	18.7~$\pm$~10\%		&	37.7				&	0.28		&*		&	5		&\cite{Buch1997}					&								\\ 
+	        							&	17.6~$\pm$~15\%		&	35.5				&	*		&*		&	10		&This Study						&								\\ 
+								&	$18.3^{**}$~$\pm$~0.6		&	37.1~$\pm$~1.4		&0.27~$\pm$~0.1&0.31&					& Average						&								\\ \hline
     \end{tabular}
+    \begin{tablenotes}
+      \footnotesize
+      	\item * Unreported
+	\item $^{**}$ The mass burning flux of acetone reported in \cite{Weckman1996} is an outlier and not included in the average.	
+	\item Uncertainty of averages is defined as the standard deviation with a coverage factor of 2.
+   	
+    \end{tablenotes}
+\end{threeparttable}
 \end{table}
 \end{document}
