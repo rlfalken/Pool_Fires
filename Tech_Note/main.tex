@@ -292,7 +292,7 @@ The heat release rate, $\dot{Q}$, is the product of the time-averaged mass burni
 \begin{equation}\label{eq:Heat_release_rate}
 \dot{Q}= \dot{m}~\Delta H_{c}
 \end{equation}
-The heat of the combustion is provided by Ref.~\cite{Dippr} and reported in Table~\ref{tab:Pool_Fire_Parameters_Table}. 
+The heat of the combustion is provided by Ref.~\cite{Dippr} and reported in Table~\ref{tab:Pool_Fire_Parameters_Table}.
 
 The mean flame height, $L_{\rm{f}}$, is estimated from 3600~frames of high-resolution video of the experiments using MATLAB’s Image Processing Toolbox\footnote{\label{fn:product} Certain commercial products are identified in this report to specify adequately the equipment used. Such identification does not imply a recommendation by the National Institute of Standards and Technology, nor does it imply that this equipment is the best available for the purpose.}. Imported color images are decomposed into binary (i.e., black and white) images using a pre-set threshold level. The flame height for a single frame is defined as the distance between the pool surface and flame tip. All measurements are repeated, then averaged to provide the mean flame height. A description of the uncertainty analysis for the mean flame height is described in Appendix~\ref{ssec:Mean_Flame_Height}.
 
@@ -355,7 +355,7 @@ The area associated with a peak, $A$, is adjusted to account for the variation i
 \end{equation}
 The corrected area is converted into number of moles using a linear calibration curve determined using gas standards listed in Appendix~\ref{sssec:Table of Gas Standards with Error}. The calibration functions of liquid-vapors (e.g., water, methanol, ethanol, acetone) are obtained from a bubbler apparatus described in Appendix~\ref{sssec:Concentration of Vapors from Bubblers}.
 
-Once the number of moles for all detected species is determined, the volume fraction of each species can be calculated. The mean volume fraction of a given species, $\bar{X}_{i}$, is the ratio of the number of moles of a given gas species, $n_{i}$, and the total number of moles identified by the GC/MS, $n_{\rm tot}$, averaged over the repeated GC/MS gas injections. The total number of moles is determined from the summation of moles for each species quantified from the TCD chromatogram. In the case of water, the relative humidity measured within the room accounted for when calculating its volume fraction. 
+Once the number of moles for all detected species is determined, the volume fraction of each species can be calculated. The mean volume fraction of a given species, $\bar{X}_{i}$, is the ratio of the number of moles of a given gas species, $n_{i}$, and the total number of moles identified by the GC/MS, $n_{\rm tot}$, averaged over the repeated GC/MS gas injections. The total number of moles is determined from the summation of moles for each species quantified from the TCD chromatogram. In the case of water, the relative humidity measured within the room accounted for when calculating its volume fraction.
 \begin{equation}\label{eq:volume_fraction}
   	\bar{X}_{i}= \frac{n_{i}}{n_{\rm tot}}
 \end{equation}
@@ -413,7 +413,7 @@ Figure~\ref{fig:Flame_Structure} displays a series of snapshots depicting a sing
 	\caption[Photographs of the three fires]{Flame structures of methanol (top), ethanol (middle), and acetone (bottom) pool fires during their pulsing cycles}
 	\label{fig:Flame_Structure}
 \end{figure}
-The methanol fire has a pale blue color, whereas the ethanol and acetone fires are more luminous and yellow. The measured time-averaged burning rates and calculated heat release rates are listed in Table~\ref{tab:Pool_Fire_Parameters_Table}. The heat release rates are calculated from Eq.~(\ref{eq:Heat_release_rate}). The methanol fire has the lowest average flame height, followed by the ethanol, and then the acetone. The measured mean flame heights match Heskestad’s correlation~\cite{Heskestad1983} to within measurement uncertainty. 
+The methanol fire has a pale blue color, whereas the ethanol and acetone fires are more luminous and yellow. The measured time-averaged burning rates and calculated heat release rates are listed in Table~\ref{tab:Pool_Fire_Parameters_Table}. The heat release rates are calculated from Eq.~(\ref{eq:Heat_release_rate}). The methanol fire has the lowest average flame height, followed by the ethanol, and then the acetone. The measured mean flame heights match Heskestad’s correlation~\cite{Heskestad1983} to within measurement uncertainty.
 \begin{equation}
 \frac{L_{\rm f}}{D} = 3.7 \, (\dot{Q}^*)^{2/5} - 1.02 \quad ; \quad \dot{Q}^*=\frac{\dot{Q}}{c_{p}\rho_\infty T_\infty \sqrt{g} \, D^{5/2}}
 \end{equation}
@@ -1085,7 +1085,7 @@ The uncertainty of the mass fractions of carbon containing species is discussed 
 \pagebreak
 
 \section{Previous Measurements in 30~cm Pool Fires}
-Many experiments have been conducted on pool fires such as those considered in this report~\cite{Weckman1996,Kim2019,Hamins1994, Klassen1994,Hamins1991,Hamins2016,Wang2019,Buch1997,Hogben1998,Weckman1989,Corlett1966,Sung2019}.  Table~\ref{tab:pool_fire_prev_measurements} lists previously reported local and global measurements characterizing the structure of 30~cm diameter methanol, ethanol and acetone pool fires steadily burning under well-ventilated and quiescent conditions. These measurements complement each other and help build a more complete picture of the energetics, structure and dynamics of medium-scale pool fires burning oxygenated fuels. The accumulated information provides a basis for understanding details about these fires that makes them particularly suitable candidates for fire model evaluation. The three fires considered here are particularly useful as a testbed for radiation sub-models since blackbody radiation from soot is relatively more or less important depending on the fuel. The time-averaged mean and RMS data from several of the studies is available through the Measurement and Computational Fire Phenomena (MaCFP) GitHub website~\cite{MaCFp}. 
+Many experiments have been conducted on pool fires such as those considered in this report~\cite{Weckman1996,Kim2019,Hamins1994, Klassen1994,Hamins1991,Hamins2016,Wang2019,Buch1997,Hogben1998,Weckman1989,Corlett1966,Sung2019}.  Table~\ref{tab:pool_fire_prev_measurements} lists previously reported local and global measurements characterizing the structure of 30~cm diameter methanol, ethanol and acetone pool fires steadily burning under well-ventilated and quiescent conditions. These measurements complement each other and help build a more complete picture of the energetics, structure and dynamics of medium-scale pool fires burning oxygenated fuels. The accumulated information provides a basis for understanding details about these fires that makes them particularly suitable candidates for fire model evaluation. The three fires considered here are particularly useful as a testbed for radiation sub-models since blackbody radiation from soot is dependent on the fuel type. The time-averaged mean and RMS data from several of the studies is available through the Measurement and Computational Fire Phenomena (MaCFP) GitHub website~\cite{MaCFp}.
 
 \begin{table}[!h]
     \centering
@@ -1096,33 +1096,33 @@ Many experiments have been conducted on pool fires such as those considered in t
     \hline
 										& 								& \multicolumn{3}{c}{\textbf{References}} 	\\ \cline{3-5}
 										&\raisebox{1.5ex}[0pt]{\textbf{Parameter}} 		& \textbf{Methanol}	& \textbf{Ethanol}	& \textbf{Acetone}		\\ \hline
-\multirow{5}{*}{\rotatebox{90}{Global}} 				& Mass Loss Rate						&\cite{Hamins1991}	& 			&\cite{Hogben1998}		\\ 
-										& Heat Release Rate					&\cite{Weckman1996}	& 			&\cite{Weckman1989}	\\ 
-										& Mean Flame Height					&\cite{Kim2019,Klassen1994,Hamins1991,Buch1997}				&\cite{Kim2019,Hamins1991,Buch1997}				&	\cite{Kim2019,Buch1997,Hogben1998}		\\ 
-										& Pulsation Frequency					&\cite{Weckman1996,Kim2019,Hamins1994,Klassen1994,Hamins1991,Hamins2016,Corlett1966}&	\cite{Kim2019,Buch1997,Corlett1966}			&	\cite{Kim2019,Buch1997,Weckman1989,Corlett1966}\\ 
+\multirow{5}{*}{\rotatebox{90}{Global}} 				& Mass Loss Rate						&\cite{Hamins1991}	& 			&\cite{Hogben1998}		\\
+										& Heat Release Rate					&\cite{Weckman1996}	& 			&\cite{Weckman1989}	\\
+										& Mean Flame Height					&\cite{Kim2019,Klassen1994,Hamins1991,Buch1997}				&\cite{Kim2019,Hamins1991,Buch1997}				&	\cite{Kim2019,Buch1997,Hogben1998}		\\
+										& Pulsation Frequency					&\cite{Weckman1996,Kim2019,Hamins1994,Klassen1994,Hamins1991,Hamins2016,Corlett1966}&	\cite{Kim2019,Buch1997,Corlett1966}			&	\cite{Kim2019,Buch1997,Weckman1989,Corlett1966}\\
 										& Radiative Fraction					&\cite{Kim2019}	& \cite{Kim2019}	& \cite{Kim2019}		\\ \hline
 \multirow{7}{*}{\rotatebox{90}{Local}}				& Radiative flux distribution on fuel surface 		&\cite{Hamins1994}	&			&		\\
-										& Total Heat Flux Distributuion on Fuel Surface	&\cite{Kim2019}	& \cite{Kim2019}	& \cite{Kim2019}		\\ 
-										& Radiative flux to surroundings 				&\cite{Kim2019,Klassen1994,Hamins1991}	&			&		\\ 
-										& Transient fuel temperature 				&\cite{Hamins1994}	&			&		\\ 
-										& Gas species volume fraction  				&\cite{Hamins2016}		&			&		\\ 
+										& Total Heat Flux Distributuion on Fuel Surface	&\cite{Kim2019}	& \cite{Kim2019}	& \cite{Kim2019}		\\
+										& Radiative flux to surroundings 				&\cite{Kim2019,Klassen1994,Hamins1991}	&			&		\\
+										& Transient fuel temperature 				&\cite{Hamins1994}	&			&		\\
+										& Gas species volume fraction  				&\cite{Hamins2016}		&			&		\\
 										& Local Gas Phase Temperature  				&\cite{Weckman1996,Hamins1991}				&			&		\\
 										& Local Gas Phase Velocity  				&\cite{Weckman1996}				&			&		\\ \hline
     \end{tabular}
 \end{table}
 
-There are subtle differences in the experimental conditions as well as reporting assumptions and approximations that may account for some of the differences among the reported results.  Some of the relevant issues are highlighted in Table~\ref{tab:Past_Pool_fire_parameters} below for the methanol, ethanol and acetone pool fires, respectively. The tables include information on the steady-state mass burning flux, $m''$, lip height, mean flame height, $L_{\rm{f}}$, and radiative fraction to the surroundings - excluding the fuel pool ($\chi_r$), radiative fraction to the surroundings including the fuel pool ($\chi_{rad}$), during steady burning reported for each study.  
+There are subtle differences in the experimental conditions as well as reporting assumptions and approximations that may account for some of the differences among the reported results.  Some of the relevant issues are highlighted in Table~\ref{tab:Past_Pool_fire_parameters} below for the methanol, ethanol and acetone pool fires, respectively. The tables include information on the steady-state mass burning flux, $m''$, lip height, mean flame height, $L_{\rm{f}}$, and radiative fraction to the surroundings - excluding the fuel pool ($\chi_r$), radiative fraction to the surroundings including the fuel pool ($\chi_{rad}$), during steady burning reported for each study.
 
 There are several general considerations regarding the previous work:
 \begin{itemize}
-\item Ref.~\cite{Weckman1996} reports using a round, stainless-steel, 30.5~cm diameter burner, which differs from the 0.301 (inner) diameter burner used in Refs.~\cite{Kim2019,Hamins1994,Klassen1994,Hamins1991,Hamins2016,Wang2019,Buch1997}. Due to this disparity (3 \% in area), Table~\ref{tab:pool_fire_prev_measurements} refers to the mass burning flux (rather than the mass burning rate). The same circular, water-cooled, stainless-steel pan was used for experiments~\cite{Kim2019,Hamins1994,Klassen1994,Hamins1991,Hamins2016,Wang2019,Buch1997}. The burner had an inner diameter of 0.301 m, a depth of 0.15~m, and a wall thickness of 0.0016~m (an outer diameter of 0.304~m). The burner was fitted with legs such that the burner rim was positioned 0.3~m above the ground. The bottom of the burner was maintained at a constant temperature by flowing tap water (nominally 20~\si{\degree C}) through a 3 cm section on the bottom of the fuel pan. The exhaust flow in \cite{Kim2019} was 0.50~kg/s; this value can be assumed to be approximately the same for Refs.~\cite{Hamins1994,Klassen1994,Hamins2016,Wang2019,Buch1997}.
-\item The lip height reported in Ref.~\cite{Weckman1996} and several of the other studies was 10~mm \cite{Hamins2016,Wang2019}, except Refs.~\cite{Hamins1994,Klassen1994,Hamins1991,Hamins2016,Buch1997} where it was reported as 4~mm or 5~mm (see Table~\ref{tab:pool_fire_prev_measurements}). 
+\item Ref.~\cite{Weckman1996} reports using a round, stainless-steel, 30.5~cm diameter burner, which differs from the 30.1~cm (inner) diameter burner used in Refs.~\cite{Kim2019,Hamins1994,Klassen1994,Hamins1991,Hamins2016,Wang2019,Buch1997}. Due to this disparity (3~\% in area), Table~\ref{tab:pool_fire_prev_measurements} refers to the mass burning flux (rather than the mass burning rate). The same circular, water-cooled, stainless-steel pan was used for experiments~\cite{Kim2019,Hamins1994,Klassen1994,Hamins1991,Hamins2016,Wang2019,Buch1997}. The burner had an inner diameter of 30.1~cm, a depth of 15~cm, and a wall thickness of 1.6~mm. The burner was fitted with legs such that the burner rim was positioned 30~c~m above the ground. The bottom of the burner was maintained at a constant temperature by flowing tap water (nominally 20~\si{\degree C}) through a 3~cm section on the bottom of the fuel pan. The exhaust flow in \cite{Kim2019} was 0.50~kg/s; this value can be assumed to be approximately the same for Refs.~\cite{Hamins1994,Klassen1994,Hamins2016,Wang2019,Buch1997}.
+\item The lip height reported in Ref.~\cite{Weckman1996} and several of the other studies was 10~mm \cite{Hamins2016,Wang2019}, except Refs.~\cite{Hamins1994,Klassen1994,Hamins1991,Hamins2016,Buch1997} where it was reported as 4~mm or 5~mm (see Table~\ref{tab:pool_fire_prev_measurements}).
 \item Weckman and Strong’s results \cite{Weckman1996} and Ref.~\cite{Hamins2016} are presented as a function of distance from the fuel surface, whereas all the other studies use the top of the burner rim as the point of reference.
 \item A water-cooling section was not reported on the bottom of the burner used in Ref.~\cite{Weckman1996}; the burner in Refs.~\cite{Kim2019,Klassen1994,Hamins1991,Hamins1994,Hamins2016,Wang2019,Buch1997} had a water-cooling section on the bottom of the burner.
-\item Refs.~\cite{Kim2019,Buch1997} reported radiative fraction emitted to the surroundings and did not include flux incident on the fuel surface; Ref.~\cite{Kim2019} reported radiative fraction to the surroundings plus flux incident on the fuel surface; Ref.~\cite{Klassen1994} assumed flux incident on the pool was uniform across the pool and equal to its value just outside the pool burner. 
+\item Refs.~\cite{Kim2019,Buch1997} reported radiative fraction emitted to the surroundings and did not include flux incident on the fuel surface; Ref.~\cite{Kim2019} reported radiative fraction to the surroundings plus flux incident on the fuel surface; Ref.~\cite{Klassen1994} assumed flux incident on the pool was uniform across the pool and equal to its value just outside the pool burner.
 \item The amount of CO in the methanol, ethanol and acetone exhaust stream was below detection limits \cite{Kim2019}, so the combustion efficiency can be assumed to be about 1.
-\item In Ref.~\cite{Klassen1994}, the average heat flux to the pool was assumed to be equal to the radiative flux measured just outside the burner, which is smaller than that expected \cite{Kim2019}. Here, $\chi_{rad}$ is recalculated using  $\chi_{r}$= 0.065 from \cite{Kim2019}.
-\item In Ref.~\cite{Klassen1994}, $\chi_{rad}$ was based on a heat of combustion of 22.317 kJ/g. Here, $\chi_{rad}$ is recalculated using the “net” heat of combustion (19.94 kJ/g) in which gaseous water is assumed to be the product of combustion \cite{Dippr}.
+\item In Ref.~\cite{Klassen1994}, the average heat flux to the pool was assumed to be equal to the radiative flux measured just outside the burner, which is smaller than that expected \cite{Kim2019}. Here, $\chi_{\rm rad}$ is recalculated using  $\chi_{\rm r}$= 0.065 from \cite{Kim2019}.
+\item In Ref.~\cite{Klassen1994}, $\chi_{\rm rad}$ was based on a heat of combustion of 22.317~kJ/g. Here, $\chi_{\rm rad}$ is recalculated using the ``net'' heat of combustion (19.94 kJ/g) in which gaseous water is assumed to be the product of combustion \cite{Dippr}.
 \item The heat of combustion values provided in Table~\ref{tab:Pool_Fire_Parameters_Table} were used to determine the heat release rates reported in Table~\ref{tab:Past_Pool_fire_parameters}.
 \end{itemize}
 
@@ -1134,26 +1134,26 @@ There are several general considerations regarding the previous work:
     \caption[Previously reported pool fire measurements]{Reported mass burning flux, $m''$, heat release rate, $\dot{Q}$, radiative fractions, excluding, $\chi_r$, and including, $\chi_{rad}$ the fuel pool, and the lip height of steady burning pool fires}
     \label{tab:Past_Pool_fire_parameters}
     \begin{tabular}{c|ccccp{0.3cm}cp{3cm}}
-								&$\dot{m''}$~(\si{g/{m^2 s}})		& $\dot{Q}$~(\si{kW})		&  $\chi_r$		& $\chi_{rad}$	& Lip Height&\text{Ref.}				&\text{Comments}					\\ \hline
+								&$\dot{m''}$~(\si{g/{m^2 s}})		& $\dot{Q}$~(\si{kW})		&  $\chi_{\rm r}$		& $\chi_{\rm rad}$	& Lip Height&\text{Ref.}				&\text{Comments}					\\ \hline
 \multirow{11}{*}{\rotatebox{90}{Methanol}}	        	&	15.1~$\pm$~*		&	21.4				&*			&*		&	10		& \cite{Weckman1996}				&Volumetric Burning Rate of 1.35~\si{cm^3/s}	\\
-		            					&	13.5~$\pm$~9\%		&	19.2				&	0.19		&0.24		&	10		&\cite{Kim2019}					&								\\
+		            			&	13.5~$\pm$~9\%		&	19.2				&	0.19		&0.24		&	10		&\cite{Kim2019}					&								\\
 								&	12.9~$\pm$~*		&	18.3				&	0.22		&*		&	5		&\cite{Hamins1994}				&Fuel Mass Burning Rate of 0.92~g/s			\\	
 								&	12.6~$\pm$~*		&	18.0				&	*		&0.20		&	5		&\cite{Klassen1994}				&Fuel Mass Burning Rate of 0.9~g/s 			\\	           								
 								&	*				&	20				&	0.18		&0.22		&	4		&\cite{Hamins1991}				&								\\
 								&	*				&	*				&	*		&*		&	5		&\cite{Hamins2016}				&								\\	
 								&	*				&	*				&	*		&*		&	10		&\cite{Wang2019}					&								\\
-								&	12.8~$\pm$~10\%		&	18.2				&	0.22		&*		&	5		&\cite{Buch1997}					&								\\ 
+								&	12.8~$\pm$~10\%		&	18.2				&	0.22		&*		&	5		&\cite{Buch1997}					&								\\
 								&	12.4~$\pm$~4\%		&	17.6				&	*		&*		&	10		&This study						&								\\
 								&	12.4~$\pm$~4\%		&	17.6				&	*		&*		&	10		&This study						&								\\
 								&	13.2~$\pm$~0.4		&	18.7~$\pm$~0.6		&0.20~$\pm$~0.02&0.22~$\pm$0.2&			& Average						&								\\ \hline
 \multirow{4}{*}{\rotatebox{90}{Ethanol}}	        	&	16.2~$\pm$~11\%		&	31.0				&	0.21		&*		&	10		&\cite{Kim2019}					&								\\
 	        							&	14.4~$\pm$~10\%		&	27.3				&	0.16		&*		&	5		&\cite{Buch1997}					&								\\
-	        							&	13.9~$\pm$~15\%		&	26.3				&	*		&0.26		&	10		&This study						&								\\  
+	        							&	13.9~$\pm$~15\%		&	26.3				&	*		&0.26		&	10		&This study						&								\\
 								&	14.8~$\pm$~1.2		&	28.2~$\pm$~2.5		&0.19~$\pm$~0.3&0.26&					& Average						&								\\ \hline
 \multirow{5}{*}{\rotatebox{90}{Acetone}}	        	&	25.9~$\pm$~*		&	54.1				&	0.26		&*		&	10		&\cite{Weckman1996}				&$\dot{Q''}$ of 740~\si{kW/m^2}	\\
 	        							&	18.7~$\pm$~11\%		&	38.1				&	0.27		&0.31		&	10		&\cite{Kim2019}					&								\\
-	        							&	18.7~$\pm$~10\%		&	37.7				&	0.28		&*		&	5		&\cite{Buch1997}					&								\\ 
-	        							&	17.6~$\pm$~15\%		&	35.5				&	*		&*		&	10		&This Study						&								\\ 
+	        							&	18.7~$\pm$~10\%		&	37.7				&	0.28		&*		&	5		&\cite{Buch1997}					&								\\
+	        							&	17.6~$\pm$~15\%		&	35.5				&	*		&*		&	10		&This Study						&								\\
 								&	$18.3^{**}$~$\pm$~0.6		&	37.1~$\pm$~1.4		&0.27~$\pm$~0.1&0.31&					& Average						&								\\ \hline
     \end{tabular}
     \begin{tablenotes}
