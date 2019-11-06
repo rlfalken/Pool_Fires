@@ -4,7 +4,7 @@
 %% This file is part of the 'Elsarticle Bundle'.
 %% ---------------------------------------------
 
-%% Please read the file, ``Addtional_AuthorInstruction_LaTeX.pdf'', for choosing the following options. 
+%% Please read the file, ``Addtional_AuthorInstruction_LaTeX.pdf'', for choosing the following options.
 %% Please choose only one of the two following options. Note that the option \final, which is also provided below, must not be submitted.
 %\def\preprint{1}		% Use for submitted manuscript
 \def\wordcount {1}		% Use for word count
@@ -23,7 +23,7 @@
   \documentclass[final,3p,times,twocolumn]{elsarticle}
 \fi
 
-%% Graphics packages for PostScript figures 
+%% Graphics packages for PostScript figures
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -83,13 +83,13 @@ Mixture fraction \sep Pool fires \sep Carbon-to-Hydrogen Ratio \sep Combustion P
 
 \section{Introduction}
 \label{Introduction}
-Computational fluid dynamics (CFD) models are an important component of performance-based design in fire protection engineering. A requirement of their acceptance in the design process is that these models be verified and validated, the latter of which involves comparison with experimental measurements. The primary objective of this work is to provide data for use in fire model validation. 
+Computational fluid dynamics (CFD) models are an important component of performance-based design in fire protection engineering. A requirement of their acceptance in the design process is that these models be verified and validated, the latter of which involves comparison with experimental measurements. The primary objective of this work is to provide data for use in fire model validation.
 
-The mixture fraction-based combustion has been widely used to characterize the combustion chemistry of different fires~\cite{Bilger1977,Peters1984,Floyd2001,Hamins1987,Sivathanu1990}, which is essential when improving the accuracy of fire model predictions. A mixture fraction-based combustion model assumes that the combustion is mixing-controlled, and the reaction between fuel and oxygen is taking place on an infinitely thin flame sheet. This assumption is ideal for well-ventilated conditions such as a pool fire. 
+The mixture fraction-based combustion has been widely used to characterize the combustion chemistry of different fires~\cite{Bilger1977,Peters1984,Floyd2001,Hamins1987,Sivathanu1990}, which is essential when improving the accuracy of fire model predictions. A mixture fraction-based combustion model assumes that the combustion is mixing-controlled, and the reaction between fuel and oxygen is taking place on an infinitely thin flame sheet. This assumption is ideal for well-ventilated conditions such as a pool fire.
 
 In a pool fire, the fuel surface is isothermal, flat and horizontal, providing a well-defined boundary condition for modeling. Fuel and product species concentrations and temperatures have a significant influence on the heat feedback to the fuel surface, which directly affects the burning rate. A zone of particular interest is the fuel rich-core between the flame and the pool surface, where gaseous species can absorb energy that would otherwise have been transferred to the fuel surface. Few studies in the literature have reported local chemical species measurements within the flame envelope.
 
-In this study, a mixture fraction analysis is performed to investigate the characterize the spatial distribution of the principal chemical species in moderate-scale pool fires steadily burning in a well-ventilated, quiescent environment. A series of fire experiments was conducted using a 30~cm diameter liquid and 38~cm diameter gaseous pool burner. Gaseous species and soot measurements were made at various heights within the fire. Four kinds of fuels are considered, namely, methanol, ethanol, acetone, and methane. Through the analysis of the species composition at various locations within the fire, this study attempts to provide insight into the combustion chemistry of pool fires. 
+In this study, a mixture fraction analysis is performed to investigate the characterize the spatial distribution of the principal chemical species in moderate-scale pool fires steadily burning in a well-ventilated, quiescent environment. A series of fire experiments was conducted using a 30~cm diameter liquid and 38~cm diameter gaseous pool burner. Gaseous species and soot measurements were made at various heights within the fire. Four kinds of fuels are considered, namely, methanol, ethanol, acetone, and methane. Through the analysis of the species composition at various locations within the fire, this study attempts to provide insight into the combustion chemistry of pool fires.
 
 
 \section{Description of Experiments}
@@ -122,7 +122,7 @@ where ${{\textrm{W}_{i}}}$ is the molecular weight of a given species.
 
 \subsection{Centerline Temperature Measurements}
 \label{ssec:Temperature_Measurements}
-Time-averaged temperature measurements were made along the centerline profiles of the pool fires at the same gas sampling locations. An S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouple (OMEGA P10R-001) with a wire diameter of approximately 50~$\mu$m and a bead diameter of approximately 150~$\mu$m was used. Temperature measurements are sampled at \SI{250}{Hz} for \SI{2}{min}, or approximately 300~pulsing cycles \cite{Wang2019}. The thermal inertia and radiative heat loss associated with the thermocouple were corrected following the method of Shaddix~\cite{Shaddix1999}. 
+Time-averaged temperature measurements were made along the centerline profiles of the pool fires at the same gas sampling locations. An S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouple (OMEGA P10R-001) with a wire diameter of approximately 50~$\mu$m and a bead diameter of approximately 150~$\mu$m was used. Temperature measurements are sampled at \SI{250}{Hz} for \SI{2}{min}, or approximately 300~pulsing cycles \cite{Wang2019}. The thermal inertia and radiative heat loss associated with the thermocouple were corrected following the method of Shaddix~\cite{Shaddix1999}.
 
 \subsection{Determining Soot Mass Fraction}
 \label{ssec:Soot_Setup}
@@ -141,7 +141,7 @@ Z = \bar{Y}_{\rm F} + \frac{W_{\rm F}}{\rm x} \sum_{i\ne{\rm F}} \frac{\bar{Y}_i
 \end{equation}
 where $\bar{Y}_{\rm F}$, ${W_{\rm F}}$, and $\rm x$ are the mass fraction, molecular weight, and number of carbon atoms in the fuel molecule, respectively. Assuming ideal (i.e. no CO or soot), infinitely-fast (fuel and oxygen from the air cannot co-exist) combustion, the mass fractions of all species can be expressed as piece-wise linear ``state relations'' according to the following reaction:
 \begin{multline}\label{eq:Ideal_rxn}
-{\rm C}_{\rm x}{\rm H}_{\rm y}{\rm O}_{\rm z}\\ +\eta(\rm x+\frac{\rm y}{4}-\frac{\rm z}{2})~({\rm O}_{2}+3.76~{\rm N}_{2}+0.0445~{\rm Ar}) \rightarrow \\ \max(0,1-\eta)~{\rm C}_{\rm x}{\rm H}_{\rm y}{\rm O}_{\rm z}+\max(0,1- \eta)~(\rm x+\frac{\rm y}{4}-\frac{\rm z}{2})~{\rm O}_{2} \\ +\eta(\rm x+\frac{\rm y}{4}-\frac{\rm z}{2})~(3.76~{\rm N}_{2}+0.0445~{\rm Ar})\\+ \min(1,\eta)~\rm x~{\rm CO}_{2}+\min(1,\eta)~\frac{\rm y}{2}~{\rm H}_{2}{\rm O}
+{\rm C}_{\rm x}{\rm H}_{\rm y}{\rm O}_{\rm z}\\ +\eta(\rm x+\frac{\rm y}{4}-\frac{\rm z}{2})~({\rm O}_{2}+3.76~{\rm N}_{2}+0.0445~{\rm Ar}) \rightarrow \\ \max(0,1-\eta)~{\rm C}_{\rm x}{\rm H}_{\rm y}{\rm O}_{\rm z}+\max(0,1- \eta)~(\rm x+\frac{\rm y}{4}-\frac{\rm z}{2})~{\rm O}_{2} \\ +\eta(\rm x+\frac{\rm y}{4}-\frac{\rm z}{2})~(3.76~{\rm N}_{2}+0.0445~{\rm Ar})\\+ \min(1,\eta)~{\rm x}~{\rm CO}_2+\min(1,\eta)~\frac{\rm y}{2}~{\rm H}_{2}{\rm O}
 \end{multline}
 The parameter $\eta$ is the reciprocal of the local fuel equivalence ratio, $\phi$,
 \begin{equation}\label{eq:Eta}
@@ -155,7 +155,7 @@ An extensive uncertainty of all measurements made in this study is provided in R
 \label{eq:mixture_frac_uncertainty}
 {u_{\scriptscriptstyle Z}}^2={{u_{\scriptscriptstyle \bar{Y}_{\rm F}}}^2+{\left(\frac{W_{\rm F}}{\rm x}\right)}^2{\sum_{i\ne {\rm F}}{\left(\frac{u_{\scriptscriptstyle \bar{Y}_{i}}}{\textrm{W}_{i}} \right)}^2}}
 \end{equation}
-where $u_{\scriptscriptstyle Z}$ is the estimated uncertainty of the mixture fraction determined from combined expanded uncertainty of the mass fractions of all carbon carrying species. 
+where $u_{\scriptscriptstyle Z}$ is the estimated uncertainty of the mixture fraction determined from combined expanded uncertainty of the mass fractions of all carbon carrying species.
 
 \section{Results}
 \label{sec:Results}
@@ -206,7 +206,7 @@ Here, $z$ is the vertical spatial coordinate, $\dot{Q}$ is the heat release rate
 	\caption[Mean and RMS centerline temperature profiles]{Mean and RMS centerline temperature profiles of methanol, ethanol, acetone, and methane pool fires during their pulsing cycles}
 	\label{fig:Temp_Comparison}
 \end{figure}
-Figure~\ref{fig:Soot_Comparison} shows the soot mass fraction as a function of $z^*$ for the ethanol, acetone, and methane pool fires. No soot was detected within the methanol pool fire. The peak soot mass fraction is achieved at approximately $z^*=0.57~\pm~0.08$. The acetone pool fire has a factor of 5 larger soot mass fraction than ethanol. 
+Figure~\ref{fig:Soot_Comparison} shows the soot mass fraction as a function of $z^*$ for the ethanol, acetone, and methane pool fires. No soot was detected within the methanol pool fire. The peak soot mass fraction is achieved at approximately $z^*=0.57~\pm~0.08$. The acetone pool fire has a factor of 5 larger soot mass fraction than ethanol.
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=6.7 cm,keepaspectratio]{Soot.pdf}
@@ -229,7 +229,7 @@ where the summation is over all measured gaseous species, and ${\rm x}_i$ and ${
 
 \subsection{Mixture Fraction Analysis}
 \label{ssec:Mixture_Faction_Analysis}
-Figure~\ref{fig:Mixture_Fraction} shows the mean mass fraction measurements as a function of the mixture fraction for the methanol, ethanol, acetone and methane fires, respectively. The combined expanded uncertainty of each measurement is also presented. The dotted lines represent ideal combustion from Eq.~(\ref{eq:Ideal_rxn}). 
+Figure~\ref{fig:Mixture_Fraction} shows the mean mass fraction measurements as a function of the mixture fraction for the methanol, ethanol, acetone and methane fires, respectively. The combined expanded uncertainty of each measurement is also presented. The dotted lines represent ideal combustion from Eq.~(\ref{eq:Ideal_rxn}).
 %\begin{figure}[!]
 %%	\centering
 %\includegraphics[width=6.7 cm]{Methanol_OVERALL_Mass_Frac_Mix_Frac}
@@ -262,17 +262,17 @@ Figure~\ref{fig:Mixture_Fraction} shows the mean mass fraction measurements as a
 	\label{fig:Mixture_Fraction}
 \end{figure*}
 
-The stoichiometric condition can be identified by the intersection of fuel and oxygen at $Y_i=0$. Where the mixture fraction is much less than stoichiometric, all major gaseous species are in close agreement with the ideal state relations; the measured mass fractions of unburned fuel and $\ch{CO}$ are nearly zero, and the $\ch{O_2}$ is close to its respective theoretical value. The measured mass fraction of $\ch{CO_{2}}$ and $\ch{H_{2}O}$ are found to peak close to the stoichiometric mixture fraction. As the mixture fraction increases, the mass fraction of $\ch{O_2}$ is nearly zero, while the mass fraction of each fuel increases linearly. In the fuel-rich region, the measured mass fraction of $\ch{CO_{2}}$ differs considerably from the ideal state relation due to the substantial portion of $\ch{CO}$ and soot. The over estimation of $\ch{CO_{2}}$ has been observed in other mixture fraction analyses and is attributed to finite rate chemistry effects associated with slow $\ch{CO}$ chemistry~\cite{Sivathanu1990}. For the cases of the liquid pool fires, the over estimation of fuel is likely linked to the presence of other intermediate carbon-containing species close to the fuel surface. This is exemplified in the fuel-rich region for acetone in which the fuel concentration is overestimated while $\ch{CO_{2}}$ is in fair agreement with the hypothetical values; the substantial portion of $\ch{CO}$ and soot, relative to other fuels, could account for the difference. 
+The stoichiometric condition can be identified by the intersection of fuel and oxygen at $Y_i=0$. Where the mixture fraction is much less than stoichiometric, all major gaseous species are in close agreement with the ideal state relations; the measured mass fractions of unburned fuel and $\ch{CO}$ are nearly zero, and the $\ch{O_2}$ is close to its respective theoretical value. The measured mass fraction of $\ch{CO_{2}}$ and $\ch{H_{2}O}$ are found to peak close to the stoichiometric mixture fraction. As the mixture fraction increases, the mass fraction of $\ch{O_2}$ is nearly zero, while the mass fraction of each fuel increases linearly. In the fuel-rich region, the measured mass fraction of $\ch{CO_{2}}$ differs considerably from the ideal state relation due to the substantial portion of $\ch{CO}$ and soot. The over estimation of $\ch{CO_{2}}$ has been observed in other mixture fraction analyses and is attributed to finite rate chemistry effects associated with slow $\ch{CO}$ chemistry~\cite{Sivathanu1990}. For the cases of the liquid pool fires, the over estimation of fuel is likely linked to the presence of other intermediate carbon-containing species close to the fuel surface. This is exemplified in the fuel-rich region for acetone in which the fuel concentration is overestimated while $\ch{CO_{2}}$ is in fair agreement with the hypothetical values; the substantial portion of $\ch{CO}$ and soot, relative to other fuels, could account for the difference.
 
 \section{Conclusion}
 \label{sec:Conclusion}
-This study characterizes the structure of several medium-scale pool fires steadily burning in a quiescent environment. Temperature and soot centerline profiles for methanol, ethanol, acetone, and methane is reported. The calculated carbon-to-hydrogen ratio at each location was shown to be in fair agreement with the parent fuel values, which validates the accuracy of the measurements. Major species detected in the centerline profile of the pool fires are represented as a function of mixture fraction. As expected, carbon-containing species are shown to be over-estimated in fuel-rich regions due to the presence of $\ch{CO}$, soot, and other carbon-containing species. 
+This study characterizes the structure of several medium-scale pool fires steadily burning in a quiescent environment. Temperature and soot centerline profiles for methanol, ethanol, acetone, and methane is reported. The calculated carbon-to-hydrogen ratio at each location was shown to be in fair agreement with the parent fuel values, which validates the accuracy of the measurements. Major species detected in the centerline profile of the pool fires are represented as a function of mixture fraction. As expected, carbon-containing species are shown to be over-estimated in fuel-rich regions due to the presence of $\ch{CO}$, soot, and other carbon-containing species.
 
 %% References can be added with or without bibTeX database
 %%
 %% References with bibTeX database:
 %% Note that the PROCI references style is considered Elsevier non-standard.
-%% The original Elsevier bibliography style, elsarticle-num.bst prints paper titles as part of the references, which is different from 
+%% The original Elsevier bibliography style, elsarticle-num.bst prints paper titles as part of the references, which is different from
 \bibliography{References} %%User-specified
 \bibliographystyle{elsarticle-num}
 
