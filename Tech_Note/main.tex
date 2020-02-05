@@ -131,6 +131,7 @@ pdfkeywords={} %%put keywords here
 \large Ryan Falkenstein-Smith\\
 \large Kunhyuk Sung\\
 \large Jian Chen\\
+\large Kimberly Harris\\
 \large Anthony Hamins\\
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -175,6 +176,13 @@ Anthony Hamins\\
 \large
 \textit{Fire Research Division}\\
 \textit{Engineering Laboratory}\\
+\vspace{12pt}
+\vfill
+
+\normalsize Kimberly Harris\\
+\large
+\textit{Chemical Science Division}\\
+\textit{Material Measurement Laboratory}\\
 \vspace{12pt}
 \vfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -582,7 +590,7 @@ Where the mixture fraction is much less than stoichiometric, all major gas speci
 In summary, time-averaged local measurements of temperature and gas species concentrations are made to characterize the structure of methanol, ethanol, and acetone \SI{30}{cm} diameter pool fire steadily burning in a quiescent environment. A verification scheme is developed to verify the gas species measurements that considered  the accuracy of the calibration and the overall stoichiometry of combustion for each fuel. The gas species measurements are favorably compared to the idealized SCR values, which lends confidence to the veracity of the measurements. These local measurements complement previous measurements and provide insight into the complex chemical structure of medium-scale pool fires.
 
 \section*{Acknowledgments}
-The authors would like to acknowledge Kimberly Harris of the Gas Sensing Metrology Group at NIST, who assisted in the developing the species calibration method used in the study, and Kevin McGrattan, who aided in the editing of this report.
+The authors would like to acknowledge Kevin McGrattan, who aided in the editing of this report.
 
 \clearpage
 
@@ -1064,10 +1072,14 @@ The uncertainty of the volume fractions is described in Appendix~\ref{sec:Uncert
 
 \subsection{Inert Ratio}
 \label{ssec:Inert_ratio}
+%\begin{equation}
+%\label{eq:inert_ratio}
+%\rm{Inert~Ratio}=\frac{\bar{X}_{Ar}}{\bar{X}_{N_2}}
+%\end{equation}
 The inert ratio is calculated from the ratio the Nitrogen and Argon volume fractions, $\bar{X}_{N_2}$ and $\bar{X}_{Ar}$, identified by the TCD and TIC chromatograms. The uncertainty of inert ratio is determined from the law of propagation of uncertainty:
 \begin{equation}
 \label{eq:inert_ratio_uncertainty}
-u_{\scriptscriptstyle \bar{X}_{N_2}/\bar{X}_{Ar}} = \sqrt{{\left(\frac{u_{\scriptscriptstyle \bar{X}_{N_2}}}{\bar{X}_{Ar}}\right)}^2+{\left(\frac{-\bar{X}_{N_2}u_{\scriptscriptstyle \bar{X}_{Ar}}}{\bar{X}_{Ar}}\right)}^2}
+u_{\scriptscriptstyle \bar{X}_{Ar}/\bar{X}_{N_2}} = \sqrt{{\left(\frac{u_{\scriptscriptstyle \bar{X}_{Ar}}}{\bar{X}_{N_2}}\right)}^2+{\left(\frac{-\bar{X}_{Ar}u_{\scriptscriptstyle \bar{X}_{N_2}}}{\bar{X}_{N_2}}\right)}^2}
 \end{equation}
 The uncertainty of the volume fractions is described in Appendix~\ref{sec:UncertaintyMoleFrac}.
 
@@ -1098,7 +1110,7 @@ Many experiments have been conducted on pool fires such as those considered in t
 										&\raisebox{1.5ex}[0pt]{\textbf{Parameter}} 		& \textbf{Methanol}	& \textbf{Ethanol}	& \textbf{Acetone}		\\ \hline
 \multirow{5}{*}{\rotatebox{90}{Global}} 				& Mass Loss Rate						&\cite{Hamins1991}	& 			&\cite{Hogben1998}		\\
 										& Heat Release Rate					&\cite{Weckman1996}	& 			&\cite{Weckman1989}	\\
-										& Mean Flame Height					&\cite{Kim2019,Klassen1994,Hamins1991,Buch1997}				&\cite{Kim2019,Hamins1991,Buch1997}				&	\cite{Kim2019,Buch1997,Hogben1998}		\\
+										& Mean Flame Height					&\cite{Kim2019,Klassen1994,Hamins1991,Buch1997}				&\cite{Kim2019,Hamins1991,Buch1997}					&	\cite{Kim2019,Buch1997,Hogben1998}		\\
 										& Pulsation Frequency					&\cite{Weckman1996,Kim2019,Hamins1994,Klassen1994,Hamins1991,Hamins2016,Corlett1966}&	\cite{Kim2019,Buch1997,Corlett1966}			&	\cite{Kim2019,Buch1997,Weckman1989,Corlett1966}\\
 										& Radiative Fraction					&\cite{Kim2019}	& \cite{Kim2019}	& \cite{Kim2019}		\\ \hline
 \multirow{7}{*}{\rotatebox{90}{Local}}				& Radiative flux distribution on fuel surface 		&\cite{Hamins1994}	&			&		\\
