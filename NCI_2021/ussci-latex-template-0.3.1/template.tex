@@ -1,0 +1,111 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          template.tex
+%
+% LaTeX template for papers conforming to the United States Sections of
+% the Combustion Institute style guide.
+%
+% Authors:
+%     Bryan W. Weber, University of Connecticut
+%     Kyle E. Niemeyer, Oregon State University
+%
+% This work is licensed under the Creative Commons Attribution 4.0
+% International License. To view a copy of this license, visit
+% http://creativecommons.org/licenses/by/4.0/.
+%
+% The source for this template can be found at
+% https://github.com/pr-omethe-us/ussci-latex-template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{ussci}
+
+%======================================================================
+% Remove this in the real document
+\usepackage{blindtext}
+%======================================================================
+% BibLaTeX and biber (not BibTeX) are used to process the references,
+% so these packages must be installed on your system. All configuration
+% for the bibliography and citations are done in the ussci.cls file
+% Add your bibliography file here, replacing template.bib
+\addbibresource{template.bib}
+%======================================================================
+% Replace "Reaction Kinetics" in the line below by your paper topic
+\newcommand\papertopic{Reaction Kinetics}
+%======================================================================
+
+\title{ Title of Paper }
+
+\author[1]{Author Name}
+\author[1]{Author Name}
+\author[2]{Author Name}
+\author[2,*]{Author Name}
+
+\affil[1]{Department, Institution, Address, Country}
+\affil[2]{Department, Institution, Address, Country}
+\affil[*]{Corresponding author: \email{author@university.edu}}
+
+\begin{document}
+\maketitle
+
+%====================================================================
+\begin{abstract} % not to exceed 200 words
+Abstract should be between 150--200 words and should state briefly the purpose
+of the research, the principal results and major conclusions. An abstract is
+often presented separately from the article, so it must be able to stand alone.
+For this reason, References should be avoided, but if essential, then cite the
+author(s) and year(s). Also, non-standard or uncommon abbreviations should be
+avoided, but if essential they must be defined at their first mention in the
+abstract itself.
+\end{abstract}
+
+% Provide 2-4 keywords describing your research. Only abbreviations firmly
+% established in the field may be used. These keywords will be used for
+% sessioning/indexing purposes. Use \sep between each keyword.
+\begin{keyword}
+    Keyword1\sep Keyword2\sep Keyword3\sep Keyword4
+\end{keyword}
+
+%====================================================================
+\section{Introduction}
+%
+
+You can use the following cite commands:
+
+Single reference with number only: \cite{Falkenstein_2019}
+
+Multiple references with number only: \cite{Affleck1967,Turanyi2014,uconnrcmpy}
+
+Single reference with two or fewer authors: \textcite{Affleck1967}
+
+Single reference with three or more authors: \textcite{Wang2011}
+
+Two references with authors: \textcite{Kee1996,Baumgardner2013}
+
+Three or more references with authors: \textcite{Kee1996,Baumgardner2013,Haworth2011}
+
+
+\section{Methods/Experimental}
+%
+\blindtext
+
+
+\section{Results and Discussion}
+%
+\blindtext
+
+\subsection{Results}
+%
+\blindtext
+
+\section{Conclusions}
+%
+\blindtext
+
+\blindtext
+
+\section{Acknowledgements}
+This research was funded by \ldots
+
+\noindent\textbf{Page Limits:} The total length of the paper including references should be limited to 10 pages.
+
+\printbibliography
+
+\end{document}
