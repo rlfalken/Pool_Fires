@@ -326,7 +326,7 @@ This report documents a series of time-averaged gas species measurements made al
 \nomenclature[63]{$Z$}{Mixture fraction}
 \nomenclature[64]{$z$}{Vertical spatial coordinate}
 \nomenclature[65]{$z^*$}{Normalized vertical spatial coordinate}
-\begin{multicols}{2} 
+\begin{multicols}{2}
 \printnomenclature
 \end{multicols}
 \clearpage
@@ -344,7 +344,7 @@ Computational fluid dynamics (CFD) models are an important component of performa
 
 A pool fire is a fundamental focus of study in fire science. The fuel surface is isothermal, flat and horizontal, providing a well-defined boundary condition for modeling. Fuel and product species concentrations and temperatures have a significant influence on the heat feedback to the fuel surface, which directly affects the burning rate. A zone of particular interest is the fuel rich-core between the flame and the pool surface, where gas species can absorb energy that would otherwise have been transferred to the fuel surface. Few studies in the literature have reported local chemical species measurements within the flame envelop.
 
-The purpose of this study is to characterize the spatial distribution of the principal chemical species in moderate-scale pool fires steadily burning in a well-ventilated, quiescent environment. Here, methanol, ethanol, acetone, methane\textcolor{red}{, and propane} are the fuels of interest. Contrary to ethanol, acetone, methane, \textcolor{red}{and propane}, fires established using methanol are unusual as no carbonaceous soot is present or emitted. These particular fuels are selected for research since the measurements complement results from previous studies, including analyses of the mass burning rate, the temperature and velocity fields, radiative emission, flame height, and pulsation frequency~\cite{Fisher1987,Hamins2016}.
+The purpose of this study is to characterize the spatial distribution of the principal chemical species in moderate-scale pool fires steadily burning in a well-ventilated, quiescent environment. Here, methanol, ethanol, acetone, methane\textcolor{red}{, and propane} are the fuels of interest. Methanol is unique among the fuels because it generates no measurable carbonaceous soot. These particular fuels have been selected because the measurements complement those from previous studies, including the mass burning rate, the temperature and velocity fields, radiative emission, flame height, and pulsation frequency~\cite{Fisher1987,Hamins2016}.
 
 
 \clearpage
@@ -393,7 +393,7 @@ The mean flame height, $L_{\rm{f}}$, is estimated from 3600~frames of high-resol
 \subsection{Centerline Temperature Measurements}
 \label{ssec:Temperature_Measurements}
 
-Time-averaged temperature measurements are made along the vertical centerline of the fire plumes using S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouples (OMEGA P10S-001) with wire diameters of approximately 13~$\mu$m and 25~$\mu$m for the liquid and gas pool fires, respectively, and bead diameter approximately three times greater. Temperature measurements are sampled at \SI{250}{Hz} for \SI{2}{min}, or approximately 300~pulsing cycles \cite{Wang2019}. The uncertainty of the temperature radiative measurements are discussed in Appendix~\ref{sec:Uncertainty_Temperature_Measurements}. \textcolor{red}{In some cases, temperature measurements are made using thermocouple of different configurations. Thermcouple bead temperature readings of bead diameters for each fuel are presented in Appendix~\ref{sec:Bead_Temp}.}
+Time-averaged temperature measurements are made along the vertical centerline of the fire plumes using S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouples (OMEGA P10S-001) with wire diameters of approximately 13~$\mu$m and 25~$\mu$m for the liquid and gas pool fires, respectively, and bead diameter approximately three times greater. Temperature measurements are sampled at \SI{250}{Hz} for \SI{2}{min}, or approximately 300~pulsing cycles \cite{Wang2019}. The uncertainty of the temperature radiative measurements are discussed in Appendix~\ref{sec:Uncertainty_Temperature_Measurements}. \textcolor{red}{In some cases, temperature measurements are made using thermocouples of different configurations. Thermcouple bead temperature readings of bead diameters for each fuel are presented in Appendix~\ref{sec:Bead_Temp}.}
 
 The measured thermocouple temperatures are corrected for heat losses and thermal inertia using the formula described by Shaddix~\cite{Shaddix1999}:
 \begin{equation}\label{eq:Thermocouple_Bead_Correction}
@@ -417,28 +417,29 @@ The uncertainty of Eq.~(\ref{eq:Thermocouple_Bead_Correction}) is discussed in d
 
 \subsection{Centerline Velocity Measurements}
 \label{ssec:Velocity_Measurements}
-\textcolor{red}{A bi-directional probe is located above the burner centerline and moved using a computer controlled translation device. A full description of the measurement and data processing methods is given in Ref.~\cite{Sung2021}. The pressure difference between the front and rear side of the probe (16~mm outer diameter and 2.5~cm  long) is measured with multiple pressure transducers with various instrument response times. The instantaneous gas velocity ($V_{\rm{g}}(t)$) can be determined from the instantaneous measured pressure difference between the front and rear sides of the probe and the local gas density:}
+\textcolor{red}{A bi-directional probe is located above the burner centerline and moved using a computer controlled translation device. A full description of the measurement and data processing methods is given in Ref.~\cite{Sung2021}. The pressure difference between the front and rear side of the probe (16~mm outer diameter and 2.5~cm  long) is measured with multiple pressure transducers with various instrument response times. The gas velocity, $V_{\rm{g}}(t)$, can be determined from the corrected pressure difference between the front and rear sides of the probe, $\Delta P_{c}(t)$, and the local gas density, $\rho(t)$:}
 \begin{equation}\label{eq:Vel_g}
 V_{\rm{g}}(t) = \frac{1}{k_p(t)}\sqrt{\frac{2~\Delta P_{c}(t)}{\rho(t)}}
 \end{equation}
-\textcolor{red}{where $\Delta P_c(t)$ and $\rho(t)$ are the instantaneous corrected pressure difference and gas density, respectively. The instantaneous gas temperature $ {T_{\rm g}(t)}$ measured near the probe. The parameter $k_p(t)$ is the instantaneous probe constant, whose value depends on several factors, such as Reynolds number, probe shape, and flow approach angle. The temperature-dependent gas properties are taken as those of air.}
+\textcolor{red}{The gas density is calculated from the gas temperature, $ {T_{\rm g}(t)}$, which is measured near the probe. The parameter $k_p(t)$ is the probe constant, whose value depends on several factors including the Reynolds number, probe shape, and flow approach angle. The temperature-dependent gas properties are taken as those of air.}
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=\textwidth,keepaspectratio]{Vel_probe.png}
 	\caption[Photograph of a bi-directional probe]{Photograph of a bi-directional probe with a Type S, 25 µm wire diameter, bare-bead thermocouple positioned a few cm above the water-cooled, sintered-metal, 37 cm diameter, gas burner.}
 	\label{fig:Vel_Probe}
 \end{figure}
-\textcolor{red}{As many as three transducers are used for any single time series pressure measurement. The measurements were repeated at least once and typically twice. A Type S (Pt 10 \% Rh/Pt), 25~µm diameter, bare-wire, thermocouple is positioned 5 mm upstream of the probe as seen in Figure 4. The thermocouple bead is nearly spherical with a bead diameter of approximately 125 µm as determined using optical microscopy. Voltage signals from the pressure transducers and the Type S temperature are obtained using a DAQ (Model: SCXI-1600, National instrument Inc). Data sampling rates are either 250 Hz or 500 Hz, depending on the case. Data is acquired for 2 min at each position along the axial centerline above the burner.}
-\textcolor{red}{The instantaneous measured pressure difference is corrected to consider the instrument time response, which is treated in a manner similar to the inertia correction in the thermocouple measurement. The instantaneous corrected pressure difference is defined as:}
+\textcolor{red}{As many as three transducers are used for any single time series pressure measurement. The measurements are repeated at least once and typically twice. A Type S (Pt 10 \% Rh/Pt), 25~µm diameter, bare-wire, thermocouple is positioned 5~mm upstream of the probe as seen in Figure~\ref{fig:Vel_Probe}. The thermocouple bead is nearly spherical with a bead diameter of approximately 125 µm as determined using optical microscopy. Voltage signals from the pressure transducers and the Type S temperature are obtained using a DAQ (Model: SCXI-1600, National instrument Inc). Data sampling rates are either 250 Hz or 500 Hz, depending on the case. Data is acquired for 2 min at each position along the axial centerline above the burner.}
+
+\textcolor{red}{The measured pressure difference, $\Delta P(t)$, is corrected to account for the instrument time response, which is treated in a manner similar to the inertia correction in the thermocouple measurement:}
 \begin{equation}\label{eq:Delta_Pc}
 \Delta P_c~(t) = \Delta P(t)+\tau_{p}\frac{d(\Delta P(t))}{dt}
 \end{equation}
-\textcolor{red}{where the second term on the right side of the equation is the instantaneous time-response correction term. Solving for the correction term, the time derivative of the pressure difference is calculated using a second-order polynomial fit using three consecutive data points in the pressure difference time series. The parameter, $\tau_p$, is the pressure transducer instrument response time. This parameter is experimentally determined for each transducer by applying a step-function pressure change and observing the transient signal response as discussed in Ref.~\cite{Sung2021}}.
+\textcolor{red}{The time derivative of the pressure difference is calculated using a second-order polynomial fit using three consecutive data points in the pressure difference time series. The parameter, $\tau_p$, is the pressure transducer instrument response time. This parameter is experimentally determined for each transducer by applying a step-function pressure change and observing the transient signal response as discussed in Ref.~\cite{Sung2021}}.
 
 \subsection{Measuring the Volume Fraction of Gas Species via GC/MS}
 \label{ssec:Gas_Species_Setup}
 
-Figure~\ref{fig:Experimental_Setup} displays the flow diagram for gas and particulate sampling. The GC/MSD is equipped with a 2~mL sample loop maintained at approximately \SI{200}{\degree C}. \textcolor{red}{The characteristic length of the regime of influence was estimated to range between 0.5~cm~$\pm$~0.1~cm to 3.9~cm~$\pm$~0.7~cm. The characteristic length of the regime of influence was calculated using through the approximation provided in Appendix~\ref{sec:Regime_of_Influence}.} The gases are extracted by a vacuum pump located downstream of the GC/MSD. Gas samples are collected using a thermal quenching probe composed of concentric, stainless-steel tubes with outer annular coolant flow and inner extracted sample flow. The outer and inner tube diameters are \SI{16}{mm} and \SI{8}{mm}, respectively. Water at approximately \SI{90}{\degree C} flows through the sampling probe for the duration of the experiment. The remainder of the sampling line leading into the GC/MSD is heated to approximately \SI{140}{\degree C} with electrical heating tape to prevent condensation of water and other condensable species (e.g., methanol, ethanol, benzene, etc.).
+Figure~\ref{fig:Experimental_Setup} displays the flow diagram for gas and particulate sampling. The GC/MSD is equipped with a 2~mL sample loop maintained at approximately \SI{200}{\degree C}. \textcolor{red}{The characteristic length of the regime of influence is estimated to range between 0.5~cm~$\pm$~0.1~cm to 3.9~cm~$\pm$~0.7~cm. The characteristic length of the regime of influence is calculated using an approximation described in Appendix~\ref{sec:Regime_of_Influence}.} The gases are extracted by a vacuum pump located downstream of the GC/MSD. Gas samples are collected using a thermal quenching probe composed of concentric, stainless-steel tubes with outer annular coolant flow and inner extracted sample flow. The outer and inner tube diameters are \SI{16}{mm} and \SI{8}{mm}, respectively. Water at approximately \SI{90}{\degree C} flows through the sampling probe for the duration of the experiment. The remainder of the sampling line leading into the GC/MSD is heated to approximately \SI{140}{\degree C} with electrical heating tape to prevent condensation of water and other condensable species (e.g., methanol, ethanol, benzene, etc.).
 
 \begin{sidewaysfigure}[!]
 	\centering
@@ -447,11 +448,11 @@ Figure~\ref{fig:Experimental_Setup} displays the flow diagram for gas and partic
 	\label{fig:Experimental_Setup}
 \end{sidewaysfigure}
 
-\textcolor{red}{Directly behind the sampling probe is a heated soot filter which was used to make a gravimetic soot measurement and eliminate soot from the gas sample injected into the GC. An in-line, heated, 150~ml chamber helps to ensure that the sample is well-mixed and representative of the local sampling volume. Depending on the probe's lateral location within the fire, the sampling period varies from \SI{12}{min} to \SI{25}{min}, ensuring a significant soot measurement is made and that the gases are representative of the sampling location and have completely swept through the sample loop. The sample flow is controlled using a mass flow controller (Alicat Scientific MC-Series) located in upstream of the vacuum pump in the sampling line. All measurements are replicated at least two times to provide an average concentration measurement.}
+\textcolor{red}{Directly behind the sampling probe is a heated soot filter which is used to make a gravimetic soot measurement and eliminate soot from the gas sample injected into the GC. An in-line, heated, 150~ml chamber ensures that the sample is well-mixed and representative of the local sampling volume. Depending on the probe's lateral location within the fire, the sampling period varies from \SI{12}{min} to \SI{25}{min}, ensuring a significant soot measurement is made and that the gases are representative of the sampling location and have completely swept through the sample loop. The sample flow is controlled using a mass flow controller (Alicat Scientific MC-Series) located upstream of the vacuum pump in the sampling line. All measurements are replicated at least twice to provide an average concentration measurement.}
 
-\textcolor{red}{During the gas sampling procedure, the volumetric flow is approximately 200~mL/min and recorded at \SI{2}{\hertz}. The characteristic length of the regime of influence was estimated to range between 0.5~cm~$\pm$~0.1~cm to 3.9~cm~$\pm$~0.7~cm. The characteristic length of the regime of influence was calculated using through the approximation provided in Appendix~\ref{sec:Regime_of_Influence}. After the gas sampling period, two quarter-turn valves located on opposite ends of the sample loop are closed, at which point pressure measurements, obtained from a digital pressure gauge (OMEGA DPG409-030DWU), and temperature measurements, acquired by a K-type thermocouple located at the GC/MSD sample loop injection port, are collected at \SI{2}{\hertz} for \SI{50}{s} directly followed by sample injection.}
+\textcolor{red}{During the gas sampling procedure, the volumetric flow is approximately 200~mL/min and recorded at \SI{2}{\hertz}. The characteristic length of the regime of influence is estimated to range between 0.5~cm~$\pm$~0.1~cm to 3.9~cm~$\pm$~0.7~cm. The characteristic length of the regime of influence is calculated using an approximation described in Appendix~\ref{sec:Regime_of_Influence}. After the gas sampling period, two quarter-turn valves located on opposite ends of the sample loop are closed, at which point pressure measurements, obtained from a digital pressure gauge (OMEGA DPG409-030DWU), and temperature measurements, acquired by a K-type thermocouple located at the GC/MSD sample loop injection port, are collected at \SI{2}{\hertz} for \SI{50}{s} directly followed by sample injection.}
 
-\textcolor{red}{Gas species measurements are made using an Agilent 5977E Series GC/MSD. The GC/MSD quantifies a variety of stable reactant, intermediate, and product species collected from the fire plume using helium as the carrier gas. The GC/MSD utilizes an Agilent J\&W Select Permanent Gases/\ch{CO2} High-Resolution column, which separates permanent gases (i.e., gases that are incapable of liquefaction). As shown in Fig.~\ref{fig:GC_Intern}, the column is a parallel configuration consisting of a 25~m x 0.32~mm PoraBOND Q capillary column coupled with a 50~m x 0.53~mm Molsieve $\SI{5}{\angstrom}$ capillary column. The PoraBOND has high retention for several species, including carbon dioxide, but struggles to separate oxygen, nitrogen, and other species resulting in a single composite peak. The Molsieve $\SI{5}{\angstrom}$ column includes zeolite-based materials with a pore size of $\SI{5}{\angstrom}$, allowing for separation and very high retention of permanent gases. Due to the multi-component setup of the column, some species (e.g., methane or propane) are observed to elute twice from the composite column causing two distinct peaks on the chromatogram.}
+\textcolor{red}{Gas species measurements are made using an Agilent 5977E Series GC/MSD. The GC/MSD quantifies a variety of stable reactant, intermediate, and product species collected from the fire plume using helium as the carrier gas. The GC/MSD utilizes an Agilent J\&W Select Permanent Gases/\ch{CO2} High-Resolution column, which separates permanent gases (i.e., gases that are incapable of liquefaction). As shown in Fig.~\ref{fig:GC_Intern}, the column is a parallel configuration consisting of a 25~m x 0.32~mm PoraBOND Q capillary column coupled with a 50~m x 0.53~mm Molsieve $\SI{5}{\angstrom}$ capillary column. The PoraBOND has high retention for several species, including carbon dioxide, but cannot completely separate oxygen, nitrogen, and other species resulting in a single composite peak. The Molsieve $\SI{5}{\angstrom}$ column includes zeolite-based materials with a pore size of $\SI{5}{\angstrom}$, allowing for separation and very high retention of permanent gases. Due to the multi-component setup of the column, some species (e.g., methane or propane) are observed to elute twice from the composite column causing two distinct peaks on the chromatogram.}
 
 \begin{figure}[h!]
 	\centering
@@ -462,7 +463,7 @@ Figure~\ref{fig:Experimental_Setup} displays the flow diagram for gas and partic
 
 \textcolor{red}{The sample components elute from the column through a capillary tee splitter (Agilent G3184-60065), which divides the flow into two deactivated fused silica tubes (Agilent 160-2615-10) of different lengths leading to the thermal conductivity (TCD) and mass selective detectors. The deactivated fused silica tubing flowing into the TCD and MSD are cut to 1~m and 5~m to maintain carrier gas flows of approximately 3~mL/min $\pm$ 5\% and 1~mL/min $\pm$ 5\%, respectively, such that the TCD and MSD chromatograms are synchronized. Gas species are identified using the total ion chromatogram generated by the MSD and quantified from the TCD's chromatogram.}
 
-For the ethanol, acetone\textcolor{red}{, methane, and propane} pool fires, the sample analysis time is approximately \SI{60}{min}, during which time the GC oven temperature is maintained at \SI{30}{\degree C} for \SI{10}{min}, then ramped at \SI{8}{\degree C/min} for \SI{34}{min} until reaching a temperature of \SI{300}{\degree C} which is maintined for the remainder of the analysis. For methanol pool fires, GC oven has same setpoint temperature hold time and ramp rate, but only ramps to \SI{192}{\degree C} to reduce overall analysis time. During the sample analysis, the TCD is maintained at \SI{300}{\degree C} with a makeup and reference flow of 12~mL/min and 27~mL/min, respectively. Additionally, the MS source and quad temperatures are \SI{250}{\degree C} and \SI{200}{\degree C}, respectively, for the duration of the sample analysis.
+For the ethanol, acetone\textcolor{red}{, methane, and propane} fires, the sample analysis time is approximately \SI{60}{min}, during which time the GC oven temperature is maintained at \SI{30}{\degree C} for \SI{10}{min}, then ramped at \SI{8}{\degree C/min} for \SI{34}{min} until reaching a temperature of \SI{300}{\degree C} which is maintained for the remainder of the analysis. For the methanol pool fires, the GC oven has the same setpoint temperature hold time and ramp rate, but only ramps to \SI{192}{\degree C} to reduce overall analysis time. During the sample analysis, the TCD is maintained at \SI{300}{\degree C} with a makeup and reference flow of 12~mL/min and 27~mL/min, respectively. Additionally, the MS source and quad temperatures are \SI{250}{\degree C} and \SI{200}{\degree C}, respectively, for the duration of the sample analysis.
 
 A typical TCD chromatogram is shown in Fig.~\ref{fig:Chromatogram}. \textcolor{red}{The elution times for individual gas species are provided in Appendix~\ref{sec:Elution Times}}. The area associated with each peak is proportional to the number of moles of a particular species. Peaks are manually integrated using the Agilent software. Integration bounds of each peak are determined using the MS. In instances where peaks overlap, it is necessary to implement a tangential ``skim'' to improve integration resolution of an overlapping region, as shown in Fig.~\ref{fig:Chromatogram}.
 
@@ -507,7 +508,7 @@ The soot mass fraction, $Y_{\rm s}$, is computed from the ratio of the mass of t
 \begin{equation}\label{eq:soot_mass_frac}
 Y_{s}= \frac{m_{\rm s}}{m_{\rm tot}}
 \end{equation}
-The total mass of gas sampled is the product of the average volumetric flow rate measured by the mass flow controller, $\dot{V}$, the density of the sample gas injected into the GC/MS, $\rho_{\rm gas}$, the gas sampling time, $\Delta t$, and the ratio of the mass flow controller's temperature reading, $T_{\infty}$, to the effective temperature of the gas calculated from Eq.~(\ref{eq:Thermocouple_Bead_Correction}), $T_{\rm g}$. 
+The total mass of gas sampled is the product of the average volumetric flow rate measured by the mass flow controller, $\dot{V}$, the density of the sample gas injected into the GC/MS, $\rho_{\rm gas}$, the gas sampling time, $\Delta t$, and the ratio of the mass flow controller's temperature reading, $T_{\infty}$, to the effective temperature of the gas calculated from Eq.~(\ref{eq:Thermocouple_Bead_Correction}), $T_{\rm g}$.
 \begin{equation}\label{eq:total_mass}
 m_{t}= \dot{V} \, \rho_{gas}\, \Delta t \frac{T_{\infty}}{T_{\rm g}}
 \end{equation}
@@ -523,7 +524,7 @@ A description of the soot mass fraction uncertainty is provided in Appendix~\ref
 \section{Results}
 \label{sec:Results}
 
-This section presents the flame height, temperature, gas species, and soot measurements made at incremental heights along the centerline of 30~cm diameter methanol, ethanol, and acetone pool fires and a \textcolor{red}{37~cm effective diameter methane and propane pool fires}.
+This section presents the flame height, temperature, gas species, and soot measurements made at incremental heights along the centerline of 30~cm diameter methanol, ethanol, and acetone pool fires and \textcolor{red}{37~cm diameter methane and propane fires}.
 
 \subsection{Flame Observations}
 \label{ssec:Flame_Observations}
@@ -535,7 +536,7 @@ Figure~\ref{fig:Flame_Structure} displays a series of snapshots depicting a sing
 	\caption[Photographs of the three fires]{Flame structures of methanol, ethanol, acetone, methane, and propane pool fires during their pulsing cycles}
 	\label{fig:Flame_Structure}
 \end{sidewaysfigure}
-The methanol fire is purely blue, whereas the ethanol, acetone, methane, and propane fires are more luminous and yellow. The measured time-averaged burning rates and calculated heat release rates are listed in Table~\ref{tab:Pool_Fire_Parameters_Table}. The heat release rates are calculated from Eq.~(\ref{eq:Heat_release_rate}).The methanol fire has the lowest average flame height, followed by the propane, ethanol, methane, and acetone. The measured mean flame heights match Heskestad’s correlation~\cite{Heskestad1983} to within measurement uncertainty. 
+The methanol fire is purely blue, whereas the ethanol, acetone, methane, and propane fires are more luminous and yellow. The measured time-averaged burning rates and calculated heat release rates are listed in Table~\ref{tab:Pool_Fire_Parameters_Table}. The heat release rates are calculated from Eq.~(\ref{eq:Heat_release_rate}).The methanol fire has the lowest average flame height, followed by the propane, ethanol, methane, and acetone. The measured mean flame heights match Heskestad’s correlation~\cite{Heskestad1983} to within measurement uncertainty.
 \begin{equation}
 \frac{L_{\rm f}}{D} = 3.7 \, (\dot{Q}^*)^{2/5} - 1.02 \quad ; \quad \dot{Q}^*=\frac{\dot{Q}}{c_{p}\rho_\infty T_\infty \sqrt{g} \, D^{5/2}}
 \end{equation}
@@ -576,7 +577,7 @@ Figure~\ref{fig:Temp_Comparison} displays the time-averaged, corrected gas tempe
 \begin{equation}\label{eq:Z_Star}
 z^*=\frac{z}{D^*}  \quad ; \quad  D^* = \left(\frac{\dot{Q}}{c_{p}\rho_\infty T_\infty \sqrt{g}}\right)^{\frac{2}{5}}
 \end{equation}
-Here, $z$ is the vertical spatial coordinate, $\dot{Q}$ is the heat release rate, $g$ is the acceleration of gravity, and $c_p$ and $\rho_\infty$ are the specific heat and the density of air at room temperature, $T_\infty$. The maximum mean temperature for each fuel peaks at approximately $z^*=0.2$. The maximum mean temperature for each fuel peaks is close to their respective stoichiometric mixture fraction values. The methanol temperature profile is in agreement with previous works~\cite{Wang2019}. The thermal inertia correction applied to the thermocouple temperature has less than a 5~K influence on the mean but significantly alters the RMS. 
+Here, $z$ is the vertical spatial coordinate, $\dot{Q}$ is the heat release rate, $g$ is the acceleration of gravity, and $c_p$ and $\rho_\infty$ are the specific heat and the density of air at room temperature, $T_\infty$. The maximum mean temperature for each fuel peaks at approximately $z^*=0.2$. The maximum mean temperature for each fuel peaks is close to their respective stoichiometric mixture fraction values. The methanol temperature profile is in agreement with previous works~\cite{Wang2019}. The thermal inertia correction applied to the thermocouple temperature has less than a 5~K influence on the mean but significantly alters the RMS.
 
 \begin{figure}[h!]
 	\centering
@@ -585,7 +586,7 @@ Here, $z$ is the vertical spatial coordinate, $\dot{Q}$ is the heat release rate
 	\label{fig:Temp_Comparison}
 \end{figure}
 
-\textcolor{red}{Figure \ref{fig:Vel_Comparison} shows the mean and standard deviation of the upward gas velocity along the pool centerline as a function of $z^*$ (based on axial distance above the fuel surface) in the 30 cm diameter liquid pool fires and the 37~cm effective diameter gaseous pool fires. The results reported here complement those of Weckman~\cite{Weckman1996}, extending the measurement range from 1 one diameter above the fuel surface to about 4 times the burner diameter.  The upward velocity along the centerline monotonically accelerates for about the first diameter above the fuel surface.  After one diameter, the upward velocity plateaus and slowly decreases with distance above the burner surface.    The velocity profiles are similar. The methanol fire has the smallest peak velocity, whereas the others are similar.}
+\textcolor{red}{Figure \ref{fig:Vel_Comparison} shows the mean and standard deviation of the upward gas velocity along the pool centerline as a function of $z^*$ (based on axial distance above the fuel surface) in the 30 cm diameter liquid pool fires and the 37~cm diameter gaseous pool fires. The results reported here complement those of Weckman~\cite{Weckman1996}, extending the measurement range from one to four burner diameters above the fuel surface.  The upward velocity along the centerline monotonically accelerates over the first diameter above the fuel surface.  Above that, the velocity plateaus and slowly decreases with height.    The velocity profiles are similar. The methanol fire has the lowest peak velocity, whereas the others are similar.}
 
 
 \begin{figure}[h!]
@@ -628,7 +629,7 @@ Here, $R=8.314$~J/(mol$\cdot$K) is the universal gas constant, $V_{\rm s}=2\time
 	\label{fig:Mole_Comp}
 \end{figure}
 
-Figure~\ref{fig:Mole_Comp} shows the ratio of the moles identified by the TCD and MS to the mole injected into the GC/MS as a function of $z^*$. In most cases, the ratio is close to unity, indicating that the total moles injected into the GC/MS are all accounted for in the calculation. For low values of $z^*$, the ratio is higher than unity, indicating an error in the calibration which is most likely due to an over-prediction of the fuel species that are found at high concentrations near the fuel surface. \textcolor{red}{In comparison, the expected values and estimated results are consistent within the experimental uncertainty, validating the calibration process of all detected species.}
+Figure~\ref{fig:Mole_Comp} shows the ratio of the moles identified by the TCD and MS to the moles injected into the GC/MS as a function of $z^*$. In most cases, the ratio is close to unity, indicating that the total moles injected into the GC/MS are all accounted for in the calculation. For low values of $z^*$, the ratio is higher than unity, indicating an error in the calibration which is most likely due to an over-prediction of the fuel species that are found at high concentrations near the fuel surface. \textcolor{red}{Nevertheless, the expected values and estimated results are within experimental uncertainty, validating the calibration process of all detected species.}
 
 \subsection{Carbon to Hydrogen Ratio}
 
@@ -647,8 +648,8 @@ where the summation is over all measured gas species, and ${\rm x}_i$ and ${\rm 
 
 \textcolor{red}{Figure~\ref{fig:C2H} shows the comparison between the hydrogen to carbon ratio of the parent fuel, indicated by the dotted lines, and the calculated ratio at various positions within the centerline of the fires. In all cases, the calculated {C}\textbackslash{H} is within the experimental uncertainty of the parent fuels' ratios. In several cases, the expected and calculated values are nearly matching, indicating that the concentration measurements of species that consist of carbon and hydrogen are accurately estimated using the experimental method. The consistency of the {C}/{H} at different positions along the centerline of the fires also suggests that each of the extracted gas samples are well-mixed, as expected, showing no uneven distribution of carbon or hydrogen atoms when measured throughout the fire.}
 
-Another verification test considers the inert species argon and nitrogen whose molar ratio should be the same regardless of fuel type. The measured Ar/N$_2$ ratio in ambient air is $0.0117\pm0.0005$, and the measured ratio at different vertical locations within the fires is depicted in Fig.~\ref{fig:IR}. All points fall within the uncertainty bounds of the ambient air measurement\textcolor{red}{, indicating that measurements of the concentrations of argon and nitrogen are reasonable throughout the fire. Similarly to the {C}/{H}, the consistency of the inert gas ratio suggests the extracted sample is well-mixed, further supporting the validity of the experimental methods.}
- 
+Another verification test considers the inert species argon and nitrogen whose molar ratio should be the same regardless of fuel type. The measured Ar/N$_2$ ratio in ambient air is $0.0117\pm0.0005$, and the measured ratio at different vertical locations within the fires is depicted in Fig.~\ref{fig:IR}. All points fall within the uncertainty bounds of the ambient air measurement\textcolor{red}{, indicating that measurements of the concentrations of argon and nitrogen are reasonable throughout the fire. As with {C}/{H}, the consistency of the inert gas ratio suggests the extracted sample is well-mixed, further supporting the validity of the experimental methods.}
+
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.0cm, keepaspectratio]{Inert_ratio_Comparison.pdf}
@@ -756,19 +757,9 @@ The authors would like to acknowledge Kevin McGrattan, who aided in the editing 
 \subsection{Mass Burning Rate}
 \label{ssec:Mass_Burning_Flux}
 
-\textcolor{red}{For liquid fuels,} the mean mass burning rate, $\dot{m}$, is determined by weighing the fuel reservoir at the start and end of the steady burning stage using a Precisa XB-6200C Precision balance, calibrated using a collection of standard weights. The Type A evaluation of uncertainty is the standard deviation in the measurements made during replicate experiments, $s_{\scriptscriptstyle \dot{m_l}}$. The Type B evaluation of uncertainty is the reported accuracy of the balance, 0.01~g, divided by the time interval. The Type A uncertainty dominates; thus, the standard uncertainty of liquid fuels is approximately the standard deviation of the multiple measurements:
+\textcolor{red}{For liquid fuels,} the mean mass burning rate, $\dot{m}$, is determined by weighing the fuel reservoir at the start and end of the steady burning stage using a Precisa XB-6200C Precision balance, calibrated using a collection of standard weights. The Type A evaluation of uncertainty is the standard deviation in the measurements made during replicate experiments. The Type B evaluation of uncertainty is the reported accuracy of the balance, 0.01~g, divided by the time interval. The Type A uncertainty dominates; thus, the standard uncertainty of liquid fuels, $u_{\scriptscriptstyle \dot{m}}$, is approximately the standard deviation of the multiple measurements.
 
-\begin{equation}
-\label{eq:mass_rate_uncertainty_liquid}
-u_{\scriptscriptstyle \dot{m}} \approx s_{\scriptscriptstyle \dot{m_l} }
-\end{equation}
-
-\textcolor{red}{For gas fuels, $\dot{m}$ is determined by the flow of gas controlled via a Brooks mass flow controller, Model 5863, configured to nitrogen. The Type A evaluation of uncertainty is the standard deviation in the measurements made during replicate experiments, $s_{\scriptscriptstyle \dot{m_g}}$. The Type B evaluation of uncertainty of the controller is reported to be 1\% of its full scale, 500~SLPM. The Type B uncertainty dominates; thus, the standard uncertainty of gas fuel is approximately the bias uncertainty of the mass flow controller, $u_{\scriptscriptstyle {\rm{MFC}}}$}.
-
-\begin{equation}
-\label{eq:mass_rate_uncertainty_gas}
-u_{\scriptscriptstyle \dot{m}} \approx u_{\scriptscriptstyle {\rm{MFC}}}
-\end{equation}
+\textcolor{red}{For gaseous fuels, $\dot{m}$ is measured with a Brooks mass flow controller, Model 5863, configured for nitrogen. The Type A evaluation of uncertainty is the standard deviation in the measurements made during replicate experiments. The Type B evaluation of uncertainty of the controller is reported to be 1~\% of its full scale, 500~L/min. The Type B uncertainty dominates; thus, the standard uncertainty of gas fuel is approximately the bias uncertainty of the mass flow controller, $u_{\scriptscriptstyle \dot{m}}=0.01$.}
 
 
 
@@ -802,7 +793,7 @@ u_{\scriptscriptstyle L_{\rm{f}}} \approx s_{\scriptscriptstyle{L_{\rm f}}}
 The uncertainty of the temperature measurements is estimated from Type A and Type B uncertainty. The Type A evaluation of uncertainty is the standard deviation of the corrected temperature measurements made at each flame location. The bias error sources, Type B uncertainty, in the S-type thermocouple, $u_{\rm inst}$, used to measure temperature (\SI{1.5}{\degree C}) of the gas sample injected is relatively small compared to the Type A uncertainty.
 
 \textcolor{red}{\subsection{Uncertainty Analysis of Velocity Measurements}}
-\textcolor{red}{The mean and standard deviation for the velocity was obtained from the multiple pressure transducers at a specific measurement position. The uncertainty associated with using the measurements from multiple pressure transducers contributed to the combined uncertainty of the gas velocity. Ref.~\cite{Sung2021} provides a detailed description of the velocity uncertainty methodology.}
+\textcolor{red}{The mean and standard deviation for the velocity is obtained from the multiple pressure transducers at a specific measurement position. The uncertainty associated with using the measurements from multiple pressure transducers contributes to the combined uncertainty of the gas velocity. Ref.~\cite{Sung2021} provides a detailed description of the velocity uncertainty methodology.}
 
 \textcolor{red}{The time-averaged gas velocity (SYMBOL) and RMS are measured and the uncertainty is estimated from Eq.~\ref{eq:Vel_g}. The gas density in the equation is determined using the thermocouple temperature data.  The mean and standard deviation of the gas velocity obtained from each pressure transducer is estimated from repeat measurements.  The parameters and their data type used in the uncertainty analysis are described in detail in Ref.~\cite{Sung2021}. Temperature-dependent gas properties are taken as those of air and the temperature-dependent emissivity and thermophysical properties of platinum are taken from the literature~\cite{Sung2021}.}
 
@@ -900,7 +891,7 @@ u(x,y,z)=\frac{-\rm{\dot{Q}}}{8\pi}~\frac{x}{({x^2+y^2+z^2})^{\frac{3}{2}}}
 \label{eq:v-velocity}
 v(x,y,z)=\frac{-\rm{\dot{Q}}}{8\pi}~\frac{y}{({x^2+y^2+z^2})^{\frac{3}{2}}}+V_{\infty}
 \end{equation}
-where $V_{\infty}$ is the velocity profile, assumed to be completely vertical surrounding the sampling probe. 
+where $V_{\infty}$ is the velocity profile, assumed to be completely vertical surrounding the sampling probe.
 \begin{equation}
 \label{eq:w-velocity}
 w(x,y,z)=\frac{-\rm{\dot{Q}}}{8\pi}~\frac{z}{({x^2+y^2+z^2})^{\frac{3}{2}}}
@@ -920,7 +911,7 @@ L=\sqrt{\frac{\rm{\dot{Q}}}{8\pi~0.01~V_{\infty}}}
 
 \section{Elution times of combustion species using a Select for Permanent Gasses-Dual Column}\label{sec:Elution Times}
 
-A table of the gas species elution times using the method described in Section~\ref{ssec:Gas_Species_Setup}. This method utilizes an Agilent J\&W Select Permanent Gases/\ch{CO2} High-Resolution column is provided below.The column is a parallel configuration consisting of a 25~m x 0.32~mm PoraBOND Q capillary column coupled with a 50~m x 0.53~mm Molsieve $\SI{5}{\angstrom}$ capillary column. 
+A table of the gas species elution times using the method described in Section~\ref{ssec:Gas_Species_Setup}. This method utilizes an Agilent J\&W Select Permanent Gases/\ch{CO2} High-Resolution column is provided below.The column is a parallel configuration consisting of a 25~m x 0.32~mm PoraBOND Q capillary column coupled with a 50~m x 0.53~mm Molsieve $\SI{5}{\angstrom}$ capillary column.
 
 \begin{table}[h!]
 
@@ -929,11 +920,11 @@ A table of the gas species elution times using the method described in Section~\
 \centering
 	%\footnotesize
 	\begin{tabular}{clcc}
-\specialrule{.2em}{.1em}{.1em} 
+\specialrule{.2em}{.1em}{.1em}
 %\\[0.0005cm]
 \textbf{Retention} &\textbf{Species}&\textbf{Eluted}\\
 \textbf{Time (min)} &&\textbf{from}\\
-\specialrule{.2em}{.1em}{.1em} 
+\specialrule{.2em}{.1em}{.1em}
 $6.4$		&	Composite 1		&	PoraBOND Q					\\%&0.2		\\
 $6.8$		&	Methane		& 	PoraBOND Q					\\%&0.2		\\
 $7.6$		&	Carbon Dioxide	&	PoraBOND Q					\\%&0.2		\\
@@ -954,7 +945,7 @@ $43.6$	&	Ethane		&	Molsieve $\SI{5}{\angstrom}$		\\%&0.2		\\
 $50.2$	&	Acetylene		&	Molsieve $\SI{5}{\angstrom}$		\\%&0.2		\\
 $57.3$	&	Ethylene		&	Molsieve $\SI{5}{\angstrom}$ 		\\%&0.1		\\
 $65.2$	&	Propane		&	Molsieve $\SI{5}{\angstrom}$ 		\\%&0.1		\\
-\specialrule{.2em}{0em}{.1em} 
+\specialrule{.2em}{0em}{.1em}
 \end{tabular}
 \end{table}
 
@@ -1502,7 +1493,7 @@ Many experiments have been conducted on pool fires such as those considered in t
     \end{tabular}
 \end{table}
 
-There are subtle differences in the experimental conditions as well as reporting assumptions and approximations that may account for some of the differences among the reported results. Some of the relevant issues are highlighted in Table~\ref{tab:Past_Pool_fire_parameters} below for the methanol, ethanol and acetone pool fires, respectively. The tables include information on the steady-state mass burning flux, $m''$, lip height, mean flame height. 
+There are subtle differences in the experimental conditions as well as reporting assumptions and approximations that may account for some of the differences among the reported results. Some of the relevant issues are highlighted in Table~\ref{tab:Past_Pool_fire_parameters} below for the methanol, ethanol and acetone pool fires, respectively. The tables include information on the steady-state mass burning flux, $m''$, lip height, mean flame height.
 
 The radiative fraction to the surroundings including the fuel pool, $\chi_{\rm {rad}}$, and excluding the fuel pool, $\chi_{\rm{r}}$, during steady burning is reported for each study. $\chi_{\rm{rad}}$ is defined as the total radiative heat transfer to the surroundings and onto the fuel surface such that:
 \begin{equation}
