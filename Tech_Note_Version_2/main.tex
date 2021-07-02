@@ -99,7 +99,7 @@ pdfkeywords={} %%put keywords here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\pubnumber}{2082e2, Second Edition}
 \newcommand{\DOI}{https://doi.org/10.6028/NIST.TN.2082e2}
-\newcommand{\monthyear}{June 2021}
+\newcommand{\monthyear}{July 2021}
 
 
 \newcommand*\chem[1]{\ensuremath{\mathrm{#1}}}
@@ -336,7 +336,7 @@ This report documents a series of time-averaged gas species measurements made al
 %   Start body of text - page number starts with "1"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{\textcolor{red}{Prefeace to Second Edition}}
-\textcolor{red}{The second edition of this technical note contains additional data not presented in the proceeding edition, including data on the structure of two propane pool fires. Specifically, new data is reported on the centerline profiles of temperature, velocity, and chemical species for \textcolor{red}{21~kW} and 34~kW propane gaseous pool fires established on a 37~cm effective diameter water-cooled sintered-metal burner. A description and uncertainty analysis of the velocity measurements are described. Centerline velocity measurements are also provided for the methanol, ethanol, acetone, and methane pool fires.}
+\textcolor{red}{The second edition of this technical note contains additional data not presented in the proceeding edition, including data on the structure of two propane pool fires. Specifically, new data is reported on the centerline profiles of temperature, velocity, and chemical species for \textcolor{red}{21~kW} and 34~kW propane gaseous pool fires established on a 37~cm effective diameter water-cooled sintered-metal burner. Description of the velocity measurements and the uncertainty analysis are provided. Centerline velocity measurements are also provided for the methanol, ethanol, acetone, and methane pool fires.}
 
 \clearpage
 
@@ -379,13 +379,13 @@ Fuel to the burner is gravity fed from a reservoir positioned on a mass load cel
 
 \subsection{Gas Pool Burner Setup}
 \label{ssec:Gas_Pool_Burner_Setup}
-Gas fuels are burned using a \textcolor{red}{burner with an effective diameter of 37~cm with a flat porous surface of which gaseous fuel is fed through. A photo of the gaseous burner is shown in Fig.~\ref{}. Internally, the burner consists of porous sintered metal made of bronze. The pore size is estimates to be approximately 1/10~mm. It is estimated that the depth of the porous metal is approximately 8~cm interlaced with cooling coils.}. Fuel to the gas burner is controlled via a \textcolor{red}{Brooks mass flow controller, Model 5863}\footnote{\label{fn:product} Certain commercial products are identified in this report to specify adequately the equipment used. Such identification does not imply a recommendation by the National Institute of Standards and Technology, nor does it imply that this equipment is the best available for the purpose.} located outside of the enclosure. Similar to the liquid pool burner, the gas burner is maintained at a constant temperature by circulating cooled water (approximately $20 \; ^\circ \hbox{C} \pm 5 \; ^\circ \hbox{C}$) through the basin.
+Gas fuels are burned using a \textcolor{red}{burner with an effective diameter of 37~cm with a flat porous surface of which gaseous fuel is fed through. A photo of the gaseous burner is shown in Fig.~\ref{fig:Gas_Pool_Burner}. Internally, the burner consists of porous sintered metal made of bronze. The pore size is estimates to be approximately 1/10~mm. The depth of the porous metal is approximately 8~cm interlaced with cooling coils.}. Fuel to the gas burner is controlled via a \textcolor{red}{Brooks mass flow controller, Model 5863}\footnote{\label{fn:product} Certain commercial products are identified in this report to specify adequately the equipment used. Such identification does not imply a recommendation by the National Institute of Standards and Technology, nor does it imply that this equipment is the best available for the purpose.} located outside of the enclosure. Similar to the liquid pool burner, the gas burner is maintained at a constant temperature by circulating cooled water (approximately $20 \; ^\circ \hbox{C} \pm 5 \; ^\circ \hbox{C}$) through the basin.
 
 \begin{figure}[h!]
 	\centering
-\includegraphics[width=10.0cm,keepaspectratio]{Gas_Burner.png}
+\includegraphics[width=\textwidth,keepaspectratio]{Gas_Burner_2.jpg}
 	\caption[Photograph of the gaseous burner]{The 37~cm effective diameter gaseous burner.}
-	\label{fig:Pool Burner}
+	\label{fig:Gas_Pool_Burner}
 \end{figure}
 
 \subsection{Measuring Flame Characteristics}
@@ -402,7 +402,7 @@ The mean flame height, $L_{\rm{f}}$, is estimated from 3600~frames of high-resol
 \subsection{Centerline Temperature Measurements}
 \label{ssec:Temperature_Measurements}
 
-Time-averaged temperature measurements are made along the vertical centerline of the fire plumes using S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouples (OMEGA P10S-001) with wire diameters of approximately 13~$\mu$m and 25~$\mu$m for the liquid and gas pool fires, respectively, and bead diameter approximately three times greater. Temperature measurements are sampled at \SI{250}{Hz} for \SI{2}{min}, or approximately 300~pulsing cycles \cite{Wang2019}. The uncertainty of the temperature radiative measurements are discussed in Appendix~\ref{sec:Uncertainty_Temperature_Measurements}. \textcolor{red}{In some cases, temperature measurements are made using thermocouples of different configurations. Thermcouple bead temperature readings of bead diameters for each fuel are presented in Appendix~\ref{sec:Bead_Temp}.}
+Time-averaged temperature measurements are made along the vertical centerline of the fire plumes using S-type (Pt 10\% Rh/Pt), bare-wire, fine diameter thermocouples (OMEGA P10S-001) with wire diameters of approximately 13~$\mu$m and 25~$\mu$m for the liquid and gas pool fires, respectively, and bead diameter approximately three times greater. Temperature measurements are sampled at \SI{250}{Hz} for \SI{2}{min}, or approximately 300~pulsing cycles \cite{Wang2019,Sung2021}. The uncertainty of the temperature measurements are discussed in Appendix~\ref{sec:Uncertainty_Temperature_Measurements}. \textcolor{red}{In some cases, temperature measurements are made using thermocouples of different configurations. The (uncorrected) mean thermocouple temperature measurements, the corrected mean gas temperatures, and the combined uncertainty of the gas measurement for each fire are presented in Appendix~\ref{sec:Bead_Temp}.}
 
 The measured thermocouple temperatures are corrected for heat losses and thermal inertia using the formula described by Shaddix~\cite{Shaddix1999}:
 \begin{equation}\label{eq:Thermocouple_Bead_Correction}
@@ -448,7 +448,7 @@ V_{\rm{g}}(t) = \frac{1}{k_p(t)}\sqrt{\frac{2~\Delta P_{c}(t)}{\rho(t)}}
 \subsection{Measuring the Volume Fraction of Gas Species via GC/MS}
 \label{ssec:Gas_Species_Setup}
 
-Figure~\ref{fig:Experimental_Setup} displays the flow diagram for gas and particulate sampling. The GC/MS is equipped with a 2~mL sample loop maintained at approximately \SI{200}{\degree C}. \textcolor{red}{The characteristic length of the regime of influence is estimated to range between 0.5~cm~$\pm$~0.1~cm to 3.9~cm~$\pm$~0.7~cm. The characteristic length of the regime of influence is calculated using an approximation described in Appendix~\ref{sec:Regime_of_Influence}. The uncertainty of the characteristic length is estimated from the Type A evaluation of uncertainty defined as the standard deviation in the flow at the inlet of the probe.} The gases are extracted by a vacuum pump located downstream of the GC/MS. Gas samples are collected using a thermal quenching probe composed of concentric, stainless-steel tubes with outer annular coolant flow and inner extracted sample flow. The outer and inner tube diameters are \SI{16}{mm} and \SI{8}{mm}, respectively. Water at approximately \SI{90}{\degree C} flows through the sampling probe for the duration of the experiment. The remainder of the sampling line leading into the GC/MS is heated to approximately \SI{140}{\degree C} with electrical heating tape to prevent condensation of water and other condensable species (e.g., methanol, ethanol, benzene, etc.).
+Figure~\ref{fig:Experimental_Setup} displays the flow diagram for gas and particulate sampling. The GC/MS is equipped with a 2~mL sample loop maintained at approximately \SI{200}{\degree C}. \textcolor{red}{The characteristic length of the regime of influence of theextractive sampling probe is estimated to range between 0.5~cm~$\pm$~0.1~cm to 3.9~cm~$\pm$~0.7~cm. The characteristic length of the regime of influence is calculated using an analysis described in Appendix~\ref{sec:Regime_of_Influence}. The uncertainty of the characteristic length is estimated from the Type A evaluation of uncertainty defined as the standard deviation in the flow at the inlet of the probe.} The gases are extracted by a vacuum pump located downstream of the GC/MS. Gas samples are collected using a thermal quenching probe composed of concentric, stainless-steel tubes with outer annular coolant flow and inner extracted sample flow. The outer and inner tube diameters are \SI{16}{mm} and \SI{8}{mm}, respectively. Water at approximately \SI{90}{\degree C} flows through the sampling probe for the duration of the experiment. The remainder of the sampling line leading into the GC/MS is heated to approximately \SI{140}{\degree C} with electrical heating tape to prevent condensation of water and other condensable species (e.g., methanol, ethanol, benzene, etc.).
 
 \begin{sidewaysfigure}[!]
 	\centering
@@ -461,7 +461,7 @@ Figure~\ref{fig:Experimental_Setup} displays the flow diagram for gas and partic
 
 \textcolor{red}{The gas sample extracted from the fire is conducted using a pump that provides a near-constant volumetric flow. Since the gas sample is taken for several minutes and well-mixed in the sample gas reservoir, the sample injected into the GC/MS for gas analysis represents a time-average of the extracted sample. In the turbulent fires investigated in this study, at any position, the temperature, and the density, varies as a function of time at a nominal frequency related to the dominant puffing frequency of the fire, which ranged from \SI{2.3}{\hertz} to \SI{2.6}{\hertz} for the fires considered here. For a constant volumetric flow, the extracted sample is therefore weighted by the density and represents a “Favre-averaged” statistical quantity.}
 
-\textcolor{red}{Based on CFD fire modeling, preliminary results on the difference in the time series of gas species volume fractions as a function of location for conventional (or ensemble) averaging as compared to Favre (or density weighted) averaging is thought to be on the order of roughly 5\% for the fires considered here~\cite{McDermott_2021}. The difference is smaller for species characterized by small and trace local concentrations. When the species composition data presented in this report is used for CFD fire modeling validation, Favre averaging statistics should be applied to properly conduct the comparison.}
+\textcolor{red}{Based on CFD fire modeling, preliminary results on the difference in the time series of gas species volume fractions as a function of location for conventional (or ensemble) averaging as compared to Favre (or density weighted) averaging is thought to be on the order of roughly 10\% for the fires considered here. The difference is smaller for species characterized by small and trace local concentrations. When the species composition data presented in this report is used for CFD fire modeling validation, Favre averaging statistics~\cite{bilger1975note} should be applied to properly conduct the comparison.}
 
 \textcolor{red}{During the gas sampling procedure, the volumetric flow is approximately 200~mL/min and recorded at \SI{2.0}{\hertz}. The characteristic length of the regime of influence is estimated to range between 0.5~cm~$\pm$~0.1~cm to 3.9~cm~$\pm$~0.7~cm. The characteristic length of the regime of influence is calculated using an approximation described in Appendix~\ref{sec:Regime_of_Influence}. After the gas sampling period, two quarter-turn valves located on opposite ends of the sample loop are closed, at which point pressure measurements, obtained from a digital pressure gauge (OMEGA DPG409-030DWU), and temperature measurements, acquired by a K-type thermocouple located at the GC/MS sample loop injection port, are collected at \SI{2.0}{\hertz} for \SI{50}{s} directly followed by sample injection.}
 
@@ -595,17 +595,17 @@ Here, $z$ is the vertical spatial coordinate, $\dot{Q}$ is the heat release rate
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.0 cm, keepaspectratio]{Temperature_Comparison.pdf}
-	\caption[Mean and RMS centerline gas temperature profiles]{Mean and root mean square (RMS) centerline gas temperature profiles of methanol, ethanol, acetone, methane\textcolor{red}{, and propane} pool fires during their pulsing cycles \textcolor{red}{ as a function of $z^*$}}
+	\caption[Mean gas temperature profiles]{Mean centerline gas temperature profiles of methanol, ethanol, acetone, methane\textcolor{red}{, and propane} pool fires during their pulsing cycles \textcolor{red}{ as a function of $z^*$. Vertical error bars represent the combined uncertainty of the measurement with a coverage factor of 2. Horizontal error bars represent the combined uncertainty estimated from the law of propagation of uncertainty.}}
 	\label{fig:Temp_Comparison}
 \end{figure}
 
-\textcolor{red}{Figure \ref{fig:Vel_Comparison} shows the mean and standard deviation of the upward gas velocity along the pool centerline as a function of $z^*$ (based on axial distance above the fuel surface) in the 30 cm diameter liquid pool fires and the 37~cm diameter gaseous pool fires. The results reported here complement those of Weckman~\cite{Weckman1996}, extending the measurement range from one to four burner diameters above the fuel surface. The upward velocity along the centerline monotonically accelerates over the first diameter above the fuel surface. Above that, the velocity plateaus and slowly decreases with height. The velocity profiles are similar. The methanol fire has the lowest peak velocity, whereas the others are similar.}
+\textcolor{red}{Figure \ref{fig:Vel_Comparison} shows the mean and standard deviation of the upward gas velocity along the pool centerline as a function of $z^*$ (based on axial distance above the fuel surface) in the 30 cm diameter liquid pool fires and the 37~cm diameter gaseous pool fires. The results reported here complement those of Weckman~\cite{Weckman1996} for the methanol fire, extending the measurement range from one to four burner diameters above the fuel surface. The upward velocity along the centerline monotonically accelerates over the first diameter above the fuel surface. Above that, the velocity plateaus and slowly decreases with height. The velocity profiles are similar. The methanol fire has the lowest peak velocity, whereas the others are similar.Details of the velocity measurement and its uncertainty are provided in Ref.~\cite{Sung2021}.}
 
 
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.0 cm, keepaspectratio]{Velocity_Comparison.pdf}
-	\caption[Mean centerline velocity profiles]{Mean centerline velocity profiles of methanol, ethanol, acetone, methane\textcolor{red}{, and propane} pool fires during their pulsing cycles \textcolor{red}{ as a function of $z^*$}}
+	\caption[Mean centerline velocity profiles]{Mean centerline velocity profiles of methanol, ethanol, acetone, methane\textcolor{red}{, and propane} pool fires during their pulsing cycles \textcolor{red}{ as a function of $z^*$.Vertical error bars represent the combined uncertainty of the measurement with a coverage factor of 2. Horizontal error bars represent the combined uncertainty estimated from the law of propagation of uncertainty.}}
 	\label{fig:Vel_Comparison}
 \end{figure}
 
@@ -638,7 +638,7 @@ Here, $R=8.314$~J/(mol$\cdot$K) is the universal gas constant, $V_{\rm s}=2\time
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.0cm,keepaspectratio]{mole_ratio_Comparison.pdf}
-	\caption[Ratio of moles identified to moles injected]{Ratio of moles identified to moles injected, with uncertainty, as a function of $z^*$. The uncertainty of the ratio is defined in in Section~\ref{ssec:mole ratio}.}
+	\caption[Ratio of moles identified to moles injected]{Ratio of moles identified to moles injected, with uncertainty, as a function of $z^*$. Error bars represent the combined uncertainty estimated from the law of propagation of uncertainty. The uncertainty of the ratio is defined in in Section~\ref{ssec:mole ratio}.}
 	\label{fig:Mole_Comp}
 \end{figure}
 
@@ -655,7 +655,7 @@ where the summation is over all measured gas species, and ${\rm x}_i$ and ${\rm 
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.0cm, keepaspectratio]{C2H_ratio_Comparison.pdf}
-	\caption[Carbon to hydrogen ratio calculated from all species]{Carbon to hydrogen ratio calculated from all measured gas species compared to the theoretical values \textcolor{red}{ as a function of $z^*$}.The uncertainty of the ratio is defined in in Section~\ref{ssec:C2H_ratio}.}
+	\caption[Carbon to hydrogen ratio calculated from all species]{Carbon to hydrogen ratio calculated from all measured gas species compared to the theoretical values \textcolor{red}{ as a function of $z^*$. Error bars represent the combined uncertainty estimated from the law of propagation of uncertainty.}.The uncertainty of the ratio is defined in in Section~\ref{ssec:C2H_ratio}.}
 	\label{fig:C2H}
 \end{figure}
 
@@ -666,7 +666,7 @@ Another verification test considers the inert species argon and nitrogen whose m
 \begin{figure}[h!]
 	\centering
 \includegraphics[width=10.0cm, keepaspectratio]{Inert_ratio_Comparison.pdf}
-	\caption[Ar/N$_2$ ratio within the fire envelop compared to ambient air]{Ar/N$_2$ molar ratio at different elevations compared to the uncertainty bounds of the measurement in ambient air \textcolor{red}{ as a function of $z^*$}.The uncertainty of the ratio is defined in in Section~\ref{ssec:Inert_ratio}.}
+	\caption[Ar/N$_2$ ratio within the fire envelop compared to ambient air]{Ar/N$_2$ molar ratio at different elevations compared to the uncertainty bounds of the measurement in ambient air \textcolor{red}{ as a function of $z^*$. Error bars represent the combined uncertainty estimated from the law of propagation of uncertainty.}.The uncertainty of the ratio is defined in in Section~\ref{ssec:Inert_ratio}.}
 	\label{fig:IR}
 \end{figure}
 \clearpage
@@ -696,42 +696,42 @@ Figures~\ref{fig:Methanol_Mix_Frac}, \ref{fig:Ethanol_Mix_Frac}, \ref{fig:Aceton
 \begin{figure}[!]
 	\centering
 \includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelMethanol_Mixture_Fraction_Intermediate_Plot.pdf}
-	\caption[Mean mass fractions as a function of mixture fraction, methanol]{Mean mass fractions as a function of mixture fraction, methanol. The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
+	\caption[Mean mass fractions as a function of mixture fraction, methanol]{Mean mass fractions as a function of mixture fraction, methanol. Error bars represent the combined uncertainty estimated from the law of propagation of uncertainty. The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
 	\label{fig:Methanol_Mix_Frac}
 \end{figure}
 
 \begin{figure}[!]
 	\centering
 \includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelEthanol_Mixture_Fraction_Intermediate_Plot.pdf}
-	\caption[Mean mass fractions as a function of mixture fraction, ethanol]{Mean mass fractions as a function of mixture fraction, ethanol. The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
+	\caption[Mean mass fractions as a function of mixture fraction, ethanol]{Mean mass fractions as a function of mixture fraction, ethanol. Error bars represent the combined uncertainty estimated from the law of propagation of uncertainty. The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
 	\label{fig:Ethanol_Mix_Frac}
 \end{figure}
 
 \begin{figure}[!]
 	\centering
 \includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelAcetone_Mixture_Fraction_Intermediate_Plot.pdf}
-	\caption[Mean mass fractions as a function of mixture fraction, acetone]{Mean mass fractions as a function of mixture fraction, acetone. The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
+	\caption[Mean mass fractions as a function of mixture fraction, acetone]{Mean mass fractions as a function of mixture fraction, acetone. Error bars represent the combined uncertainty estimated from the law of propagation of uncertainty. The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
 	\label{fig:Acetone_Mix_Frac}
 \end{figure}
 
 \begin{figure}[!]
 	\centering
 \includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelMethane_Mixture_Fraction_Intermediate_Plot.pdf}
-	\caption[Mean mass fractions as a function of mixture fraction, methane]{Mean mass fractions as a function of mixture fraction, methane. The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
+	\caption[Mean mass fractions as a function of mixture fraction, methane]{Mean mass fractions as a function of mixture fraction, methane. Error bars represent the combined uncertainty estimated from the law of propagation of uncertainty. The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
 	\label{fig:Methane_Mix_Frac}
 \end{figure}
 
 \begin{figure}[!]
 	\centering
 \includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelPropane 21KW_Mixture_Fraction_Intermediate_Plot.pdf}
-	\caption[Mean mass fractions as a function of mixture fraction, propane (21~kW)]{Mean mass fractions as a function of mixture fraction, propane (21~kW). The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
+	\caption[Mean mass fractions as a function of mixture fraction, propane (21~kW)]{Mean mass fractions as a function of mixture fraction, propane (21~kW). Error bars represent the combined uncertainty estimated from the law of propagation of uncertainty. The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
 	\label{fig:Propane20kW_Mix_Frac}
 \end{figure}
 
 \begin{figure}[!]
 	\centering
 \includegraphics[width=\textwidth,keepaspectratio]{Adjusted_FuelPropane 34KW_Mixture_Fraction_Intermediate_Plot.pdf}
-	\caption[Mean mass fractions as a function of mixture fraction, propane (34~kW)]{Mean mass fractions as a function of mixture fraction, propane (34~kW). The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
+	\caption[Mean mass fractions as a function of mixture fraction, propane (34~kW)]{Mean mass fractions as a function of mixture fraction, propane (34~kW). Error bars represent the combined uncertainty estimated from the law of propagation of uncertainty. The uncertainty of the mean mass fractions shown here is defined in Section~\ref{ssec:Uncertainty of Mass Fractions}.}
 	\label{fig:Propane34kW_Mix_Frac}
 \end{figure}
 
@@ -742,7 +742,7 @@ Where the mixture fraction is much less than stoichiometric, all major gas speci
 
 \section{Conclusion}
 \label{sec:Conclusion}
-In summary, time-averaged local measurements of temperature and gas species concentrations are made to characterize the structure of methanol, ethanol, and acetone 30~cm diameter pool fires and \textcolor{red}{37~cm effective diameter methane and propane pool fires} steadily burning in a quiescent environment. A verification scheme is developed to verify the gas species measurements that considered  the accuracy of the calibration and the overall stoichiometry of combustion for each fuel. The gas species measurements are favorably compared to the idealized SCR values, which lends confidence to the veracity of the measurements. These local measurements complement previous measurements and provide insight into the complex chemical structure of medium-scale pool fires.
+In summary, time-averaged local measurements of temperature and gas species concentrations are made to characterize the structure of methanol, ethanol, and acetone 30~cm diameter pool fires and \textcolor{red}{37~cm effective diameter methane and propane pool fires} steadily burning in a quiescent environment. A verification scheme is developed to verify the gas species measurements that considered  the accuracy of the calibration and the overall stoichiometry of combustion for each fuel. The gas species measurements are favorably compared to the \textcolor{red}{idealized mole, carbon to hydrogen, and inert ratios}, which lends confidence to the veracity of the measurements. These local measurements complement previous measurements and provide insight into the complex chemical structure of medium-scale pool fires.
 
 \section*{Acknowledgments}
 The authors would like to acknowledge Kevin McGrattan, who aided in the editing of this report.
